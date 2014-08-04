@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<tool id="freebayes_wrapper_princeton" name="Call SNPS with Freebayes (DEPRECATED)" version="0.9.0.a">
+  <requirements>
+    <requirement type="package" version="0.9.0">freebayes</requirement>
+    <requirement type="package">samtools</requirement>
+  </requirements>
+  <description>Bayesian genetic variant detector</description>
+  <version_string>freebayes -h | grep [Vv]ersion</version_string>
+  <command>
+     if [ "`freebayes -h | grep [Vv]ersion | awk '{print \$2}'`" != "0.9.0" ]; then
+        echo "Freebayes version installed is not compatible with this version of the Galaxy wrapper (requires '0.9.0')." >&amp;2;
+        exit 2; fi;
+
+    #if $genomeSource.refGenomeSource == "history":
+        ln -s "$genomeSource.ownFile" localref.fa &amp;&amp;
+    #else:
+        ln -s "${ filter( lambda x: str( x[0] ) == str( $genomeSource.index ), $__app__.tool_data_tables[ 'all_fasta' ].get_fields() )[0][-1] }" localref.fa &amp;&amp;
+    #end if
+    samtools faidx localref.fa 2&gt;&amp;1 || echo "Error running samtools faidx for FreeBayes" &gt;&amp;2 &amp;&amp;
+
+    #if ($params.source_select == "full") and (str($params.baqAdjustment) == 'true')
+	    samtools fillmd -Arb ${bamfile} localref.fa > localbam.bam 2&gt;&amp;1 || echo "Error running samtools fillmd for FreeBayes" &gt;&amp;2 &amp;&amp;
+    #else
+	    ln -s ${bamfile} localbam.bam &amp;&amp;
+    #end if
+    
+    samtools index localbam.bam 2&gt;&amp;1 || echo "Error running samtools index for FreeBayes" &gt;&amp;2 &amp;&amp;
+
+    #for $i, $b in enumerate($bamfiles)
+    	#if ($params.source_select == "full") and (str($params.baqAdjustment) == 'true')
+	       samtools fillmd -Arb ${b.additional_bamfile} localref.fa > localbam_${i}.bam 2&gt;&amp;1 || echo "Error running samtools fillmd for FreeBayes" &gt;&amp;2 &amp;&amp;
+    	#else
+	       ln -s ${b.additional_bamfile} localbam_${i}.bam &amp;&amp;
+    	#end if
+	   samtools index localbam_${i}.bam 2&gt;&amp;1 || echo "Error running samtools index for FreeBayes" &gt;&amp;2 &amp;&amp;
+    #end for
+
+    freebayes localbam*.bam --fasta-reference localref.fa --vcf $output
+            #if $params.source_select == "full":
+                -T $params.theta
+                -p $params.ploidy
+                $params.pooled
+		--pvar $params.pvar
+ 	 	$params.showRefRepeats
+                $params.nosnps
+                $params.noindels
+                $params.nomnps
+                $params.nocomplex
+                -n $params.bestAlleles
+                $params.leftAlignIndels
+                $params.useRefAllele
+                $params.diploidReference
+                --reference-quality $params.refMapQuality,$params.refBaseQuality  
+		$params.duplicateReads
+                -m $params.minMapQuality
+                -q $params.minBaseQuality
+                $params.noFilters
+                -x $params.indelExclusionWindow
+                -F $params.minAltFraction
+                -C $params.minAltCount
+                -G $params.minAltTotal
+                --min-coverage $params.minCoverage
+		-W $params.postIntegLimitN,$params.postIntegLimitM
+	    #else
+                --left-align-indels
+            #end if
+    </command>
+  <inputs>
+	  <!-- <param format="fasta" name="reference" type="data" metadata_name="dbkey" label="Reference File"/> -->
+	  <param format="bam" name="bamfile" type="data" label="Bam Alignment File"
+		  help="Additional BAM files will be considered to be from the same sample unless they have a different read group assigned. Read groups can be assigned during mapping with BWA (advanced options) or after mapping with Picard tools."/>
+    <repeat name="bamfiles" title="Additional BAM Files">	  
+	    <param format="bam" name="additional_bamfile" type="data" label="Additional Bam Alignment File"/>
+    </repeat>
+      
+    <conditional name="genomeSource">
+      <param name="refGenomeSource" type="select" label="Select Reference Genome">
+        <option value="default" selected="true">Use the assigned data genome/build</option>
+        <option value="indexed">Select a different built-in genome</option>
+        <option value="history">Use a genome (fasta format) from my history</option>
+      </param>
+      <when value="default">
+	  <param name="index" type="select" label="Check the assigned reference genome" help="Galaxy thinks that the reads in you dataset were aligned against this reference. If this is not correct, use the 'Select a build-in reference genome' option of the 'Select Reference Genome' dropdown to select approprtiate Reference.">
+          <options from_data_table="all_fasta">
+          <filter type="data_meta" ref="bamfile" key="dbkey" column="dbkey" multiple="True" separator="," />
+          <validator type="no_options" message="No reference build available for selected input" /> 
+          </options>
+  </param>
+      </when>
+      <when value="indexed">
+        <param name="index" type="select" label="Select a built-in reference genome" help="This list contains genomes cached at this Galaxy instance. If your genome of interest is not present here request it by using 'Help' link at the top of Galaxy interface or use the 'Use a genome (fasta format) from my history' option of the 'Select Reference Genome' dropdown.">
+          <options from_data_table="all_fasta">
+          </options>
+        </param>
+      </when>
+      <when value="history">
+        <param name="ownFile" type="data" format="fasta" metadata_name="dbkey" label="Select a reference genome from history" help="This option works best for relatively small genomes. If you are working with large human-sized genomes, send request to Galaxy team for adding your reference to this Galaxy instance by using 'Help' link at the top of Galaxy interface."/>
+      </when>
+    </conditional>
+
+    <conditional name="params">
+      <param name="source_select" type="select" label="Freebayes Settings to Use" help="Default settings uses freebayes dafults for options (except that left-align-indels is set). The defaults are generally not recommended, however. For best results use Full Parameter List and set options appropriate to your data.">
+        <option value="pre_set">Default Settings</option>
+        <option value="full">Full Parameter List</option>
+      </param>
+      <when value="pre_set"/>
+      <when value="full">
+
+        <!-- Population Model -->
+        <param name="theta" size="5" type="float" value="0.01" label="Theta" help="The expected mutation rate or pairwise nucleotide diversity among the population under analysis.  This serves as the single parameter to the Ewens Sampling Formula prior model"/>
+        <param name="ploidy" size="5" type="integer" value="2" label="Ploidy" help="Sets the default ploidy for the analysis"/>
+	<param name="pooled" type="boolean" label="Pooled" help="Assume that samples result from pooled sequencing. When using this flag, set 'Ploidy' to the number of alleles in each sample" truevalue="-J" falsevalue="" />
+
+	<!-- Reporting -->
+	<param name="pvar" type="float" value="0.0001" label="Probability of variant threshold" help="Report sites if the probability that there is a polymorphism at the site is greater than N." /> 
+	<param name="showRefRepeats" type="boolean" label="Show Reference Repeats" help="Calculate and show information about reference repeats in the VCF output" truevalue="--show-reference-repeats" falsevalue="" />
+
+	<!-- Alelle Scope -->
+        <param name="nosnps" type="boolean" label="Ignore SNP alleles" truevalue="--no-snps" falsevalue="" />
+	<param name="noindels" type="boolean" label="Ignore insertion and deletion alleles" truevalue="--no-indels" falsevalue="" />
+	<param name="nomnps" type="boolean" label="Ingnore multi-nuceotide polymorphisms, MNPs" truevalue="--no-mnps" falsevalue="" />
+	<param name="nocomplex" type="boolean" label="Ignore complex events (composites of other classes)" truevalue="--no-complex" falsevalue="" />
+	<param name="bestAlleles" size="5" type="integer" value="0" label="Use Best N Alleles" help="Evaluate only the best N alleles, ranked by sum of supporting quality scores. Set to 0 to use all." />
+
+	<!-- Indel realignment -->
+	<param name="leftAlignIndels" type="boolean" label="Left align indels" help="Left-realign and merge gaps embedded in reads, recommended when calling indels" checked="true" truevalue="--left-align-indels" falsevalue="" />
+	<param name="baqAdjustment" type="boolean" label="Base alignment quality (BAQ) adjustment" help="A quality smoothing filter which applies a hidden markov model of read genesis to each alignment independently.  This is currently implemented by samtools fillmd." />
+
+	<!-- Reference Allele -->
+	<param name="useRefAllele" type="boolean" label="Use Reference Allele" help="Include the reference allele in the analsis as if it is another sample from the same population" truevalue="--use-reference-allele" falsevalue=""/>
+        <param name="diploidReference" type="select" label="Reference Ploidy" help="If using the reference sequence as a sample, it can be treated as haploid (default) or diploid.">
+          <option value="">Haploid</option>
+          <option value="--diploid-reference">Diploid</option>
+        </param>
+	<param name="refMapQuality" size="5" type="integer" value="100" label="Assign mapping quality of Q to the reference allele at each site"/>
+        <param name="refBaseQuality" size="5" type="integer" value="60" label="Reference Base Quality" help="Assign a base quality of Q to the reference allele at each site"/>
+
+	<!-- Input Filters -->
+	<param name="duplicateReads" type="boolean" label="Use duplicate reads" help="Include duplicate-marked alignments in the analysis" truevalue="--use-duplicate-reads" falsevalue="" />
+	<param name="minMapQuality" size="5" type="integer" value="30" label="Minimum Mapping Quality" help="Exclude alignments from analysis if they have a mapping quality less than Q"/>
+        <param name="minBaseQuality" size="5" type="integer" value="20" label="Minimum Base Quality" help="Exclude alleles from analysis if their supporting base quality is less than Q"/>
+	<param name="noFilters" type="boolean" label="No Filters" help="Do not use any input base and mapping quality filters. Equivalent to setting Minimum Mapping Quality, Minimum Base Quality, and Minimum Supporting Quality to 0" truevalue="--no-filters" falsevalue="" />
+        <param name="indelExclusionWindow" size="5" type="integer" value="-1" label="Indel Exclusion Window" help="Ignore portions of alignments N bases from a putative insertion or deletion allele"/>
+        <param name="minAltFraction" size="5" type="float" min="0" max="1" value="0" label="Minimum Alternative Fraction" help="Require at least this fraction of observations supporting an alternate allele within a single individual in the in order to evaluate the position"/>
+        <param name="minAltCount" size="5" type="integer" value="1" label="Minimum Alternative Count" help="Require at least this count of observations supporting an alternate allele within a single individual in order to evaluate the position"/>
+        <param name="minAltTotal" size="5" type="integer" value="1" label="Minimum Alternative Total" help="Require at least this count of observations supporting an alternate allele within the total population in order to use the allele in analysis"/>
+        <param name="minCoverage" size="5" type="integer" value="0" label="Minimum Coverage" help="Require at least this coverage to process a site"/>
+
+	<!-- Algorithmic Features -->
+	<!-- <param name="readDependenceFactor" size="5" type="float" value="0.9" label="Read Dependence Factor" help="Incorporate non-independence of reads by scaling successive observations by this factor during data likelihood calculations"/> -->
+	<!-- <param name="diffusionPriorScalar" size="5" type="float" value="1" label="Diffusion Prior Scalar" help="Downgrade the significance of P(genotype combo | allele frequency) by taking the Nth root of this component of the prior"/> -->
+        <param name="postIntegLimitN" size="5" type="integer" value="1" label="Posterior Integration Limit N" help="See Limit M below."/>
+        <param name="postIntegLimitM" size="5" type="integer" value="3" label="Posterior Integration Limit M" help="Integrate all genotype combinations in our posterior space which include no more than N samples with their Mth best data likelihood."/>
+	<!-- <param name="postIntegBandwidth" size="5" type="integer" value="2" label="Posterior Integratoin Bandwidth" help="Integrate all genotype combinations in our posterior space which lie no more than N steps from the most likely combination in terms of data likelihoods, taking the N steps from the most to least likely genotype for each individual"/>
+	<param name="postIntegBanddepth" size="5" type="integer" value="2" label="Posterior Integratoin Banddepth" help="Generate all genotype combinations for which up to this number of samples have up to their -W'th worst genotype according to data likelihood"/> -->
+      </when>
+    </conditional>
+  </inputs>
+  <outputs>
+    <data format="vcf" name="output" metadata_source="bamfile" />
+  </outputs>
+  <tests>
+    <test>
+      <param name="refGenomeSource" value="history"/>
+      <param name="ownFile" ftype="fasta" value="mosaik_test_ref.fasta"/>
+      <param name="bamfile" ftype="bam" value="freebayes_in.bam"/>
+      <param name="source_select" value="pre_set"/>
+      <output name="output" file="freebayes_princeton_out.vcf" lines_diff="4"/>
+    </test>
+  </tests>
+  <help>
+	  This tool uses `Freebayes`__ to call SNPS given a reference sequence and a BAM alignment file.
+
+	  Base alignment quality (BAQ) adjustment is a quality smoothing filter which applies a hidden 
+	  markov model of read genesis to each alignment independently.  This is currently implemented
+	  by samtools fillmd.  (See Biological Sequence Analysis Probabilistic Models of Proteins and 
+	  Nucleic Acids by Durbin et. al. for more details.)
+
+	  Requires a coordinate-sorted BAM file. Galaxy currently coordinate-sorts all BAM files.
+
+	  .. __: http://bioinformatics.bc.edu/marthlab/FreeBayes
+  </help>
+</tool>

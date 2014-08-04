@@ -1,0 +1,62 @@
+- name: create database backup cron script
+  template: src="backup_pg_database.sh.j2" dest="{{ GALAXY_HOME }}/cron/backup_pg_database.sh"
+
+- name: create dataset cleanup cron script
+  template: src="dataset_cleanup.sh.j2" dest="{{ GALAXY_HOME }}/cron/dataset_cleanup.sh"
+
+- name: copy inidividual dataset cleanup scripts
+  copy: src="scripts" dest="{{ GALAXY_HOME }}/"
+
+- name: create user disk usage cron script
+  template: src="set_user_disk_usage.sh.j2" dest="{{ GALAXY_HOME }}/cron/set_user_disk_usage.sh"
+
+
+- name: set MAILTO in crontab
+  cron:
+    name: "MAILTO"
+    minute: "MAILTO={{ crontab_mailto }}"
+    hour: ""
+    day: ""
+    month: ""
+    weekday: ""
+    job: ""
+
+- name: crontab entry to backup Galaxy database
+  cron:
+    name: "backup galaxy database"
+    minute: "0"
+    hour: "1"
+    day: "*"
+    month: "*"
+    weekday: "*"
+    job: "{{ GALAXY_HOME }}cron/backup_pg_database.sh"
+
+- name: crontab entry to cleanup datasets
+  cron:
+    name: "cleanup galaxy datasets"
+    minute: "0"
+    hour: "2"
+    day: "*"
+    month: "*"
+    weekday: "*"
+    job: "export PATH=/usr/local/bin:$PATH; {{ GALAXY_HOME }}/cron/dataset_cleanup.sh >/dev/null"
+
+- name: crontab entry to set Galaxy user disk usage
+  cron:
+    name: "set galaxy user disk usage"
+    minute: "0"
+    hour: "4"
+    day: "*"
+    month: "*"
+    weekday: "*"
+    job: "export PATH=/usr/local/bin:$PATH; {{ GALAXY_HOME }}/cron/set_user_disk_usage.sh"
+
+- name: crontab entry to cleanup Galaxy temp files
+  cron:
+    name: "cleanup galaxy tempfiles"
+    minute: "0"
+    hour: "5"
+    day: "*"
+    month: "*"
+    weekday: "*"
+    job: "/usr/sbin/tmpwatch -u 168 {{ GALAXY_HOME }}/database/tmp"

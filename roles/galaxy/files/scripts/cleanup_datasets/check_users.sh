@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+userids=`psql -U galaxy -p 5431 -c "select email from galaxy_user where deleted = 'f';" -t | sed 's/@princeton.edu//'`
+
+echo $userids
+for line in $userids; do
+        echo -ne "$line - "
+        out=$(ldapsearch -h ldap.princeton.edu -p 389 -b "o=Princeton University,c=US" "(uid=$line)")
+        if [[ $? -ne 0 ]]; then
+            echo "ERROR executing ldapsearch"
+        else  
+            #if grep -q "numEntries: 1" <<<$out; then
+            echo $out
+            if [[ $out != "" ]]; then
+                    echo "FOUND"
+            else
+                    echo "NOT FOUND"
+            fi  
+        fi
+done 

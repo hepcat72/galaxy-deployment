@@ -1,0 +1,39 @@
+
+FastQC
+------
+
+From the FastQC website   http://www.bioinformatics.bbsrc.ac.uk/projects/fastqc/
+
+Function	A quality control tool for high throughput sequence data.
+Language	Java
+Requirements	A suitable Java Runtime Environment 
+		The Picard BAM/SAM Libraries (included in download)
+Code Maturity	Stable. Mature code, but feedback is appreciated.
+Code Released	Yes, under GPL v3 or later.
+Initial Contact	Simon Andrews
+
+FastQC aims to provide a simple way to do some quality control checks on raw sequence data coming from high throughput sequencing pipelines. It provides a modular set of analyses which you can use to give a quick impression of whether your data has any problems of which you should be aware before doing any further analysis.
+
+The main functions of FastQC are:
+
+- Import of data from BAM, SAM or FastQ files (any variant)
+- Providing a quick overview to tell you in which areas there may be problems
+- Summary graphs and tables to quickly assess your data
+- Export of results to an HTML based permanent report
+- Offline operation to allow automated generation of reports without running the interactive application
+
+Download and installation information is at: http://www.bioinformatics.bbsrc.ac.uk/projects/download.html#fastqc
+
+
+Galaxy Tool Wrapper
+-------------------
+
+The galaxy tool wrapper for FastQC requires version:   FastQC v0.7.2 
+
+FastQC should be downloaded and installed on the system on which it will be executed.  
+The PATH environment variable should include the directory in which the fastqc script resides.
+
+The fastqc.py wrapper invokes the fastqc script provided in FastQC download, 
+and converts the FastQC results into a Galaxy html formatted dataset.
+
+

@@ -1,0 +1,59 @@
+<tool id="bam_to_bigwig" name="BAM to BigWig" version="0.1">
+	<description>Calculates coverage from a BAM alignment file</description>
+	<requirements>
+		<requirement type="binary">genomeCoverageBed</requirement>
+		<requirement type="binary">bedGraphToBigWig</requirement>
+	</requirements>
+	<command>
+		genomeCoverageBed -ibam $align -bg $split -g 
+		`awk '($0 !~ /^#.*/) &amp;&amp; ($2 == "$align.dbkey") {print $3}' ${GALAXY_DATA_INDEX_DIR}/sam_fa_indices.loc`.fai
+		> tmp.bedgraph;
+		bedGraphToBigWig 
+		#if $settings.settingsType == "full":
+     			-blockSize=${settings.blockSize} -itemsPerSlot=${settings.itemsPerSlot} ${settings.unc}
+    		#end if
+		tmp.bedgraph 
+		`awk '($0 !~ /^#.*/) &amp;&amp; ($2 == "$align.dbkey") {print $3}' ${GALAXY_DATA_INDEX_DIR}/sam_fa_indices.loc`.fai
+	       	$out;
+	</command>
+	<inputs>
+		<param name="align" type="data" format="bam" label="Select the BAM file to generate the pileup file for">
+			<validator type="unspecified_build" />
+			<validator type="dataset_metadata_in_file" filename="sam_fa_indices.loc" metadata_name="dbkey" metadata_column="1" message="Sequences are not currently available for the specified build." line_startswith="index" />
+		</param>
+		<param name="split" type="boolean" value="false" label="Separate split reads" help="Do not use gaps when computing coverage. This is recommended for RNA-Seq where reads are mapped across long splice junctions. Uses the CIGAR &quot;N&quot; and &quot;D&quot; operations to infer the blocks for computing coverage." truevalue="-split" falsevalue="" /> 
+		 <conditional name="settings">
+      <param name="settingsType" type="select" label="Converter settings to use" help="Default settings should usually be used.">
+        <option value="preset">Default</option>
+        <option value="full">Full parameter list</option>
+      </param>
+      <when value="preset" />
+      <when value="full">
+        <param name="blockSize" size="4" type="integer" value="256" label="Items to bundle in r-tree" help="Default is 256 (blockSize)" />
+        <param name="itemsPerSlot" size="4" type="integer" value="1024" label="Data points bundled at lowest level" help="Default is 1024 (itemsPerSlot)" />
+        <param name="unc" type="boolean" truevalue="-unc" falsevalue="" checked="False" label="Do not use compression" help="(unc)"/>
+      </when>
+    </conditional>
+ 
+	</inputs>
+	<outputs>
+		<data format="bigwig" name="out" />
+	</outputs>
+
+	<help>
+		**What it does**
+
+		Creates a coverage file in BigWig format, given a BAM alignment file. 
+
+		**Input**
+
+		A BAM alignment file. This needs to have the genome database build used in alignment annotated. If your file has '?' for the database build, click on the pencil icon to edit the alignment attributes, and specify the organism used to align against.
+
+		The BAM file must also be sorted. If you generated the BAM file in Galaxy, this will be true, however, if you uploaded the file, you must make sure it was sorted.
+
+		**Output**
+
+		BigWig files can be loaded directly from Galaxy into the UCSC browser. They can be loaded incrementally by UCSC, so a single file can be used to represent the entire genome without having to upload the entire thing as a custom track.
+	</help>
+
+</tool>

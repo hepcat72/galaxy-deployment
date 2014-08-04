@@ -1,0 +1,13 @@
+Galaxy Server Cleanup
+---------------------
+The following Galaxy datasets imported from Princeton's HTSEQ Database are older than ${cutoff} days and have been DELETED:
+
+% for dataset, history in datasets:
+    "${dataset}" in history "${history}"
+% endfor
+
+These datasets remain available on HTSEQ, but have been deleted in the specified Galaxy Histories. You may be able to undelete them (for up to 10 days) by logging into Galaxy, navigating to the appropriate history, selecting "Include Deleted Datasets" from the history options menu, and clicking on the link to undelete each dataset that you want to keep.  
+
+In addition to this automated cleanup, we ask that all our users please delete inactive histories and datasets from the server.  Thank you for your understanding and cooporation in helping us keep the Galaxy resource available.  Please don't hesitate to contact us if you have any questions or concerns.
+
+ -- Galaxy Administrators
