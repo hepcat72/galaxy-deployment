@@ -1,4 +1,6 @@
 ---
+- include: scheduled_maintenance.yaml
+
 - name: stop galaxy
   sudo: yes
   sudo_user: galaxy

@@ -5,6 +5,15 @@
 - name: set galaxy user hg config
   copy: src="hg_config/.hgrc" dest="~"
 
+- name: error-documents
+  copy: src="error-documents" dest={{ GALAXY_HOME }}/../www/html/
+
+- name: set 503 error message
+  file: src="{{ GALAXY_HOME }}/../www/html/error-documents/503_outage.html"
+        dest="{{ GALAXY_HOME }}/../www/html/error-documents/503.html"
+        state=link
+        force=yes
+
 - name: Check if pid file exists.
   command: /usr/bin/test -e {{ GALAXY_HOME }}/web0.pid
   ignore_errors: True
@@ -52,9 +61,6 @@
   template: src=welcome.html.j2 dest={{ GALAXY_HOME }}/static/welcome.html
 
 - include: tool-dependencies.yaml
-
-- name: error-documents
-  copy: src="error-documents" dest={{ GALAXY_HOME }}/../www/html/
 
 - include: crontab.yaml
 

@@ -1,14 +1,33 @@
 - name: create database backup cron script
-  template: src="backup_pg_database.sh.j2" dest="{{ GALAXY_HOME }}/cron/backup_pg_database.sh"
+  template:
+    src: "backup_pg_database.sh.j2"
+    dest: "{{ GALAXY_HOME }}/cron/backup_pg_database.sh"
+    mode: 0755
 
 - name: create dataset cleanup cron script
-  template: src="dataset_cleanup.sh.j2" dest="{{ GALAXY_HOME }}/cron/dataset_cleanup.sh"
-
-- name: copy inidividual dataset cleanup scripts
-  copy: src="scripts" dest="{{ GALAXY_HOME }}/"
+  template:
+    src: "dataset_cleanup.sh.j2"
+    dest: "{{ GALAXY_HOME }}/cron/dataset_cleanup.sh"
+    mode: 0755
 
 - name: create user disk usage cron script
   template: src="set_user_disk_usage.sh.j2" dest="{{ GALAXY_HOME }}/cron/set_user_disk_usage.sh"
+
+- name: create scripts directory
+  file: dest={{ GALAXY_HOME }}/scripts/ state=directory
+
+- name: copy scripts
+  copy: src={{ item }} dest={{ GALAXY_HOME }}/scripts/ owner=galaxy mode=755
+  with_fileglob:
+        - scripts/*
+
+- name: create dataset_cleanup scripts directory
+  file: dest={{ GALAXY_HOME }}/scripts/cleanup_datasets state=directory
+
+- name: copy dataset_cleanup scripts
+  copy: src={{ item }} dest={{ GALAXY_HOME }}/scripts/cleanup_datasets owner=galaxy mode=755
+  with_fileglob:
+        - scripts/cleanup_datasets/*
 
 
 - name: set MAILTO in crontab
