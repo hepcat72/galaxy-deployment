@@ -50,22 +50,22 @@
     PATH: /usr/local/bin:{{ ansible_env.PATH }}
 
 - name: add legacy tools (not from toolshed)
-  copy: src="galaxy_legacy_tools/" dest="{{ GALAXY_HOME }}/tools/"
+  copy: src="galaxy_legacy_tools/" dest="{{ GALAXY_HOME }}/tools/" backup=yes
 
 - name: universe_wsgi.ini
-  template: src=universe_wsgi.ini.j2 dest={{ GALAXY_HOME }}/universe_wsgi.ini
+  template: src=universe_wsgi.ini.j2 dest={{ GALAXY_HOME }}/universe_wsgi.ini backup=yes
 
 - name: job_conf.xml
-  template: src=job_conf.xml.j2 dest={{ GALAXY_HOME }}/job_conf.xml
+  template: src=job_conf.xml.j2 dest={{ GALAXY_HOME }}/job_conf.xml backup=yes
 
 - name: reports_wsgi.ini
-  template: src=reports_wsgi.ini.j2 dest={{ GALAXY_HOME }}/reports_wsgi.ini
+  template: src=reports_wsgi.ini.j2 dest={{ GALAXY_HOME }}/reports_wsgi.ini backup=yes
 
 - name: tool_conf.xml
-  template: src=tool_conf.xml.j2 dest={{ GALAXY_HOME }}/tool_conf.xml
+  template: src=tool_conf.xml.j2 dest={{ GALAXY_HOME }}/tool_conf.xml backup=yes
 
 - name: welcome.html
-  template: src=welcome.html.j2 dest={{ GALAXY_HOME }}/static/welcome.html
+  template: src=welcome.html.j2 dest={{ GALAXY_HOME }}/static/welcome.html backup=yes
 
 - include: tool-dependencies.yaml
 

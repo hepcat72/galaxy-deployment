@@ -1,14 +1,14 @@
 ---
 - name: tool-dependencies
   copy: src="tool-dependencies" dest={{ GALAXY_HOME }}
-        recurse=yes state=directory
+        recurse=yes state=directory backup=yes
 
 - name: bamToBed
   file: src="{{ GALAXY_HOME }}/tool-dependencies/bedtools"
         dest="{{ GALAXY_HOME }}/tool-dependencies/bamToBed"
         state=link
 
-- name: coverageBed 
+- name: coverageBed
   file: src="{{ GALAXY_HOME }}/tool-dependencies/bedtools"
         dest="{{ GALAXY_HOME }}/tool-dependencies/coverageBed"
         state=link
