@@ -16,6 +16,12 @@
       dest: "{{ GALAXY_HOME }}/cron/set_user_disk_usage.sh"
       mode: 0755
 
+- name: create updateucsc cron script
+  template:
+      src: "updateucsc.sh.j2"
+      dest: "{{ GALAXY_HOME }}/cron/updateucsc.sh"
+      mode: 0755
+
 - name: create scripts directory
   file: dest={{ GALAXY_HOME }}/scripts/ state=directory
 
@@ -80,3 +86,13 @@
     month: "*"
     weekday: "*"
     job: "/usr/sbin/tmpwatch -u 168 {{ GALAXY_HOME }}/database/tmp"
+
+- name: crontab entry to update ucsc genomes
+  cron:
+    name: "update ucsc genomes"
+    minute: "0"
+    hour: "6"
+    day: "*"
+    month: "*"
+    weekday: "*"
+    job: "{{ GALAXY_HOME }}cron/updateucsc.sh"

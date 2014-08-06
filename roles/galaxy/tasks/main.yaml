@@ -55,6 +55,9 @@
 - name: add legacy tool test-data
   copy: src="galaxy_legacy_tools/test-data/" dest="{{ GALAXY_HOME }}/test-data/" backup=yes
 
+- name: add legacy jars
+  copy: src="galaxy_legacy_tools/tool-data/" dest="{{ GALAXY_HOME }}/tool-data/" backup=yes
+
 - name: universe_wsgi.ini
   template: src=universe_wsgi.ini.j2 dest={{ GALAXY_HOME }}/universe_wsgi.ini backup=yes
 
