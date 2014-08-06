@@ -7,3 +7,12 @@
   shell: "source {{ GALAXY_HOME }}/../galaxy-env/bin/activate && /bin/sh {{ GALAXY_HOME }}/run.sh --daemon"
 
 - include: normal_operation.yaml
+
+- name: start reports
+  sudo: yes
+  sudo_user: galaxy
+  environment:
+    GALAXY_RUN_ALL: 1
+  shell: "source {{ GALAXY_HOME }}/../galaxy-env/bin/activate && /bin/sh {{ GALAXY_HOME }}/run_reports.sh --daemon"
+
+

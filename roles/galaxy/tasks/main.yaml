@@ -11,13 +11,7 @@
         state=link
         force=yes
 
-- name: Check if pid file exists.
-  command: /usr/bin/test -e {{ GALAXY_HOME }}/web0.pid
-  ignore_errors: True
-  register: galaxy_running
-
 - include: stop.yaml
-  when: galaxy_running.rc == 0
 
 - name: set galaxy user hg config
   copy: src="hg_config/.hgrc" dest="~"

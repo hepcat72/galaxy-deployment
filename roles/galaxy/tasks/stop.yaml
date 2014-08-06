@@ -1,5 +1,11 @@
 ---
+- name: Check if galaxy pid file exists.
+  command: /usr/bin/test -e {{ GALAXY_HOME }}/web0.pid
+  ignore_errors: True
+  register: galaxy_running
+
 - include: scheduled_maintenance.yaml
+  when: galaxy_running.rc == 0
 
 - name: stop galaxy
   sudo: yes
@@ -7,3 +13,18 @@
   environment:
     GALAXY_RUN_ALL: 1
   shell: "source {{ GALAXY_HOME }}/../galaxy-env/bin/activate && /bin/sh {{ GALAXY_HOME }}/run.sh --stop-daemon"
+  when: galaxy_running.rc == 0
+
+- name: Check if reports pid file exists.
+  command: /usr/bin/test -e {{ GALAXY_HOME }}/reports_webapp.pid
+  ignore_errors: True
+  register: reports_running
+
+
+- name: stop reports
+  sudo: yes
+  sudo_user: galaxy
+  environment:
+    GALAXY_RUN_ALL: 1
+  shell: "source {{ GALAXY_HOME }}/../galaxy-env/bin/activate && /bin/sh {{ GALAXY_HOME }}/run_reports.sh --stop-daemon"
+  when: reports_running.rc == 0
