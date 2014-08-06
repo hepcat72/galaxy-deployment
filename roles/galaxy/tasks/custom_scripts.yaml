@@ -1,0 +1,16 @@
+---
+- name: create scripts directory
+  file: dest={{ GALAXY_HOME }}/scripts/ state=directory
+
+- name: copy scripts
+  copy: src={{ item }} dest={{ GALAXY_HOME }}/scripts/ owner=galaxy mode=755
+  with_fileglob:
+        - scripts/*
+
+- name: create scripts/loc_files directory
+  file: dest={{ GALAXY_HOME }}/scripts/loc_files state=directory
+
+- name: copy loc file update script
+  copy: src={{ item }} dest={{ GALAXY_HOME }}/scripts/loc_files owner=galaxy mode=755
+  with_fileglob:
+        - scripts/loc_files/*

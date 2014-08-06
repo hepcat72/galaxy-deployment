@@ -2,9 +2,6 @@
 - name: test connection
   ping:
 
-- name: set galaxy user hg config
-  copy: src="hg_config/.hgrc" dest="~"
-
 - name: error-documents
   copy: src="error-documents" dest={{ GALAXY_HOME }}/../www/html/
 
@@ -22,10 +19,26 @@
 - include: stop.yaml
   when: galaxy_running.rc == 0
 
+- name: set galaxy user hg config
+  copy: src="hg_config/.hgrc" dest="~"
+
+- stat: path="{{ GALAXY_HOME }}/.hg"
+  register: hg
+
+- name: pop galaxy patches
+  command: hg qpop -a
+  args:
+    chdir: "{{ GALAXY_HOME }}"
+  environment:
+    PATH: /usr/local/bin:{{ ansible_env.PATH }}
+  when: hg.stat.isdir is defined and hg.stat.isdir == true
+
+- include: backup_loc_files.yaml
+
 - name: checkout galaxy
   hg: repo=https://bitbucket.org/galaxy/galaxy-dist#stable
       dest={{ GALAXY_HOME }}
-      revision=d3b1f484c4b6
+      revision=f7dd0060c296
   environment:
     PATH: /usr/local/bin:{{ ansible_env.PATH }}
 
@@ -64,8 +77,7 @@
 
 - include: crontab.yaml
 
-- name: custom scripts
-  copy: src="scripts/" dest="{{ GALAXY_HOME }}/scripts/"
+- include: custom_scripts.yaml
 
 - include: start.yaml
 

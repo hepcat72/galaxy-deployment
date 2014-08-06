@@ -11,15 +11,13 @@
     mode: 0755
 
 - name: create user disk usage cron script
-  template: src="set_user_disk_usage.sh.j2" dest="{{ GALAXY_HOME }}/cron/set_user_disk_usage.sh"
+  template:
+      src: "set_user_disk_usage.sh.j2"
+      dest: "{{ GALAXY_HOME }}/cron/set_user_disk_usage.sh"
+      mode: 0755
 
 - name: create scripts directory
   file: dest={{ GALAXY_HOME }}/scripts/ state=directory
-
-- name: copy scripts
-  copy: src={{ item }} dest={{ GALAXY_HOME }}/scripts/ owner=galaxy mode=755
-  with_fileglob:
-        - scripts/*
 
 - name: create dataset_cleanup scripts directory
   file: dest={{ GALAXY_HOME }}/scripts/cleanup_datasets state=directory

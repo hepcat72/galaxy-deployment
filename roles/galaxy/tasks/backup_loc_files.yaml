@@ -1,0 +1,10 @@
+---
+- name: list sample loc files
+  shell: "ls -1 {{ GALAXY_HOME }}/tool-data/*.loc"
+  register: locfiles
+  ignore_errors: yes
+
+- name: backup loc files
+  shell: mv {{ item }} {{ item }}.backup
+  with_items:
+      - "{{ locfiles.stdout_lines }}"
