@@ -95,4 +95,4 @@
     day: "*"
     month: "*"
     weekday: "*"
-    job: "{{ GALAXY_HOME }}cron/updateucsc.sh"
+    job: "{{ GALAXY_HOME }}cron/updateucsc.sh >> {{ GALAXY_HOME }}/../logs/updateucsc.log"

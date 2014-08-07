@@ -539,7 +539,7 @@ log_level = {{ log_level }}
 # also causes the files used by PBS/SGE (submission script, output, and error)
 # to remain on disk after the job is complete.  Debug mode is disabled if
 # commented, but is uncommented by default in the sample config.
-debug = True
+debug = {{ debug }}
 
 # Check for WSGI compliance.
 #use_lint = False
@@ -579,7 +579,6 @@ use_interactive = {{ use_interactive }}
 # login ( email ).  The non-admin user is restricted to uploading files or
 # sub-directories of files contained in their directory.
 #user_library_import_dir = None
-user_library_import_dir = /seqarch/htseqdev/users
 
 # Add an option to the admin library upload tool allowing admins to paste
 # filesystem paths to files and directories in a box, and these paths will be
