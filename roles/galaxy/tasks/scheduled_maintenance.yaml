@@ -1,7 +1,0 @@
----
-- name: scheduled maintenance
-  sudo: yes
-  sudo_user: galaxy
-  file: src={{ GALAXY_HOME }}/../www/html/error-documents/503_scheduled_maintenance.html
-        dest={{ GALAXY_HOME }}/../www/html/error-documents/503.html
-        state=link

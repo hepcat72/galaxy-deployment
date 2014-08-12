@@ -5,13 +5,7 @@
 - name: error-documents
   copy: src="error-documents" dest={{ GALAXY_HOME }}/../www/html/
 
-- name: set 503 error message
-  file: src="{{ GALAXY_HOME }}/../www/html/error-documents/503_outage.html"
-        dest="{{ GALAXY_HOME }}/../www/html/error-documents/503.html"
-        state=link
-        force=yes
-
-- include: stop.yaml
+#- include: stop.yaml
 
 - name: set galaxy user hg config
   copy: src="hg_config/.hgrc" dest="~"
@@ -79,5 +73,5 @@
 
 - include: custom_scripts.yaml
 
-- include: start.yaml
+# - include: start.yaml
 

@@ -1,7 +1,0 @@
----
-- name: normal operation
-  sudo: yes
-  sudo_user: galaxy
-  file: src={{ GALAXY_HOME }}/../www/html/error-documents/503_outage.html
-        dest={{ GALAXY_HOME }}/../www/html/error-documents/503.html
-        state=link
