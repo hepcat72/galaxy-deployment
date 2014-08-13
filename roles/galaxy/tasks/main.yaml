@@ -2,6 +2,9 @@
 - name: test connection
   ping:
 
+- name: create error-documents folder
+  file: path={{ GALAXY_HOME }}/../www/html/error-documents/ state=directory
+
 - name: error-documents
   copy: src="error-documents" dest={{ GALAXY_HOME }}/../www/html/
 

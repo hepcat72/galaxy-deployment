@@ -1,99 +1,107 @@
 ---
-- name: tool-dependencies
-  copy: src="tool-dependencies" dest={{ GALAXY_HOME }}
-        recurse=yes state=directory backup=yes
 
-- name: bamToBed
+- name: make sure tool-dependencies folder exists
+  file: path="{{ GALAXY_HOME }}/tool-dependencies/" state=directory
+
+- name: tool-dependencies directory copy
+  copy: src="tool-dependencies/" dest="{{ GALAXY_HOME }}/tool-dependencies/"
+
+- name: bamToBed link
   file: src="{{ GALAXY_HOME }}/tool-dependencies/bedtools"
         dest="{{ GALAXY_HOME }}/tool-dependencies/bamToBed"
         state=link
 
-- name: coverageBed
+- name: coverageBed link
   file: src="{{ GALAXY_HOME }}/tool-dependencies/bedtools"
         dest="{{ GALAXY_HOME }}/tool-dependencies/coverageBed"
         state=link
 
-- name: genomeCoverageBed
+- name: genomeCoverageBed link
   file: src="{{ GALAXY_HOME }}/tool-dependencies/bedtools"
         dest="{{ GALAXY_HOME }}/tool-dependencies/genomeCoverageBed"
         state=link
 
-- name: intersectBed
+- name: intersectBed link
   file: src="{{ GALAXY_HOME }}/tool-dependencies/bedtools"
         dest="{{ GALAXY_HOME }}/tool-dependencies/intersectBed"
         state=link
 
-- name: multiIntersectBed
+- name: multiIntersectBed link
   file: src="{{ GALAXY_HOME }}/tool-dependencies/bedtools"
         dest="{{ GALAXY_HOME }}/tool-dependencies/multiIntersectBed"
         state=link
 
-- name: unionBedGraphs
+- name: unionBedGraphs link
   file: src="{{ GALAXY_HOME }}/tool-dependencies/bedtools"
         dest="{{ GALAXY_HOME }}/tool-dependencies/unionBedGraphs"
         state=link
 
-- name: bwa_default
+- name: bedtools_default link
+  file: src="{{ GALAXY_HOME }}/tool-dependencies/bedtools/2.16.2"
+        dest="{{ GALAXY_HOME }}/tool-dependencies/bedtools/default"
+        state=link force=yes
+
+- name: bwa_default link
   file: src="{{ GALAXY_HOME }}/tool-dependencies/bwa/0.5.10"
         dest="{{ GALAXY_HOME }}/tool-dependencies/bwa/default"
-        state=link
+        state=link force=yes
 
-- name: SICER_default
+- name: SICER_default link
   file: src="{{ GALAXY_HOME }}/tool-dependencies/SICER/1.1"
         dest="{{ GALAXY_HOME }}/tool-dependencies/SICER/default"
-        state=link
+        state=link force=yes
 
-- name: bowtie2_default
+- name: bowtie2_default link
   file: src="{{ GALAXY_HOME }}/tool-dependencies/bowtie2/2.1.0"
         dest="{{ GALAXY_HOME }}/tool-dependencies/bowtie2/default"
-        state=link
+        state=link force=yes
 
-- name: cufflinks_default
+- name: cufflinks_default link
   file: src="{{ GALAXY_HOME }}/tool-dependencies/cufflinks/2.1.1"
         dest="{{ GALAXY_HOME }}/tool-dependencies/cufflinks/default"
-        state=link
+        state=link force=yes
 
-- name: freebayes_default
+- name: freebayes_default link
   file: src="{{ GALAXY_HOME }}/tool-dependencies/freebayes/0.9.4"
         dest="{{ GALAXY_HOME }}/tool-dependencies/freebayes/default"
-        state=link
+        state=link force=yes
 
-- name: htseq_default
+- name: htseq_default link
   file: src="{{ GALAXY_HOME }}/tool-dependencies/htseq/0.5.3p9"
         dest="{{ GALAXY_HOME }}/tool-dependencies/htseq/default"
-        state=link
+        state=link force=yes
 
-- name: macs_default
+- name: macs_default link
   file: src="{{ GALAXY_HOME }}/tool-dependencies/macs/1.3.7.1"
         dest="{{ GALAXY_HOME }}/tool-dependencies/macs/default"
-        state=link
+        state=link force=yes
 
-- name: macs14_default
+- name: macs14_default link
   file: src="{{ GALAXY_HOME }}/tool-dependencies/macs14/1.4.2"
         dest="{{ GALAXY_HOME }}/tool-dependencies/macs14/default"
-        state=link
+        state=link force=yes
 
-- name: numpy_default
+- name: numpy_default link
   file: src="{{ GALAXY_HOME }}/tool-dependencies/numpy/1.6.2"
         dest="{{ GALAXY_HOME }}/tool-dependencies/numpy/default"
-        state=link
+        state=link force=yes
 
-- name: sambamba_default
+- name: sambamba_default link
   file: src="{{ GALAXY_HOME }}/tool-dependencies/sambamba/0.3.3"
         dest="{{ GALAXY_HOME }}/tool-dependencies/sambamba/default"
-        state=link
+        state=link force=yes
 
-- name: samtools_default
+- name: samtools_default link
   file: src="{{ GALAXY_HOME }}/tool-dependencies/samtools/0.1.18"
         dest="{{ GALAXY_HOME }}/tool-dependencies/samtools/default"
-        state=link
+        state=link force=yes
 
-- name: tophat_default
+- name: tophat_default link
   file: src="{{ GALAXY_HOME }}/tool-dependencies/tophat/1.4.0"
         dest="{{ GALAXY_HOME }}/tool-dependencies/tophat/default"
-        state=link
+        state=link force=yes
 
-- name: tophat2_default
+- name: tophat2_default link
   file: src="{{ GALAXY_HOME }}/tool-dependencies/tophat2/2.0.8b"
         dest="{{ GALAXY_HOME }}/tool-dependencies/tophat2/default"
-        state=link
+        state=link force=yes

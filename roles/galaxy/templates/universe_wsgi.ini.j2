@@ -102,6 +102,7 @@ paste.app_factory = galaxy.web.buildapp:app_factory
 # config file documentation.
 #database_connection = sqlite:///./database/universe.sqlite?isolation_level=IMMEDIATE
 database_connection = postgres://{{ database_user }}:{{ database_password }}@{{ database_location }}/galaxy
+
 # If the server logs errors about not having enough database pool connections,
 # you will want to increase these values, or consider running more Galaxy
 # processes.

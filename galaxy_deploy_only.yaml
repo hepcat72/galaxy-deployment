@@ -3,6 +3,6 @@
   sudo: yes
   sudo_user: galaxy
   vars_files:
-    -  "{{ env }}/secrets/passwords.yml"
+    -  "{{ env }}/secrets/passwords.yaml"
   roles:
     - galaxy
