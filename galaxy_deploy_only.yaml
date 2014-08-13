@@ -2,5 +2,7 @@
 - hosts: galaxy_servers
   sudo: yes
   sudo_user: galaxy
+  vars_files:
+    -  "{{ env }}/secrets/passwords.yml"
   roles:
     - galaxy

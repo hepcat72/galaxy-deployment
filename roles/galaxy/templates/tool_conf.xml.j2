@@ -3,7 +3,7 @@
   <section id="getext" name="Get Data">
     <tool file="data_source/upload.xml" />
     <tool file="data_source/htseq.xml" />
-    {% if development %}
+    {% if env == 'development' %}
     <tool file="data_source/htseq_dev.xml" />
     {% endif %}
     <tool file="data_source/ucsc_tablebrowser.xml" />
@@ -12,7 +12,7 @@
     <tool file="data_source/ebi_sra.xml" />
     <tool file="data_source/microbial_import.xml" />
     <tool file="data_source/biomart.xml" />
-    {% if development %}
+    {% if env == 'development' %}
     <tool file="data_source/biomart_test.xml" />
     {% endif %}
     <tool file="data_source/cbi_rice_mart.xml" />
@@ -20,7 +20,7 @@
     <tool file="data_source/fly_modencode.xml" />
     <tool file="data_source/worm_modencode.xml" />
     <tool file="data_source/wormbase.xml" />
-    {% if development %}
+    {% if env == 'development' %}
     <tool file="data_source/wormbase_test.xml" />
     {% endif %}
     <tool file="data_source/eupathdb.xml" />

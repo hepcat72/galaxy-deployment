@@ -1,0 +1,11 @@
+---
+env: production
+GALAXY_HOME: /Genomics/local/galaxy/galaxy-prod/
+crontab_mailto: biocomp@genomics.princeton.edu
+database_user: galaxy
+database_location: localhost:5431
+file_path: /ndata/local/galaxy/galaxy-prod/database/files
+new_file_path: database/tmp
+log_level: WARNING
+debug: False
+use_interactive: False
