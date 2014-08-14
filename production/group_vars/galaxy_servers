@@ -1,6 +1,6 @@
 ---
 env: production
-GALAXY_HOME: /Genomics/local/galaxy/galaxy-prod-ansible/
+GALAXY_HOME: /Genomics/local/galaxy/galaxy-prod/
 crontab_mailto: biocomp@genomics.princeton.edu
 database_user: galaxy
 database_location: localhost:5431
