@@ -1,6 +1,6 @@
 ---
 - name: backup loc files
   shell: mv {{ item }} {{ item }}.backup removes={{ item }}
-  with_fileglob: 
+  with_fileglob:
       - "{{ GALAXY_HOME }}/tool-data/*.loc"
       - "{{ GALAXY_HOME }}/tool_data_table_conf.xml"

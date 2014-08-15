@@ -1,0 +1,6 @@
+---
+- name: backup database
+  command: "{{ GALAXY_HOME }}/cron/backup_pg_database.sh"
+
+- name: backup galaxy maintained files
+  command: "{{ GALAXY_HOME }}/cron/backup_galaxy_maintained_files.sh"

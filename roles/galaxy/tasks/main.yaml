@@ -8,8 +8,6 @@
 - name: error-documents
   copy: src="error-documents" dest={{ GALAXY_HOME }}/../www/html/
 
-#- include: stop.yaml
-
 - name: set galaxy user hg config
   copy: src="hg_config/.hgrc" dest="~"
 
@@ -26,18 +24,35 @@
 
 - include: backup_loc_files.yaml
 
+- name: Get current Galaxy changeset
+  command: hg parents --template '{latesttag}' chdir={{ GALAXY_HOME }}
+  environment:
+    PATH: /usr/local/bin:{{ ansible_env.PATH }}
+  register: current_changeset_id
+  changed_when: False
+
+- name: Report current Galaxy changeset
+  debug:
+    msg: "Current changeset of {{ GALAXY_HOME }} {{ current_changeset_id.stdout }} does not match playbook version {{ hg_revision }}"
+  changed_when: True
+  when: current_changeset_id.stdout != hg_revision
+
 - name: checkout galaxy
   hg: repo=https://bitbucket.org/galaxy/galaxy-dist#stable
       dest={{ GALAXY_HOME }}
-      revision=f7dd0060c296
+      revision={{ hg_revision }}
   environment:
     PATH: /usr/local/bin:{{ ansible_env.PATH }}
+  #notify:
+  #  - restart galaxy
 
 - name: checkout galaxy patches
   hg: repo=https://bitbucket.org/princeton_genomics/galaxy_patches
       dest={{ GALAXY_HOME }}/.hg/patches
   environment:
     PATH: /usr/local/bin:{{ ansible_env.PATH }}
+  #notify:
+  #  - restart galaxy
 
 - name: apply galaxy patches
   command: hg qpush -a
@@ -76,5 +91,19 @@
 
 - include: custom_scripts.yaml
 
-# - include: start.yaml
+- name: Get current Galaxy DB version
+  command: "{{ galaxy_venv_dir }}/bin/python {{ GALAXY_HOME }}/scripts/manage_db.py db_version chdir={{ GALAXY_HOME }}"
+  register: current_db_version
+  changed_when: False
 
+- name: Get maximum Galaxy DB version
+  command: "{{ galaxy_venv_dir }}/bin/python {{ GALAXY_HOME }}/scripts/manage_db.py version chdir={{ GALAXY_HOME }}"
+  register: max_db_version
+  changed_when: False
+
+- include: backup_database.yaml
+  when: current_db_version.stdout != max_db_version.stdout
+
+- name: Upgrade Galaxy DB
+  command: "{{ galaxy_venv_dir }}/bin/python {{ GALAXY_HOME }}/scripts/manage_db.py upgrade chdir={{ GALAXY_HOME }}"
+  when: current_db_version.stdout != max_db_version.stdout

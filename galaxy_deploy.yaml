@@ -2,6 +2,6 @@
 - hosts: galaxy_servers
   sudo: yes
   sudo_user: galaxy
-- include: galaxy_stop.yaml
+#- include: galaxy_stop.yaml
 - include: galaxy_deploy_only.yaml
-- include: galaxy_start.yaml
+#- include: galaxy_start.yaml
