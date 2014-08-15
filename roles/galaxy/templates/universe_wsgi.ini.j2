@@ -101,7 +101,7 @@ paste.app_factory = galaxy.web.buildapp:app_factory
 # instead.  This string takes many options which are explained in detail in the
 # config file documentation.
 #database_connection = sqlite:///./database/universe.sqlite?isolation_level=IMMEDIATE
-database_connection = postgres://{{ database_user }}:{{ database_password }}@{{ database_location }}/galaxy
+database_connection = postgresql://{{ database_user }}:{{ database_password }}@{{ database_location }}/galaxy
 
 # If the server logs errors about not having enough database pool connections,
 # you will want to increase these values, or consider running more Galaxy
@@ -166,7 +166,7 @@ tool_config_file = tool_conf.xml,shed_tool_conf.xml
 tool_dependency_dir = tool-dependencies
 
 # Enable automatic polling of relative tool sheds to see if any updates
-# are available for installed repositories.  Ideally only one Galaxy 
+# are available for installed repositories.  Ideally only one Galaxy
 # server process should be able to check for repository updates.  The
 # setting for hours_between_check should be an integer between 1 and 24.
 #enable_tool_shed_check = False
@@ -220,7 +220,7 @@ visualization_plugins_directory = config/plugins/visualizations
 # used for the cache
 #template_cache_path = database/compiled_templates
 
-# External service types config file, defines what types of external_services configurations 
+# External service types config file, defines what types of external_services configurations
 # are available in Galaxy.
 #external_service_type_config_file = external_service_types_conf.xml
 
@@ -330,15 +330,15 @@ error_email_to = biocomp@genomics.princeton.edu
 
 # -- Account activation
 
-# This is user account activation feature global flag. If set to "False" the rest of the Account 
+# This is user account activation feature global flag. If set to "False" the rest of the Account
 # activation configuration is ignored and user activation is disabled (a.k.a. accounts are active since registration).
 # Note the activation is also not working in case the smtp server is not defined.
 #user_activation_on = False
 
-# Activation grace period. Activation is not forced (login is not disabled) until 
+# Activation grace period. Activation is not forced (login is not disabled) until
 # grace period has passed. Users under grace period can't run jobs (see inactivity_box_content).
-# In hours. Default is 3. Enter 0 to disable grace period. 
-# Users with OpenID logins have grace period forever. 
+# In hours. Default is 3. Enter 0 to disable grace period.
+# Users with OpenID logins have grace period forever.
 #activation_grace_period = 0
 
 # Used for warning box for inactive accounts (unable to run jobs).
@@ -408,7 +408,7 @@ brand = Princeton Genomics
 # - $iso8601 (complete format string as specified by ISO 8601 international standard).
 # pretty_datetime_format = $locale (UTC)
 
-# The URL of the page to display in Galaxy's middle pane when loaded. This can be 
+# The URL of the page to display in Galaxy's middle pane when loaded. This can be
 # an absolute or relative URL.
 #welcome_url = /static/welcome.html
 
@@ -441,7 +441,7 @@ support_url = http://www.princeton.edu/genomics/sequencing/instructions/data-ana
 # The URL linked by the "Galaxy Q&A" link in the "Help" menu
 # The Galaxy Q&A site is under development; when the site is done, this URL
 # will be set and uncommented.
-# qa_url = 
+# qa_url =
 
 # Serve static content, which must be enabled if you're not serving it via a
 # proxy server.  These options should be self explanatory and so are not
@@ -593,7 +593,7 @@ allow_library_path_paste = True
 # if testing shows that Galaxy is able to create files using these formats.
 # Specific formats can be disabled with this option, separate more than one
 # format with commas.  Available formats are currently 'zip', 'gz', and 'bz2'.
-#disable_library_comptypes = 
+#disable_library_comptypes =
 
 # Some sequencer integration features in beta allow you to automatically
 # transfer datasets.  This is done using a lightweight transfer manager which
@@ -751,7 +751,7 @@ enable_quotas = True
 #enable_data_manager_user_view = False
 # File where Data Managers are configured
 #data_manager_config_file = data_manager_conf.xml
-# File where Tool Shed based Data Managers are configured 
+# File where Tool Shed based Data Managers are configured
 #shed_data_manager_config_file = shed_data_manager_conf.xml
 # Directory to store Data Manager based tool-data; defaults to tool_data_path
 #galaxy_data_manager_data_path = tool-data
@@ -864,11 +864,11 @@ enable_quotas = True
 
 # ---- Galaxy External Message Queue -------------------------------------------------
 
-# Galaxy uses AMQ protocol to receive messages from external sources like 
+# Galaxy uses AMQ protocol to receive messages from external sources like
 # bar code scanners. Galaxy has been tested against RabbitMQ AMQP implementation.
-# For Galaxy to receive messages from a message queue the RabbitMQ server has 
+# For Galaxy to receive messages from a message queue the RabbitMQ server has
 # to be set up with a user account and other parameters listed below. The 'host'
-# and 'port' fields should point to where the RabbitMQ server is running. 
+# and 'port' fields should point to where the RabbitMQ server is running.
 
 [galaxy_amqp]
 

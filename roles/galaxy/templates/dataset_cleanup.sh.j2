@@ -1,16 +1,12 @@
 #!/bin/sh
 
-# Wrapping the scripts using the following patterns allows us to prevent useless errors from
-# getting reported (http://www.burgerbum.com/stderr_pipe.html)
-# ( COMMAND 3>&1 1>&2 2>&3 | grep -v ANNOYING_ERRORS ) 3>&1 1>&2 2>&3 | grep TARGET_STRINGS
-
 # Run galaxy dataset cleanup scripts in recommended order
-( sh {{ GALAXY_HOME }}/scripts/cleanup_datasets/delete_userless_histories_princeton.sh 3>&1 1>&2 2>&3 | grep -v SADeprecationWarning) 3>&1 1>&2 2>&3
-( sh {{ GALAXY_HOME }}/scripts/cleanup_datasets/purge_histories_princeton.sh 3>&1 1>&2 2>&3 | grep -v SADeprecationWarning) 3>&1 1>&2 2>&3
-( sh {{ GALAXY_HOME }}/scripts/cleanup_datasets/purge_libraries_princeton.sh 3>&1 1>&2 2>&3 | grep -v SADeprecationWarning) 3>&1 1>&2 2>&3
-( sh {{ GALAXY_HOME }}/scripts/cleanup_datasets/purge_folders_princeton.sh 3>&1 1>&2 2>&3 | grep -v SADeprecationWarning) 3>&1 1>&2 2>&3
-( sh {{ GALAXY_HOME }}/scripts/cleanup_datasets/delete_datasets_princeton.sh 3>&1 1>&2 2>&3 | grep -v SADeprecationWarning) 3>&1 1>&2 2>&3
-( sh {{ GALAXY_HOME }}/scripts/cleanup_datasets/purge_datasets_princeton.sh 3>&1 1>&2 2>&3 | grep -v SADeprecationWarning) 3>&1 1>&2 2>&3
+sh {{ GALAXY_HOME }}/scripts/cleanup_datasets/delete_userless_histories_princeton.sh
+sh {{ GALAXY_HOME }}/scripts/cleanup_datasets/purge_histories_princeton.sh
+sh {{ GALAXY_HOME }}/scripts/cleanup_datasets/purge_libraries_princeton.sh
+sh {{ GALAXY_HOME }}/scripts/cleanup_datasets/purge_folders_princeton.sh
+sh {{ GALAXY_HOME }}/scripts/cleanup_datasets/delete_datasets_princeton.sh
+sh {{ GALAXY_HOME }}/scripts/cleanup_datasets/purge_datasets_princeton.sh
 
 # Run administrative datasets cleanup
-( sh {{ GALAXY_HOME }}/scripts/cleanup_datasets/admin_delete_datasets_princeton.sh 3>&1 1>&2 2>&3 | grep -v SADeprecationWarning) 3>&1 1>&2 2>&3
+sh {{ GALAXY_HOME }}/scripts/cleanup_datasets/admin_delete_datasets_princeton.sh
