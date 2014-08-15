@@ -1,0 +1,7 @@
+#!/bin/bash
+
+for FILE in migrated_tools_conf.xml shed_tool_conf.xml shed_tool_data_table_conf.xml; do
+    NOW=$(date +"%Y-%m-%d@%H:%M")
+    BACKUP_FILE="${FILE}.${NOW}~"
+    cp -u "{{ GALAXY_HOME }}/${FILE}" "{{ GALAXY_HOME }}/${BACKUP_FILE}"
+done

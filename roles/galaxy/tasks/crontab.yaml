@@ -1,26 +1,14 @@
-- name: create database backup cron script
+- name: create cron scripts from templates
   template:
-    src: "backup_pg_database.sh.j2"
-    dest: "{{ GALAXY_HOME }}/cron/backup_pg_database.sh"
+    src: "{{ item }}.j2"
+    dest: "{{ GALAXY_HOME }}/cron/{{ item }}"
     mode: 0755
-
-- name: create dataset cleanup cron script
-  template:
-    src: "dataset_cleanup.sh.j2"
-    dest: "{{ GALAXY_HOME }}/cron/dataset_cleanup.sh"
-    mode: 0755
-
-- name: create user disk usage cron script
-  template:
-      src: "set_user_disk_usage.sh.j2"
-      dest: "{{ GALAXY_HOME }}/cron/set_user_disk_usage.sh"
-      mode: 0755
-
-- name: create updateucsc cron script
-  template:
-      src: "updateucsc.sh.j2"
-      dest: "{{ GALAXY_HOME }}/cron/updateucsc.sh"
-      mode: 0755
+  with_items:
+      - "backup_pg_database.sh"
+      - "backup_galaxy_maintained_files.sh"
+      - "dataset_cleanup.sh"
+      - "set_user_disk_usage.sh"
+      - "updateucsc.sh"
 
 - name: create scripts directory
   file: dest={{ GALAXY_HOME }}/scripts/ state=directory
@@ -56,6 +44,16 @@
     month: "*"
     weekday: "*"
     job: "{{ GALAXY_HOME }}cron/backup_pg_database.sh"
+
+- name: crontab entry to backup Galaxy maintained files
+  cron:
+    name: "backup galaxy maintained files"
+    minute: "0"
+    hour: "1"
+    day: "*"
+    month: "*"
+    weekday: "*"
+    job: "{{ GALAXY_HOME }}cron/backup_galaxy_maintained_files.sh"
 
 - name: crontab entry to cleanup datasets
   cron:
