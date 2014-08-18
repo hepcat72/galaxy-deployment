@@ -37,6 +37,11 @@
   changed_when: True
   when: current_changeset_id.stdout != hg_revision
 
+- name: Get current tool migration stages
+  shell: ls -1 *tools.sh | sort chdir={{ GALAXY_HOME }}/scripts/migrate_tools/
+  register: current_tool_migration_stages
+  changed_when: False
+
 - name: checkout galaxy
   hg: repo=https://bitbucket.org/galaxy/galaxy-dist#stable
       dest={{ GALAXY_HOME }}
@@ -45,6 +50,11 @@
     PATH: /usr/local/bin:{{ ansible_env.PATH }}
   #notify:
   #  - restart galaxy
+
+- name: Get updated tool migration stage
+  shell: ls -1 *tools.sh | sort chdir={{ GALAXY_HOME }}/scripts/migrate_tools/
+  register: updated_tool_migration_stages
+  changed_when: False
 
 - name: checkout galaxy patches
   hg: repo=https://bitbucket.org/princeton_genomics/galaxy_patches
@@ -107,3 +117,31 @@
 - name: Upgrade Galaxy DB
   command: "{{ galaxy_venv_dir }}/bin/python {{ GALAXY_HOME }}/scripts/manage_db.py upgrade chdir={{ GALAXY_HOME }}"
   when: current_db_version.stdout != max_db_version.stdout
+
+- name: Report current tool migration stage
+  debug:
+    msg: "There are {{ updated_tool_migration_stages.stdout_lines|length - current_tool_migration_stages.stdout_lines|length }} new tool migration stages for {{ GALAXY_HOME }}"
+  changed_when: True
+  when: current_tool_migration_stages.stdout_lines|length != updated_tool_migration_stages.stdout_lines|length
+
+- name: Run tool migrations
+  shell: ". {{ galaxy_venv_dir}}/bin/activate && sh ./scripts/migrate_tools/{{ item }} install_dependencies chdir={{ GALAXY_HOME }}"
+  changed_when: True
+  when: updated_tool_migration_stages.stdout_lines|length - current_tool_migration_stages.stdout_lines|length > 0
+  with_items:
+    updated_tool_migration_stages.stdout_lines[-(updated_tool_migration_stages.stdout_lines|length - current_tool_migration_stages.stdout_lines|length)]
+
+- name: Create tool_conf.xml patch
+  shell: "diff -u tool_conf.xml-pre-stage-{{ item[:4] }} tool_conf.xml > tool_conf.xml-{{ item[:4] }}.diff chdir={{ GALAXY_HOME }} creates={{ GALAXY_HOME }}/tool_conf.xml-{{ item[:4] }}.diff"
+  changed_when: True
+  when: updated_tool_migration_stages.stdout_lines|length - current_tool_migration_stages.stdout_lines|length > 0
+  with_items:
+    updated_tool_migration_stages.stdout_lines[-1]
+  register: diff_result
+  failed_when: diff_result.rc > 1
+
+- name: Fetch tool_conf.xml diff
+  fetch: src={{ GALAXY_HOME }}/tool_conf.xml-{{ item[:4] }}.diff dest=tool_conf_diffs/{{ ansible_hostname }}/tool_conf.xml-{{ item[:4] }}.diff flat=yes
+  when: updated_tool_migration_stages.stdout_lines|length - current_tool_migration_stages.stdout_lines|length > 0
+  with_items:
+    updated_tool_migration_stages.stdout_lines[-1]
