@@ -37,7 +37,6 @@
   </section>
   <section id="textutil" name="Text Manipulation">
     <tool file="filters/fixedValueColumn.xml" />
-    <tool file="stats/column_maker.xml" />
     <tool file="filters/catWrapper.xml" />
     <tool file="filters/cutWrapper.xml" />
     <tool file="filters/mergeCols.xml" />
@@ -53,8 +52,7 @@
     <tool file="filters/trimmer.xml" />
     <tool file="filters/wc_gnu.xml" />
     <tool file="filters/secure_hash_message_digest.xml" />
-    <tool file="stats/dna_filtering.xml" />
-  </section>
+    </section>
   <section id="filter" name="Filter and Sort">
     <tool file="stats/filtering.xml" />
     <tool file="filters/sorter.xml" />
@@ -117,22 +115,12 @@
   <section id="stats" name="Statistics">
     <tool file="stats/gsummary.xml" />
     <tool file="filters/uniq.xml" />
-    <tool file="stats/cor.xml" />
-    <tool file="stats/generate_matrix_for_pca_lda.xml" />
-    <tool file="stats/lda_analy.xml" />
-    <tool file="stats/plot_from_lda.xml" />
-    <tool file="stats/MINE.xml" />
-    
     <label id="gff" text="GFF" />
-    <tool file="stats/count_gff_features.xml" />
-  </section>
+    </section>
   <section id="plots" name="Graph/Display Data">
-    <tool file="plotting/histogram2.xml" />
-    <tool file="plotting/scatterplot.xml" />
     <tool file="plotting/bar_chart.xml" />
     <tool file="plotting/boxplot.xml" />
     <tool file="visualization/LAJ.xml" />
-    <tool file="visualization/build_ucsc_custom_track.xml" />
     <tool file="maf/vcf_to_maf_customtrack.xml" />
     <tool file="mutation/visualize.xml" />
   </section>
@@ -147,7 +135,7 @@
     <tool file="meme/fimo.xml" />
   </section>
 
-  <label text="High Throughput Sequencing" id="HTSeq" />
+  <label id="HTSeq" text="High Throughput Sequencing" />
   <section id="NGS_QC" name="NGS: QC and manipulation">
     
     <label id="fastqcsambam" text="FastQC: fastq/sam/bam" />
@@ -195,7 +183,7 @@
   </section>
   <section id="gatk" name="NGS: GATK Tools (beta)">
   </section>
-  <section name="NGS: Variant Detection" id="variant_detection">
+  <section id="variant_detection" name="NGS: Variant Detection">
     <tool file="freebayes/freebayes.xml" />
   </section>  
   <section id="ngs-simulation" name="NGS: Simulation">
@@ -207,7 +195,6 @@
     <tool file="phenotype_association/sift.xml" />
     <tool file="phenotype_association/linkToGProfile.xml" />
     <tool file="phenotype_association/linkToDavid.xml" />
-    <tool file="phenotype_association/snpFreq.xml" />
     <tool file="phenotype_association/ldtools.xml" />
     <tool file="phenotype_association/pass.xml" />
     <tool file="phenotype_association/gpass.xml" />
@@ -216,6 +203,5 @@
     <tool file="phenotype_association/lps.xml" />
     -->
     <tool file="phenotype_association/master2pg.xml" />
-    <tool file="phenotype_association/vcf2pgSnp.xml" />
-  </section>
+    </section>
 </toolbox>

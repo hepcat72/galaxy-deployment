@@ -2,7 +2,7 @@
 env: production
 GALAXY_HOME: /Genomics/local/galaxy/galaxy-prod/
 galaxy_venv_dir: /Genomics/local/galaxy/galaxy-env/
-hg_revision: latest_2014.06.02
+hg_revision: latest_2014.08.11
 crontab_mailto: biocomp@genomics.princeton.edu
 database_user: galaxy
 database_location: localhost:5431
