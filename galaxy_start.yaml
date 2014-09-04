@@ -11,7 +11,7 @@
     environment:
       GALAXY_RUN_ALL: 1
       PATH: "/usr/local/bin:{{ ansible_env.PATH }}"
-    shell: "source {{ GALAXY_HOME }}/../galaxy-env/bin/activate && /bin/sh {{ GALAXY_HOME }}/run.sh --daemon"
+    shell: "/bin/sh {{ GALAXY_HOME }}/run.sh --daemon"
 
   - name: normal operation
     sudo: yes
@@ -26,4 +26,4 @@
     environment:
       GALAXY_RUN_ALL: 1
       PATH: "/usr/local/bin:{{ ansible_env.PATH }}"
-    shell: "source {{ GALAXY_HOME }}/../galaxy-env/bin/activate && /bin/sh {{ GALAXY_HOME }}/run_reports.sh --daemon"
+    shell: "/bin/sh {{ GALAXY_HOME }}/run_reports.sh --daemon"

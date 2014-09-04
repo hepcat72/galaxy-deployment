@@ -1,7 +1,7 @@
 ---
 env: development
 GALAXY_HOME: /Genomics/local/galaxy-dev/galaxy-dev/
-galaxy_venv_dir: /Genomics/local/galaxy-dev/galaxy-env/
+galaxy_venv_dir: /Genomics/local/galaxy-dev/galaxy-dev/.venv
 hg_revision: latest_2014.08.11
 crontab_mailto: lparsons@genomics.princeton.edu
 database_user: galaxy

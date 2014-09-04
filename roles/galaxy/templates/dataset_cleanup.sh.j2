@@ -1,5 +1,15 @@
 #!/bin/sh
 
+cd `dirname $0`/..
+
+# If there is a .venv/ directory, assume it contains a virtualenv that we
+# should run this instance in.
+if [ -d .venv ];
+then
+    . .venv/bin/activate
+    export PATH={{ GALAXY_HOME }}/.venv/bin:$PATH # Need this for sub-shells
+fi
+
 # Run galaxy dataset cleanup scripts in recommended order
 sh {{ GALAXY_HOME }}/scripts/cleanup_datasets/delete_userless_histories_princeton.sh
 sh {{ GALAXY_HOME }}/scripts/cleanup_datasets/purge_histories_princeton.sh

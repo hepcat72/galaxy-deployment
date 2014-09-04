@@ -6,6 +6,14 @@
 
 # Set galaxy home directory
 GALAXY_HOME={{ GALAXY_HOME }}
+cd {{ GALAXY_HOME }}
+
+# If there is a .venv/ directory, assume it contains a virtualenv that we
+# should run this instance in.
+if [ -d .venv ];
+then
+    . .venv/bin/activate
+fi
 
 LOG_FILE=${GALAXY_HOME}/../logs/set_user_disk_usage.log
 NOW=$(date +"%Y-%m-%d %H:%M:%S")
@@ -13,5 +21,6 @@ HEADER="\n\
 ${NOW}\n\
 ==================="
 echo -e "${HEADER}" >> ${LOG_FILE}
+cd ${GALAXY_HOME}
 # Run set_user_disk_usage.py script, ignoring some warnings
 ( ( python ${GALAXY_HOME}/scripts/set_user_disk_usage.py 3>&1 1>&2 2>&3 | grep -v SADeprecationWarning) 3>&1 1>&2 2>&3 ) 1>>${LOG_FILE}
