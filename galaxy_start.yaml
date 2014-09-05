@@ -10,7 +10,7 @@
     sudo_user: galaxy
     environment:
       GALAXY_RUN_ALL: 1
-      PATH: "/usr/local/bin:{{ ansible_env.PATH }}"
+      PATH: "/usr/local/bin:/usr/local/galaxy_dependencies/bedtools/2.16.2/bin:{{ ansible_env.PATH }}"
     shell: "/bin/sh {{ GALAXY_HOME }}/run.sh --daemon"
 
   - name: normal operation
@@ -25,5 +25,4 @@
     sudo_user: galaxy
     environment:
       GALAXY_RUN_ALL: 1
-      PATH: "/usr/local/bin:{{ ansible_env.PATH }}"
     shell: "/bin/sh {{ GALAXY_HOME }}/run_reports.sh --daemon"
