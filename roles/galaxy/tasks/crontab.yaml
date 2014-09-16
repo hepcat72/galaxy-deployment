@@ -92,5 +92,5 @@
     hour: "6"
     day: "*"
     month: "*"
-    weekday: "*"
+    weekday: "mon-sat"
     job: "{{ GALAXY_HOME }}cron/updateucsc.sh >> {{ GALAXY_HOME }}/../logs/updateucsc.log"

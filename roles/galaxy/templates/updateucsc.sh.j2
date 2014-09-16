@@ -6,6 +6,16 @@
 
 # Edit this line to refer to galaxy's path:
 GALAXY={{ GALAXY_HOME }}
+
+cd "$GALAXY"
+
+# If there is a .venv/ directory, assume it contains a virtualenv that we
+# should run this instance in.
+if [ -d .venv ];
+then
+    . .venv/bin/activate
+fi
+
 PYTHONPATH=${GALAXY}/lib
 export PYTHONPATH
 
