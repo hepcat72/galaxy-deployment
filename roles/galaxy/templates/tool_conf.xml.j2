@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <toolbox>
+  <label id="Data" text="Get and Send Data" />
   <section id="getext" name="Get Data">
     <tool file="data_source/upload.xml" />
     <tool file="data_source/htseq.xml" />
@@ -32,9 +33,118 @@
   <section id="send" name="Send Data">
     <tool file="genomespace/genomespace_exporter.xml" />
   </section>
+
+  <label id="HTSeq" text="High Throughput Sequencing" />
+  <section id="NGS_QC" name="HTS: FASTQ Manipulation and QC">
+    <tool file="next_gen_conversion/solid2fastq.xml" />
+    <tool file="solid_tools/solid_qual_stats.xml" />
+  </section>
+  <section id="HTS_Simulation" name="HTS: Simulation">
+    <tool file="ngs_simulation/ngs_simulation.xml" />
+  </section>
+  <section id="solexa_tools" name="HTS: Mapping">
+    <tool file="sr_mapping/bwa_wrapper_princeton.xml" />
+    <tool file="sr_mapping/srma_wrapper.xml" />
+  </section>
+  <section id="samtools" name="HTS: SAM/BAM Manipulation"> </section>
+  <section id="picard_beta" name="HTS: Picard (Beta) (Mapping Stats and QC)"> </section>
+  <section id="ngs:_rna-seq_qc" name="HTS: RNA-Seq QC" version=""> </section>
+  <section id="ngs-rna-tools" name="HTS: RNA-Seq Analysis"> </section>
+  <section id="peak_calling" name="HTS: Peakcalling (ChIP-Seq)"> </section>
+  <section id="gatk" name="HTS: GATK - Genome Analysis Toolkit (Beta)"> </section>
+
+  <label id="Variant_Analysis" text="Variant Analysis" />
+  <section id="variant_detection" name="Variant Detection and Analysis">
+    <tool file="freebayes/freebayes.xml" />
+    <tool file="evolution/codingSnps.xml" />
+  </section>
+  <section id="vcf_tools" name="VCF Manipulation"> </section>
+  <section id="snpEff" name="SNPEff: SNP Effect Predictor"> </section>
+  <section id="hyphy" name="Evolution"> </section>
+  <section id="Genomic_Diversity" name="Genomic Diversity"> </section>
+  <section id="hgv" name="Phenotype Association">
+    <tool file="evolution/codingSnps.xml" />
+    <tool file="evolution/add_scores.xml" />
+    <tool file="phenotype_association/sift.xml" />
+    <tool file="phenotype_association/linkToGProfile.xml" />
+    <tool file="phenotype_association/linkToDavid.xml" />
+    <tool file="phenotype_association/ldtools.xml" />
+    <tool file="phenotype_association/pass.xml" />
+    <tool file="phenotype_association/gpass.xml" />
+    <tool file="phenotype_association/beam.xml" />
+    <!-- lpt_tool not installed
+    <tool file="phenotype_association/lps.xml" />
+    -->
+    <tool file="phenotype_association/master2pg.xml" />
+  </section>
+
+  <label id="Genomic_Annotation_Analysis" text="Genomic Annotation Analysis" />
+  <section id="bxops" name="Operate on Genomic Intervals"> </section>
+  <section id="bedtools" name="BEDTools"> </section>
   <section id="liftOver" name="Lift-Over">
     <tool file="extract/liftOver_wrapper.xml" />
   </section>
+  <section id="features" name="Extract Features">
+    <tool file="filters/ucsc_gene_bed_to_exon_bed.xml" />
+  </section>
+  <section id="fetchSeq" name="Fetch Sequences">
+    <tool file="extract/extract_genomic_dna.xml" />
+  </section>
+  <section id="fetchAlign" name="Fetch Alignments">
+    <tool file="maf/interval2maf_pairwise.xml" />
+    <tool file="maf/interval2maf.xml" />
+    <tool file="maf/maf_split_by_species.xml" />
+    <tool file="maf/interval_maf_to_merged_fasta.xml" />
+    <tool file="maf/genebed_maf_to_fasta.xml" />
+    <tool file="maf/maf_stats.xml" />
+    <tool file="maf/maf_thread_for_species.xml" />
+    <tool file="maf/maf_limit_to_species.xml" />
+    <tool file="maf/maf_limit_size.xml" />
+    <tool file="maf/maf_by_block_number.xml" />
+    <tool file="maf/maf_reverse_complement.xml" />
+    <tool file="maf/maf_filter.xml" />
+  </section>
+  <section id="scores" name="Get Genomic Scores">
+    <tool file="filters/wiggle_to_simple.xml" />
+    <tool file="stats/aggregate_binned_scores_in_intervals.xml" />
+  </section>
+  <section id="regVar" name="Regional Variation"> </section>
+
+  <label id="sequence_analysis" text="Sequence Analysis" />
+  <section id="fasta_manipulation" name="FASTA Manipulation"> </section>
+  <section id="clustal" name="Multiple Alignments"> </section>
+  <section id="motifs" name="Motif Tools">
+    <tool file="meme/meme.xml" />
+    <tool file="meme/fimo.xml" />
+  </section>
+  <section id="ncbi_blast_plus_tools" name="NCBI BLAST+" version=""> </section>
+  <section id="emboss" name="EMBOSS" version=""> </section>
+
+  <label id="metagenomics" text="Metagenomics" />
+  <section id="tax_manipulation" name="Metagenomic Analysis"> </section>
+
+  <label id="metagenomics" text="Metagenomics" />
+
+  <label id="statistics" text="Statistics" />
+  <section id="stats" name="Statistics">
+    <tool file="stats/gsummary.xml" />
+    <tool file="filters/uniq.xml" />
+  </section>
+  <section id="multReg" name="Multiple Regression"> </section>
+  <section id="multVar" name="Multivariate Analysis"> </section>
+
+  <label id="visualization" text="Visualization" />
+  <section id="plots" name="Graph/Display Data">
+    <tool file="plotting/bar_chart.xml" />
+    <tool file="plotting/boxplot.xml" />
+    <tool file="visualization/LAJ.xml" />
+    <tool file="maf/vcf_to_maf_customtrack.xml" />
+    <tool file="mutation/visualize.xml" />
+  </section>
+
+
+
+  <label id="miscellaneous_utilities" text="Miscellaneous Utilties" />
   <section id="textutil" name="Text Manipulation">
     <tool file="filters/fixedValueColumn.xml" />
     <tool file="filters/catWrapper.xml" />
@@ -57,7 +167,6 @@
     <tool file="stats/filtering.xml" />
     <tool file="filters/sorter.xml" />
     <tool file="filters/grep.xml" />
-    
     <label id="gff" text="GFF" />
     <tool file="filters/gff/extract_GFF_Features.xml" />
     <tool file="filters/gff/gff_filter_by_attribute.xml" />
@@ -88,120 +197,4 @@
     <tool file="bam_to_bigwig/bam_to_bigwig.xml" />
     <tool file="filters/bed_to_bigbed.xml" />
   </section>
-  <section id="features" name="Extract Features">
-    <tool file="filters/ucsc_gene_bed_to_exon_bed.xml" />
-  </section>
-  <section id="fetchSeq" name="Fetch Sequences">
-    <tool file="extract/extract_genomic_dna.xml" />
-  </section>
-  <section id="fetchAlign" name="Fetch Alignments">
-    <tool file="maf/interval2maf_pairwise.xml" />
-    <tool file="maf/interval2maf.xml" />
-    <tool file="maf/maf_split_by_species.xml" />
-    <tool file="maf/interval_maf_to_merged_fasta.xml" />
-    <tool file="maf/genebed_maf_to_fasta.xml" />
-    <tool file="maf/maf_stats.xml" />
-    <tool file="maf/maf_thread_for_species.xml" />
-    <tool file="maf/maf_limit_to_species.xml" />
-    <tool file="maf/maf_limit_size.xml" />
-    <tool file="maf/maf_by_block_number.xml" />
-    <tool file="maf/maf_reverse_complement.xml" />
-    <tool file="maf/maf_filter.xml" />
-  </section>
-  <section id="scores" name="Get Genomic Scores">
-    <tool file="filters/wiggle_to_simple.xml" />
-    <tool file="stats/aggregate_binned_scores_in_intervals.xml" />
-  </section>
-  <section id="stats" name="Statistics">
-    <tool file="stats/gsummary.xml" />
-    <tool file="filters/uniq.xml" />
-    <label id="gff" text="GFF" />
-    </section>
-  <section id="plots" name="Graph/Display Data">
-    <tool file="plotting/bar_chart.xml" />
-    <tool file="plotting/boxplot.xml" />
-    <tool file="visualization/LAJ.xml" />
-    <tool file="maf/vcf_to_maf_customtrack.xml" />
-    <tool file="mutation/visualize.xml" />
-  </section>
-  <section id="hyphy" name="Evolution">
-    <tool file="evolution/codingSnps.xml" />
-    <!--
-    <tool file="evolution/add_scores.xml" />
-    -->
-  </section>
-  <section id="motifs" name="Motif Tools">
-    <tool file="meme/meme.xml" />
-    <tool file="meme/fimo.xml" />
-  </section>
-
-  <label id="HTSeq" text="High Throughput Sequencing" />
-  <section id="NGS_QC" name="NGS: QC and manipulation">
-    
-    <label id="fastqcsambam" text="FastQC: fastq/sam/bam" />
-    
-    <label id="illumina" text="Illumina fastq" />
-    
-    <label id="454" text="Roche-454 data" />
-    <label id="solid" text="AB-SOLiD data" />
-    <tool file="next_gen_conversion/solid2fastq.xml" />
-    <tool file="solid_tools/solid_qual_stats.xml" />
-    <tool file="solid_tools/solid_qual_boxplot.xml" />
-    
-    <label id="generic_fastq" text="Generic FASTQ manipulation" />
-    
-    <label id="fastx_toolkit" text="FASTX-Toolkit for FASTQ data" />
-  </section>
-  <!--
-  Keep this section commented until it includes tools that
-  will be hosted on test/main.  The velvet wrappers have been
-  included in the distribution but will not be hosted on our
-  public servers for the current time.
-  <section name="NGS: Assembly" id="ngs_assembly">
-  <label text="Velvet" id="velvet"/>
-  <tool file="sr_assembly/velvetg.xml" />
-  <tool file="sr_assembly/velveth.xml" />
-  </section>
-  -->
-  <section id="solexa_tools" name="NGS: Mapping">
-    <tool file="sr_mapping/bwa_wrapper_princeton.xml" />
-    <!--
-    <tool file="sr_mapping/bfast_wrapper.xml" />
-    <tool file="sr_mapping/PerM.xml" />
-    -->
-    <tool file="sr_mapping/srma_wrapper.xml" />
-    <!--
-    <tool file="sr_mapping/mosaik.xml" />
-    -->
-  </section>
-  <section id="ngs-rna-tools" name="NGS: RNA Analysis">
-    
-    <label id="rna_seq" text="RNA-seq" />
-    <label id="filtering" text="Filtering" />
-  </section>
-  <section id="samtools" name="NGS: SAM Tools">
-  </section>
-  <section id="gatk" name="NGS: GATK Tools (beta)">
-  </section>
-  <section id="variant_detection" name="NGS: Variant Detection">
-    <tool file="freebayes/freebayes.xml" />
-  </section>  
-  <section id="ngs-simulation" name="NGS: Simulation">
-    <tool file="ngs_simulation/ngs_simulation.xml" />
-  </section>
-  <section id="hgv" name="Phenotype Association">
-    <tool file="evolution/codingSnps.xml" />
-    <tool file="evolution/add_scores.xml" />
-    <tool file="phenotype_association/sift.xml" />
-    <tool file="phenotype_association/linkToGProfile.xml" />
-    <tool file="phenotype_association/linkToDavid.xml" />
-    <tool file="phenotype_association/ldtools.xml" />
-    <tool file="phenotype_association/pass.xml" />
-    <tool file="phenotype_association/gpass.xml" />
-    <tool file="phenotype_association/beam.xml" />
-    <!-- lpt_tool not installed 
-    <tool file="phenotype_association/lps.xml" />
-    -->
-    <tool file="phenotype_association/master2pg.xml" />
-    </section>
 </toolbox>
