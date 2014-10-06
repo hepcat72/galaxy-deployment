@@ -1,0 +1,10 @@
+---
+- name: create taxonomy tool-data directory
+  file:
+    path: "{{ GALAXY_HOME }}/tool-data/taxonomy/"
+    state: directory
+
+- name: create taxonomy tool-data files
+  command: "/bin/sh {{ GALAXY_HOME }}/cron/processTaxonomy_cron.sh"
+  args:
+    creates: "{{ GALAXY_HOME }}/tool-data/taxonomy/gi_taxid_sorted.txt"

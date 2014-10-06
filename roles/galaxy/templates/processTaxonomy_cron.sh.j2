@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# Change to Galaxy home dir
+GALAXY_HOME="{{ GALAXY_HOME }}"
+cd "${GALAXY_HOME}/scripts/taxonomy"
+
+# Logfile name
+NOW=$(date +"%Y-%m-%d")
+LOGFILE="processTaxonomy-$NOW.log"
+
+# Delete old data
+rm -rf "${GALAXY_HOME}/scripts/taxonomy/taxdump.tar.gz"*
+
+# Run taxonomy script
+/bin/sh processTaxonomy.sh > "${GALAXY_HOME}/../logs/${LOGFILE}" 2>&1
+
+# Move files
+mv -f "${GALAXY_HOME}/scripts/taxonomy/gi_taxid_sorted.txt" "${GALAXY_HOME}/tool-data/taxonomy/"
+mv -f "${GALAXY_HOME}/scripts/taxonomy/nodes.dmp" "${GALAXY_HOME}/tool-data/taxonomy/"
+mv -f "${GALAXY_HOME}/scripts/taxonomy/names.dmp" "${GALAXY_HOME}/tool-data/taxonomy/"

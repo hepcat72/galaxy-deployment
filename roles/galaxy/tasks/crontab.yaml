@@ -9,6 +9,7 @@
       - "dataset_cleanup.sh"
       - "set_user_disk_usage.sh"
       - "updateucsc.sh"
+      - "processTaxonomy_cron.sh"
 
 - name: create scripts directory
   file: dest={{ GALAXY_HOME }}/scripts/ state=directory
@@ -85,6 +86,16 @@
     weekday: "*"
     job: "/usr/sbin/tmpwatch -u 168 {{ GALAXY_HOME }}/database/tmp"
 
+- name: crontab entry to update ncbi taxonomy
+  cron:
+    name: "update ncbi taxonomy"
+    minute: "15"
+    hour: "5"
+    day: "*"
+    month: "*"
+    weekday: "*"
+    job: "/bin/sh {{ GALAXY_HOME }}/cron/processTaxonomy_cron.sh >/dev/null"
+
 - name: crontab entry to update ucsc genomes
   cron:
     name: "update ucsc genomes"
@@ -94,3 +105,4 @@
     month: "*"
     weekday: "mon-sat"
     job: "{{ GALAXY_HOME }}cron/updateucsc.sh >> {{ GALAXY_HOME }}/../logs/updateucsc.log"
+

@@ -101,6 +101,8 @@
 
 - include: custom_scripts.yaml
 
+- include: taxonomy_tool_data.yaml
+
 - name: Get current Galaxy DB version
   command: "{{ galaxy_venv_dir }}/bin/python {{ GALAXY_HOME }}/scripts/manage_db.py db_version chdir={{ GALAXY_HOME }}"
   register: current_db_version
