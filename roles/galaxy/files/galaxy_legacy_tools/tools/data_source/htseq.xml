@@ -7,7 +7,7 @@
 <tool name="Princeton HTSEQ" id="princeton_htseq" tool_type="data_source">
 	<description>HTSEQ Data Import</description>
 	<command interpreter="python">data_source.py $output $__app__.config.output_size_limit</command>
-	<inputs action="http://htseq.princeton.edu/cgi-bin/search/advanced.pl" check_values="false" method="get">
+	<inputs action="https://htseq.princeton.edu/cgi-bin/search/advanced.pl" check_values="false" method="get">
 		<display>go to Princeton HTSEQ $GALAXY_URL</display>
 		<param name="GALAXY_URL" type="baseurl" value="/tool_runner" />
 		<param name="tool_id" type="hidden" value="princeton_htseq" />

@@ -98,6 +98,9 @@
 - name: welcome.html
   template: src=welcome.html.j2 dest={{ GALAXY_HOME }}/static/welcome.html backup=yes
 
+- name: remove integrated_tool_panel.xml
+  file: path="{{ GALAXY_HOME }}/integrated_tool_panel.xml" state="absent"
+
 - include: tool-dependencies.yaml
 
 - include: crontab.yaml

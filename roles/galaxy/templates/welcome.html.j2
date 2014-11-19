@@ -4,14 +4,14 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <link rel="stylesheet" href="style/base.css" type="text/css" />
-        <style>
+        <style type="text/css">
             #maintenance-notice, #updates, #instructions, #diskspace-notice {
                 width: 48%;
                 display: inline-block;
                 vertical-align: top;
             }
         </style>
-            
+        <title>Galaxy Data Analysis</title>
     </head>
     <body>
         <div class="document">
@@ -27,17 +27,28 @@
             <div class="infomessagelarge section" id="updates">
 			<h2>What's New</h2>
 
-            <h3>New Tool - RSeQC</h3>
-            <p><a href="http://rseqc.sourceforge.net/">RSeQC</a> is an RNA-seq quality control package. The RSeQC package provides a number of useful modules that can comprehensively evaluate high throughput sequence data especially RNA-seq data. “Basic modules” quickly inspect sequence quality, nucleotide composition bias, PCR bias and GC bias, while “RNA-seq specific modules” investigate sequencing saturation status of both splicing junction detection and expression estimation, mapped reads clipping profile, mapped reads distribution, coverage uniformity over gene body, reproducibility, strand specificity and splice junction annotation.</p>
+            <h3>New/Updated - bedTools</h3>
+            <p><a href="http://bedtools.readthedocs.org/en/latest/">bedTools</a> has been greatly enhanced, providing a much larger set of tools to Galaxy users. Collectively, the bedtools utilities are a swiss-army knife of tools for a wide-range of genomics analysis tasks. The most widely-used tools enable genome arithmetic: that is, set theory on the genome. For example, bedtools allows one to intersect, merge, count, complement, and shuffle genomic intervals from multiple files in widely-used genomic file formats such as BAM, BED, GFF/GTF, VCF.</p>
 
-            <h3>New Tool - Naive Variant Caller</h3>
-            <p>The <a href="http://toolshed.g2.bx.psu.edu/view/blankenberg/naive_variant_caller">Naive Variant Caller</a> processes aligned sequencing reads from the BAM format and produces a VCF file containing per position variant calls. This tool allows multiple BAM files to be provided as input and utilizes read group information to make calls for individual samples.</p>
+            <h3>New - deepTools</h3>
+            <p><a href="https://github.com/fidelram/deepTools">deepTools</a> is a set of user-friendly tools for the normalization and visualization of deep-sequencing data. deepTools addresses the challenge of handling the large amounts of data that are now routinely generated from DNA sequencing centers. To do so, deepTools contains useful modules to process the mapped reads data to create coverage files in standard bedGraph and bigWig file formats. By doing so, deepTools allows the creation of normalized coverage files or the comparison between two files (for example, treatment and control). Finally, using such normalized and standardized files, multiple visualizations can be created to identify enrichments with functional annotations of the genome.</p>
 
-            <h3>New Tool - BCFTools</h3>
-            <p><a href="http://samtools.github.io/bcftools/">BCFTools</a> allows the conversion of BCF files (compressed variant calls) to VCF files (text representations of variant calls).</p>
+            <h3>Updated - FastQC</h3>
+            <p><a href="http://www.bioinformatics.babraham.ac.uk/projects/fastqc/">FastQC</a> has been updated to version 0.11.2 which includes the following changes:</p>
+            <ul>
+                <li>Configurable warn/fail thresholds for all modules</li>
+                <li>Allow modules to be selectively turned off</li>
+                <li>Added a per-tile quality plot for Illumina libraries</li>
+                <li>Added an adapter content plot</li>
+                <li>Improved the duplication plot</li>
+                <li>Improved the Kmer module</li>
+                <li>Used embedded graphics in the HTML output so you can distribute a single file</li>
+                <li>Changed how base grouping works to better accommodate long reads</li>
+                <li>Dropped support for Solexa64 format (NB not Phred 64 which is still supported)</li>
+            </ul>
 
             <h3>Questions, comments, suggestions?</h3>
-        <p><a href="mailto:sequencer@genomics.princeton.edu">sequencer@genomics.princeton.edu</a></p>
+            <p><a href="mailto:sequencer@genomics.princeton.edu">sequencer@genomics.princeton.edu</a></p>
             <ul>
                 <li>New tools (custom tools are welcome!)</li>
                 <li>Reference genomes and other annotations</li>
@@ -47,12 +58,11 @@
 
           </div>
 
-
             <div class="donemessagelarge section" id="instructions">
                 <h2>Getting Started with Galaxy</h2>
                 <p>Get started by selecting <strong>Get Data</strong> from the menu on the left.  Upload a file from your computer or import sequencing data from HTSEQ.</p>
                 <ul>
-                    <li><a href="http://main.g2.bx.psu.edu/galaxy101">Galaxy 101: Tutorial explaining the galaxy basics</a>
+                    <li><a href="http://main.g2.bx.psu.edu/galaxy101">Galaxy 101: Tutorial explaining the galaxy basics</a></li>
                     <li>Watch <a href="http://galaxycast.org/">Screencasts</a></li>
                     <li>Get an overview of the most useful tools at the <a href="http://www.princeton.edu/genomics/sequencing/instructions/data-analysis/galaxy/">Sequencing Core's Galaxy Overview</a></li>
                     <li>Read about technical details on the <a href="http://wiki.g2.bx.psu.edu/">Galaxy Wiki</a></li>
