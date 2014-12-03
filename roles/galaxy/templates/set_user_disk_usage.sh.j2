@@ -1,9 +1,5 @@
 #!/bin/sh
 
-# Wrapping the scripts using the following patterns allows us to prevent useless errors from 
-# getting reported (http://www.burgerbum.com/stderr_pipe.html)
-# ( COMMAND 3>&1 1>&2 2>&3 | grep -v ANNOYING_ERRORS ) 3>&1 1>&2 2>&3 | grep TARGET_STRINGS
-
 # Set galaxy home directory
 GALAXY_HOME={{ GALAXY_HOME }}
 cd {{ GALAXY_HOME }}
@@ -22,5 +18,4 @@ ${NOW}\n\
 ==================="
 echo -e "${HEADER}" >> ${LOG_FILE}
 cd ${GALAXY_HOME}
-# Run set_user_disk_usage.py script, ignoring some warnings
-( ( python ${GALAXY_HOME}/scripts/set_user_disk_usage.py 3>&1 1>&2 2>&3 | grep -v SADeprecationWarning) 3>&1 1>&2 2>&3 ) 1>>${LOG_FILE}
+python ${GALAXY_HOME}/scripts/set_user_disk_usage.py --config "${GALAXY_HOME}/universe_wsgi.ini" 1>>${LOG_FILE}
