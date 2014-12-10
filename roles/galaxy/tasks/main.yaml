@@ -9,10 +9,29 @@
   copy: src="error-documents" dest={{ GALAXY_HOME }}/../www/html/
 
 - name: set galaxy user hg config
-  copy: src="hg_config/.hgrc" dest="~"
+  copy: src="hg_config/hgrc" dest="{{ GALAXY_HOME }}/.hg/hgrc"
 
 - stat: path="{{ GALAXY_HOME }}/.hg"
   register: hg
+
+- name: Check if galaxy pid file exists.
+  command: /usr/bin/test -e {{ GALAXY_HOME }}/web0.pid
+  ignore_errors: True
+  register: galaxy_running
+  tags: 
+    - restart
+    - stop
+
+- name: stop galaxy
+  sudo: yes
+  sudo_user: galaxy
+  environment:
+    GALAXY_RUN_ALL: 1
+  shell: "/bin/sh {{ GALAXY_HOME }}/galaxy_stop.sh"
+  when: galaxy_running.rc == 0
+  tags: 
+    - restart
+    - stop
 
 - name: pop galaxy patches
   command: hg qpop -a
@@ -153,3 +172,11 @@
   when: updated_tool_migration_stages.stdout_lines|length - current_tool_migration_stages.stdout_lines|length > 0
   with_items:
     updated_tool_migration_stages.stdout_lines[-1]
+
+- name: start galaxy
+  sudo: yes
+  sudo_user: galaxy
+  shell: "/bin/sh {{ GALAXY_HOME }}/galaxy_start.sh"
+  tags:
+    - restart
+    - start
