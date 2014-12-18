@@ -24,15 +24,8 @@
         state=link
   with_items:
       - { tool: 'bedtools', version: '2.16.2' }
-      - { tool: 'bwa', version: '0.5.10' }
-      - { tool: 'SICER', version: '1.1' }
-      - { tool: 'bowtie2', version: '2.1.0' }
-      - { tool: 'cufflinks', version: '2.1.1' }
       - { tool: 'freebayes', version: '0.9.4' }
       - { tool: 'htseq', version: '0.5.3p9' }
-      - { tool: 'macs', version: '1.3.7.1' }
       - { tool: 'macs14', version: '1.4.2' }
       - { tool: 'sambamba', version: '0.3.3' }
       - { tool: 'samtools', version: '0.1.18' }
-      - { tool: 'tophat', version: '1.4.0' }
-      - { tool: 'tophat2', version: '2.0.8b' }
