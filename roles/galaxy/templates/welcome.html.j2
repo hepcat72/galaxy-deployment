@@ -26,25 +26,23 @@
 
             <div class="infomessagelarge section" id="updates">
 			<h2>What's New</h2>
+            <h3>Galaxy Release 2015-01-13</h3>
+            <p>Galaxy has been updated to the lastest release with many performance enchancements and bugfixes. See <a href="https://wiki.galaxyproject.org/DevNewsBriefs/2015_01_13">Galaxy January 13, 2015 DevNewsBrief</a> for complete list of changes.</p>
 
-            <h3>New/Updated - bedTools</h3>
-            <p><a href="http://bedtools.readthedocs.org/en/latest/">bedTools</a> has been greatly enhanced, providing a much larger set of tools to Galaxy users. Collectively, the bedtools utilities are a swiss-army knife of tools for a wide-range of genomics analysis tasks. The most widely-used tools enable genome arithmetic: that is, set theory on the genome. For example, bedtools allows one to intersect, merge, count, complement, and shuffle genomic intervals from multiple files in widely-used genomic file formats such as BAM, BED, GFF/GTF, VCF.</p>
+            <h3>Updated - bedTools 2.22</h3>
+            <p><a href="http://bedtools.readthedocs.org/en/latest/">bedTools</a> updated to version 2.22. Collectively, the bedtools utilities are a swiss-army knife of tools for a wide-range of genomics analysis tasks. The most widely-used tools enable genome arithmetic: that is, set theory on the genome. For example, bedtools allows one to intersect, merge, count, complement, and shuffle genomic intervals from multiple files in widely-used genomic file formats such as BAM, BED, GFF/GTF, VCF.</p>
 
-            <h3>New - deepTools</h3>
-            <p><a href="https://github.com/fidelram/deepTools">deepTools</a> is a set of user-friendly tools for the normalization and visualization of deep-sequencing data. deepTools addresses the challenge of handling the large amounts of data that are now routinely generated from DNA sequencing centers. To do so, deepTools contains useful modules to process the mapped reads data to create coverage files in standard bedGraph and bigWig file formats. By doing so, deepTools allows the creation of normalized coverage files or the comparison between two files (for example, treatment and control). Finally, using such normalized and standardized files, multiple visualizations can be created to identify enrichments with functional annotations of the genome.</p>
+            <h3>Updated - MACS 1.4.2</h3>
+            <p><a href="http://liulab.dfci.harvard.edu/MACS/index.html">MACS 1.4</a> has been updated from 1.4.1 to 1.4.2.</p>
+           
+            <h3>Updated - Picard Tools Wrapper</h3>
+            <p><a href="http://broadinstitute.github.io/picard/">Picard Tools</a> wrapper has been updated, making many more tools available in Galaxy. Picard is a general set of tools for manipulating high-throughput sequencing data (HTS) data and formats.</p>
 
-            <h3>Updated - FastQC</h3>
-            <p><a href="http://www.bioinformatics.babraham.ac.uk/projects/fastqc/">FastQC</a> has been updated to version 0.11.2 which includes the following changes:</p>
+            <h3>Updated - Cufflinks Tool Suite</h3>
+            <p><a href="">Cufflinks</a> and associated tools were updated to version 2.2.1.  Now includes two new tools:</p>
             <ul>
-                <li>Configurable warn/fail thresholds for all modules</li>
-                <li>Allow modules to be selectively turned off</li>
-                <li>Added a per-tile quality plot for Illumina libraries</li>
-                <li>Added an adapter content plot</li>
-                <li>Improved the duplication plot</li>
-                <li>Improved the Kmer module</li>
-                <li>Used embedded graphics in the HTML output so you can distribute a single file</li>
-                <li>Changed how base grouping works to better accommodate long reads</li>
-                <li>Dropped support for Solexa64 format (NB not Phred 64 which is still supported)</li>
+                <li>cuffquant - Cuffquant allows precalculation of gene expression levels. Output can be used in cuffdiff and cuffnorm.</li>
+                <li>cuffnorm - Cuffnorm is similar to cuffdiff, but does not perform differential expression testing. It provides normalized gene expression tables for use in downstream tools (R/matlab/...).</li>
             </ul>
 
             <h3>Questions, comments, suggestions?</h3>
