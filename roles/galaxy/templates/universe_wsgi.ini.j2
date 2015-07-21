@@ -308,9 +308,13 @@ smtp_server = gsmtp.princeton.edu
 #error_email_to = None
 error_email_to = biocomp@genomics.princeton.edu
 
-# Activation email is used as a sender ('from' field) for the account activation mail.
-# We recommend using string in the following format: Galaxy Project <galaxy-no-reply@example.com>
-#activation_email = None
+# Email address to use in the 'From' field when sending emails for
+# account activations, workflow step notifications and password resets.
+# We recommend using string in the following format:
+# Galaxy Project <galaxy-no-reply@example.com>
+# If not configured, '<galaxy-no-reply@HOSTNAME>' will be used.
+#email_from = None
+email_from = biocomp@genomics.princeton.edu
 
 # URL of the support resource for the galaxy instance. Used in activation emails.
 #instance_resource_url = http://wiki.galaxyproject.org/
