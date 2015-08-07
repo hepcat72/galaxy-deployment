@@ -1,0 +1,7 @@
+[user]
+    name = Galaxy Admin
+    email = galaxy@princeton.edu
+[color]
+    diff = auto
+    status = auto
+    branch = auto

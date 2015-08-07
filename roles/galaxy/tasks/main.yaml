@@ -11,6 +11,11 @@
 - name: set galaxy user hg config
   copy: src="hg_config/hgrc" dest="{{ GALAXY_HOME }}/.hg/hgrc"
 
+- name: set galaxy user git config
+  copy: src="git_config/gitconfig" dest="{{ ansible_env.HOME }}/.gitconfig"
+  tags:
+    - userconfig
+
 - stat: path="{{ GALAXY_HOME }}/.hg"
   register: hg
 
@@ -18,7 +23,7 @@
   command: /usr/bin/test -e {{ GALAXY_HOME }}/web0.pid
   ignore_errors: True
   register: galaxy_running
-  tags: 
+  tags:
     - restart
     - stop
 
@@ -29,7 +34,7 @@
     GALAXY_RUN_ALL: 1
   shell: "/bin/sh {{ GALAXY_HOME }}/galaxy_stop.sh"
   when: galaxy_running.rc == 0
-  tags: 
+  tags:
     - restart
     - stop
 
