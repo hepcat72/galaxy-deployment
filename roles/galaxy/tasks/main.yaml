@@ -16,8 +16,8 @@
   tags:
     - userconfig
 
-- stat: path="{{ GALAXY_HOME }}/.hg"
-  register: hg
+- stat: path="{{ GALAXY_HOME }}/.git"
+  register: git
 
 - name: Check if galaxy pid file exists.
   command: /usr/bin/test -e {{ GALAXY_HOME }}/web0.pid
@@ -38,38 +38,46 @@
     - restart
     - stop
 
-- name: pop galaxy patches
-  command: hg qpop -a
+# - name: pop galaxy patches
+#   command: hg qpop -a
+#   args:
+#     chdir: "{{ GALAXY_HOME }}"
+#   environment:
+#     PATH: /usr/local/bin:{{ ansible_env.PATH }}
+#   when: hg.stat.isdir is defined and hg.stat.isdir == true
+
+- name: checkout upstream branch
+  command: "{{ git_executable | default('git') }} checkout {{ galaxy_changeset_id }} chdir={{ GALAXY_HOME }}"
   args:
     chdir: "{{ GALAXY_HOME }}"
   environment:
     PATH: /usr/local/bin:{{ ansible_env.PATH }}
-  when: hg.stat.isdir is defined and hg.stat.isdir == true
 
 - include: backup_loc_files.yaml
 
-- name: Get current Galaxy changeset
-  command: hg parents --template '{latesttag}' chdir={{ GALAXY_HOME }}
+- name: Get current Galaxy commit id (git)
+  command: "{{ git_executable | default('git') }} rev-parse HEAD chdir={{ GALAXY_HOME }}"
   environment:
     PATH: /usr/local/bin:{{ ansible_env.PATH }}
   register: current_changeset_id
   changed_when: False
+  when: git.stat.isdir is defined and git.stat.isdir == true
 
 - name: Report current Galaxy changeset
   debug:
-    msg: "Current changeset of {{ GALAXY_HOME }} {{ current_changeset_id.stdout }} does not match playbook version {{ hg_revision }}"
+    msg: "Current changeset of {{ GALAXY_HOME }} {{ current_changeset_id.stdout }} does not match playbook version {{ galaxy_changeset_id }}"
   changed_when: True
-  when: current_changeset_id.stdout != hg_revision
+  when: current_changeset_id.stdout != galaxy_changeset_id
+  when: git.stat.isdir is defined and git.stat.isdir == true
 
 - name: Get current tool migration stages
   shell: ls -1 *tools.sh | sort chdir={{ GALAXY_HOME }}/scripts/migrate_tools/
   register: current_tool_migration_stages
   changed_when: False
+  when: git.stat.isdir is defined and git.stat.isdir == true
 
-- name: checkout galaxy
-  hg: repo=https://bitbucket.org/galaxy/galaxy-dist#stable
-      dest={{ GALAXY_HOME }}
-      revision={{ hg_revision }}
+- name: Update galaxy to correct changeset
+  git: dest={{ GALAXY_HOME }} force=no repo=https://github.com/galaxyproject/galaxy.git version={{ galaxy_changeset_id }} executable={{ git_executable | default(omit) }}
   environment:
     PATH: /usr/local/bin:{{ ansible_env.PATH }}
   #notify:
@@ -80,20 +88,32 @@
   register: updated_tool_migration_stages
   changed_when: False
 
-- name: checkout galaxy patches
-  hg: repo=https://bitbucket.org/princeton_genomics/galaxy_patches
-      dest={{ GALAXY_HOME }}/.hg/patches
-  environment:
-    PATH: /usr/local/bin:{{ ansible_env.PATH }}
-  #notify:
-  #  - restart galaxy
-
-- name: apply galaxy patches
-  command: hg qpush -a
+- name: checkout patches branch
+  command: "{{ git_executable | default('git') }} checkout princeton_patches chdir={{ GALAXY_HOME }}"
   args:
     chdir: "{{ GALAXY_HOME }}"
   environment:
     PATH: /usr/local/bin:{{ ansible_env.PATH }}
+
+- name: Rebase galaxy patches branch
+  command: "{{ git_executable | default('git') }} rebase {{ galaxy_changeset_id }} chdir={{ GALAXY_HOME }}"
+  environment:
+    PATH: /usr/local/bin:{{ ansible_env.PATH }}
+
+# - name: checkout galaxy patches
+#   hg: repo=https://bitbucket.org/princeton_genomics/galaxy_patches
+#       dest={{ GALAXY_HOME }}/.hg/patches
+#   environment:
+#     PATH: /usr/local/bin:{{ ansible_env.PATH }}
+#   #notify:
+#   #  - restart galaxy
+# 
+# - name: apply galaxy patches
+#   command: hg qpush -a
+#   args:
+#     chdir: "{{ GALAXY_HOME }}"
+#   environment:
+#     PATH: /usr/local/bin:{{ ansible_env.PATH }}
 
 - name: add legacy tools (not from toolshed)
   copy: src="galaxy_legacy_tools/tools/" dest="{{ GALAXY_HOME }}/tools/" backup=yes
