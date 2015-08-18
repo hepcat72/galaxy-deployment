@@ -38,14 +38,6 @@
     - restart
     - stop
 
-# - name: pop galaxy patches
-#   command: hg qpop -a
-#   args:
-#     chdir: "{{ GALAXY_HOME }}"
-#   environment:
-#     PATH: /usr/local/bin:{{ ansible_env.PATH }}
-#   when: hg.stat.isdir is defined and hg.stat.isdir == true
-
 - name: checkout upstream branch
   command: "{{ git_executable | default('git') }} checkout {{ galaxy_changeset_id }} chdir={{ GALAXY_HOME }}"
   args:
@@ -107,7 +99,7 @@
 #     PATH: /usr/local/bin:{{ ansible_env.PATH }}
 #   #notify:
 #   #  - restart galaxy
-# 
+
 # - name: apply galaxy patches
 #   command: hg qpush -a
 #   args:
