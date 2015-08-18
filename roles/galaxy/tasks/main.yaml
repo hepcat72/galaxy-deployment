@@ -38,12 +38,20 @@
     - restart
     - stop
 
+- name: remove integrated_tool_panel.xml
+  file: path="{{ GALAXY_HOME }}/integrated_tool_panel.xml" state="absent"
+  when: galaxy_running.rc == 0
+  tags:
+    - restart
+    - stop
+
 - name: checkout upstream branch
   command: "{{ git_executable | default('git') }} checkout {{ galaxy_changeset_id }} chdir={{ GALAXY_HOME }}"
   args:
     chdir: "{{ GALAXY_HOME }}"
   environment:
     PATH: /usr/local/bin:{{ ansible_env.PATH }}
+  when: git.stat.isdir is defined and git.stat.isdir == true
 
 - include: backup_loc_files.yaml
 
@@ -133,9 +141,6 @@
 
 - name: welcome.html
   template: src=welcome.html.j2 dest={{ GALAXY_HOME }}/static/welcome.html backup=yes
-
-- name: remove integrated_tool_panel.xml
-  file: path="{{ GALAXY_HOME }}/integrated_tool_panel.xml" state="absent"
 
 - include: tool-dependencies.yaml
 
