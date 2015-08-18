@@ -292,8 +292,8 @@ smtp_server = smtp.princeton.edu
 # If your SMTP server requires a username and password, you can provide them
 # here (password in cleartext here, but if your server supports STARTTLS it
 # will be sent over the network encrypted).
-#smtp_username = None
-#smtp_password = None
+smtp_username = gensmtp
+smtp_password = {{ smtp_password }}
 
 # If your SMTP server requires SSL from the beginning of the connection
 # smtp_ssl= False
