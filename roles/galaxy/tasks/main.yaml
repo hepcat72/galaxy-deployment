@@ -8,9 +8,6 @@
 - name: error-documents
   copy: src="error-documents" dest={{ GALAXY_HOME }}/../www/html/
 
-- name: set galaxy user hg config
-  copy: src="hg_config/hgrc" dest="{{ GALAXY_HOME }}/.hg/hgrc"
-
 - name: set galaxy user git config
   copy: src="git_config/gitconfig" dest="{{ ansible_env.HOME }}/.gitconfig"
   tags:

@@ -1,8 +1,0 @@
-[paths]
-default = https://bitbucket.org/galaxy/galaxy-dist#stable
-
-[ui]
-username = Galaxy Admin <galaxy@princeton.edu>
-
-[extensions]
-hgext.mq =
