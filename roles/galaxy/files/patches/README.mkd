@@ -1,0 +1,3 @@
+Add files here with extension `.patch` to apply patches to Galaxy in production.
+
+It's generally best to keep these to a minimum, but they may be required in some cases.

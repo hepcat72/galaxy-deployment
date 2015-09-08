@@ -77,9 +77,14 @@
   when: git.stat.isdir is defined and git.stat.isdir == true
 
 - name: Update galaxy to correct changeset
-  git: dest={{ GALAXY_HOME }} force=no repo=https://github.com/galaxyproject/galaxy.git version={{ galaxy_changeset_id }} executable={{ git_executable | default(omit) }}
+  git:
+    dest: "{{ GALAXY_HOME }}"
+    force: "yes"
+    repo: "https://github.com/galaxyproject/galaxy.git"
+    version: "{{ galaxy_changeset_id }}"
+    executable: "{{ git_executable | default(omit) }}"
   environment:
-    PATH: /usr/local/bin:{{ ansible_env.PATH }}
+    PATH: "/usr/local/bin:{{ ansible_env.PATH }}"
   #notify:
   #  - restart galaxy
 
@@ -88,17 +93,19 @@
   register: updated_tool_migration_stages
   changed_when: False
 
-- name: checkout patches branch
-  command: "{{ git_executable | default('git') }} checkout princeton_patches chdir={{ GALAXY_HOME }}"
-  args:
-    chdir: "{{ GALAXY_HOME }}"
-  environment:
-    PATH: /usr/local/bin:{{ ansible_env.PATH }}
+- include: patches.yml
 
-- name: Rebase galaxy patches branch
-  command: "{{ git_executable | default('git') }} rebase {{ galaxy_changeset_id }} chdir={{ GALAXY_HOME }}"
-  environment:
-    PATH: /usr/local/bin:{{ ansible_env.PATH }}
+#- name: checkout patches branch
+#  command: "{{ git_executable | default('git') }} checkout princeton_patches chdir={{ GALAXY_HOME }}"
+#  args:
+#    chdir: "{{ GALAXY_HOME }}"
+#  environment:
+#    PATH: /usr/local/bin:{{ ansible_env.PATH }}
+#
+#- name: Rebase galaxy patches branch
+#  command: "{{ git_executable | default('git') }} rebase {{ galaxy_changeset_id }} chdir={{ GALAXY_HOME }}"
+#  environment:
+#    PATH: /usr/local/bin:{{ ansible_env.PATH }}
 
 # - name: checkout galaxy patches
 #   hg: repo=https://bitbucket.org/princeton_genomics/galaxy_patches
@@ -140,11 +147,11 @@
   template: src=tool_conf.xml.j2 dest={{ GALAXY_HOME }}/tool_conf.xml backup=yes
 
 - name: tool_data_table_conf.xml
-  copy: src="tool_data_table_conf.xml" dest="{{ GALAXY_HOME }}/tool_data_table_conf.xml" backup=yes
+  copy: src="config/tool_data_table_conf.xml" dest="{{ GALAXY_HOME }}/tool_data_table_conf.xml" backup=yes
 
 - name: tool-data
   copy:
-    src: "tool-data/{{ item }}"
+    src: "tool-data/"
     dest: "{{ GALAXY_HOME }}/tool-data/"
     backup: yes
 
