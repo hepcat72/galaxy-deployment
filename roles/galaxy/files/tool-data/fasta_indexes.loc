@@ -1,0 +1,84 @@
+#This is a sample file distributed with Galaxy that enables tools
+#to use a directory of Samtools indexed sequences data files.  You will need
+#to create these data files and then create a fasta_indexes.loc file
+#similar to this one (store it in this directory) that points to
+#the directories in which those files are stored. The fasta_indexes.loc
+#file has this format (white space characters are TAB characters):
+#
+# <unique_build_id>	<dbkey>	<display_name>	<file_base_path>
+#
+#So, for example, if you had hg19 Canonical indexed stored in
+#
+# /depot/data2/galaxy/hg19/sam/,
+#
+#then the fasta_indexes.loc entry would look like this:
+#
+#hg19canon	hg19	Human (Homo sapiens): hg19 Canonical	/depot/data2/galaxy/hg19/sam/hg19canon.fa
+#
+#and your /depot/data2/galaxy/hg19/sam/ directory
+#would contain hg19canon.fa and hg19canon.fa.fai files.
+#
+#Your fasta_indexes.loc file should include an entry per line for
+#each index set you have stored.  The file in the path does actually
+#exist, but it should never be directly used. Instead, the name serves
+#as a prefix for the index file.  For example:
+#
+#hg18canon	hg18	Human (Homo sapiens): hg18 Canonical	/depot/data2/galaxy/hg18/sam/hg18canon.fa
+#hg18full	hg18	Human (Homo sapiens): hg18 Full	/depot/data2/galaxy/hg18/sam/hg18full.fa
+#hg19canon	hg19	Human (Homo sapiens): hg19 Canonical	/depot/data2/galaxy/hg19/sam/hg19canon.fa
+#hg19full	hg19	Human (Homo sapiens): hg19 Full	/depot/data2/galaxy/hg19/sam/hg19full.fa
+hg19	hg19	Human Feb. 2009 (GRCh37/hg19) (hg19)	/reference-genomes/homo_sapiens/homo_sapiens_hg19/homo_sapiens_hg19_FASTA/homo_sapiens_hg19.fasta
+mm9	mm9	Mouse (mus musculus): mm9	/reference-genomes/mus_musculus/mus_musculus_mm9/mus_musculus_mm9_FASTA/mus_musculus_mm9.fasta
+oxyTri215	oxyTri215	oxytricha trifallax 2.1.5 (oxyTri215)	/reference-genomes/oxytricha_trifallax/oxytricha_trifallax_2_1_5/oxytricha_trifallax_2_1_5_FASTA/oxytricha_trifallax_2_1_5.fasta
+phiX	phiX	Coliphage phiX174 (NC_001422.1)	/reference-genomes/phix/phix_illumina/phix_illumina_FASTA/phi_plus_SNPs.fasta
+suid_herpesvirus_1_becker_020911	suid_herpesvirus_1_becker_020911	Suid herpesvirus 1 Becker (Szpara 020911) (suid_herpesvirus_1_becker_020911)	/reference-genomes/suid_herpesvirus_1/suid_herpesvirus_1_becker_020911/suid_herpesvirus_1_becker_020911_FASTA/becker_020911_f.fasta
+suid_herpesvirus_1_bartha_020911	suid_herpesvirus_1_bartha_020911	Suid herpesvirus 1 Bartha (Szpara 020911) (suid_herpesvirus_1_bartha_020911)	/reference-genomes/suid_herpesvirus_1/suid_herpesvirus_1_bartha_020911/suid_herpesvirus_1_bartha_020911_FASTA/bartha_020911_f.fasta
+suid_herpesvirus_1_kaplan_020911	suid_herpesvirus_1_kaplan_020911	Suid herpesvirus 1 Kaplan (Szpara 020911) (suid_herpesvirus_1_kaplan)	/reference-genomes/suid_herpesvirus_1/suid_herpesvirus_1_kaplan_020911/suid_herpesvirus_1_kaplan_020911_FASTA/kaplan_020911_f.fasta
+suid_herpesvirus_1_nc_006151_1	suid_herpesvirus_1_nc_006151_1	Suid herpesvirus 1 NC 006151.1 (NCBI) (suid_herpesvirus_1_nc_006151_1)	/reference-genomes/suid_herpesvirus_1/suid_herpesvirus_1_nc_006151_1/suid_herpesvirus_1_nc_006151_1_FASTA/prv.fasta
+rn4	rn4	Rat Nov. 2004 (Baylor 3.4/rn4) (rn4)	/reference-genomes/rattus_norvegicus/rattus_norvegicus_rn4/rattus_norvegicus_rn4_FASTA/rattus_norvegicus_rn4.fasta
+susScr2	susScr2	Pig Nov. 2009 (SGSC Sscrofa9.2/susScr2) (susScr2)	/reference-genomes/sus_scrofa/sus_scrofa_susscr2/sus_scrofa_susscr2_FASTA/sus_scrofa_susscr2.fasta
+pf3d7_plasmodb_8_0	pf3d7_plasmodb_8_0	Plasmodium falciparum 3D7 (PlasmoDB 8.0) (pf3d7_plasmodb_8_0)	/reference-genomes/plasmodium_falciparum_3d7/plasmodium_falciparum_3d7_8_0/plasmodium_falciparum_3d7_8_0_FASTA/plasmodium_falciparum_3d7_8_0.fasta
+19857	19857	Vibrio harveyi ATCC BAA-1116 (19857)	/reference-genomes/vibrio_harveyi_atcc_baa-1116/vibrio_harveyi_atcc_baa-1116_2007-09-06/vibrio_harveyi_atcc_baa-1116_2007-09-06_FASTA/vibrio_harveyi_atcc_baa-1116_2007-09-06.fasta
+dm3	dm3	D. melanogaster Apr. 2006 (BDGP R5/dm3) (dm3)	/reference-genomes/drosophila_melanogaster/drosophila_melanogaster_dm3/drosophila_melanogaster_dm3_FASTA/drosophila_melanogaster_dm3.fasta
+saccharomyces_cerevisiae_w303_draft_20111023	saccharomyces_cerevisiae_w303_draft_20111023	S. cerevisiae W303 (agammie draft_20111023) (saccharomyces_cerevisiae_w303_draft_20111023)	/reference-genomes/saccharomyces_cerevisiae_w303/saccharomyces_cerevisiae_w303_draft_20111023/saccharomyces_cerevisiae_w303_draft_20111023_FASTA/w303_draft_20111023.fasta
+saccharomyces_cerevisiae_s288c_sgd_r64-1-1_20110203	saccharomyces_cerevisiae_s288c_sgd_r64-1-1_20110203	S. cerevisiae S288C (SGD R64-1-1_20110203) (saccharomyces_cerevisiae_s288c_sgd_r64-1-1_20110203)	/reference-genomes/saccharomyces_cerevisiae_s288c/saccharomyces_cerevisiae_s288c_sgd_r64-1-1_20110203/saccharomyces_cerevisiae_s288c_sgd_r64-1-1_20110203_FASTA/saccharomyces_cerevisiae_R64-1-1_20110208.fasta
+human_adenovirus_type_5_ay601635_1_strain_nhrc_ad5fs_7151	human_adenovirus_type_5_ay601635_1_strain_nhrc_ad5fs_7151	Human adenovirus type 5 (NCBI AY601635.1 strain NHRC Ad5FS 7151) (human_adenovirus_type_5_ay601635_1_strain_nhrc_ad5fs_7151)	/reference-genomes/human_adenovirus_type_5/human_adenovirus_type_5_ay601635_1_strain_nhrc_ad5fs_7151/human_adenovirus_type_5_ay601635_1_strain_nhrc_ad5fs_7151_FASTA/ay601635.1.fasta
+sscrofa10_2	sscrofa10_2	Pig Dec 2011 Sus scrofa (SGSC 10.2) (sscrofa10_2)	/reference-genomes/sus_scrofa/sus_scrofa_10_2/sus_scrofa_10_2_FASTA/sscrofa10_2.fasta
+ce10	ce10	C. elegans Oct. 2010 (WS220/ce10) (ce10)	/reference-genomes/caenorhabditis_elegans/caenorhabditis_elegans_ce10/caenorhabditis_elegans_ce10_FASTA/caenorhabditis_elegans_ce10.fasta
+schizosaccharomyces_pombe_09052011	schizosaccharomyces_pombe_09052011	Schizosaccharomyces pombe (PomBase 09052011) (schizosaccharomyces_pombe_09052011)	/reference-genomes/schizosaccharomyces_pombe/schizosaccharomyces_pombe_09052011/schizosaccharomyces_pombe_09052011_FASTA/pombe_09052011.fasta
+rheMac2	rheMac2	Rhesus Macaque (UCSC rheMac2) (rheMac2)	/reference-genomes/rhesus_macaque/rhesus_macaque_rhemac2/rhesus_macaque_rhemac2_FASTA/rhesus_macaque_rhemac2.fasta
+sacCer3	sacCer3	S. cerevisiae Apr. 2011 (SacCer_Apr2011/sacCer3) (sacCer3)	/reference-genomes/saccharomyces_cerevisiae_s288c/saccharomyces_cerevisiae_s288c_saccer3/saccharomyces_cerevisiae_s288c_saccer3_FASTA/saccharomyces_cerevisiae_s288c_saccer3.fasta
+canFam2	canFam2	Dog May 2005 (Broad/canFam2) (canFam2)	/reference-genomes/canis_familiaris/canis_familiaris_canfam2/canis_familiaris_canfam2_FASTA/genome.fasta
+eschColi_K12	eschColi_K12	Escherichia coli K12 (NCBI NC_000913.2) (eschColi_K12)	/reference-genomes/escherichia_coli_k12/escherichia_coli_k12_nc_000913_2/escherichia_coli_k12_nc_000913_2_FASTA/NC_000913_2.fasta
+canFam_ncbi_build3.1	canFam_ncbi_build3.1	Dog Sep 2011 (NCBI build3.1) (canFam_ncbi_build3.1)	/reference-genomes/iGenomes/Canis_familiaris/NCBI/build3.1/Sequence/WholeGenomeFasta/genome.fa
+vibrio_cholerae_o1_biovar_eltor_str_n16961_2000-08-03	vibrio_cholerae_o1_biovar_eltor_str_n16961_2000-08-03	Vibrio cholerae O1 biovar eltor str N16961 (NCBI 2000-08-03) (vibrio_cholerae_o1_biovar_eltor_str_n16961_2000-08-03)	/reference-genomes/vibrio_cholerae_o1_biovar_eltor_str_n16961/vibrio_cholerae_o1_biovar_eltor_str_n16961_2000-08-03/vibrio_cholerae_o1_biovar_eltor_str_n16961_2000-08-03_FASTA/vibrio_cholerae_o1_biovar_eltor_str_n16961_2000-08-03.fasta
+saccharomyces_cerevisiae_sk1_mvo_v1	saccharomyces_cerevisiae_sk1_mvo_v1	Saccharomyces cerevisiae SK1 (MSKCC MvO_v1) (saccharomyces_cerevisiae_sk1_mvo_v1)	/reference-genomes/saccharomyces_cerevisiae_sk1/saccharomyces_cerevisiae_sk1_mvo_v1/saccharomyces_cerevisiae_sk1_mvo_v1_FASTA/sk1_MvO_V1.fasta
+mm10	mm10	Mouse Dec. 2011 (GRCm38/mm10) (mm10)	/reference-genomes/iGenomes/Mus_musculus/UCSC/mm10/Sequence/WholeGenomeFasta/genome.fa
+danRer7	danRer7	Danio rerio (UCSC danRer7) (danRer7)	/reference-genomes/danio_rerio/danio_rerio_danrer7/danio_rerio_danrer7_FASTA/danRer7.fasta
+celegans_ws220	celegans_ws220	C. elegans Oct. 2010 (Wormbase) (celegans_ws220)	/reference-genomes/iGenomes/Caenorhabditis_elegans/Ensembl/WS220/Sequence/WholeGenomeFasta/genome.fa
+sbayanus_ygob_v6_dec2011	sbayanus_ygob_v6_dec2011	Saccharomyces bayanus (YGOB V6 Dec2011) (sbayanus_ygob_v6_dec2011)	/reference-genomes/saccharomyces_bayanus/saccharomyces_bayanus_ygob_v6_dec2011/saccharomyces_bayanus_ygob_v6_dec2011_FASTA/Sbayanus_sequence.fsa.fasta
+sbayanus_ygob_v7_Aug2012	sbayanus_ygob_v7_Aug2012	Saccharomyces bayanus var. uvarum (YGOB v7 Aug2012) (sbayanus_ygob_v7_Aug2012)	/reference-genomes/saccharomyces_bayanus_var_uvarum/saccharomyces_bayanus_var_uvarum_ygob_v7_aug2012/saccharomyces_bayanus_var_uvarum_ygob_v7_aug2012_FASTA/Suvarum_sequence.fasta
+Pf3D7_v3_0	Pf3D7_v3_0	Plasmodium falciparum 3D7 (Sanger Institute v3.0 / PlasmoDB 9.x) (Pf3D7_v3_0)	/reference-genomes/plasmodium_falciparum_3d7/plasmodium_falciparum_3d7_v3_0/plasmodium_falciparum_3d7_v3_0_FASTA/PlasmoDB-9.3_Pfalciparum3D7_Genome.fasta
+pchab_2013-05-01	pchab_2013-05-01	Plasmodium chabaudi (Sanger Institute 2013-05-01, unpublished) (pchab_2013-05-01)	/reference-genomes/plasmodium_chabaudi/plasmodium_chabaudi_2013-05-01/plasmodium_chabaudi_2013-05-01_FASTA/plasmodium_chabaudi_2013-05-01.fasta
+suid_herpesvirus_1_bartha_JF797217_1	suid_herpesvirus_1_bartha_JF797217_1	Suid herpesvirus 1 Bartha (NCBI JF797217.1) (suid_herpesvirus_1_bartha_JF797217_1)	/reference-genomes/suid_herpesvirus_1_bartha/suid_herpesvirus_1_bartha_jf797217_1/suid_herpesvirus_1_bartha_jf797217_1_FASTA/suid_herpesvirus_1_bartha.fasta
+suid_herpesvirus_1_becker_JF797219_1	suid_herpesvirus_1_becker_JF797219_1	Suid herpesvirus 1 Becker (NCBI JF797219.1) (suid_herpesvirus_1_becker_JF797219_1)	/reference-genomes/suid_herpesvirus_1_becker/suid_herpesvirus_1_becker_jf797219_1/suid_herpesvirus_1_becker_jf797219_1_FASTA/suid_herpesvirus_1_becker.fasta
+suid_herpesvirus_1_kaplan_JF797218_1	suid_herpesvirus_1_kaplan_JF797218_1	Suid herpesvirus 1 Kaplan (NCBI JF797218.1) (suid_herpesvirus_1_kaplan_JF797218_1)	/reference-genomes/suid_herpesvirus_1_kaplan/suid_herpesvirus_1_kaplan_jf797218_1/suid_herpesvirus_1_kaplan_jf797218_1_FASTA/suid_herpesvirus_1_kaplan.fasta
+rn5	rn5	Rat Mar. 2012 (RGSC 5.0/rn5) (rn5)	/reference-genomes/iGenomes/Rattus_norvegicus/UCSC/rn5/Sequence/WholeGenomeFasta/genome.fa
+saccharomyces_cerevisiae_cen_pk113-7d_2012-03-26	saccharomyces_cerevisiae_cen_pk113-7d_2012-03-26	Saccharomyces cerevisiae CEN.PK113-7D (NCBI BioProject PRJNA52955 2012-03-26) (saccharomyces_cerevisiae_cen_pk113-7d_2012-03-26)	/reference-genomes/saccharomyces_cerevisiae_cen_pk113-7d/saccharomyces_cerevisiae_cen_pk113-7d_2012-03-26/saccharomyces_cerevisiae_cen_pk113-7d_2012-03-26_FASTA/Saccharomyces_cerevisiae_CEN.PK113-7D_PRJNA52955.fasta
+18801	18801	Staphylococcus aureus subsp. aureus str. Newman [NCBI NC_009641.1] (18801)	/reference-genomes/staphylococcus_aureus_subsp__aureus_str__newman/staphylococcus_aureus_subsp__aureus_str__newman_nc_009641_1/staphylococcus_aureus_subsp__aureus_str__newman_nc_009641_1_FASTA/sequence.fasta
+pseuAeru	pseuAeru	Pseudomonas aeruginosa PAO1 (NCBI NC_002516.2) (pseuAeru)	/reference-genomes/pseudomonas_aeruginosa_pao1/pseudomonas_aeruginosa_pao1_nc_002516_2/pseudomonas_aeruginosa_pao1_nc_002516_2_FASTA/sequence.fasta
+225	225	Escherichia coli K12 (NCBI NC_000913.3) (225)	/reference-genomes/escherichia_coli_k12/escherichia_coli_k12_nc_000913_3/escherichia_coli_k12_nc_000913_3_FASTA/escherichia_coli_k12_nc_000913_3.fasta
+dmel_ncbi_build5.41	dmel_ncbi_build5.41	Drosophila melanogaster (NCBI) (dmel_ncbi_build5.41)	/reference-genomes/iGenomes/Drosophila_melanogaster/NCBI/build5.41/Sequence/WholeGenomeFasta/genome.fa
+ensembl_dmel_bdgp5.25	ensembl_dmel_bdgp5.25	Drosophila melanogaster (Ensembl) (ensembl_dmel_bdgp5.25)	/reference-genomes/iGenomes/Drosophila_melanogaster/Ensembl/BDGP5.25/Sequence/WholeGenomeFasta/genome.fa
+flybase_dmel_5_55	flybase_dmel_5_55	Drosophila melanogaster (Flybase 5.55) (flybase_dmel_5_55)	/reference-genomes/drosophila_melanogaster/drosophila_melanogaster_5_55/drosophila_melanogaster_5_55_FASTA/dmel-all-chromosome-r5.55.fasta
+eschColi_BW2952_nc_012759_1	eschColi_BW2952_nc_012759_1	Escherichia coli BW2952 (MC4100 derivative) (NCBI NC_0012759.1) (eschColi_BW2952_nc_012759_1)	/reference-genomes/escherichia_coli_k12/escherichia_coli_k12_bw2952_nc_012759_1/escherichia_coli_k12_bw2952_nc_012759_1_FASTA/escherichia_coli_BW2952.fasta
+susScr3	susScr3	Pig Aug. 2011 (SGSC Sscrofa10.2/susScr3) (susScr3)	/reference-genomes/iGenomes/Sus_scrofa/UCSC/susScr3/Sequence/WholeGenomeFasta/genome.fa
+ensembl_tcas3_22	ensembl_tcas3_22	Tribolium castaneum (Ensembl 3.22) (ensembl_tcas3_22)	/reference-genomes/tribolium_castaneum/tribolium_castaneum_ensembl_tcas3_22/tribolium_castaneum_ensembl_tcas3_22_FASTA/Tribolium_castaneum.Tcas3.22.dna.genome.fasta
+bacillus_thuringiensis_serovar_berliner_atcc_10792_nz_cm000753_1	bacillus_thuringiensis_serovar_berliner_atcc_10792_nz_cm000753_1	Bacillus thuringiensis serovar berliner ATCC 10792 (NCBI NZ_CM000753.1) (bacillus_thuringiensis_serovar_berliner_atcc_10792_nz_cm000753_1)	/reference-genomes/bacillus_thuringiensis_serovar_berliner_atcc_10792/bacillus_thuringiensis_serovar_berliner_atcc_10792_nz_cm000753_1/bacillus_thuringiensis_serovar_berliner_atcc_10792_nz_cm000753_1_FASTA/Bacillus_thuringiensis_serovar_berliner_ATCC_10792.fna.fasta
+shewOnei	shewOnei	Shewanella oneidensis MR-1 (UCSC Microbial 2002-10-09) (shewOnei)	/reference-genomes/shewanella_oneidensis_mr-1/shewanella_oneidensis_mr-1_2002-10-09/shewanella_oneidensis_mr-1_2002-10-09_FASTA/shewanella_oneidensis_mr-1_2002-10-09.fasta
+shewOnei2	shewOnei2	Shewanella oneidensis MR-1 (NCBI 2012-11-14) (shewOnei2)	/reference-genomes/shewanella_oneidensis_mr-1/shewanella_oneidensis_mr-1_2012-11-14/shewanella_oneidensis_mr-1_2012-11-14_FASTA/shewanella_oneidensis_mr-1_2012-11-14.fasta
+danRer10	danRer10	Danio rerio (Zebrafish) Sep. 2014 (GRCz10/danRer10)	/reference-genomes/danio_rerio/danio_rerio_danrer10/danio_rerio_danrer10_FASTA/danRer10.fasta
+Thaps3	Thaps3	Thalassiosira pseudonana (JGI v3.031306) (Thaps3)	/reference-genomes/thalassiosira_pseudonana/thalassiosira_pseudonana_v3_031306/thalassiosira_pseudonana_v3_031306_FASTA/Thaps3_complete.fasta
+GRCh38	GRCh38	Human (Ensembl GRCh38) (GRCh38)	/reference-genomes/homo_sapiens/homo_sapiens_grch38/homo_sapiens_grch38_FASTA/Homo_sapiens.GRCh38.dna.toplevel.fasta
+ci2	ci2	Ciona intestinalis (UCSC ci2) (ci2)	/reference-genomes/ciona_intestinalis/ciona_intestinalis_ci2/ciona_intestinalis_ci2_FASTA/ciona_intestinalis_ci2.fasta
+ci_kh1	ci_kh1	Ciona intestinalis (Ensemble KH1 GCA_000224145.1) (ci_kh1)	/reference-genomes/ciona_intestinalis/ciona_intestinalis_kh1/ciona_intestinalis_kh1_FASTA/Ciona_intestinalis.KH.dna_sm.toplevel.fasta

@@ -1,0 +1,745 @@
+phiX	phiX174	phiX=5386
+16079	Mycobacterium sp. JLS	NC_009077=6048425
+symbTher_IAM14863	Symbiobacterium thermophilum IAM 14863	chr=3566135
+16070	Yersinia pseudotuberculosis IP 31758	NC_009708=4723306,NC_009705=153140,NC_009704=58679
+18883	Mycobacterium tuberculosis H37Ra	NC_009525=4419977
+nocaJS61	Nocardioides sp. JS614	plasmid_pNOCA01=307814,chr=4985871
+12521	Clostridium perfringens SM101	NC_008265=38092,NC_008264=12206,NC_008263=12397,NC_008262=2897393
+acidCryp_JF_5	Acidiphilium cryptum JF-5	plasmid_pACRY07=5629,plasmid_pACRY06=8781,plasmid_pACRY05=37155,plasmid_pACRY04=37415,plasmid_pACRY03=88953,plasmid_pACRY02=187422,plasmid_pACRY01=203589,plasmid_pACRY08=4909,chr=3389227
+lactLact	Lactococcus lactis subsp. lactis Il1403	chr=2365589
+13082	Bacillus licheniformis ATCC 14580	NC_006322=4222645
+344	Rhizobium leguminosarum bv. viciae 3841	NC_008384=684202,NC_008382=151564,NC_008383=147463,NC_008380=5057142,NC_008381=488135,NC_008379=352782,NC_008378=870021
+siliPome_DSS_3	Silicibacter pomeroyi DSS-3	chr=4109442,megaplasmid=491611
+paraSp_UWE25	Candidatus Protochlamydia amoebophila UWE25	chr=2414465
+geobKaus_HTA426	Geobacillus kaustophilus HTA426	chr=3544776,plasmid_pHTA426=47890
+rhizEtli_CFN_42	Rhizobium etli CFN 42	d=371254,plasmid_p42c=250948,plasmid_p42b=184338,plasmid_p42a=194229,plasmid_p42f=642517,plasmid_p42e=505334,chr=4381608
+13162	Streptococcus thermophilus LMG 18311	NC_006448=1796846
+13163	Streptococcus thermophilus CNRZ1066	NC_006449=1796226
+18817	Methylobacterium radiotolerans JCM 2831	NC_010510=586164,NC_010502=27836,NC_010505=6077833,NC_010504=22114,NC_010507=21022,NC_010509=47003,NC_010518=36410,NC_010514=42985,NC_010517=37743
+28109	Bartonella tribocorum CIP 105476	NC_010161=2619061,NC_010160=23343
+dichNodo_VCS1703A	Dichelobacter nodosus VCS1703A	chr=1389350
+12931	Xanthomonas oryzae pv. oryzae KACC10331	NC_006834=4941439
+eschColi_O157H7	Escherichia coli O157:H7 str. Sakai	plasmid_pOSAK1=3306,chr=5498450,plasmid_pO157=92721
+burk383	Burkholderia sp. 383	chr3=1395069,chr2=3587082,chr1=3694126
+15759	Psychrobacter sp. PRwf-1	NC_009524=2978976,NC_009516=13956,NC_009517=2117
+15758	Staphylococcus aureus subsp. aureus JH1	NC_009632=2906507,NC_009619=30429
+27835	Microcystis aeruginosa NIES-843	NC_010296=5842795
+campJeju_81_176	Campylobacter jejuni subsp. jejuni 81-176	chr=1616554,plasmid_pVir=37473,plasmid_pTet=45025
+15751	Rhodopseudomonas palustris BisA53	NC_008435=5505494
+15750	Rhodopseudomonas palustris BisB18	NC_007925=5513844
+15757	Staphylococcus aureus subsp. aureus JH9	NC_009477=30429,NC_009487=2906700
+15756	Xanthobacter autotrophicus Py2	NC_009717=316164,NC_009720=5308934
+15755	Rhodobacter sphaeroides ATCC 17025	NC_009428=3217726,NC_009429=877879,NC_009433=13873,NC_009432=36198,NC_009431=121962,NC_009430=289489
+15754	Rhodobacter sphaeroides ATCC 17029	NC_009050=1219053,NC_009040=122606,NC_009049=3147721
+13603	Ralstonia eutropha H16	NC_008314=2912490,NC_005241=452156,NC_008313=4052032
+shewPutrCN32	Shewanella putrefaciens CN-32	chr=4659220
+aerPer1	Aeropyrum pernix K1	chr=1669696
+18255	Bacillus thuringiensis str. Al Hakam	NC_008600=5257091,NC_008598=55939
+acinSp_ADP1	Acinetobacter sp. ADP1	chr=3598621
+anapMarg_ST_MARIES	Anaplasma marginale str. St. Maries	chr=1197687
+297	Xanthomonas axonopodis pv. citri str. 306	NC_003922=64920,NC_003921=33700,NC_003919=5175554
+desuPsyc_LSV54	Desulfotalea psychrophila LSv54	chr=3523383,plasmid_small=14664,plasmid_large=121587
+17227	Desulfovibrio vulgaris subsp. vulgaris DP4	NC_008751=3462887,NC_008741=198504
+190	Yersinia enterocolitica subsp. enterocolitica 8081	NC_008791=67721,NC_008800=4615899
+193	Clostridium botulinum A str. ATCC 3502	NC_009495=3886916,NC_009496=16344
+270	Streptococcus pyogenes str. Manfredo	NC_009332=1841271
+16252	Synechococcus sp. JA-2-3B'a(2-13)	NC_007776=3046682
+16251	Synechococcus sp. JA-3-3Ab	NC_007775=2932766
+16319	Arcobacter butzleri RM4018	NC_009850=2341251
+276	Listeria monocytogenes EGD-e	NC_003210=2944528
+277	Streptococcus pneumoniae TIGR4	NC_003028=2160842
+13427	Heliobacterium modesticaldum Ice1	NC_010337=3075407
+279	Staphylococcus epidermidis ATCC 12228	NC_005008=4439,NC_004461=2499279,NC_005003=6585,NC_005006=8007,NC_005007=4679,NC_005004=24365,NC_005005=17261
+19979	Flavobacterium psychrophilum JIP02/86	NC_009613=2861988
+13548	Prochlorococcus marinus str. AS9601	NC_008816=1669886
+16700	Yersinia pestis Pestoides F	NC_009378=137010,NC_009381=4517345,NC_009377=71507
+therTher_HB8	Thermus thermophilus HB8	chr=1849742,plasmid_pTT27=256992,plasmid_pTT8=9322
+28035	Streptococcus pneumoniae Hungary19A-6	NC_010380=2245615
+19575	Bradyrhizobium sp. ORS278	NC_009445=7456587
+18083	Escherichia coli C str. ATCC 8739	
+methStad1	Methanosphaera stadtmanae DSM 3091	chr=1767403
+magnMagn_AMB_1	Magnetospirillum magneticum AMB-1	chr=4967148
+13901	Thermoanaerobacter pseudethanolicus ATCC 33223	NC_010321=2362816
+methBurt2	Methanococcoides burtonii DSM 6242	chr=2575032
+13908	Rhodoferax ferrireducens T118	NC_007901=257447,NC_007908=4712337
+13909	Pseudomonas putida F1	NC_009512=5959964
+16400	Haemophilus influenzae PittEE	NC_009566=1813033
+16401	Haemophilus influenzae PittGG	NC_009567=1887192
+100	Mycoplasma pulmonis UAB CTIP	NC_002771=963879
+methMari_C7	Methanococcus maripaludis C7	chr=1772694
+106	Halobacterium salinarum R1	NC_010364=2000962,NC_010367=40894,NC_010366=147625,NC_010369=194963,NC_010368=284332
+geobSulf	Geobacter sulfurreducens PCA	chr=3814139
+38	Haemophilus ducreyi 35000HP	NC_002940=1698955
+28247	Synechococcus sp. PCC 7002	NC_010480=124030,NC_010479=38515,NC_010478=31972,NC_010475=3008047,NC_010474=186459,NC_010477=16103,NC_010476=4809
+16791	Coxiella burnetii RSA 331	NC_010117=2016427,NC_010115=37317
+procMari_CCMP1375	Prochlorococcus marinus subsp. marinus str. CCMP1375	chr=1751080
+31	Klebsiella pneumoniae subsp. pneumoniae MGH 78578	NC_009653=3478,NC_009652=4259,NC_009651=88582,NC_009650=107576,NC_009648=5315120,NC_009649=175879
+oenoOeni_PSU_1	Oenococcus oeni PSU-1	chr=1780517
+16817	Pseudomonas stutzeri A1501	NC_009434=4567418
+wiggBrev	Wigglesworthia glossinidia endosymbiont of Glossina brevipalpis	chr=697724,plasmid_pWb1=5280
+10639	Mycoplasma hyopneumoniae 7448	NC_007332=920079
+10638	Yersinia pestis biovar Microtus str. 91001	NC_005810=4595065,NC_005813=70159,NC_005815=106642,NC_005814=21742,NC_005816=9609
+caldMaqu1	Caldivirga maquilingensis IC-167	chr=2077567
+salmEnte_PARATYPI_ATC	Salmonella enterica subsp. enterica serovar Paratyphi A str. ATCC 9150	chr=4585229
+onioYell_PHYTOPLASMA	Onion yellows phytoplasma OY-M	chr=860631
+18459	Francisella tularensis subsp. tularensis WY96-3418	NC_009257=1898476
+334	Streptococcus agalactiae NEM316	NC_004368=2211485
+mariAqua_VT8	Marinobacter aquaeolei VT8	plasmid_pMAQU01=239623,chr=4326849,plasmid_pMAQU02=213290
+16719	Fervidobacterium nodosum Rt17-B1	NC_009718=1948941
+330	Streptococcus agalactiae 2603V/R	NC_004116=2160267
+333	Streptococcus mutans UA159	NC_004350=2030921
+9638	Lactobacillus johnsonii NCC 533	NC_005362=1992676
+17729	Anaeromyxobacter sp. Fw109-5	NC_009675=5277990
+shewLoihPV4	Shewanella loihica PV-4	chr=4602594
+candPela_UBIQUE_HTCC1	Candidatus Pelagibacter ubique HTCC1062	chr=1308759
+myxoXant_DK_1622	Myxococcus xanthus DK 1622	chr=9139763
+9636	Rickettsia rickettsii str. 'Sheila Smith'	NC_009882=1257710
+salmTyph_TY2	Salmonella enterica subsp. enterica serovar Typhi str. Ty2	chr=4791961
+chloChlo_CAD3	Chlorobium chlorochromatii CaD3	chr=2572079
+mesoFlor_L1	Mesoplasma florum L1	chr=793224
+28921	Acinetobacter baumannii	NC_010401=5644,NC_010402=9661,NC_010403=2726,NC_010404=94413,NC_010410=3936291
+hermArse	Herminiimonas arsenicoxydans	chr=3424307
+methMaze1	Methanosarcina mazei Go1	chr=4096345
+17343	Sphingomonas wittichii RW1	NC_009508=222757,NC_009507=310228,NC_009511=5382261
+99	Mycoplasma pneumoniae M129	NC_000912=816394
+13643	Synechococcus sp. CC9605	NC_007516=2510659
+13642	Synechococcus sp. WH 7803	NC_009481=2366980
+lawsIntr_PHE_MN1_00	Lawsonia intracellularis PHE/MN1-00	plasmid_2=39794,plasmid_3=194553,chr=1457619,plasmid_1=27048
+jannCCS1	Jannaschia sp. CCS1	chr=4317977,plasmid1=86072
+91	Mycobacterium avium subsp. paratuberculosis K-10	NC_002944=4829781
+90	Mycobacterium leprae TN	NC_002677=3268203
+92	Mycobacterium smegmatis str. MC2 155	NC_008596=6988209
+95	Tropheryma whipplei str. Twist	NC_004572=927303
+13649	Xanthomonas campestris pv. vesicatoria str. 85-10	NC_007505=19146,NC_007504=1852,NC_007507=182572,NC_007506=38116,NC_007508=5178466
+13885	Chlamydia trachomatis A/HAR-13	NC_007430=7510,NC_007429=1044459
+13884	Rickettsia felis URRWXCal2	NC_007109=1485148,NC_007110=62829,NC_007111=39263
+13887	Streptococcus pyogenes MGAS6180	NC_007296=1897573
+13760	Corynebacterium glutamicum ATCC 13032	NC_006958=3282708
+13888	Streptococcus pyogenes MGAS5005	NC_007297=1838554
+ureaUrea	Ureaplasma parvum serovar 3 str. ATCC 700970	chr=751719
+streCoel	Streptomyces coelicolor A3(2)	chr=8667507,plasmid_SCP2=31317,plasmid_SCP1=356023
+orieTsut_BORYONG	Orientia tsutsugamushi str. Boryong	chr=2127051
+polaJS66	Polaromonas sp. JS666	plasmid_2=338007,chr=5200264,plasmid_1=360405
+rhodRubr_ATCC11170	Rhodospirillum rubrum ATCC 11170	chr=4352825,plasmid_unnamed=53732
+rhodRHA1	Rhodococcus sp. RHA1	plasmid_pRHL1=1123075,chr=7804765,plasmid_pRHL3=332361,plasmid_pRHL2=442536
+pireSp	Rhodopirellula baltica SH 1	chr=7145576
+franTula_TULARENSIS	Francisella tularensis subsp. tularensis SCHU S4	chr=1892819
+syneSp_WH8102	Synechococcus sp. WH 8102	chr=2434428
+19521	Clostridium botulinum A str. Hall	NC_009698=3760560
+238	Staphylococcus aureus subsp. aureus COL	NC_002951=2809422,NC_006629=4440
+15660	Prochlorococcus marinus str. NATL1A	NC_008819=1864731
+17823	Xylella fastidiosa M12	NC_010513=2475130
+methPetr_PM1	Methylibium petroleiphilum PM1	chr=4044195,plasmid_RPME01=599444
+237	Staphylococcus aureus subsp. aureus NCTC 8325	NC_007795=2821361
+thioCrun_XCL_2	Thiomicrospira crunogena XCL-2	chr=2427734
+haloHalo1	Halobacterium sp. NRC-1	chr=2014239,plasmid_pNRC100=191346,plasmid_pNRC200=365425
+16190	Roseiflexus sp. RS-1	NC_009523=5801598
+idioLoih_L2TR	Idiomarina loihiensis L2TR	chr=2839318
+18637	Methylobacterium extorquens PA1	NC_010172=5471154
+sodaGlos_MORSITANS	Sodalis glossinidius str. 'morsitans'	chr=4171146,plasmid_pSG3=10810,plasmid_pSG2=27240,plasmid_pSG1=83306
+18633	Prochlorococcus marinus str. MIT 9215	NC_009840=1738790
+mycoTube_H37RV	Mycobacterium tuberculosis H37Rv	chr=4411532
+polyQLWP	Polynucleobacter sp. QLW-P1DMWA-1	chr=2159490
+peloLute_DSM273	Pelodictyon luteolum DSM 273	chr=2364842
+burkCeno_AU_1054	Burkholderia cenocepacia AU 1054	chr3=1196094,chr2=2788459,chr1=3294563
+13942	Streptococcus sanguinis SK36	NC_009009=2388435
+13943	Burkholderia mallei NCTC 10229	NC_008835=2284095,NC_008836=3458208
+ente638	Enterobacter sp. 638	chr=4518712,plasmid_pENTE01=157749
+13946	Burkholderia mallei NCTC 10247	NC_009080=3495687,NC_009079=2352693
+13947	Burkholderia mallei SAVP1	NC_008784=1734922,NC_008785=3497479
+16363	Streptococcus pyogenes MGAS9429	NC_008021=1836467
+neorSenn_MIYAYAMA	Neorickettsia sennetsu str. Miyayama	chr=859006
+heliAcin_SHEEBA	Helicobacter acinonychis str. Sheeba	chr=1553927,plasmid_pHac1=3661
+16366	Streptococcus pyogenes MGAS10750	NC_008024=1937111
+16365	Streptococcus pyogenes MGAS2096	NC_008023=1860355
+13473	Nitrobacter hamburgensis X14	NC_007961=121408,NC_007960=188318,NC_007964=4406967,NC_007959=294829
+burkCepa_AMMD	Burkholderia ambifaria AMMD	plasmid_1=43581,chr3=1281472,chr2=2646969,chr1=3556545
+methMari_C5_1	Methanococcus maripaludis C5	chr=1780761,plasmid_pMMC501=8285
+13478	Aster yellows witches'-broom phytoplasma AYWB	NC_007718=4009,NC_007719=5104,NC_007720=4316,NC_007716=706569,NC_007717=3972
+13370	Actinobacillus succinogenes 130Z	NC_009655=2319663
+methBark1	Methanosarcina barkeri str. Fusaro	chr=4837408,plasmid1=36358
+geobMeta_GS15	Geobacter metallireducens GS-15	chr=3997420,plasmid_unnamed=13762
+eschColi_CFT073	Escherichia coli CFT073	chr=5231428
+metMar1	Methanococcus maripaludis S2	chr=1661137
+enteFaec_V583	Enterococcus faecalis V583	chr=3218031,plasmid_pTEF1=66320,plasmid_pTEF3=17963,plasmid_pTEF2=57660
+17265	Francisella tularensis subsp. holarctica OSU18	NC_008369=1895727
+shigFlex_2A	Shigella flexneri 2a str. 301	chr=4607203,plasmid_pCP301=221618
+erwiCaro_ATROSEPTICA	Pectobacterium atrosepticum SCRI1043	chr=5064019
+pseuHalo_TAC125	Pseudoalteromonas haloplanktis TAC125	chrII=635328,chrI=3214944
+17163	Campylobacter jejuni subsp. doylei 269.97	NC_009707=1845106
+17161	Campylobacter curvus 525.92	NC_009715=1971264
+10690	Mesorhizobium sp. BNC1	NC_008243=131247,NC_008242=343931,NC_008254=4412446,NC_008244=47561
+10694	Ehrlichia canis str. Jake	NC_007354=1315030
+10697	Mycoplasma mobile 163K	NC_006908=777079
+25	Bordetella parapertussis 12822	NC_002928=4773551
+26	Bordetella pertussis Tohama I	NC_002929=4086189
+16841	Candidatus Ruthia magnifica str. Cm (Calyptogena magnifica)	NC_008610=1160782
+sulfToko1	Sulfolobus tokodaii str. 7	chr=2694756
+404	Lactobacillus brevis ATCC 367	NC_008498=13413,NC_008499=35595,NC_008497=2291220
+403	Lactobacillus delbrueckii subsp. bulgaricus ATCC BAA-365	NC_008529=1856951
+13920	Psychrobacter cryohalolentis K5	NC_007969=3059876,NC_007968=41221
+401	Lactococcus lactis subsp. cremoris SK11	NC_008527=2438589,NC_008503=14041,NC_008504=9554,NC_008505=74750,NC_008506=47208,NC_008507=14206
+16137	Bradyrhizobium sp. BTAi1	NC_009475=228826,NC_009485=8264687
+uncuMeth_RCI	uncultured methanogenic archaeon RC-I	chr=3179916
+coryEffi_YS_314	Corynebacterium efficiens YS-314	chr=3147090
+13485	Parabacteroides distasonis ATCC 8503	NC_009615=4811379
+409	Mycoplasma gallisepticum R	NC_004829=996422
+28743	Yersinia pseudotuberculosis YPIII	NC_010465=4689441
+19469	Escherichia coli SECEC SMS-3-5	NC_010488=130440,NC_010498=5068389,NC_010485=8909,NC_010486=4074,NC_010487=3565
+psycArct_273_4	Psychrobacter arcticus 273-4	chr=2650701
+propAcne_KPA171202	Propionibacterium acnes KPA171202	chr=2560265
+acidJS42	Acidovorax sp. JS42	plasmid_pAOVO01=72689,chr=4448856,plasmid_pAOVO02=63609
+chroSale_DSM3043	Chromohalobacter salexigens DSM 3043	chr=3696649
+19065	Clostridium kluyveri DSM 555	NC_009466=59182,NC_009706=3964618
+18801	Staphylococcus aureus subsp. aureus str. Newman	NC_009641=2878897
+13151	Shigella sonnei Ss046	NC_009346=5153,NC_009345=8401,NC_009347=2101,NC_007385=214396,NC_007384=4825265
+18965	Sulfurovum sp. NBC37-1	NC_009663=2562277
+18963	Nitratiruptor sp. SB155-2	NC_009662=1877931
+18809	Methylobacterium sp. 4-46	
+tropWhip_TW08_27	Tropheryma whipplei TW08/27	chr=925938
+28135	Bordetella petrii DSM 12804	NC_010170=5287950
+natrPhar1	Natronomonas pharaonis DSM 2160	plasmid_PL23=23486,chr=2595221,plasmid_PL131=130989
+370	Chlamydophila felis Fe/C-56	NC_007900=7552,NC_007899=1166239
+377	Gluconacetobacter diazotrophicus PAl 5	NC_010123=16610,NC_010125=3944163,NC_010124=38818
+rubrXyla_DSM9941	Rubrobacter xylanophilus DSM 9941	chr=3225748
+15746	Prochlorococcus marinus str. MIT 9301	NC_009091=1641879
+15747	Rhodopseudomonas palustris HaA2	NC_007778=5331656
+18981	Finegoldia magna ATCC 29328	NC_010376=1797577,NC_010371=189163
+franCcI3	Frankia sp. CcI3	chr=5433628
+15749	Rhodopseudomonas palustris BisB5	NC_007958=4892717
+16549	Janthinobacterium sp. Marseille	NC_009659=4110251
+89	Mycobacterium bovis AF2122/97	NC_002945=4345492
+12716	Citrobacter koseri ATCC BAA-895	NC_009792=4720462,NC_009793=9294,NC_009794=5601
+82	Lactobacillus acidophilus NCFM	NC_006814=1993560
+81	Clostridium tetani E88	NC_004557=2799251,NC_004565=74082
+16095	Mycoplasma agalactiae PG2	NC_009497=877438
+87	Corynebacterium diphtheriae NCTC 13129	NC_002935=2488635
+84	Lactobacillus gasseri ATCC 33323	NC_008530=1894360
+85	Listeria monocytogenes str. 4b F2365	NC_002973=2905187
+20197	Francisella tularensis subsp. holarctica FTA	NC_009749=1890909
+caldSacc_DSM8903	Caldicellulosiruptor saccharolyticus DSM 8903	chr=2970275
+anabVari_ATCC29413	Anabaena variabilis ATCC 29413	plasmid_B=35762,plasmid_C=300758,chr=6365727,plasmid_A=366354
+lactPlan	Lactobacillus plantarum WCFS1	chr=3308274,plasmid_pWCFS101=1917,plasmid_pWCFS103=36069,plasmid_pWCFS102=2365
+carbHydr_Z_2901	Carboxydothermus hydrogenoformans Z-2901	chr=2401520
+13617	Prochlorococcus marinus str. MIT 9515	NC_008817=1704176
+10878	Bacillus anthracis str. Sterne	NC_005945=5228663
+16067	Yersinia pestis Angola	NC_010158=114570,NC_010159=4504254,NC_010157=68190
+16062	Leuconostoc citreum KM20	NC_010466=31463,NC_010467=17971,NC_010471=1796284,NC_010470=38713,NC_010469=12183
+16148	Leptospira borgpetersenii serovar Hardjo-bovis JB197	NC_008511=299762,NC_008510=3576473
+16146	Leptospira borgpetersenii serovar Hardjo-bovis L550	NC_008508=3614446,NC_008509=317336
+vibrVuln_CMCP6_1	Vibrio vulnificus CMCP6	chrII=1844853,chrI=3281944
+10877	Bacillus thuringiensis serovar konkukian str. 97-27	NC_006578=77112,NC_005957=5237682
+19517	Clostridium botulinum A str. ATCC 19397	NC_009697=3863450
+nitrWino_NB_255	Nitrobacter winogradskyi Nb-255	chr=3402093
+16321	Bifidobacterium adolescentis ATCC 15703	NC_008618=2089645
+17629	Pseudomonas putida GB-1	NC_010322=6078430
+17237	Rickettsia bellii OSU 85-389	NC_009883=1528980
+19519	Clostridium botulinum F str. Langeland	NC_009700=17531,NC_009699=3995387
+mesoLoti	Mesorhizobium loti MAFF303099	chr=7036071,plasmid_pMLa=351911,plasmid_pMLb=208315
+coxiBurn	Coxiella burnetii RSA 493	chr=1995281,plasmid_pQpH1=37393
+247	Chlamydophila pneumoniae AR39	NC_002179=1229853
+acidBact_ELLIN345	Acidobacteria bacterium Ellin345	chr=5650368
+241	Salmonella typhimurium LT2	NC_003277=93939,NC_003197=4857432
+16249	Bartonella bacilliformis KC583	NC_008783=1445021
+12997	Acaryochloris marina MBIC11017	NC_009929=226680,NC_009928=273121,NC_009934=2133,NC_009932=155110,NC_009933=120693,NC_009930=177162,NC_009931=172728,NC_009925=6503724,NC_009927=356087,NC_009926=374161
+xyleFast	Xylella fastidiosa 9a5c	plasmid_pXF1.3=1286,chr=2679306,plasmid_pXF51=51158
+13435	Lactobacillus sakei subsp. sakei 23K	NC_007576=1884661
+11752	Haemophilus influenzae 86-028NP	NC_007146=1914490
+16393	Neisseria meningitidis 053442	NC_010120=2153416
+16394	Thermoanaerobacter sp. X514	NC_010320=2457259
+methKand1	Methanopyrus kandleri AV19	chr=1694969
+bifiLong	Bifidobacterium longum NCC2705	chr=2256640,plasmid_pBLO1=3626
+leptInte	Leptospira interrogans serovar Lai str. 56601	chrII=358943,chrI=4332241
+burkCeno_HI2424	Burkholderia cenocepacia HI2424	plasmid_1=164857,chr3=1055417,chr2=2998664,chr1=3483902
+16364	Streptococcus pyogenes MGAS10270	NC_008022=1928252
+13875	Candidatus Blochmannia pennsylvanicus str. BPEN	NC_007292=791654
+buchSp	Buchnera aphidicola str. APS (Acyrthosiphon pisum)	chr=640681,plasmid_pTrp=7258,plasmid_pLeu=7786
+178	Burkholderia pseudomallei K96243	NC_006351=3173005,NC_006350=4074542
+176	Mycoplasma penetrans HF-2	NC_004432=1358633
+pyroCali1	Pyrobaculum calidifontis JCM 11548	chr=2009313
+chloTepi_TLS	Chlorobium tepidum TLS	chr=2154946
+13282	Synechococcus elongatus PCC 6301	NC_006576=2696255
+16800	Pseudomonas entomophila L48	NC_008027=5888780
+picrTorr1	Picrophilus torridus DSM 9790	chr=1545895
+shewANA3	Shewanella sp. ANA-3	plasmid_1=278942,chr1=4972204
+13443	Listeria welshimeri serovar 6b str. SLCC5334	NC_008555=2814130
+bdelBact	Bdellovibrio bacteriovorus HD100	chr=3782950
+gramFors_KT0803	Gramella forsetii KT0803	chr=3798465
+184	Clavibacter michiganensis subsp. sepedonicus	
+189	Streptomyces avermitilis MA-4680	NC_004719=94287,NC_003155=9025608
+clavMich_NCPPB_382	Clavibacter michiganensis subsp. michiganensis NCPPB 382	chr=3297891,plasmid_pCM1=27357,plasmid_pCM2=69989
+peloCarb	Pelobacter carbinolicus DSM 2380	chr=3665893
+20083	Campylobacter hominis ATCC BAA-381	NC_009713=3678,NC_009714=1711273
+saliTrop_CNB_440	Salinispora tropica CNB-440	chr=5183331
+17057	Borrelia afzelii PKo	NC_008277=905394,NC_008274=26533,NC_008273=30017,NC_008568=28533,NC_008569=24794,NC_008566=34273,NC_008567=32368,NC_008564=59958,NC_008565=59804
+campJeju	Campylobacter jejuni subsp. jejuni NCTC 11168	chr=1641481
+17053	Pseudomonas putida W619	NC_010501=5774330
+12	Pseudomonas fluorescens PfO-1	NC_007492=6438405
+15	Xanthomonas campestris pv. campestris str. 8004	NC_007086=5148708
+12475	Wolbachia endosymbiont strain TRS of Brugia malayi	NC_006833=1080084
+13217	Azoarcus sp. BH72	NC_008702=4376040
+dehaEthe_195	Dehalococcoides ethenogenes 195	chr=1469720
+methTherPT1	Methanosaeta thermophila PT	chr=1879471
+shewMR7	Shewanella sp. MR-7	chr=4792610,plasmid1=6499
+shewMR4	Shewanella sp. MR-4	chr=4706287
+15708	Acidovorax avenae subsp. citrulli AAC00-1	NC_008752=5352772
+19087	Ureaplasma parvum serovar 3 str. ATCC 27815	
+geobUran_RF4	Geobacter uraniireducens Rf4	chr=5136364
+shewDeni	Shewanella denitrificans OS217	chr=4545906
+pyrFur2	Pyrococcus furiosus DSM 3638	chr=1908256
+desuRedu_MI_1	Desulfotomaculum reducens MI-1	chr=3608104
+syntFuma_MPOB	Syntrophobacter fumaroxidans MPOB	chr=4990251
+278	Streptococcus pneumoniae R6	NC_003098=2038615
+13654	Synechococcus sp. RCC307	NC_009482=2224914
+13655	Synechococcus sp. CC9902	NC_007513=2234828
+16313	Staphylococcus aureus subsp. aureus USA300	NC_007790=3125,NC_007791=4439,NC_007792=37136,NC_007793=2872769
+legiPneu_PHILADELPHIA	Legionella pneumophila subsp. pneumophila str. Philadelphia 1	chr=3397754
+20391	Bacillus pumilus SAFR-032	NC_009848=3704465
+chlaPneu_CWL029	Chlamydophila pneumoniae CWL029	chr=1230230
+16259	Escherichia coli UTI89	NC_007946=5065741,NC_007941=114230
+13067	Bacteroides fragilis YCH46	NC_006297=33716,NC_006347=5277274
+gloeViol	Gloeobacter violaceus PCC 7421	chr=4659019
+moorTher_ATCC39073	Moorella thermoacetica ATCC 39073	chr=2628784
+323	Pseudomonas syringae pv. syringae B728a	NC_007005=6093698
+320	Brucella suis 1330	NC_004311=1207381,NC_004310=2107794
+roseDeni_OCH_114	Roseobacter denitrificans OCh 114	chr=5824
+326	Streptococcus agalactiae A909	NC_007432=2127839
+327	Pseudomonas fluorescens Pf-5	NC_004129=7074893
+325	Ehrlichia chaffeensis str. Arkansas	NC_007799=1176248
+329	Desulfovibrio desulfuricans G20	NC_007519=3730232
+16203	Brucella melitensis biovar Abortus 2308	NC_007624=1156948,NC_007618=2121359
+12950	Yersinia pseudotuberculosis IP 32953	NC_006153=68525,NC_006155=4744671,NC_006154=27702
+heliPylo_26695	Helicobacter pylori 26695	chr=1667867
+12952	Rickettsia canadensis str. McKiel	NC_009879=1159772
+12953	Rickettsia akari str. Hartford	NC_009881=1231060
+16208	Mycoplasma capricolum subsp. capricolum ATCC 27343	NC_007633=1010023
+17375	Francisella tularensis subsp. tularensis FSC198	NC_008245=1892616
+19259	Acholeplasma laidlawii PG-8A	NC_010163=1496992
+77	Clostridium acetobutylicum ATCC 824	NC_003030=3940880,NC_001988=192000
+74	Bacillus cereus ATCC 10987	NC_005707=208369,NC_003909=5224283
+15770	Dehalococcoides sp. BAV1	NC_009455=1341892
+79	Clostridium perfringens str. 13	NC_003042=54310,NC_003366=3031430
+78	Clostridium difficile 630	NC_009089=4290252,NC_008226=7881
+13624	Bacillus cereus subsp. cytotoxis NVH 391-98	NC_009674=4087024,NC_009673=7135
+13623	Bacillus weihenstephanensis KBAB4	NC_010184=5262775,NC_010181=75107,NC_010180=417054,NC_010183=52830,NC_010182=64977
+tricEryt_IMS101	Trichodesmium erythraeum IMS101	chr=7750108
+photLumi	Photorhabdus luminescens subsp. laumondii TTO1	chr=5688987
+peloTher_SI	Pelotomaculum thermopropionicum SI	chr=3025375
+18789	Shewanella sediminis HAW-EB3	NC_009831=5517674
+therKoda1	Thermococcus kodakarensis KOD1	chr=2088737
+oceaIhey	Oceanobacillus iheyensis HTE831	chr=3630528
+16297	Xanthomonas oryzae pv. oryzae MAFF 311018	NC_007705=4940217
+19639	Methanococcus maripaludis C6	NC_009975=1744193
+blocFlor	Candidatus Blochmannia floridanus	chr=705557
+shewW318	Shewanella sp. W3-18-1	chr=4708380
+16184	Clostridium phytofermentans ISDg	NC_010001=4847594
+17477	Acinetobacter baumannii ATCC 17978	NC_009084=11302,NC_009085=3976747,NC_009083=13408
+therElon	Thermosynechococcus elongatus BP-1	chr=2593857
+13403	Bacillus amyloliquefaciens FZB42	NC_009725=3918589
+17679	Petrotoga mobilis SJ95	NC_010003=2169548
+16374	Streptococcus pneumoniae D39	NC_008533=2046115
+16375	Shigella flexneri 5 str. 8401	NC_008258=4574284
+methBoon1	Candidatus Methanoregula boonei 6A8	chr=2542943
+mariMari_MCS10	Maricaulis maris MCS10	chr=3368780
+ralsEutr_JMP134	Ralstonia eutropha JMP134	plasmid_1=87688,chr2=2726152,chr1=3806533,megaplasmid=634917
+baciSubt	Bacillus subtilis subsp. subtilis str. 168	chr=4214630
+16372	Buchnera aphidicola str. Cc (Cinara cedri)	NC_008513=416380
+213	Prochlorococcus marinus subsp. pastoris str. CCMP1986	NC_005072=1657990
+erytLito_HTCC2594	Erythrobacter litoralis HTCC2594	chr=3052398
+acidCell_11B	Acidothermus cellulolyticus 11B	chr=2443540
+pyrAer1	Pyrobaculum aerophilum str. IM2	chr=2222430
+xantCamp	Xanthomonas campestris pv. campestris str. ATCC 33913	chr=5076188
+thioDeni_ATCC25259	Thiobacillus denitrificans ATCC 25259	chr=2909809
+28583	Chlamydia trachomatis 434/Bu	NC_010287=1038842
+deinRadi	Deinococcus radiodurans R1	plasmid_CP1=45704,plasmid_MP1=177466,chr2=412348,chr1=2648638
+yersPest_CO92	Yersinia pestis CO92	chr=4653728,plasmid_pCD1=70305,plasmid_pPCP1=9612,plasmid_pMT1=96210
+28585	Chlamydia trachomatis L2b/UCH-1/proctitis	NC_010280=1038869
+wolbEndo_OF_DROSOPHIL	Wolbachia endosymbiont of Drosophila melanogaster	chr=1267782
+17153	Streptococcus suis 05ZYH33	NC_009442=2096309
+10689	Kineococcus radiotolerans SRS30216	NC_009806=182572,NC_009664=4761183,NC_009660=12917
+17155	Streptococcus suis 98HAH33	NC_009443=2095698
+17159	Campylobacter concisus 13826	NC_009802=2052007,NC_009796=16457,NC_009795=30949
+ralsSola	Ralstonia solanacearum GMI1000	chr=3716413,plasmid_pGMI1000MP=2094509
+10687	Leptospira interrogans serovar Copenhageni str. Fiocruz L1-130	NC_005823=4277185,NC_005824=350181
+17403	Frankia alni ACN14a	NC_008278=7497934
+16871	Lactobacillus delbrueckii subsp. bulgaricus ATCC 11842	NC_008054=1864998
+12388	Bacillus licheniformis ATCC 14580	NC_006270=4222597
+neisMeni_Z2491_1	Neisseria meningitidis Z2491	chr=2184406
+saliRube_DSM13855	Salinibacter ruber DSM 13855	chr=3551823,plasmid_pSR35=35505
+17953	Campylobacter jejuni subsp. jejuni 81116	NC_009839=1628115
+10616	Mycoplasma mycoides subsp. mycoides SC str. PG1	NC_005364=1211703
+13496	Prochlorococcus marinus str. MIT 9303	NC_008820=2682675
+28507	Clostridium botulinum A3 str. Loch Maree	NC_010520=3992906,NC_010418=266785
+colwPsyc_34H	Colwellia psychrerythraea 34H	chr=5373180
+hyphNept_ATCC15444	Hyphomonas neptunium ATCC 15444	chr=3705021
+vibrChol1	Vibrio cholerae O1 biovar eltor str. N16961	chrII=1072315,chrI=2961149
+deinGeot_DSM11300	Deinococcus geothermalis DSM 11300	chr=2467205,plasmid_1=574127
+312	Buchnera aphidicola str. Sg (Schizaphis graminum)	NC_004061=641454
+311	Streptococcus pyogenes MGAS315	NC_004070=1900521
+metaSedu	Metallosphaera sedula DSM 5348	chr=2191517
+314	Clostridium thermocellum ATCC 27405	NC_009012=3843301
+lactSali_UCC118	Lactobacillus salivarius UCC118	plasmid_pSF118-20=20417,chr=1827111,plasmid_pMP118=242436,plasmid_pSF118-44=44013
+pediPent_ATCC25745	Pediococcus pentosaceus ATCC 25745	chr=1832387
+flavJohn_UW101	Flavobacterium johnsoniae UW101	chr=6096872
+mannSucc_MBEL55E	Mannheimia succiniciproducens MBEL55E	chr=2314078
+haemSomn_129PT	Haemophilus somnus 129PT	chr=2007700,plasmid_pHS129=5178
+13145	Shigella dysenteriae Sd197	NC_007606=4369232,NC_007607=182726,NC_009344=8953
+13146	Shigella boydii Sb227	NC_007613=4519823,NC_007608=126697
+17491	Legionella pneumophila str. Corby	NC_009494=3576470
+nanEqu1	Nanoarchaeum equitans Kin4-M	chr=490885
+12508	Staphylococcus haemolyticus JCSC1435	NC_007168=2685015
+13384	Pelobacter propionicus DSM 2379	NC_008609=4008000,NC_008608=30722,NC_008607=202397
+chlaTrac	Chlamydia trachomatis D/UW-3/CX	chr=1042519
+haloWals1	Haloquadratum walsbyi DSM 16790	chr=3132494,plasmid_PL47=46867
+13389	Shewanella baltica OS195	NC_009998=75605,NC_009999=75508,NC_010000=49148,NC_009997=5347283
+baciHalo	Bacillus halodurans C-125	chr=4202352
+hypeButy1	Hyperthermus butylicus DSM 5456	chr=1667163
+chroViol	Chromobacterium violaceum ATCC 12472	chr=4751080
+16088	Francisella tularensis subsp. novicida U112	NC_008601=1910031
+methJann1	Methanocaldococcus jannaschii DSM 2661	chr=1664970,lg_extrachr=58407,sm_extrachr=16550
+384	Bacillus cereus ATCC 14579	NC_004721=15274,NC_004722=5411809
+pastMult	Pasteurella multocida subsp. multocida str. Pm70	chr=2257487
+386	Pseudomonas aeruginosa UCBPP-PA14	NC_008463=6537648
+388	Haemophilus somnus 2336	NC_010519=2263857
+16083	Alkaliphilus oremlandii OhILAs	NC_009922=3123558
+27853	Francisella philomiragia subsp. philomiragia ATCC 25017	NC_010331=3936,NC_010336=2045775
+16081	Mycobacterium sp. KMS	NC_008703=302089,NC_008704=216763,NC_008705=5737227
+cytoHutc_ATCC33406	Cytophaga hutchinsonii ATCC 33406	chr=4433218
+nitrEuro	Nitrosomonas europaea ATCC 19718	chr=2812094
+12720	Enterobacter sakazakii ATCC BAA-894	NC_009780=131196,NC_009778=4368373,NC_009779=31208
+therMari	Thermotoga maritima MSB8	chr=1860725
+mycoGeni	Mycoplasma genitalium G37	chr=580076
+vibrFisc_ES114_1	Vibrio fischeri ES114	chrII=1332022,plasmid_pES100=45849,chrI=2906179
+pyroIsla1	Pyrobaculum islandicum DSM 4184	chr=1826402
+17407	Burkholderia multivorans ATCC 17616	NC_010084=3448466,NC_010070=167422,NC_010086=2472928,NC_010087=919806
+13030	Salmonella enterica subsp. arizonae serovar 62:z4,z23:--	NC_010067=4600800
+18271	Rickettsia massiliae MTU5	NC_009897=15286,NC_009900=1360898
+21047	Candidatus Desulforudis audaxviator MP104C	NC_010424=2349476
+19857	Vibrio harveyi ATCC BAA-1116	NC_009783=3765351,NC_009777=89008,NC_009784=2204018
+17639	Parvibaculum lavamentivorans DS-1	NC_009719=3914745
+18059	Mycobacterium bovis BCG str. Pasteur 1173P2	NC_008769=4374522
+vibrPara1	Vibrio parahaemolyticus RIMD 2210633	chrII=1877212,chrI=3288558
+259	Escherichia coli O157:H7 EDL933	NC_007414=92077,NC_002655=5528445
+64	Staphylococcus epidermidis RP62A	NC_006663=27310,NC_002976=2616530
+neisGono_FA1090_1	Neisseria gonorrhoeae FA 1090	chr=2153922
+66	Streptococcus gordonii str. Challis substr. CH1	NC_009785=2196662
+16723	Aeromonas salmonicida subsp. salmonicida A449	NC_009349=166749,NC_009348=4702402,NC_009350=155098,NC_004923=5424,NC_004924=5616,NC_004925=5247
+16230	Mycobacterium ulcerans Agy99	NC_008611=5631606
+16721	Coxiella burnetii Dugway 5J108-111	NC_009727=2158758,NC_009726=54179
+16720	Pseudomonas aeruginosa PA7	NC_009656=6588339
+256	Buchnera aphidicola str. Bp (Baizongia pistaciae)	NC_004555=2399,NC_004545=615980
+257	Chlamydophila pneumoniae J138	NC_002491=1226565
+novoArom_DSM12444	Novosphingobium aromaticivorans DSM 12444	chr=3561584,plasmid_pNL2=487268,plasmid_pNL1=184462
+15642	Mycobacterium tuberculosis F11	NC_009565=4424435
+azoaSp_EBN1	Azoarcus sp. EbN1	plasmid_2=223670,chr=4296230,plasmid_1=207355
+therTher_HB27	Thermus thermophilus HB27	chr=1894877,plasmid_pTT27=232605
+metAce1	Methanosarcina acetivorans C2A	chr=5751492
+glucOxyd_621H	Gluconobacter oxydans 621H	plasmid_pGOX2=26568,plasmid_pGOX1=163186,chr=2702173,plasmid_pGOX3=14547,plasmid_pGOX4=13223,plasmid_pGOX5=2687
+listInno	Listeria innocua Clip11262	chr=3011208,plasmid_pLI100=81905
+sulfAcid1	Sulfolobus acidocaldarius DSM 639	chr=2225959
+geobTher_NG80_2	Geobacillus thermodenitrificans NG80-2	chr=3550319,plasmid_pLW1071=57693
+402	Lactobacillus casei ATCC 334	NC_008502=29061,NC_008526=2895264
+13960	Escherichia coli E24377A	NC_009789=6199,NC_009788=70609,NC_009801=4979619,NC_009790=74224,NC_009791=5033,NC_009787=34367,NC_009786=79237
+13954	Burkholderia pseudomallei 1710b	NC_007435=3181762,NC_007434=4126292
+17445	Marinomonas sp. MWYL1	NC_009654=5100344
+13967	Corynebacterium jeikeium K411	NC_003080=14323,NC_007164=2462499
+leifXyli_XYLI_CTCB0	Leifsonia xyli subsp. xyli str. CTCB07	chr=2584158
+10645	Synechococcus elongatus PCC 7942	NC_007604=2695903,NC_007595=46366
+campFetu_82_40	Campylobacter fetus subsp. fetus 82-40	chr=1773615
+13355	Ehrlichia ruminantium str. Welgevonden	NC_006832=1512977
+desuHafn_Y51	Desulfitobacterium hafniense Y51	chr=5727534
+13356	Ehrlichia ruminantium str. Gardel	NC_006831=1499920
+13291	Bacillus clausii KSM-K16	NC_006582=4303871
+16421	Francisella tularensis subsp. holarctica	NC_007880=1895994
+therVolc1	Thermoplasma volcanium GSS1	chr=1584804
+soliUsit_ELLIN6076	Solibacter usitatus Ellin6076	chr=9965640
+bradJapo	Bradyrhizobium japonicum USDA 110	chr=9105828
+methTher1	Methanothermobacter thermautotrophicus str. Delta H	chr=1751377
+13454	Pseudoalteromonas atlantica T6c	NC_008228=5187005
+methAeol1	Methanococcus aeolicus Nankai-3	chr=1569500
+nostSp	Nostoc sp. PCC 7120	plasmid_pCC7120delta=55414,plasmid_pCC7120beta=186614,chr=6413771,plasmid_pCC7120gamma=101965,plasmid_pCC7120alpha=408101,plasmid_pCC7120zeta=5584,plasmid_pCC7120epsilon=40340
+sphiAlas_RB2256	Sphingopyxis alaskensis RB2256	F_plasmid=28543,chr=3345170
+saccDegr_2_40	Saccharophagus degradans 2-40	chr=5057531
+408	Shigella flexneri 2a str. 2457T	NC_004741=4599354
+anaeDeha_2CP_C	Anaeromyxobacter dehalogenans 2CP-C	chr=5013479
+bordBron	Bordetella bronchiseptica RB50	chr=5339179
+rickBell_RML369_C	Rickettsia bellii RML369-C	chr=1522076
+pyroArse1	Pyrobaculum arsenaticum DSM 13514	chr=2121076
+thioDeni_ATCC33889	Sulfurimonas denitrificans DSM 1251	chr=2201561
+methSmit1	Methanobrevibacter smithii ATCC 35061	chr=1853160
+halMar1	Haloarcula marismortui ATCC 43049	chrII=288050,plasmid_pNG600=155300,plasmid_pNG100=33303,plasmid_pNG200=33452,plasmid_pNG500=132678,plasmid_pNG400=50060,plasmid_pNG300=39521,chrI=3131724,plasmid_pNG700=410554
+9618	Salmonella enterica subsp. enterica serovar Choleraesuis str. SC-B67	NC_006855=49558,NC_006856=138742,NC_006905=4755700
+9619	Brucella abortus biovar 1 str. 9-941	NC_006933=1162204,NC_006932=2124241
+vermEise_EF01_2	Verminephrobacter eiseniae EF01-2	chr=5566749,plasmid_pVEIS01=31194
+granBeth_CGDNIH1	Granulibacter bethesdensis CGDNIH1	chr=2708355
+alcaBork_SK2	Alcanivorax borkumensis SK2	chr=3120143
+vibrChol_O395_1	Vibrio cholerae O395	chr2=3024069,chr1=1108250
+nitrOcea_ATCC19707	Nitrosococcus oceani ATCC 19707	chr=3481691,plasmid_A=40420
+campJeju_RM1221	Campylobacter jejuni RM1221	chr=1777831
+12468	Bacillus cereus E33L	NC_007103=466370,NC_007105=53501,NC_007104=5108,NC_007107=9150,NC_007106=8191,NC_006274=5300915
+12469	Streptococcus pyogenes MGAS10394	NC_006086=1899877
+19135	Actinobacillus pleuropneumoniae serovar 3 str. JL03	NC_010278=2242062
+woliSucc	Wolinella succinogenes DSM 1740	chr=2110355
+19485	Ochrobactrum anthropi ATCC 49188	NC_009668=1895911,NC_009669=170351,NC_009667=2887297,NC_009671=93589,NC_009670=101491,NC_009672=57138
+therPend1	Thermofilum pendens Hrk 5	chr=1781889,pTPEN01=31504
+19489	Staphylococcus aureus subsp. aureus USA300_TCH1516	NC_010079=2872915,NC_010063=27041
+therFusc_YX	Thermobifida fusca YX	chr=3642249
+12609	Chlorobium phaeobacteroides DSM 266	NC_008639=3133902
+aquiAeol	Aquifex aeolicus VF5	chr=1551335,plasmid_ece1=39456
+heliPylo_J99	Helicobacter pylori J99	chr=1643831
+burkPseu_1106A	Burkholderia pseudomallei 1106a	chrII=3100794,chrI=3988455
+azorCaul2	Azorhizobium caulinodans ORS 571	chr=5369772
+12607	Prosthecochloris vibrioformis DSM 265	NC_009337=1966858
+synePCC6	Synechocystis sp. PCC 6803	plasmid_pSYSG=44343,chr=3573470,plasmid_pSYSM=119895,plasmid_pSYSA=103307,plasmid_pSYSX=106004
+baumCica_HOMALODISCA	Baumannia cicadellinicola str. Hc (Homalodisca coagulata)	chr=686194
+355	Chlamydophila abortus S26/3	NC_004552=1144377
+28111	Sorangium cellulosum 'So ce 56'	NC_010162=13033779
+shewBalt	Shewanella baltica OS155	plasmid_pSbal04=7995,chr=5127376,plasmid_pSbal01=116763,plasmid_pSbal02=74000,plasmid_pSbal03=16762
+therTeng	Thermoanaerobacter tengcongensis MB4	chr=2689445
+359	Pseudomonas syringae pv. tomato str. DC3000	NC_004632=67473,NC_004578=6397126,NC_004633=73661
+19943	Rickettsia rickettsii str. Iowa	NC_010263=1268175
+alkaEhrl_MLHE_1	Alkalilimnicola ehrlichei MLHE-1	chr=3275944
+sulSol1	Sulfolobus solfataricus P2	chr=2992245
+15604	Dehalococcoides sp. CBDB1	NC_007356=1395502
+19265	Nitrosopumilus maritimus SCM1	NC_010085=1645259
+19543	Thermotoga sp. RQ2	
+methHung1	Methanospirillum hungatei JF-1	chr=3544738
+27803	Salmonella enterica subsp. enterica serovar Paratyphi B str. SPB7	NC_010102=4858887
+28505	Clostridium botulinum B1 str. Okra	NC_010516=3958233,NC_010379=148780
+15766	Lactobacillus reuteri F275	NC_009513=1999618
+17929	Burkholderia cenocepacia MC0-3	NC_010512=1224595,NC_010508=3532883,NC_010515=3213911
+15762	Mycobacterium sp. MCS	NC_008146=5705448,NC_008147=215075
+15760	Mycobacterium gilvum PYR-GCK	NC_009341=16660,NC_009340=25309,NC_009338=5619607,NC_009339=321253
+15761	Mycobacterium vanbaalenii PYR-1	NC_008726=6491865
+18797	Lactococcus lactis subsp. cremoris MG1363	NC_009004=2529478
+20371	Brucella suis ATCC 23445	NC_010167=1400844,NC_010169=1923763
+desuVulg_HILDENBOROUG	Desulfovibrio vulgaris subsp. vulgaris str. Hildenborough	chr=3570858,megaplasmid=202301
+20079	Escherichia coli DH10B	NC_010473=4686137
+288	Yersinia pestis KIM	NC_004838=100990,NC_004088=4600755
+13006	Alkaliphilus metalliredigens QYMF	NC_009633=4929566
+13001	Acinetobacter baumannii	NC_010398=24922,NC_010400=3421954,NC_010395=6106,NC_010396=25014
+4	Treponema denticola ATCC 35405	NC_002967=2843201
+283	Agrobacterium tumefaciens str. C58	NC_003062=2841580,NC_003063=2075577,NC_003064=542868,NC_003065=214233
+methVann1	Methanococcus vannielii SB	chr=1720048
+285	Xylella fastidiosa Temecula1	NC_004556=2519802,NC_004554=1346
+286	Streptococcus pyogenes MGAS8232	NC_003485=1895017
+candCars_RUDDII	Candidatus Carsonella ruddii PV	chr=159662
+336	Anaplasma phagocytophilum HZ	NC_007797=1471282
+burkMall_ATCC23344	Burkholderia mallei ATCC 23344	chr2=2325379,chr1=3510148
+leucMese_ATCC8293	Leuconostoc mesenteroides subsp. mesenteroides ATCC 8293	chr=2038396,plasmid_pLEUM1=37367
+burkViet_G4	Burkholderia vietnamiensis G4	chr3=1241007,chr2=2411759,chr1=3652814,plasmid_pBVIE04=107231,plasmid_pBVIE05=88096,plasmid_pBVIE02=265616,plasmid_pBVIE03=226679,plasmid_pBVIE01=397868
+267	Pseudomonas putida KT2440	NC_002947=6181863
+266	Staphylococcus aureus subsp. aureus MSSA476	NC_005951=20652,NC_002953=2799802
+265	Staphylococcus aureus subsp. aureus MRSA252	NC_002952=2902619
+264	Staphylococcus aureus subsp. aureus N315	NC_003140=24653,NC_002745=2814816
+17643	Shewanella baltica OS185	NC_009665=5229686,NC_009661=83224
+archFulg1	Archaeoglobus fulgidus DSM 4304	chr=2178400
+13418	Polaromonas naphthalenivorans CJ2	NC_008757=353291,NC_008759=171866,NC_008758=190172,NC_008781=4410291,NC_008764=6459,NC_008760=143747,NC_008761=58808,NC_008762=21611,NC_008763=9898
+18007	Desulfococcus oleovorans Hxd3	NC_009943=3944167
+16304	Sinorhizobium medicae WSM419	NC_009622=219313,NC_009620=1570951,NC_009621=1245408,NC_009636=3781904
+16306	Caulobacter sp. K31	NC_010333=177878,NC_010338=5477872,NC_010335=233649
+59	Chloroflexus aurantiacus J-10-fl	NC_010175=5258541
+12530	Synechococcus sp. CC9311	NC_008319=2606748
+13551	Prochlorococcus marinus str. MIT 9211	NC_009976=1688963
+15691	Mycobacterium abscessus	NC_010394=23319,NC_010397=5067172
+fusoNucl	Fusobacterium nucleatum subsp. nucleatum ATCC 25586	chr=2174500
+63	Staphylococcus aureus RF122	NC_007622=2742531
+heliHepa	Helicobacter hepaticus ATCC 51449	chr=1799146
+17249	Thermosipho melanesiensis BI429	NC_009616=1915238
+15596	Staphylococcus saprophyticus subsp. saprophyticus ATCC 15305	NC_007350=2516575,NC_007351=38454,NC_007352=22870
+psycIngr_37	Psychromonas ingrahamii 37	chr=4559598
+syntAcid_SB	Syntrophus aciditrophicus SB	chr=3179300
+salmTyph	Salmonella enterica subsp. enterica serovar Typhi str. CT18	plasmid_pHCM2=106516,chr=4809037,plasmid_pHCM1=218160
+burkXeno_LB400	Burkholderia xenovorans LB400	chr3=1471779,chr2=3363523,chr1=4895836
+trepPall	Treponema pallidum subsp. pallidum str. Nichols	chr=1138011
+neisMeni_MC58_1	Neisseria meningitidis MC58	chr=2272360
+syntWolf_GOETTINGEN	Syntrophomonas wolfei subsp. wolfei str. Goettingen	chr=2936195
+15644	Thermotoga lettingae TMO	NC_009828=2135342
+13913	Nitrosomonas eutropha C91	NC_008342=55635,NC_008341=65132,NC_008344=2661057
+17417	Dinoroseobacter shibae DFL 12	NC_009958=86208,NC_009959=72296,NC_009955=190506,NC_009956=152970,NC_009957=126304,NC_009952=3789584
+13911	Prochlorococcus marinus str. NATL2A	NC_007335=1842899
+13910	Prochlorococcus marinus str. MIT 9312	NC_007577=1709204
+250	Ralstonia metallidurans CH34	NC_007974=2580084,NC_007971=233720,NC_007972=171459,NC_007973=3928089
+13915	Frankia sp. EAN1pec	NC_009921=8982042
+13914	Ignicoccus hospitalis KIN4/I	NC_009776=1297538
+rhodSpha_2_4_1	Rhodobacter sphaeroides 2.4.1	chr2=943016,chr1=3188609,plasmid_B=114178,plasmid_C=105284,plasmid_A=114045,plasmid_D=100828,plasmid_E=37100
+16235	Escherichia coli 536	NC_008253=4938920
+zymoMobi_ZM4	Zymomonas mobilis subsp. mobilis ZM4	chr=2056416
+rhodPalu_CGA009	Rhodopseudomonas palustris CGA009	chr=5459213,plasmid_pRPA=8427
+420	Chlamydophila pneumoniae TW-183	NC_005043=1225935
+stapMari1	Staphylothermus marinus F1	chr=1570485
+sinoMeli	Sinorhizobium meliloti 1021	chr=3654135,plasmid_pSymA=1354226,plasmid_pSymB=1683333
+bartHens_HOUSTON_1	Bartonella henselae str. Houston-1	chr=1931047
+301	Streptococcus pyogenes SSI-1	NC_004606=1894275
+19193	Corynebacterium glutamicum R	NC_009343=49120,NC_009342=3314179
+304	Clostridium perfringens ATCC 13124	NC_008261=3256683
+306	Staphylococcus aureus subsp. aureus MW2	NC_003923=2820462
+307	Corynebacterium glutamicum ATCC 13032	NC_003450=3309401
+caulCres	Caulobacter crescentus CB15	chr=4016947
+haheChej_KCTC_2396	Hahella chejuensis KCTC 2396	chr=7215267
+10784	Bacillus anthracis str. 'Ames Ancestor'	NC_007530=5227419,NC_007323=94830,NC_007322=181677
+magnMC1	Magnetococcus sp. MC-1	chr=4719581
+heliPylo_HPAG1	Helicobacter pylori HPAG1	chr=1596366,plasmid_pHPAG1=9370
+pyrHor1	Pyrococcus horikoshii OT3	chr=1738505
+12514	Brucella ovis ATCC 25840	NC_009505=2111370,NC_009504=1164220
+12512	Arthrobacter aurescens TC1	NC_008711=4597686,NC_008713=300725,NC_008712=328237
+actiPleu_L20	Actinobacillus pleuropneumoniae L20	chr=2274482
+paraDeni_PD1222	Paracoccus denitrificans PD1222	plasmid_1=653815,chr2=1730097,chr1=2852282
+borrBurg	Borrelia burgdorferi B31	plasmid_cp26=26498,plasmid_lp21=18753,plasmid_lp25=24177,plasmid_lp28-4=27323,plasmid_lp28-2=29766,plasmid_lp28-3=28601,plasmid_lp28-1=26921,chr=910724,plasmid_cp9=9386,plasmid_lp5=5228,plasmid_lp38=38829,plasmid_lp17=16823,plasmid_cp32-1=30750,plasmid_cp32-6=29838,plasmid_cp32-7=30800,plasmid_cp32-4=30299,plasmid_cp32-8=30885,plasmid_cp32-9=30651,plasmid_lp36=36849,plasmid_lp56=52971,plasmid_lp54=53561,plasmid_cp32-3=30223
+strePyog_M1_GAS	Streptococcus pyogenes M1 GAS	chr=1852441
+pseuAeru	Pseudomonas aeruginosa PAO1	chr=6264404
+16523	Herpetosiphon aurantiacus ATCC 23779	NC_009974=99204,NC_009972=6346587,NC_009973=339639
+16525	Candidatus Korarchaeum cryptofilum OPF8	NC_010482=1590757
+19619	Lysinibacillus sphaericus C3-41	NC_010382=4639821,NC_010381=177642
+19617	Candidatus Sulcia muelleri GWSS	NC_010118=245530
+saccEryt_NRRL_2338	Saccharopolyspora erythraea NRRL 2338	chr=8212805
+methCaps_BATH	Methylococcus capsulatus str. Bath	chr=3304561
+16645	Yersinia pestis Antiqua	NC_008150=4702289,NC_008122=70299,NC_008120=96471,NC_008121=10777
+16646	Yersinia pestis Nepal516	NC_008149=4534590,NC_008119=10778,NC_008118=100918
+12637	Clostridium beijerinckii NCIMB 8052	NC_009617=6000632
+ehrlRumi_WELGEVONDEN	Ehrlichia ruminantium str. Welgevonden	chr=1516355
+methLabrZ_1	Methanocorpusculum labreanum Z	chr=1804962
+vibrVuln_YJ016_1	Vibrio vulnificus YJ016	plasmid_pYJ016=48508,chrII=1857073,chrI=3354505
+13773	Streptococcus thermophilus LMD-9	NC_008500=4449,NC_008501=3361,NC_008532=1856368
+20039	Leptothrix cholodnii SP-6	
+shewAmaz	Shewanella amazonensis SB2B	chr=4306142
+13126	Legionella pneumophila str. Lens	NC_006369=3345687,NC_006366=59832
+13127	Legionella pneumophila str. Paris	NC_006368=3503610,NC_006365=131885
+13120	Mycoplasma hyopneumoniae 232	NC_006360=892758
+18509	Staphylococcus aureus subsp. aureus Mu3	NC_009782=2880168
+13040	Silicibacter sp. TM1040	NC_008043=821788,NC_008042=130973,NC_008044=3200938
+18267	Candidatus Vesicomyosocius okutanii HA	NC_009465=1022154
+methFlag_KT	Methylobacillus flagellatus KT	chr=2971517
+therAcid1	Thermoplasma acidophilum DSM 1728	chr=1564906
+therPetr_RKU_1	Thermotoga petrophila RKU-1	chr=1823511
+shewFrig	Shewanella frigidimarina NCIMB 400	chr=4845257
+photProf_SS9	Photobacterium profundum SS9	chr2=2237943,chr1=4085304,plasmid_pPBPR1=80033
+burkThai_E264	Burkholderia thailandensis E264	chrII=2914771,chrI=3809201
+17811	Lactobacillus helveticus DPC 4571	NC_010080=2080931
+229	Chlamydia muridarum Nigg	NC_002182=7501,NC_002620=1072950
+228	Chlamydophila caviae GPIC	NC_004720=7966,NC_003361=1173390
+nitrMult_ATCC25196	Nitrosospira multiformis ATCC 25196	plasmid_2=17036,plasmid_3=14159,plasmid_1=18871,chr1=3184243
+223	Mycobacterium tuberculosis CDC1551	NC_002755=4403837
+220	Prochlorococcus marinus str. MIT 9313	NC_005071=2410873
+20241	Shewanella halifaxensis HAW-EB4	NC_010334=5226917
+20243	Brucella canis ATCC 23365	NC_010104=1206800,NC_010103=2105969
+88	Mycobacterium avium 104	NC_008595=5475491
+19227	Renibacterium salmoninarum ATCC 33209	NC_010168=3155250
+neisMeni_FAM18_1	Neisseria meningitidis FAM18	chr=2194961
+arthFB24	Arthrobacter sp. FB24	plasmid_2=115507,plasmid_3=96488,plasmid_1=159538,chr1=4698945
+10679	Rickettsia typhi str. Wilmington	NC_006142=1111496
+17457	Pseudomonas mendocina ymp	NC_009439=5072807
+13959	Escherichia coli HS	NC_009800=4643538
+17455	Shewanella woodyi ATCC 51908	NC_010506=5935403
+17109	Salinispora arenicola CNS-205	NC_009953=5786361
+17459	Serratia proteamaculans 568	NC_009832=5448853,NC_009829=46804
+13953	Burkholderia pseudomallei 668	NC_009075=3127456,NC_009074=3912947
+10676	Mycoplasma synoviae 53	NC_007294=799476
+10675	Mycoplasma hyopneumoniae J	NC_007295=897405
+16820	Clostridium novyi NT	NC_008593=2547720
+nocaFarc_IFM10152	Nocardia farcinica IFM 10152	chr=6021225,plasmid_pNF1=184026,plasmid_pNF2=87093
+13378	Bacteroides vulgatus ATCC 8482	NC_009614=5163189
+16351	Escherichia coli W3110	AC_000091=4646332
+porpGing_W83	Porphyromonas gingivalis W83	chr=2343476
+17415	Shewanella pealeana ATCC 700345	NC_009901=5174581
+eschColi_APEC_O1	Escherichia coli APEC O1	chr=5082025
+46	Bacteroides fragilis NCTC 9343	NC_003228=5205140,NC_006873=36560
+13462	Roseiflexus castenholzii DSM 13941	NC_009767=5723298
+44	Bartonella quintana str. Toulouse	NC_005955=1581384
+42	Rickettsia conorii str. Malish 7	NC_003103=1268755
+43	Rickettsia prowazekii str. Madrid E	NC_000963=1111523
+bactThet_VPI_5482	Bacteroides thetaiotaomicron VPI-5482	chr=6260361,plasmid_p5482=33038
+17413	Delftia acidovorans SPH-1	NC_010002=6767514
+haemInfl_KW20	Haemophilus influenzae Rd KW20	chr=1830138
+brucMeli	Brucella melitensis 16M	chrII=1177787,chrI=2117144
+haloHalo_SL1	Halorhodospira halophila SL1	chr=2678452
+pyrAby1	Pyrococcus abyssi GE5	chr=1765118,plasmid_pGT5=3444
+mculMari1	Methanoculleus marisnigri JR1	chr=2478101
+12554	Borrelia garinii PBi	NC_006128=27108,NC_006129=55560,NC_006156=904246
+dechArom_RCB	Dechloromonas aromatica RCB	chr=4501104
+stapAure_MU50	Staphylococcus aureus subsp. aureus Mu50	chr=2878529,plasmid_VRSAp=25107
+eschColi_K12	Escherichia coli K12	chr=4639675
+12416	Pseudomonas syringae pv. phaseolicola 1448A	NC_005773=5928787,NC_007275=51711,NC_007274=131950
+aeroHydr_ATCC7966	Aeromonas hydrophila subsp. hydrophila ATCC 7966	chr=4744448
+baciAnth_AMES	Bacillus anthracis str. Ames	chr=5227293
+shewOnei	Shewanella oneidensis MR-1	plasmid_pMR-1=161613,chr=4969803
+15217	Human herpesvirus 1	NC_001806=152261
+lMaj5	Leishmania major 2005	chr1=268984,chr2=355714,chr3=384518,chr4=441313,chr5=465823,chr6=516874,chr7=596348,chr8=574972,chr9=573441,chr10=570864,chr11=582575,chr12=675347,chr13=654604,chr14=622648,chr15=629514,chr16=714659,chr17=684831,chr18=739751,chr19=702212,chr20=742551,chr21=772974,chr22=716608,chr23=772567,chr24=840950,chr25=912849,chr26=1091579,chr27=1130447,chr28=1160128,chr29=1212674,chr30=1403454,chr31=1484336,chr32=1604650,chr33=1583673,chr34=1866754,chr35=2090491,chr36=2682183
+arabidopsis	Arabidopsis thaliana TAIR9	chr1=30427671,chr2=19698289,chr3=23459830,chr4=18585056,chr5=26975502
+arabidopsis_tair8	Arabidopsis thaliana TAIR8
+araTha1	Arabidopsis thaliana TAIR7
+mm5	Mouse May 2004
+Sscrofa9.58	Pig May 2010	chr1=79819395,chr2=66741929,chr3=145240301,chr4=57436344,chr5=134546103,chr6=136414062,chr7=64400339,chr8=77440658,chr9=54314914,chr10=295534705,chr11=16613,chr12=123604780,chr13=140138492,chr14=100521970,chr15=136259946,chr16=125876292,chr17=123310171,chr18=132473591,chrM=119990671,chrX=148515138
+AaegL1	Mosquito (Aedes aegypti)
+AgamP3	Mosquito (Anopheles gambiae)	chr3L=41963435,chr2L=49364325,chrX=24393108,chr2R=61545105,chrY_unplaced=237045,chr3R=53200684,chrUn=42389979,chrM=15363
+CpipJ1	Mosquito (Culex quinquefasciatus)
+IscaW1	Deer Tick (Ixodes scapularis)
+PhumU1	Head Louse (Pediculus humanus)
+bosTauMd3	Cow Aug. 2009 (UMD3.1)
+droWil1	D. willistoni Feb. 2006
+droAna3	D. ananassae Feb. 2006
+droEre2	D. erecta Feb. 2006
+droGri2	D. grimshawi Feb. 2006
+droMoj3	D. mojavensis Feb. 2006
+droSec1	D. sechellia Oct. 2005
+droSim1	D. simulans Apr. 2005	chrU=15797150,chr4=949497,chrYh_random=100575,chr3R=27517382,chr3R_random=1307089,chr3L=22553184,chr2L=22036055,chr2h_random=3178526,chrX_random=5698898,chrXh_random=84659,chrX=17042790,chr4_random=134295,chr2R=19596830,chr2R_random=2996586,chr3L_random=1049610,chr2L_random=909653,chrM=14972,chr3h_random=1452968
+droVir3	D. virilis Feb. 2006
+Bombyx_mori_p50T_2.0	Silkworm
+oryza_sativa_japonica_nipponbare_IRGSP4.0	Rice (Oryza sativa ssp. japonica var. Nipponbare)	chr1=30357780,chr10=32124789,chr11=30039014,chr12=35863200,chr2=37257345,chr3=36823111,chr4=45064769,chr5=134525,chr6=23843360,chr7=28530027,chr8=27757321,chr9=30828668,chrM=23661561,plastid=490520
+Schizosaccharomyces_pombe_1.1	Fission Yeast (S. pombe)	chrII=4539804,chrIII=2452883,chrI=5579133,chrM=19431
+Xanthomonas_oryzae_PXO99A	Xanthomonas oryzae pv. oryzae PXO99A	chr=5240075
+eschColi_EC4115	Escherichia coli EC4115	chr=5572075,plasmid_pO157=94644,plasmid_pEC4115=37452
+eschColi_TW14359	Escherichia coli TW14359	chr=5528136,plasmid_pO157=94601
+pUC18	pUC18 Plasmid	plasmid=2686
+nomLeu1	Gibbon	chr1=245538060,chr10=135320619,chr10_random=51011,chr11=134551115,chr12=132397767,chr12_random=336702,chr13=114140689,chr14=106383727,chr15=100373758,chr15_random=814500,chr16=88836341,chr16_random=121782,chr17=78641643,chr17_random=2617017,chr18=76124575,chr19=63791437,chr19_random=297341,chr1_random=3502083,chr2=242756806,chr20=62432189,chr21=47019833,chr22=49520868,chr22_random=31530,chr2_random=335351,chr3=199337376,chr3_random=950829,chr4=191633586,chr4_random=923474,chr5=180612635,chr5_random=150620,chr6=170839170,chr6_random=1837487,chr7=158619002,chr7_random=805938,chr8=146283503,chr8_random=649034,chr9=138402467,chr9_random=1315712,chrUn=217400297,chrX=154793867,chrX_random=1690203,chrY=57470892
+Saccharomyces_cerevisiae_S288C_SGD2010	S. cerevisae str. S288C	chr1=230218,chr2=813184,chr3=316620,chr4=1531933,chr5=576874,chr6=270161,chr7=1090940,chr8=562643,chr9=439888,chr10=745751,chr11=666816,chr12=1078177,chr13=924431,chr14=784333,chr15=1091291,chr16=948066,chrM=85779
+Spur_v2.6	Purple Sea Urchin (Strongylocentrotus purpuratus) v2.6
+Ptrichocarpa_156	Poplar (Populus trichocarpa)
+Hydra_JCVI	Hydra magnipapillata str. 105
+Araly1	Arabidopsis lyrata
+Zea_mays_B73_RefGen_v2	Maize (Zea mays)	chr1=301354135,chr2=237068928,chr3=232140222,chr4=241473566,chr5=217872898,chr6=169174371,chr7=176764813,chr8=175793772,chr9=156750718,chr10=150189513,chr11=7140224
+Homo_sapiens_AK1	Korean Man	chrM=16571,chr1=247249719,chr2=242951149,chr3=199501827,chr4=191273063,chr5=180857866,chr6=170899992,chr7=158821424,chr8=146274826,chr9=140273252,chr10=135374737,chr11=134452384,chr12=132349534,chr13=114142980,chr14=106368585,chr15=100338915,chr16=88827254,chr17=78774742,chr18=76117153,chr19=63811651,chr20=62435964,chr21=46944323,chr22=49691432,chrX=154913754,chrY=57772954
+Tcas_3.0	Red Flour Beetle (Tribolium castaneum)	chrLG1=X=10877635,chrLG2=20218415,chrLG3=38791480,chrLG4=13894384,chrLG5=19135781,chrLG6=13176827,chrLG7=20532854,chrLG8=18021898,chrLG9=21459655,chrLG10=11386040
+hg_g1k_v37	Homo sapiens b37	1=249250621,2=243199373,3=198022430,4=191154276,5=180915260,6=171115067,7=159138663,8=146364022,9=141213431,10=135534747,11=135006516,12=133851895,13=115169878,14=107349540,15=102531392,16=90354753,17=81195210,18=78077248,19=59128983,20=63025520,21=48129895,22=51304566,X=155270560,Y=59373566,MT=16569,GL000207.1=4262,GL000226.1=15008,GL000229.1=19913,GL000231.1=27386,GL000210.1=27682,GL000239.1=33824,GL000235.1=34474,GL000201.1=36148,GL000247.1=36422,GL000245.1=36651,GL000197.1=37175,GL000203.1=37498,GL000246.1=38154,GL000249.1=38502,GL000196.1=38914,GL000248.1=39786,GL000244.1=39929,GL000238.1=39939,GL000202.1=40103,GL000234.1=40531,GL000232.1=40652,GL000206.1=41001,GL000240.1=41933,GL000236.1=41934,GL000241.1=42152,GL000243.1=43341,GL000242.1=43523,GL000230.1=43691,GL000237.1=45867,GL000233.1=45941,GL000204.1=81310,GL000198.1=90085,GL000208.1=92689,GL000191.1=106433,GL000227.1=128374,GL000228.1=129120,GL000214.1=137718,GL000221.1=155397,GL000209.1=159169,GL000218.1=161147,GL000220.1=161802,GL000213.1=164239,GL000211.1=166566,GL000199.1=169874,GL000217.1=172149,GL000216.1=172294,GL000215.1=172545,GL000205.1=174588,GL000219.1=179198,GL000224.1=179693,GL000223.1=180455,GL000195.1=182896,GL000212.1=186858,GL000222.1=186861,GL000200.1=187035,GL000193.1=189789,GL000194.1=191469,GL000225.1=211173,GL000192.1=547496
+Homo_sapiens_nuHg19_mtrCRS	Homo sapiens (hg19 with mtDNA replaced with rCRS)	chr1=249250621,chr2=243199373,chr3=198022430,chr4=191154276,chr5=180915260,chr6=171115067,chr7=159138663,chr8=146364022,chr9=141213431,chr10=135534747,chr11=135006516,chr12=133851895,chr13=115169878,chr14=107349540,chr15=102531392,chr16=90354753,chr17=81195210,chr18=78077248,chr19=59128983,chr20=63025520,chr21=48129895,chr22=51304566,chrX=155270560,chrY=59373566,chrM=16569,chr1_gl000191_random=106433,chr1_gl000192_random=547496,chr4_ctg9_hap1=590426,chr4_gl000193_random=189789,chr4_gl000194_random=191469,chr6_apd_hap1=4622290,chr6_cox_hap2=4795371,chr6_dbb_hap3=4610396,chr6_mann_hap4=4683263,chr6_mcf_hap5=4833398,chr6_qbl_hap6=4611984,chr6_ssto_hap7=4928567,chr7_gl000195_random=182896,chr8_gl000196_random=38914,chr8_gl000197_random=37175,chr9_gl000198_random=90085,chr9_gl000199_random=169874,chr9_gl000200_random=187035,chr9_gl000201_random=36148,chr11_gl000202_random=40103,chr17_ctg5_hap1=1680828,chr17_gl000203_random=37498,chr17_gl000204_random=81310,chr17_gl000205_random=174588,chr17_gl000206_random=41001,chr18_gl000207_random=4262,chr19_gl000208_random=92689,chr19_gl000209_random=159169,chr21_gl000210_random=27682,chrUn_gl000211=166566,chrUn_gl000212=186858,chrUn_gl000213=164239,chrUn_gl000214=137718,chrUn_gl000215=172545,chrUn_gl000216=172294,chrUn_gl000217=172149,chrUn_gl000218=161147,chrUn_gl000219=179198,chrUn_gl000220=161802,chrUn_gl000221=155397,chrUn_gl000222=186861,chrUn_gl000223=180455,chrUn_gl000224=179693,chrUn_gl000225=211173,chrUn_gl000226=15008,chrUn_gl000227=128374,chrUn_gl000228=129120,chrUn_gl000229=19913,chrUn_gl000230=43691,chrUn_gl000231=27386,chrUn_gl000232=40652,chrUn_gl000233=45941,chrUn_gl000234=40531,chrUn_gl000235=34474,chrUn_gl000236=41934,chrUn_gl000237=45867,chrUn_gl000238=39939,chrUn_gl000239=33824,chrUn_gl000240=41933,chrUn_gl000241=42152,chrUn_gl000242=43523,chrUn_gl000243=43341,chrUn_gl000244=39929,chrUn_gl000245=36651,chrUn_gl000246=38154,chrUn_gl000247=36422,chrUn_gl000248=39786,chrUn_gl000249=38502
+Arabidopsis_thaliana_TAIR10	Arabidopsis thaliana TAIR10 (Arabidopsis_thaliana_TAIR10)	chr1=30427671,chr2=19698289,chr3=23459830,chr4=18585056,chr5=26975502,chrM=366924,chrC=154478
+dp4	D. pseudoobscura (dp4)
+Tcacao_1.0	Theobroma cacao Dec 2010 (CIRAD/Theobroma cacao Belizian Criollo)	Tc01=31268538,Tc02=27754001,Tc03=25475297,Tc04=23504306,Tc05=25651337,Tc06=15484475,Tc07=14169093,Tc08=11535834,Tc09=28459094,Tc10=15164258,Tc00=108886888
+apiMel3	Honeybee (Apis mellifera): apiMel3	Group10=11440700,Group11=12576330,Group12=9182753,Group13=8929068,Group14=8318479,Group15=7856270,Group16=5631066,Group1=25854376,Group2=14465785,Group3=12341916,Group4=10796202,Group5=13386189,Group6=14581788,Group7=9974240,Group8=11452794,Group9=10282195,GroupUn=399230636
+saccharomyces_cerevisiae_S288C_SGD20110203	{OBSOLETE} S. cerevisiae S288C (SGD 2/3/2011, arabic numbered chromosomes)	chr01=230218,chr02=813184,chr03=316620,chr04=1531933,chr05=576874,chr06=270161,chr07=1090940,chr08=562643,chr09=439888,chr10=745751,chr11=666816,chr12=1078177,chr13=924431,chr14=784333,chr15=1091291,chr16=948066,chrmt=85779
+saccharomyces_cerevisiae_w303_draft_110428	{OBSOLETE} S. cerevisiae W303 (glang draft 4/28/2011)	chr01=230218,chr02=813184,chr03=316620,chr04=1531933,chr05=576874,chr06=270161,chr07=1090940,chr08=562643,chr09=439888,chr10=745751,chr11=666816,chr12=1078177,chr13=924431,chr14=784333,chr15=1091291,chr16=948066,chrmt=85779
+suid_herpesvirus_1_becker_020911	Suid herpesvirus 1 Becker (Szpara 020911)	becker_020911=141113
+suid_herpesvirus_1_bartha_020911	Suid herpesvirus 1 Bartha (Szpara 020911)	bartha_020911=137764
+suid_herpesvirus_1_kaplan_020911	Suid herpesvirus 1 Kaplan (Szpara 020911)	kaplan_020911=140377
+suid_herpesvirus_1_nc_006151_1	Suid herpesvirus 1 NC 006151.1 (NCBI)	NC_006151.1=143461
+pf3d7_plasmodb_8_0	Plasmodium falciparum 3D7 (PlasmoDB 8.0)	Pf3D7_01=643292,Pf3D7_02=947102,Pf3D7_03=1060087,Pf3D7_04=1204112,Pf3D7_05=1343552,Pf3D7_06=1418244,Pf3D7_07=1501717,Pf3D7_08=1419563,Pf3D7_09=1541723,Pf3D7_10=1687655,Pf3D7_11=2038337,Pf3D7_12=2271478,Pf3D7_13=2895605,Pf3D7_14=3291871,M76611=5967,PFC10_API_IRAB=34242
+saccharomyces_cerevisiae_w303_draft_20110816	{OBSOLETE} S. cerevisiae W303 (glang draft_20110816)	chr01=230218,chr02=813184,chr03=316620,chr04=1531933,chr05=576874,chr06=270161,chr07=1090940,chr08=562643,chr09=439888,chr10=745751,chr11=666816,chr12=1078177,chr13=924431,chr14=784333,chr15=1091291,chr16=948066,chrmt=85779
+saccharomyces_cerevisiae_w303_draft_20110927	{OBSOLETE} S. cerevisiae W303 (agammie draft_20110927)	chr01=230221,chr02=813183,chr03=316625,chr04=1531932,chr05=576870,chr06=270159,chr07=1090929,chr08=562646,chr09=439888,chr10=745749,chr11=666815,chr12=1078171,chr13=924433,chr14=784331,chr15=1091288,chr16=948066,chrmt=85781
+saccharomyces_cerevisiae_w303_draft_20111023	S. cerevisiae W303 (agammie draft_20111023)	chrI=230221,chrII=813183,chrIII=316623,chrIV=1531932,chrV=576870,chrVI=270159,chrVII=1090929,chrVIII=562646,chrIX=439888,chrX=745749,chrXI=666815,chrXII=1078171,chrXIII=924433,chrXIV=784331,chrXV=1091288,chrXVI=948066,chrMito=85781,2-micron=6318
+saccharomyces_cerevisiae_s288c_sgd_r64-1-1_20110203	S. cerevisiae S288C (SGD R64.1.1 2011_02_03)	chrI=230218,chrII=813184,chrIII=316620,chrIV=1531933,chrV=576874,chrVI=270161,chrVII=1090940,chrVIII=562643,chrIX=439888,chrX=745751,chrXI=666816,chrXII=1078177,chrXIII=924431,chrXIV=784333,chrXV=1091291,chrXVI=948066,chrMito=85779,2-micron=6318
+human_adenovirus_type_5_ay601635_1_strain_nhrc_ad5fs_7151	Human adenovirus type 5 (NCBI AY601635.1 strain NHRC Ad5FS 7151)	AY601635.1=35931
+sscrofa10_2	Pig Dec 2011 Sus scrofa (SGSC 10.2)	chrX=144288218,chr18=61220071,chr17=69701581,chr16=86898991,chr15=157681621,chr14=153851969,chr13=218635234,chr12=63588571,chr11=87690581,chr10=79102373,chr8=148491826,chr7=134764511,chr6=157765593,chr5=111506441,chr4=143465943,chr3=144787322,chr2=162569375,chr1=315321322,chrM_domesticus=16770,chrM_taiwanensis=16480,chrM=16613,chr9=153670197
+schizosaccharomyces_pombe_09052011	Schizosaccharomyces pombe (PomBase 09052011)	chromosome1=5579133,chromosome2=4539804,chromosome3=2452883,mating_type_region=20128,Spmit=19431,telomeric_contig=20000
+canFam_ncbi_build3.1	Dog Sep 2011 (NCBI build3.1)	10=69331447,11=74389097,12=72498081,13=63241923,14=60966679,15=64190966,16=59632846,17=64289059,18=55844845,19=53741614,1=122678785,20=58134056,21=50858623,22=61439934,23=52294480,24=47698779,25=51628933,26=38964690,27=45876710,28=41182112,29=41845238,2=85426708,30=40214260,31=39895921,32=38810281,33=31377067,34=42124431,35=26524999,36=30810995,37=30902991,38=23914537,3=91889043,4=88276631,5=88915250,6=77573801,7=80974532,8=74330416,9=61074082,MT=16727,X=123869142
+vibrio_cholerae_o1_biovar_eltor_str_n16961_2000-08-03	Vibrio cholerae O1 biovar eltor str N16961 (NCBI 2000-08-03)	NC_002505_1=2961149,NC_002506_1=1072315
+saccharomyces_cerevisiae_sk1_mvo_v1	Saccharomyces cerevisiae SK1 (MSKCC MvO_v1)	chr01=203893,chr02=794508,chr03=342718,chr04=1490682,chr05=602514,chr06=284456,chr07=1067526,chr08=544538,chr09=435585,chr10=719294,chr11=687260,chr12=1008248,chr13=908607,chr14=812465,chr15=1054033,chr16=921188
+celegans_ws220	C. elegans Oct. 2010 (Wormbase)	I=15072423,II=15279345,III=13783700,IV=17493793,MT=13794,V=20924149,X=17718866
+sbayanus_ygob_v6_dec2011	Saccharomyces bayanus (YGOB V6 Dec2011)	sbay_c_86=542,sbay_c_13=867,sbay_c_670=128790,sbay_c_87=691,sbay_c_14=755,sbay_c_671=154431,sbay_c_88=716,sbay_c_15=715,sbay_c_672=178363,sbay_c_16=741,sbay_c_673=151703,sbay_c_17=749,sbay_c_674=194045,sbay_c_18=754,sbay_c_675=148653,sbay_c_676=152993,sbay_c_677=211978,sbay_c_678=363550,sbay_c_89=747,sbay_c_90=703,sbay_c_91=702,sbay_c_92=711,sbay_c_19=722,sbay_c_93=707,sbay_c_20=699,sbay_c_21=698,sbay_c_94=756,sbay_c_95=714,sbay_c_22=771,sbay_c_96=706,sbay_c_23=804,sbay_c_97=745,sbay_c_24=714,sbay_c_98=748,sbay_c_25=753,sbay_c_26=701,sbay_c_27=740,sbay_c_28=739,sbay_c_99=711,sbay_c_100=709,sbay_c_101=741,sbay_c_102=780,sbay_c_29=731,sbay_c_30=751,sbay_c_103=703,sbay_c_104=711,sbay_c_31=588,sbay_c_105=709,sbay_c_32=748,sbay_c_106=718,sbay_c_33=748,sbay_c_107=705,sbay_c_34=718,sbay_c_108=725,sbay_c_35=755,sbay_c_36=802,sbay_c_37=730,sbay_c_38=710,sbay_c_179=656,sbay_c_180=702,sbay_c_181=1218,sbay_c_182=711,sbay_c_109=727,sbay_c_183=277,sbay_c_110=714,sbay_c_111=707,sbay_c_184=692,sbay_c_39=711,sbay_c_185=700,sbay_c_112=701,sbay_c_186=1166,sbay_c_113=713,sbay_c_40=743,sbay_c_187=801,sbay_c_114=695,sbay_c_41=765,sbay_c_188=980,sbay_c_115=705,sbay_c_42=741,sbay_c_116=697,sbay_c_43=768,sbay_c_117=725,sbay_c_44=767,sbay_c_118=721,sbay_c_45=708,sbay_c_46=732,sbay_c_47=816,sbay_c_48=733,sbay_c_189=680,sbay_c_190=849,sbay_c_191=606,sbay_c_192=279,sbay_c_119=714,sbay_c_120=745,sbay_c_193=724,sbay_c_194=783,sbay_c_121=722,sbay_c_195=714,sbay_c_49=586,sbay_c_122=713,sbay_c_196=670,sbay_c_50=741,sbay_c_123=711,sbay_c_197=685,sbay_c_51=702,sbay_c_124=690,sbay_c_198=699,sbay_c_52=735,sbay_c_125=721,sbay_c_53=719,sbay_c_126=698,sbay_c_54=737,sbay_c_127=721,sbay_c_55=701,sbay_c_128=759,sbay_c_56=693,sbay_c_57=695,sbay_c_58=700,sbay_c_199=700,sbay_c_200=1199,sbay_c_201=710,sbay_c_129=666,sbay_c_202=531,sbay_c_203=508,sbay_c_130=703,sbay_c_204=671,sbay_c_131=700,sbay_c_205=700,sbay_c_59=704,sbay_c_132=1414,sbay_c_206=424,sbay_c_60=702,sbay_c_133=702,sbay_c_207=700,sbay_c_61=714,sbay_c_134=737,sbay_c_208=353,sbay_c_62=709,sbay_c_135=695,sbay_c_63=714,sbay_c_136=711,sbay_c_64=712,sbay_c_137=758,sbay_c_65=707,sbay_c_138=815,sbay_c_66=682,sbay_c_67=717,sbay_c_68=701,sbay_c_209=126,sbay_c_210=711,sbay_c_211=696,sbay_c_212=693,sbay_c_139=771,sbay_c_213=668,sbay_c_140=989,sbay_c_214=752,sbay_c_141=199,sbay_c_215=993,sbay_c_69=703,sbay_c_142=942,sbay_c_216=732,sbay_c_70=703,sbay_c_143=752,sbay_c_217=254,sbay_c_71=697,sbay_c_144=675,sbay_c_218=586,sbay_c_72=701,sbay_c_145=540,sbay_c_73=985,sbay_c_146=691,sbay_c_74=686,sbay_c_147=721,sbay_c_75=663,sbay_c_148=700,sbay_c_76=699,sbay_c_77=719,sbay_c_78=725,sbay_c_219=673,sbay_c_220=706,sbay_c_221=689,sbay_c_222=694,sbay_c_149=417,sbay_c_223=593,sbay_c_150=997,sbay_c_224=1175,sbay_c_151=1091,sbay_c_225=726,sbay_c_152=717,sbay_c_226=874,sbay_c_153=700,sbay_c_227=772,sbay_c_154=693,sbay_c_228=697,sbay_c_155=661,sbay_c_156=748,sbay_c_157=697,sbay_c_158=441,sbay_c_229=736,sbay_c_230=692,sbay_c_231=900,sbay_c_159=718,sbay_c_232=672,sbay_c_160=820,sbay_c_233=619,sbay_c_161=756,sbay_c_234=894,sbay_c_162=713,sbay_c_235=719,sbay_c_163=859,sbay_c_236=707,sbay_c_164=796,sbay_c_237=685,sbay_c_165=743,sbay_c_238=711,sbay_c_166=735,sbay_c_167=388,sbay_c_168=202,sbay_c_239=813,sbay_c_240=1369,sbay_c_241=1037,sbay_c_169=694,sbay_c_242=741,sbay_c_170=921,sbay_c_243=676,sbay_c_171=633,sbay_c_244=743,sbay_c_172=722,sbay_c_245=838,sbay_c_173=797,sbay_c_246=652,sbay_c_174=745,sbay_c_247=1152,sbay_c_175=1240,sbay_c_248=851,sbay_c_176=749,sbay_c_177=715,sbay_c_178=676,sbay_c_249=698,sbay_c_250=718,sbay_c_251=979,sbay_c_252=710,sbay_c_253=730,sbay_c_254=878,sbay_c_255=699,sbay_c_256=899,sbay_c_257=801,sbay_c_258=811,sbay_c_259=708,sbay_c_260=1020,sbay_c_261=571,sbay_c_262=841,sbay_c_263=824,sbay_c_264=704,sbay_c_265=75,sbay_c_266=750,sbay_c_267=637,sbay_c_268=788,sbay_c_269=1070,sbay_c_270=696,sbay_c_271=681,sbay_c_272=693,sbay_c_273=709,sbay_c_274=933,sbay_c_275=725,sbay_c_276=681,sbay_c_277=717,sbay_c_278=1158,sbay_c_279=728,sbay_c_280=702,sbay_c_281=802,sbay_c_282=854,sbay_c_283=702,sbay_c_284=1236,sbay_c_285=1479,sbay_c_286=687,sbay_c_287=722,sbay_c_288=719,sbay_c_289=655,sbay_c_290=1178,sbay_c_291=1493,sbay_c_292=690,sbay_c_293=88,sbay_c_294=694,sbay_c_295=1003,sbay_c_296=909,sbay_c_297=1197,sbay_c_298=479,sbay_c_299=741,sbay_c_300=1147,sbay_c_301=1686,sbay_c_302=1198,sbay_c_303=759,sbay_c_304=788,sbay_c_305=806,sbay_c_306=768,sbay_c_307=1201,sbay_c_308=1132,sbay_c_379=2722,sbay_c_380=2246,sbay_c_381=2054,sbay_c_309=1292,sbay_c_382=1960,sbay_c_310=857,sbay_c_383=862,sbay_c_311=781,sbay_c_384=1722,sbay_c_312=1248,sbay_c_385=2150,sbay_c_313=790,sbay_c_386=2026,sbay_c_314=702,sbay_c_387=1849,sbay_c_315=1109,sbay_c_388=2522,sbay_c_316=1626,sbay_c_317=1039,sbay_c_318=849,sbay_c_389=3398,sbay_c_390=1754,sbay_c_391=2588,sbay_c_319=1206,sbay_c_392=1547,sbay_c_320=1575,sbay_c_393=2625,sbay_c_321=1012,sbay_c_394=1043,sbay_c_322=756,sbay_c_395=2639,sbay_c_323=969,sbay_c_396=2327,sbay_c_324=1401,sbay_c_397=1702,sbay_c_325=702,sbay_c_398=2657,sbay_c_326=1030,sbay_c_327=711,sbay_c_328=1131,sbay_c_399=3307,sbay_c_400=3315,sbay_c_401=2575,sbay_c_329=674,sbay_c_402=2520,sbay_c_330=1368,sbay_c_403=2660,sbay_c_331=1253,sbay_c_404=2579,sbay_c_332=718,sbay_c_405=2581,sbay_c_333=831,sbay_c_406=2373,sbay_c_334=943,sbay_c_407=1846,sbay_c_335=780,sbay_c_408=2928,sbay_c_336=668,sbay_c_337=689,sbay_c_338=1563,sbay_c_479=14080,sbay_c_480=14529,sbay_c_481=13150,sbay_c_409=2133,sbay_c_482=13882,sbay_c_410=2480,sbay_c_483=14776,sbay_c_411=1965,sbay_c_484=14000,sbay_c_339=1866,sbay_c_412=1595,sbay_c_485=14141,sbay_c_340=947,sbay_c_413=4198,sbay_c_486=15693,sbay_c_341=791,sbay_c_414=2869,sbay_c_487=13725,sbay_c_342=902,sbay_c_415=4501,sbay_c_488=13795,sbay_c_343=902,sbay_c_416=3253,sbay_c_344=1403,sbay_c_417=1834,sbay_c_345=721,sbay_c_418=2208,sbay_c_346=937,sbay_c_347=784,sbay_c_348=1278,sbay_c_489=16268,sbay_c_490=12436,sbay_c_491=15932,sbay_c_419=3249,sbay_c_492=14486,sbay_c_420=4713,sbay_c_493=8880,sbay_c_421=2414,sbay_c_494=17001,sbay_c_349=1288,sbay_c_422=2153,sbay_c_495=19104,sbay_c_350=816,sbay_c_423=2805,sbay_c_496=14052,sbay_c_351=1407,sbay_c_424=3159,sbay_c_497=17516,sbay_c_352=706,sbay_c_425=4679,sbay_c_498=13499,sbay_c_353=1227,sbay_c_426=4846,sbay_c_354=1125,sbay_c_427=796,sbay_c_355=1083,sbay_c_428=3547,sbay_c_356=677,sbay_c_357=1876,sbay_c_358=1557,sbay_c_499=18929,sbay_c_500=16776,sbay_c_501=17865,sbay_c_429=2989,sbay_c_502=17291,sbay_c_430=2935,sbay_c_503=21673,sbay_c_431=814,sbay_c_504=24871,sbay_c_359=1278,sbay_c_432=2570,sbay_c_505=20567,sbay_c_360=710,sbay_c_433=2098,sbay_c_506=9710,sbay_c_361=983,sbay_c_434=3181,sbay_c_507=23364,sbay_c_362=1138,sbay_c_435=5165,sbay_c_363=700,sbay_c_508=20942,sbay_c_436=4725,sbay_c_364=716,sbay_c_437=3303,sbay_c_365=1562,sbay_c_438=5666,sbay_c_366=673,sbay_c_367=1666,sbay_c_368=1169,sbay_c_579=40041,sbay_c_580=56288,sbay_c_581=46964,sbay_c_582=42500,sbay_c_509=24320,sbay_c_583=53618,sbay_c_510=15781,sbay_c_584=26915,sbay_c_511=19253,sbay_c_585=57793,sbay_c_439=4444,sbay_c_512=20095,sbay_c_586=42974,sbay_c_440=2008,sbay_c_513=19762,sbay_c_587=66024,sbay_c_441=4657,sbay_c_514=24939,sbay_c_588=53482,sbay_c_369=1641,sbay_c_442=3311,sbay_c_515=28799,sbay_c_370=1926,sbay_c_443=4424,sbay_c_516=26720,sbay_c_371=1332,sbay_c_444=2475,sbay_c_372=2742,sbay_c_517=19061,sbay_c_445=7695,sbay_c_518=25369,sbay_c_373=2885,sbay_c_446=6248,sbay_c_374=1575,sbay_c_447=5458,sbay_c_375=1543,sbay_c_448=7904,sbay_c_376=1417,sbay_c_377=1978,sbay_c_378=1142,sbay_c_589=50087,sbay_c_590=57729,sbay_c_591=62537,sbay_c_592=53918,sbay_c_519=21975,sbay_c_593=53009,sbay_c_520=26308,sbay_c_594=42087,sbay_c_521=25835,sbay_c_595=42384,sbay_c_522=30622,sbay_c_449=7391,sbay_c_596=70285,sbay_c_523=28785,sbay_c_450=7436,sbay_c_597=59007,sbay_c_524=22483,sbay_c_451=7991,sbay_c_525=22192,sbay_c_452=8112,sbay_c_598=47813,sbay_c_453=8488,sbay_c_526=19419,sbay_c_527=26310,sbay_c_454=7523,sbay_c_528=31826,sbay_c_455=7619,sbay_c_456=6968,sbay_c_457=7429,sbay_c_458=10669,sbay_c_599=55811,sbay_c_600=69558,sbay_c_601=43138,sbay_c_602=49764,sbay_c_529=27079,sbay_c_603=59193,sbay_c_530=25936,sbay_c_604=44574,sbay_c_531=89,sbay_c_605=49882,sbay_c_532=28535,sbay_c_459=10517,sbay_c_606=72730,sbay_c_533=21754,sbay_c_460=9922,sbay_c_534=26356,sbay_c_461=11009,sbay_c_607=62361,sbay_c_462=9636,sbay_c_608=116,sbay_c_535=23427,sbay_c_536=22598,sbay_c_463=9280,sbay_c_537=32284,sbay_c_464=11017,sbay_c_538=19052,sbay_c_465=8907,sbay_c_466=11185,sbay_c_467=11876,sbay_c_468=11399,sbay_c_609=60779,sbay_c_610=48166,sbay_c_611=68771,sbay_c_612=73456,sbay_c_539=21304,sbay_c_613=77174,sbay_c_540=34345,sbay_c_614=67842,sbay_c_541=31158,sbay_c_615=70964,sbay_c_542=32002,sbay_c_469=10636,sbay_c_543=24933,sbay_c_470=13109,sbay_c_616=63541,sbay_c_471=12405,sbay_c_617=53789,sbay_c_544=32015,sbay_c_618=66910,sbay_c_545=28791,sbay_c_472=11358,sbay_c_546=30003,sbay_c_473=12872,sbay_c_547=25488,sbay_c_474=12944,sbay_c_548=29615,sbay_c_475=12722,sbay_c_476=15368,sbay_c_477=17395,sbay_c_478=12547,sbay_c_619=51823,sbay_c_620=83938,sbay_c_621=69026,sbay_c_622=61975,sbay_c_549=32883,sbay_c_623=50169,sbay_c_550=31999,sbay_c_624=74479,sbay_c_551=32627,sbay_c_552=30543,sbay_c_625=70444,sbay_c_626=63959,sbay_c_553=15898,sbay_c_627=99357,sbay_c_554=39192,sbay_c_628=63439,sbay_c_555=32951,sbay_c_556=35832,sbay_c_557=34497,sbay_c_558=30692,sbay_c_629=64885,sbay_c_630=96259,sbay_c_631=79356,sbay_c_632=98552,sbay_c_559=34541,sbay_c_633=83433,sbay_c_560=43255,sbay_c_561=37961,sbay_c_634=82433,sbay_c_635=101557,sbay_c_562=34769,sbay_c_636=95542,sbay_c_563=37450,sbay_c_637=84975,sbay_c_564=23181,sbay_c_638=95342,sbay_c_565=37367,sbay_c_566=37485,sbay_c_567=8769,sbay_c_568=34293,sbay_c_639=100163,sbay_c_640=68389,sbay_c_641=85803,sbay_c_642=115546,sbay_c_569=32218,sbay_c_570=41596,sbay_c_643=91207,sbay_c_644=79073,sbay_c_571=48440,sbay_c_645=102609,sbay_c_572=40760,sbay_c_646=91494,sbay_c_573=37454,sbay_c_647=5869,sbay_c_574=46828,sbay_c_648=84463,sbay_c_575=44101,sbay_c_576=44928,sbay_c_577=37826,sbay_c_578=45735,sbay_c_649=6025,sbay_c_650=112550,sbay_c_651=112950,sbay_c_652=116276,sbay_c_653=118889,sbay_c_654=87713,sbay_c_655=108832,sbay_c_656=121405,sbay_c_657=127799,sbay_c_658=120086,sbay_c_1=734,sbay_c_2=764,sbay_c_659=91404,sbay_c_3=684,sbay_c_660=133574,sbay_c_4=734,sbay_c_661=134736,sbay_c_5=689,sbay_c_662=124541,sbay_c_6=809,sbay_c_663=110739,sbay_c_7=735,sbay_c_664=75942,sbay_c_8=918,sbay_c_665=104906,sbay_c_666=94724,sbay_c_667=153662,sbay_c_668=141325,sbay_c_79=698,sbay_c_80=726,sbay_c_81=746,sbay_c_9=732,sbay_c_82=734,sbay_c_10=759,sbay_c_83=736,sbay_c_11=560,sbay_c_84=790,sbay_c_12=728,sbay_c_669=85171,sbay_c_85=720
+sbayanus_ygob_v7_Aug2012	Saccharomyces bayanus var. uvarum (YGOB v7 Aug2012)	
+Pf3D7_v3_0	Plasmodium falciparum 3D7 (Sanger Institute v3.0 / PlasmoDB 9.x)	Pf3D7_05_v3=1343557,Pf3D7_10_v3=1687656,Pf3D7_07_v3=1445207,Pf3D7_03_v3=1067971,Pf3D7_13_v3=2925236,Pf3D7_11_v3=2038340,Pf3D7_14_v3=3291936,Pf3D7_09_v3=1541735,Pf3D7_01_v3=640851,Pf3D7_12_v3=2271494,Pf3D7_08_v3=1472805,Pf3D7_06_v3=1418242,Pf3D7_04_v3=1200490,Pf3D7_02_v3=947102,M76611=5967,PFC10_API_IRAB=34242
+pchab_2013-05-01	Plasmodium chabaudi (Sanger Institute 2013-05-01, unpublished)	chab01=581723,chab02=498758,chab03=624158,chab04=794008,chab05=935796,chab06=916956,chab07=1169068,chab08=1360204,chab09=1345096,chab10=1634725,chab11=1720574,chab12=1682238,chab13=2616835,chab14=2514833,chab_bin=437237,PCHAS_API=29468,PCHAS_MIT=5949
+suid_herpesvirus_1_bartha_JF797217_1	Suid herpesvirus 1 Bartha (NCBI JF797217.1)	JF797217=137764
+suid_herpesvirus_1_becker_JF797219_1	Suid herpesvirus 1 Becker (NCBI JF797219.1)	JF797219=141113
+suid_herpesvirus_1_kaplan_JF797218_1	Suid herpesvirus 1 Kaplan (NCBI JF797218.1)	JF797218=140377
+saccharomyces_cerevisiae_cen_pk113-7d_2012-03-26	Saccharomyces cerevisiae CEN.PK113-7D (NCBI BioProject PRJNA52955 2012-03-26)	chrI=223219,chrII=806679,chrIII=318651,chrIV=1524084,chrV=568439,chrVI=266217,chrVII=1077823,chrVIII=550888,chrIX=431484,chrX=727859,chrXI=665806,chrXII=1051674,chrXIII=918791,chrXIV=777620,chrXV=1084430,chrXVI=953219,scaffold592=749,scaffold604=3534,scaffold617=1979,scaffold630=2776,scaffold636=2346,scaffold637=1714,scaffold591=255,scaffold593=511,scaffold594=1378,scaffold596=5901,scaffold597=2227,scaffold598=255,scaffold599=1855,scaffold600=410,scaffold601=2519,scaffold602=216,scaffold603=709,scaffold605=722,scaffold606=598,scaffold607=291,scaffold608=301,scaffold609=771,scaffold610=537,scaffold611=240,scaffold612=915,scaffold613=3037,scaffold614=244,scaffold615=328,scaffold616=257,scaffold618=2290,scaffold619=625,scaffold620=373,scaffold621=209,scaffold622=306,scaffold623=361,scaffold624=1844,scaffold625=356,scaffold626=228,scaffold627=538,scaffold628=1319,scaffold629=640,scaffold632=342,scaffold633=526,scaffold634=300,scaffold635=215,scaffold638=243,scaffold639=280,scaffold640=391,scaffold641=238,scaffold642=290,scaffold643=214,scaffold644=746,scaffold645=474,scaffold646=1253
+225	Escherichia coli K12 (NCBI NC_000913.3)	chr=4641652
+dmel_ncbi_build5.41	Drosophila melanogaster (NCBI)	2L=23011544,2R=21146708,3L=24543557,3R=27905053,4=1351857,X=22422827
+ensembl_dmel_bdgp5.25	Drosophila melanogaster (Ensembl)	2L=23011544,2R=21146708,3L=24543557,3R=27905053,4=1351857,M=19517,X=22422827
+flybase_dmel_5_55	Drosophila melanogaster (Flybase 5.55)	YHet=347038,dmel_mitochondrion_genome=19517,2L=23011544,X=22422827,3L=24543557,4=1351857,2R=21146708,3R=27905053,Uextra=29004656,2RHet=3288761,2LHet=368872,3LHet=2555491,3RHet=2517507,U=10049037,XHet=204112
+eschColi_BW2952_nc_012759_1	Escherichia coli BW2952 (MC4100 derivative) (NCBI NC_0012759.1)	chr=4578159
+ensembl_tcas3_22	Tribolium castaneum (Ensembl 3.22)	ChLGX=10877635,ChLG10=11386040,ChLG6=13176827,ChLG4=13894384,ChLG8=18021898,ChLG5=19135781,ChLG2=20218415,ChLG7=20532854,ChLG9=21459655,ChLG3=38791480,Unknown=41251169
+bacillus_thuringiensis_serovar_berliner_atcc_10792_nz_cm000753_1	Bacillus thuringiensis serovar berliner ATCC 10792 (NCBI NZ_CM000753.1)	sid|4687|accn|NZ_CM000753=6260142
+shewOnei2	Shewanella oneidensis MR-1 (NCBI 2012-11-14)	chr=4969811,plasmid_pMR-1=161613
+Thaps3	Thalassiosira pseudonana (JGI v3.031306)	
+GRCh38	Human (Ensembl GRCh38)	1=248956422,10=133797422,11=135086622,12=133275309,13=114364328,14=107043718,15=101991189,16=90338345,17=83257441,18=80373285,19=58617616,2=242193529,20=64444167,21=46709983,22=50818468,3=198295559,4=190214555,5=181538259,6=170805979,7=159345973,8=145138636,9=138394717,CHR_HG126_PATCH=198295908,CHR_HG1362_PATCH=133275314,CHR_HG142_HG150_NOVEL_TEST=135094228,CHR_HG151_NOVEL_TEST=135097696,CHR_HG1832_PATCH=248959779,CHR_HG2021_PATCH=58632883,CHR_HG2022_PATCH=198295941,CHR_HG2030_PATCH=138394865,CHR_HG2058_PATCH=248956422,CHR_HG2062_PATCH=57262172,CHR_HG2066_PATCH=198295555,CHR_HG2095_PATCH=248959131,CHR_HG2104_PATCH=248958259,CHR_HG2128_PATCH=170811684,CHR_HG2191_PATCH=133799479,CHR_HG2216_PATCH=114376428,CHR_HG2217_PATCH=135086621,CHR_HG2232_PATCH=242193529,CHR_HG2233_PATCH=242193535,CHR_HG2241_PATCH=133792722,CHR_HG2242_HG2243_PATCH=133797297,CHR_HG2244_HG2245_PATCH=133797425,CHR_HG2247_PATCH=133274000,CHR_HG2249_PATCH=114364211,CHR_HG2288_HG2289_PATCH=114360394,CHR_HG2291_PATCH=114534236,CHR_HG23_PATCH=133275184,CHR_HG986_PATCH=248956639,CHR_HSCHR10_1_CTG1=133844722,CHR_HSCHR10_1_CTG2=133813485,CHR_HSCHR10_1_CTG3=133783218,CHR_HSCHR10_1_CTG4=133815819,CHR_HSCHR11_1_CTG1_1=135092355,CHR_HSCHR11_1_CTG1_2=135096748,CHR_HSCHR11_1_CTG2=135083598,CHR_HSCHR11_1_CTG3=135090275,CHR_HSCHR11_1_CTG5=135097255,CHR_HSCHR11_1_CTG6=135092332,CHR_HSCHR11_1_CTG7=135085484,CHR_HSCHR11_1_CTG8=135088433,CHR_HSCHR11_2_CTG1=135093444,CHR_HSCHR11_2_CTG1_1=135083841,CHR_HSCHR11_3_CTG1=135092180,CHR_HSCHR12_1_CTG1=133279324,CHR_HSCHR12_1_CTG2=133281368,CHR_HSCHR12_1_CTG2_1=133284468,CHR_HSCHR12_2_CTG2=133307257,CHR_HSCHR12_2_CTG2_1=133282358,CHR_HSCHR12_3_CTG2=133271566,CHR_HSCHR12_3_CTG2_1=133281486,CHR_HSCHR12_4_CTG2=133277582,CHR_HSCHR12_4_CTG2_1=133281351,CHR_HSCHR12_5_CTG2=133275237,CHR_HSCHR12_5_CTG2_1=133279478,CHR_HSCHR12_6_CTG2_1=133275361,CHR_HSCHR12_7_CTG2_1=133289478,CHR_HSCHR13_1_CTG1=114348172,CHR_HSCHR13_1_CTG2=114368315,CHR_HSCHR13_1_CTG3=114370226,CHR_HSCHR13_1_CTG4=114368332,CHR_HSCHR13_1_CTG5=114365350,CHR_HSCHR13_1_CTG6=114367169,CHR_HSCHR14_1_CTG1=107047377,CHR_HSCHR14_2_CTG1=107050862,CHR_HSCHR14_3_CTG1=107067894,CHR_HSCHR14_7_CTG1=107045728,CHR_HSCHR15_1_CTG1=101998275,CHR_HSCHR15_1_CTG3=101994657,CHR_HSCHR15_1_CTG8=102002809,CHR_HSCHR15_2_CTG3=101995966,CHR_HSCHR15_2_CTG8=102003326,CHR_HSCHR15_3_CTG3=101993763,CHR_HSCHR15_3_CTG8=101999716,CHR_HSCHR15_4_CTG8=102071387,CHR_HSCHR15_5_CTG8=102070278,CHR_HSCHR16_1_CTG1=90426449,CHR_HSCHR16_1_CTG3_1=90335239,CHR_HSCHR16_2_CTG3_1=90343477,CHR_HSCHR16_3_CTG1=90340304,CHR_HSCHR16_4_CTG1=90340369,CHR_HSCHR16_CTG2=90341867,CHR_HSCHR17_10_CTG4=83359087,CHR_HSCHR17_1_CTG1=83290495,CHR_HSCHR17_1_CTG2=83256362,CHR_HSCHR17_1_CTG4=83264766,CHR_HSCHR17_1_CTG5=83552665,CHR_HSCHR17_1_CTG9=83255504,CHR_HSCHR17_2_CTG1=83259496,CHR_HSCHR17_2_CTG2=83160220,CHR_HSCHR17_2_CTG4=83263494,CHR_HSCHR17_2_CTG5=83086355,CHR_HSCHR17_3_CTG2=83258211,CHR_HSCHR17_3_CTG4=83269063,CHR_HSCHR17_4_CTG4=83257896,CHR_HSCHR17_5_CTG4=83247119,CHR_HSCHR17_6_CTG4=83246071,CHR_HSCHR17_7_CTG4=83058228,CHR_HSCHR17_8_CTG4=83258474,CHR_HSCHR17_9_CTG4=83263791,CHR_HSCHR18_1_CTG1_1=80380517,CHR_HSCHR18_1_CTG2=80386177,CHR_HSCHR18_1_CTG2_1=80382671,CHR_HSCHR18_2_CTG1_1=80379367,CHR_HSCHR18_2_CTG2=80442734,CHR_HSCHR18_2_CTG2_1=80378720,CHR_HSCHR18_3_CTG2_1=80379039,CHR_HSCHR18_4_CTG1_1=80378406,CHR_HSCHR18_ALT21_CTG2_1=80376343,CHR_HSCHR18_ALT2_CTG2_1=80376883,CHR_HSCHR19KIR_ABC08_A1_HAP_CTG3_1=58617625,CHR_HSCHR19KIR_ABC08_AB_HAP_C_P_CTG3_1=58618008,CHR_HSCHR19KIR_ABC08_AB_HAP_T_P_CTG3_1=58617636,CHR_HSCHR19KIR_FH05_A_HAP_CTG3_1=58616795,CHR_HSCHR19KIR_FH05_B_HAP_CTG3_1=58689016,CHR_HSCHR19KIR_FH06_A_HAP_CTG3_1=58617587,CHR_HSCHR19KIR_FH06_BA1_HAP_CTG3_1=58603994,CHR_HSCHR19KIR_FH08_A_HAP_CTG3_1=58617658,CHR_HSCHR19KIR_FH08_BAX_HAP_CTG3_1=58647709,CHR_HSCHR19KIR_FH13_A_HAP_CTG3_1=58616725,CHR_HSCHR19KIR_FH13_BA2_HAP_CTG3_1=58662330,CHR_HSCHR19KIR_FH15_A_HAP_CTG3_1=58617473,CHR_HSCHR19KIR_FH15_B_HAP_CTG3_1=58689284,CHR_HSCHR19KIR_G085_A_HAP_CTG3_1=58617601,CHR_HSCHR19KIR_G085_BA1_HAP_CTG3_1=58603800,CHR_HSCHR19KIR_G248_A_HAP_CTG3_1=58617652,CHR_HSCHR19KIR_G248_BA2_HAP_CTG3_1=58661364,CHR_HSCHR19KIR_GRC212_AB_HAP_CTG3_1=58644315,CHR_HSCHR19KIR_GRC212_BA1_HAP_CTG3_1=58602595,CHR_HSCHR19KIR_LUCE_A_HAP_CTG3_1=58617634,CHR_HSCHR19KIR_LUCE_BDEL_HAP_CTG3_1=58631446,CHR_HSCHR19KIR_RP5_B_HAP_CTG3_1=58631402,CHR_HSCHR19KIR_RSH_A_HAP_CTG3_1=58617616,CHR_HSCHR19KIR_RSH_BA2_HAP_CTG3_1=58662237,CHR_HSCHR19KIR_T7526_A_HAP_CTG3_1=58617601,CHR_HSCHR19KIR_T7526_BDEL_HAP_CTG3_1=58631206,CHR_HSCHR19LRC_COX1_CTG3_1=58546647,CHR_HSCHR19LRC_COX2_CTG3_1=58288451,CHR_HSCHR19LRC_LRC_I_CTG3_1=58623235,CHR_HSCHR19LRC_LRC_J_CTG3_1=58650772,CHR_HSCHR19LRC_LRC_S_CTG3_1=58625321,CHR_HSCHR19LRC_LRC_T_CTG3_1=58561614,CHR_HSCHR19LRC_PGF1_CTG3_1=58546031,CHR_HSCHR19LRC_PGF2_CTG3_1=58355410,CHR_HSCHR19_1_CTG2=58624032,CHR_HSCHR19_1_CTG3_1=58624789,CHR_HSCHR19_2_CTG2=58627095,CHR_HSCHR19_2_CTG3_1=58618601,CHR_HSCHR19_3_CTG2=58625823,CHR_HSCHR19_3_CTG3_1=58625958,CHR_HSCHR19_4_CTG2=58619803,CHR_HSCHR19_4_CTG3_1=58625731,CHR_HSCHR19_5_CTG2=58619095,CHR_HSCHR1_1_CTG11=248961539,CHR_HSCHR1_1_CTG3=248968406,CHR_HSCHR1_1_CTG31=248973653,CHR_HSCHR1_1_CTG32_1=248960143,CHR_HSCHR1_2_CTG3=248975002,CHR_HSCHR1_2_CTG31=248971826,CHR_HSCHR1_2_CTG32_1=248962488,CHR_HSCHR1_3_CTG31=248967909,CHR_HSCHR1_3_CTG32_1=248960761,CHR_HSCHR1_4_CTG31=248955631,CHR_HSCHR1_4_CTG32_1=248958766,CHR_HSCHR1_ALT2_1_CTG32_1=248958866,CHR_HSCHR20_1_CTG1=64450183,CHR_HSCHR20_1_CTG2=64441059,CHR_HSCHR20_1_CTG3=64447812,CHR_HSCHR20_1_CTG4=64446453,CHR_HSCHR21_1_CTG1_1=46722569,CHR_HSCHR21_2_CTG1_1=46716685,CHR_HSCHR21_3_CTG1_1=46715777,CHR_HSCHR21_4_CTG1_1=46719541,CHR_HSCHR21_5_CTG2=46712294,CHR_HSCHR21_6_CTG1_1=46713516,CHR_HSCHR21_8_CTG1_1=46713185,CHR_HSCHR22_1_CTG1=50806372,CHR_HSCHR22_1_CTG2=50788525,CHR_HSCHR22_1_CTG3=50827573,CHR_HSCHR22_1_CTG4=50824699,CHR_HSCHR22_1_CTG5=50821308,CHR_HSCHR22_1_CTG6=50842710,CHR_HSCHR22_1_CTG7=50872732,CHR_HSCHR22_2_CTG1=50830603,CHR_HSCHR22_3_CTG1=50818468,CHR_HSCHR22_4_CTG1=50806321,CHR_HSCHR22_5_CTG1=50832153,CHR_HSCHR2_1_CTG1=242194896,CHR_HSCHR2_1_CTG15=242198904,CHR_HSCHR2_1_CTG5=242199562,CHR_HSCHR2_1_CTG7=242193540,CHR_HSCHR2_1_CTG7_2=242210518,CHR_HSCHR2_2_CTG1=242198346,CHR_HSCHR2_2_CTG15=242198544,CHR_HSCHR2_2_CTG7=242223512,CHR_HSCHR2_2_CTG7_2=242199609,CHR_HSCHR2_3_CTG1=242195626,CHR_HSCHR2_3_CTG15=242194292,CHR_HSCHR2_3_CTG7_2=242194557,CHR_HSCHR2_4_CTG1=242191076,CHR_HSCHR2_4_CTG7_2=242196589,CHR_HSCHR2_5_CTG7_2=242199685,CHR_HSCHR3_1_CTG1=198297480,CHR_HSCHR3_1_CTG2_1=198306097,CHR_HSCHR3_1_CTG3=198302882,CHR_HSCHR3_2_CTG2_1=198298736,CHR_HSCHR3_2_CTG3=198296961,CHR_HSCHR3_3_CTG1=198300110,CHR_HSCHR3_3_CTG2_1=198300421,CHR_HSCHR3_3_CTG3=198293223,CHR_HSCHR3_4_CTG2_1=198301383,CHR_HSCHR3_4_CTG3=198296867,CHR_HSCHR3_5_CTG2_1=198300594,CHR_HSCHR3_5_CTG3=198293785,CHR_HSCHR3_6_CTG3=198294921,CHR_HSCHR3_7_CTG3=198294497,CHR_HSCHR3_8_CTG3=198295934,CHR_HSCHR3_9_CTG3=198291952,CHR_HSCHR4_1_CTG12=190227204,CHR_HSCHR4_1_CTG4=190221757,CHR_HSCHR4_1_CTG6=190224838,CHR_HSCHR4_1_CTG8_1=190218838,CHR_HSCHR4_1_CTG9=190096932,CHR_HSCHR4_2_CTG12=190206797,CHR_HSCHR4_3_CTG12=190218028,CHR_HSCHR4_4_CTG12=190220704,CHR_HSCHR4_5_CTG12=190219562,CHR_HSCHR4_6_CTG12=190218533,CHR_HSCHR4_7_CTG12=190225141,CHR_HSCHR5_1_CTG1=181558402,CHR_HSCHR5_1_CTG1_1=180863570,CHR_HSCHR5_1_CTG5=181543736,CHR_HSCHR5_2_CTG1=181547139,CHR_HSCHR5_2_CTG1_1=180753562,CHR_HSCHR5_2_CTG5=181542206,CHR_HSCHR5_3_CTG1=181542495,CHR_HSCHR5_3_CTG1_1=181554865,CHR_HSCHR5_3_CTG5=181538569,CHR_HSCHR5_4_CTG1=181537434,CHR_HSCHR5_4_CTG1_1=181546281,CHR_HSCHR5_5_CTG1=181539933,CHR_HSCHR5_6_CTG1=181540245,CHR_HSCHR5_7_CTG1=181544732,CHR_HSCHR6_1_CTG2=170833811,CHR_HSCHR6_1_CTG3=170836231,CHR_HSCHR6_1_CTG4=170808607,CHR_HSCHR6_1_CTG5=170815302,CHR_HSCHR6_1_CTG6=170818797,CHR_HSCHR6_1_CTG7=170812567,CHR_HSCHR6_1_CTG8=170810115,CHR_HSCHR6_1_CTG9=170815583,CHR_HSCHR6_8_CTG1=170813052,CHR_HSCHR6_MHC_APD_CTG1=170845044,CHR_HSCHR6_MHC_COX_CTG1=170727598,CHR_HSCHR6_MHC_DBB_CTG1=170783898,CHR_HSCHR6_MHC_MANN_CTG1=170959829,CHR_HSCHR6_MHC_MCF_CTG1=170976334,CHR_HSCHR6_MHC_QBL_CTG1=170734801,CHR_HSCHR6_MHC_SSTO_CTG1=170946136,CHR_HSCHR7_1_CTG1=159349278,CHR_HSCHR7_1_CTG4_4=159348604,CHR_HSCHR7_1_CTG6=159351981,CHR_HSCHR7_1_CTG7=159346281,CHR_HSCHR7_2_CTG1=159348294,CHR_HSCHR7_2_CTG4_4=159333789,CHR_HSCHR7_2_CTG6=159407160,CHR_HSCHR7_2_CTG7=159349352,CHR_HSCHR7_3_CTG6=159344441,CHR_HSCHR8_1_CTG1=145124952,CHR_HSCHR8_1_CTG6=145150400,CHR_HSCHR8_1_CTG7=145142033,CHR_HSCHR8_2_CTG1=145141567,CHR_HSCHR8_2_CTG7=145141868,CHR_HSCHR8_3_CTG1=145130612,CHR_HSCHR8_3_CTG7=145125643,CHR_HSCHR8_4_CTG1=145141010,CHR_HSCHR8_4_CTG7=145143933,CHR_HSCHR8_5_CTG1=145137619,CHR_HSCHR8_5_CTG7=145144538,CHR_HSCHR8_6_CTG1=145136257,CHR_HSCHR8_6_CTG7=145141837,CHR_HSCHR8_7_CTG1=145138198,CHR_HSCHR8_8_CTG1=145123326,CHR_HSCHR8_9_CTG1=144983589,CHR_HSCHR9_1_CTG1=138409529,CHR_HSCHR9_1_CTG2=138402913,CHR_HSCHR9_1_CTG3=138400797,CHR_HSCHR9_1_CTG4=138405815,CHR_HSCHR9_1_CTG5=138404305,CHR_HSCHRX_1_CTG3=156043585,CHR_HSCHRX_2_CTG12=156053172,CHR_HSCHRX_2_CTG3=156039875,MT=16569,X=156040895,Y=57227415,KI270728.1=1872759,KI270727.1=448248,KI270442.1=392061,KI270729.1=280839,GL000225.1=211173,KI270743.1=210658,GL000008.2=209709,GL000009.2=201709,KI270747.1=198735,KI270722.1=194050,GL000194.1=191469,KI270742.1=186739,GL000205.2=185591,GL000195.1=182896,KI270736.1=181920,KI270733.1=179772,GL000224.1=179693,GL000219.1=179198,KI270719.1=176845,GL000216.2=176608,KI270712.1=176043,KI270706.1=175055,KI270725.1=172810,KI270744.1=168472,KI270734.1=165050,GL000213.1=164239,GL000220.1=161802,KI270715.1=161471,GL000218.1=161147,KI270749.1=158759,KI270741.1=157432,GL000221.1=155397,KI270716.1=153799,KI270731.1=150754,KI270751.1=150742,KI270750.1=148850,KI270519.1=138126,GL000214.1=137718,KI270708.1=127682,KI270730.1=112551,KI270438.1=112505,KI270737.1=103838,KI270721.1=100316,KI270738.1=99375,KI270748.1=93321,KI270435.1=92983,GL000208.1=92689,KI270538.1=91309,KI270756.1=79590,KI270739.1=73985,KI270757.1=71251,KI270709.1=66860,KI270746.1=66486,KI270753.1=62944,KI270589.1=44474,KI270726.1=43739,KI270735.1=42811,KI270711.1=42210,KI270745.1=41891,KI270714.1=41717,KI270732.1=41543,KI270713.1=40745,KI270754.1=40191,KI270710.1=40176,KI270717.1=40062,KI270724.1=39555,KI270720.1=39050,KI270723.1=38115,KI270718.1=38054,KI270317.1=37690,KI270740.1=37240,KI270755.1=36723,KI270707.1=32032,KI270579.1=31033,KI270752.1=27745,KI270512.1=22689,KI270322.1=21476,GL000226.1=15008,KI270311.1=12399,KI270366.1=8320,KI270511.1=8127,KI270448.1=7992,KI270521.1=7642,KI270581.1=7046,KI270582.1=6504,KI270515.1=6361,KI270588.1=6158,KI270591.1=5796,KI270522.1=5674,KI270507.1=5353,KI270590.1=4685,KI270584.1=4513,KI270320.1=4416,KI270382.1=4215,KI270468.1=4055,KI270467.1=3920,KI270362.1=3530,KI270517.1=3253,KI270593.1=3041,KI270528.1=2983,KI270587.1=2969,KI270364.1=2855,KI270371.1=2805,KI270333.1=2699,KI270374.1=2656,KI270411.1=2646,KI270414.1=2489,KI270510.1=2415,KI270390.1=2387,KI270375.1=2378,KI270420.1=2321,KI270509.1=2318,KI270315.1=2276,KI270302.1=2274,KI270518.1=2186,KI270530.1=2168,KI270304.1=2165,KI270418.1=2145,KI270424.1=2140,KI270417.1=2043,KI270508.1=1951,KI270303.1=1942,KI270381.1=1930,KI270529.1=1899,KI270425.1=1884,KI270396.1=1880,KI270363.1=1803,KI270386.1=1788,KI270465.1=1774,KI270383.1=1750,KI270384.1=1658,KI270330.1=1652,KI270372.1=1650,KI270548.1=1599,KI270580.1=1553,KI270387.1=1537,KI270391.1=1484,KI270305.1=1472,KI270373.1=1451,KI270422.1=1445,KI270316.1=1444,KI270340.1=1428,KI270338.1=1428,KI270583.1=1400,KI270334.1=1368,KI270429.1=1361,KI270393.1=1308,KI270516.1=1300,KI270389.1=1298,KI270466.1=1233,KI270388.1=1216,KI270544.1=1202,KI270310.1=1201,KI270412.1=1179,KI270395.1=1143,KI270376.1=1136,KI270337.1=1121,KI270335.1=1048,KI270378.1=1048,KI270379.1=1045,KI270329.1=1040,KI270419.1=1029,KI270336.1=1026,KI270312.1=998,KI270539.1=993,KI270385.1=990,KI270423.1=981,KI270392.1=971,KI270394.1=970
+ci_kh1	Ciona intestinalis (Ensemble KH1 GCA_000224145.1)	1=10041005,10=4880875,11=5152901,12=5356124,13=1792679,14=4591987,2=7758925,3=6703989,4=5505748,5=5035970,6=2365711,7=6125209,8=6398795,9=6586237,MT=14790,HT000098.1=931222,HT000184.1=903750,HT000075.1=772852,HT000034.1=770266,HT000094.1=744171,HT000103.1=618270,HT000062.1=543332,HT000076.1=528922,HT000101.1=521057,HT000025.1=511662,HT000174.1=493388,HT000119.1=458687,HT000122.1=396326,HT000105.1=378467,HT000074.1=376051,HT000124.1=363992,HT000068.1=317947,HT000150.1=317834,HT000049.1=315681,HT000016.1=307153,HT000047.1=276900,HT000166.1=271488,HT000116.1=256116,HT000262.1=254163,HT000054.1=244473,HT000070.1=239237,HT000059.1=233077,HT000111.1=226204,HT000148.1=217856,HT000171.1=216808,HT000095.1=216781,HT000134.1=216356,HT000542.1=214671,HT000137.1=212012,HT000141.1=207463,HT000037.1=197828,HT000177.1=196508,HT000030.1=189855,HT000162.1=189078,HT000077.1=186174,HT000120.1=179651,HT000157.1=172877,HT000065.1=165463,HT000823.1=159002,HT000099.1=155852,HT000159.1=153401,HT000133.1=149601,HT000127.1=148694,HT000052.1=145902,HT000106.1=142250,HT000155.1=139188,HT000125.1=138664,HT000019.1=130240,HT000123.1=125404,HT000970.1=122961,HT000085.1=114202,HT000084.1=113260,HT000096.1=112227,HT000180.1=112116,HT000079.1=111967,HT000043.1=108764,HT000130.1=108088,HT000146.1=108049,HT000185.1=105369,HT000055.1=100997,HT001041.1=99653,HT000129.1=98070,HT000023.1=97975,HT000114.1=94773,HT000143.1=94740,HT000161.1=93505,HT000041.1=90102,HT000064.1=86223,HT000104.1=85566,HT000051.1=84827,HT000018.1=83522,HT001056.1=82785,HT000061.1=82757,HT000063.1=81409,HT000091.1=81400,HT000183.1=81022,HT000078.1=80879,HT000092.1=79848,HT000087.1=79057,HT001059.1=78811,HT001061.1=78705,HT001060.1=78542,HT000032.1=78385,HT000117.1=78311,HT001055.1=76709,HT000152.1=74044,HT000178.1=73697,HT000042.1=72794,HT000093.1=72566,HT001063.1=72293,HT000121.1=72124,HT000140.1=71743,HT000067.1=71314,HT001066.1=70302,HT001065.1=69013,HT001064.1=68181,HT001062.1=67582,HT001068.1=67256,HT001069.1=66886,HT000080.1=66616,HT001067.1=66473,HT001072.1=66406,HT001076.1=65441,HT001058.1=64373,HT001070.1=62387,HT001073.1=62352,HT001071.1=62134,HT000109.1=61576,HT000050.1=61003,HT000164.1=61000,HT001077.1=60153,HT001078.1=59924,HT000144.1=59920,HT001075.1=59659,HT001081.1=59493,HT001079.1=59067,HT000026.1=57814,HT001080.1=56781,HT001083.1=54995,HT001087.1=54527,HT000172.1=54119,HT001086.1=54084,HT001085.1=53888,HT001088.1=53819,HT001089.1=53159,HT000089.1=53143,HT001090.1=53038,HT001084.1=52683,HT001092.1=52583,HT000073.1=52466,HT000128.1=52378,HT000097.1=51994,HT001091.1=51642,HT001094.1=50745,HT000186.1=50082,HT000021.1=48635,HT001095.1=48331,HT001101.1=48100,HT000167.1=47700,HT001096.1=47514,HT000145.1=47280,HT000142.1=47223,HT000038.1=47050,HT001106.1=46996,HT000024.1=46971,HT000022.1=46827,HT001100.1=46799,HT001105.1=46620,HT000057.1=46381,HT001093.1=46266,HT001099.1=46047,HT001103.1=46014,HT001097.1=45966,HT001098.1=45942,HT000053.1=45909,HT000175.1=45663,HT001102.1=45474,HT000029.1=45432,HT001104.1=44911,HT001110.1=44485,HT001109.1=43835,HT001107.1=43662,HT001113.1=43544,HT001108.1=43360,HT001111.1=43283,HT000048.1=43214,HT001114.1=42987,HT000066.1=42885,HT000118.1=42885,HT000044.1=42819,HT001119.1=42791,HT000027.1=42696,HT000156.1=42443,HT001112.1=42060,HT001116.1=41413,HT000182.1=41329,HT000045.1=40806,HT000187.1=40731,HT001124.1=40577,HT001115.1=40389,HT000090.1=40386,HT001117.1=40348,HT001125.1=40333,HT001118.1=40317,HT001122.1=40300,HT000126.1=40284,HT001120.1=40229,HT001123.1=39890,HT000170.1=39759,HT001121.1=39663,HT000040.1=39642,HT000113.1=39534,HT001128.1=39366,HT001126.1=38756,HT001139.1=38391,HT001129.1=38300,HT001127.1=38050,HT001131.1=37937,HT000035.1=37645,HT001132.1=37487,HT001136.1=36842,HT001082.1=36533,HT001133.1=36007,HT001147.1=35794,HT001135.1=35777,HT001142.1=35546,HT001134.1=35415,HT001144.1=35090,HT000179.1=35021,HT001137.1=34247,HT001148.1=34214,HT001138.1=34156,HT001141.1=34029,HT001143.1=33734,HT001074.1=33531,HT001140.1=33277,HT000088.1=32785,HT001151.1=32548,HT001150.1=32544,HT000181.1=32476,HT000039.1=32319,HT001145.1=32294,HT001149.1=32132,HT001152.1=32111,HT001155.1=32062,HT001146.1=31889,HT000031.1=31724,HT000082.1=31542,HT001159.1=31147,HT001153.1=31086,HT001156.1=31043,HT001154.1=30788,HT000163.1=30613,HT001157.1=30426,HT001158.1=30246,HT001160.1=30081,HT000115.1=29238,HT001167.1=28961,HT000110.1=28867,HT000086.1=28812,HT001162.1=28745,HT001161.1=28705,HT000154.1=28365,HT001164.1=27900,HT001172.1=27803,HT001163.1=27317,HT001166.1=27066,HT000017.1=26726,HT001184.1=26718,HT000033.1=26625,HT001165.1=26616,HT001188.1=26545,HT001183.1=26402,HT001168.1=26329,HT001169.1=26277,HT001170.1=26157,HT001174.1=25587,HT001173.1=25557,HT001175.1=25534,HT001180.1=25341,HT001179.1=25340,HT001190.1=25330,HT001177.1=25300,HT001178.1=25292,HT001176.1=25286,HT001182.1=25262,HT000149.1=25241,HT001181.1=25135,HT001193.1=24885,HT001191.1=24858,HT001187.1=24730,HT000060.1=24688,HT001186.1=24668,HT001185.1=24623,HT001189.1=24453,HT000071.1=24368,HT001195.1=24254,HT000135.1=24205,HT001192.1=24060,HT000176.1=23845,HT000112.1=23817,HT001200.1=23558,HT001194.1=23512,HT001198.1=23478,HT001202.1=23364,HT001196.1=23250,HT001197.1=23091,HT001209.1=22955,HT001224.1=22916,HT000153.1=22898,HT001199.1=22873,HT001204.1=22855,HT001201.1=22840,HT001171.1=22747,HT001208.1=22665,HT001222.1=22434,HT001203.1=22145,HT001228.1=22104,HT001206.1=22093,HT001211.1=21848,HT001205.1=21744,HT001213.1=21702,HT000102.1=21576,HT001207.1=21563,HT001225.1=21470,HT001212.1=21347,HT001215.1=21294,HT000196.1=21269,HT001227.1=21133,HT000028.1=21032,HT001210.1=21028,HT001245.1=20948,HT000169.1=20824,HT001216.1=20811,HT001263.1=20773,HT001214.1=20746,HT000165.1=20729,HT001217.1=20729,HT001218.1=20686,HT001269.1=20653,HT001239.1=20637,HT000046.1=20595,HT000072.1=20474,HT001230.1=20448,HT001221.1=20412,HT001220.1=20200,HT001244.1=20122,HT001229.1=20117,HT001234.1=20112,HT001223.1=20077,HT001226.1=19952,HT001246.1=19875,HT001219.1=19661,HT001231.1=19306,HT001130.1=19270,HT001232.1=19260,HT001235.1=19253,HT001233.1=18993,HT000193.1=18985,HT001242.1=18984,HT001236.1=18933,HT001237.1=18927,HT001240.1=18884,HT001241.1=18875,HT001249.1=18857,HT001238.1=18841,HT000219.1=18784,HT001243.1=18669,HT001248.1=18618,HT000151.1=18536,HT001247.1=18521,HT000138.1=18402,HT001253.1=18371,HT001250.1=18332,HT001259.1=18309,HT000069.1=18286,HT001251.1=18256,HT001252.1=18204,HT001254.1=18174,HT000100.1=18168,HT000168.1=18118,HT000147.1=18044,HT001257.1=17856,HT000207.1=17820,HT001256.1=17817,HT001255.1=17776,HT000190.1=17599,HT001268.1=17593,HT001258.1=17507,HT000205.1=17448,HT000199.1=17434,HT001271.1=17404,HT000058.1=17325,HT001260.1=17306,HT001261.1=17266,HT001267.1=17185,HT000136.1=17164,HT001272.1=17144,HT001266.1=17057,HT000191.1=17010,HT001264.1=16991,HT001265.1=16899,HT000208.1=16813,HT001262.1=16773,HT000209.1=16755,HT001270.1=16671,HT000189.1=16517,HT000036.1=16506,HT000192.1=16498,HT000056.1=16489,HT000216.1=16446,HT000194.1=16326,HT000195.1=16270,HT000247.1=16270,HT000217.1=16264,HT000260.1=16261,HT000204.1=16098,HT000197.1=16090,HT000239.1=16086,HT000198.1=16062,HT000200.1=15996,HT000202.1=15978,HT000201.1=15946,HT000203.1=15888,HT000210.1=15876,HT000206.1=15856,HT000223.1=15806,HT000212.1=15696,HT000243.1=15645,HT000218.1=15528,HT000220.1=15481,HT000213.1=15478,HT000214.1=15470,HT000215.1=15423,HT000221.1=15363,HT000232.1=15340,HT000231.1=15308,HT000222.1=15279,HT000211.1=15223,HT000378.1=15083,HT000139.1=15079,HT000173.1=15066,HT000225.1=15058,HT000224.1=15056,HT000226.1=14936,HT000227.1=14870,HT000228.1=14859,HT000015.1=14727,HT000266.1=14709,HT000236.1=14673,HT000230.1=14649,HT000235.1=14528,HT000233.1=14490,HT000229.1=14469,HT000234.1=14422,HT000240.1=14381,HT000237.1=14359,HT000250.1=14335,HT000238.1=14308,HT000251.1=14209,HT000246.1=14123,HT000245.1=14113,HT000244.1=14085,HT000248.1=14079,HT000249.1=13962,HT000242.1=13898,HT000252.1=13871,HT000297.1=13869,HT000259.1=13834,HT000020.1=13727,HT000253.1=13701,HT000327.1=13691,HT000255.1=13624,HT000107.1=13575,HT000263.1=13555,HT000258.1=13518,HT000280.1=13515,HT000261.1=13472,HT000257.1=13437,HT000241.1=13406,HT000254.1=13388,HT000256.1=13322,HT000264.1=13219,HT000326.1=13195,HT000265.1=13187,HT000267.1=13185,HT000270.1=13118,HT000269.1=13073,HT000268.1=13062,HT000272.1=13042,HT000271.1=12931,HT000274.1=12848,HT000273.1=12830,HT000276.1=12703,HT000275.1=12686,HT000277.1=12643,HT000278.1=12620,HT000286.1=12616,HT000283.1=12569,HT000282.1=12538,HT000281.1=12496,HT000315.1=12477,HT000312.1=12462,HT000284.1=12363,HT000285.1=12270,HT000335.1=12225,HT000289.1=12223,HT000287.1=12156,HT000288.1=12147,HT000290.1=12027,HT000328.1=12016,HT000291.1=11942,HT000316.1=11936,HT000292.1=11896,HT000302.1=11885,HT000345.1=11885,HT000293.1=11869,HT000307.1=11840,HT000295.1=11760,HT000296.1=11760,HT000298.1=11753,HT000322.1=11740,HT000360.1=11705,HT000083.1=11687,HT000299.1=11673,HT000300.1=11666,HT000351.1=11663,HT000294.1=11660,HT000305.1=11600,HT000303.1=11585,HT000304.1=11540,HT000314.1=11496,HT000306.1=11495,HT000308.1=11427,HT000309.1=11422,HT000379.1=11371,HT000313.1=11336,HT000311.1=11335,HT000468.1=11289,HT000317.1=11178,HT000318.1=11171,HT000310.1=11158,HT000131.1=11132,HT000321.1=11023,HT000320.1=11001,HT000323.1=10983,HT000325.1=10977,HT000324.1=10968,HT000454.1=10945,HT000279.1=10943,HT000337.1=10895,HT000329.1=10847,HT000330.1=10784,HT000319.1=10772,HT000331.1=10769,HT000346.1=10746,HT000332.1=10730,HT000373.1=10718,HT000382.1=10716,HT000338.1=10684,HT000388.1=10639,HT000336.1=10632,HT000509.1=10528,HT000368.1=10515,HT000396.1=10497,HT000333.1=10488,HT000403.1=10487,HT000366.1=10481,HT000385.1=10480,HT000339.1=10472,HT000348.1=10402,HT000340.1=10398,HT000344.1=10394,HT000081.1=10390,HT000342.1=10359,HT000341.1=10329,HT000343.1=10297,HT000508.1=10268,HT000347.1=10210,HT000428.1=10202,HT000353.1=10111,HT000356.1=10088,HT000352.1=10080,HT000350.1=10074,HT000432.1=9998,HT000354.1=9988,HT000355.1=9980,HT000372.1=9974,HT000357.1=9940,HT000358.1=9937,HT000359.1=9897,HT000361.1=9881,HT000408.1=9865,HT000362.1=9818,HT000363.1=9800,HT000364.1=9787,HT000447.1=9787,HT000349.1=9764,HT000158.1=9755,HT000365.1=9745,HT000334.1=9552,HT000369.1=9549,HT000401.1=9530,HT000371.1=9483,HT000377.1=9477,HT000376.1=9455,HT000375.1=9427,HT000370.1=9360,HT000381.1=9355,HT000380.1=9352,HT000383.1=9347,HT000387.1=9344,HT000386.1=9305,HT000367.1=9295,HT000389.1=9294,HT000406.1=9280,HT000390.1=9246,HT000384.1=9238,HT000391.1=9214,HT000479.1=9201,HT000395.1=9194,HT000392.1=9179,HT000132.1=9143,HT000394.1=9143,HT000411.1=9137,HT000404.1=9113,HT000397.1=9107,HT000399.1=9059,HT000398.1=9058,HT000400.1=9048,HT000402.1=9040,HT000446.1=8976,HT000407.1=8959,HT000301.1=8952,HT000393.1=8935,HT000160.1=8866,HT000425.1=8851,HT000742.1=8834,HT000412.1=8805,HT000413.1=8791,HT000522.1=8750,HT000409.1=8749,HT000405.1=8706,HT000414.1=8704,HT000415.1=8662,HT000487.1=8654,HT000417.1=8649,HT000418.1=8641,HT000416.1=8620,HT000434.1=8614,HT000437.1=8586,HT000410.1=8560,HT000419.1=8558,HT000420.1=8543,HT000421.1=8533,HT000423.1=8476,HT000426.1=8474,HT000424.1=8450,HT000374.1=8426,HT000442.1=8404,HT000427.1=8377,HT000429.1=8369,HT000489.1=8360,HT000430.1=8359,HT000452.1=8334,HT000433.1=8333,HT000422.1=8331,HT000431.1=8324,HT000435.1=8314,HT000438.1=8290,HT000440.1=8271,HT000436.1=8248,HT000441.1=8199,HT000470.1=8177,HT000443.1=8176,HT000439.1=8170,HT000444.1=8170,HT000461.1=8142,HT000445.1=8136,HT000463.1=8109,HT000448.1=8093,HT000451.1=8073,HT000449.1=8069,HT000450.1=8068,HT000498.1=8053,HT000569.1=8045,HT000453.1=8010,HT000466.1=7986,HT000485.1=7977,HT000456.1=7959,HT000532.1=7952,HT000462.1=7926,HT000457.1=7923,HT000469.1=7917,HT000467.1=7916,HT000625.1=7915,HT000459.1=7912,HT000458.1=7909,HT000464.1=7892,HT000557.1=7888,HT000460.1=7869,HT000693.1=7863,HT000465.1=7849,HT000471.1=7824,HT000491.1=7734,HT000481.1=7717,HT000486.1=7705,HT000472.1=7678,HT000473.1=7675,HT000455.1=7661,HT000512.1=7620,HT000476.1=7610,HT000475.1=7607,HT000478.1=7586,HT000497.1=7580,HT000482.1=7530,HT000483.1=7528,HT000488.1=7511,HT000474.1=7491,HT000513.1=7451,HT000554.1=7450,HT000581.1=7412,HT000490.1=7398,HT000480.1=7382,HT000533.1=7378,HT000492.1=7377,HT000493.1=7353,HT000496.1=7337,HT000108.1=7333,HT000500.1=7315,HT000499.1=7297,HT000501.1=7274,HT000535.1=7270,HT000502.1=7263,HT000517.1=7261,HT000503.1=7248,HT000484.1=7179,HT000516.1=7156,HT000518.1=7149,HT000604.1=7145,HT000504.1=7137,HT000511.1=7134,HT000506.1=7122,HT000494.1=7119,HT000510.1=7113,HT000514.1=7109,HT000507.1=7104,HT000538.1=7098,HT000477.1=7083,HT000527.1=7083,HT000623.1=7073,HT000529.1=7066,HT000495.1=7052,HT000676.1=7051,HT000515.1=7042,HT000572.1=7030,HT000556.1=7006,HT000519.1=7003,HT000520.1=6988,HT000521.1=6975,HT000523.1=6943,HT000524.1=6933,HT000525.1=6926,HT000544.1=6926,HT000526.1=6903,HT000528.1=6878,HT000530.1=6819,HT000537.1=6780,HT000534.1=6762,HT000558.1=6760,HT000536.1=6730,HT000702.1=6723,HT000539.1=6716,HT000540.1=6672,HT000543.1=6662,HT000531.1=6660,HT000545.1=6643,HT000547.1=6628,HT000548.1=6624,HT000546.1=6620,HT000645.1=6615,HT000560.1=6603,HT000630.1=6599,HT000549.1=6595,HT000592.1=6579,HT000550.1=6555,HT000552.1=6554,HT000760.1=6526,HT000555.1=6513,HT000619.1=6503,HT000541.1=6502,HT000559.1=6485,HT000561.1=6459,HT000730.1=6450,HT000576.1=6443,HT000617.1=6433,HT000553.1=6431,HT000563.1=6417,HT000564.1=6416,HT000587.1=6385,HT000565.1=6365,HT000567.1=6365,HT000570.1=6352,HT000568.1=6350,HT000667.1=6305,HT000577.1=6280,HT000620.1=6269,HT000588.1=6259,HT000571.1=6247,HT000573.1=6237,HT000574.1=6232,HT000580.1=6212,HT000593.1=6203,HT000575.1=6202,HT000562.1=6189,HT000638.1=6178,HT000578.1=6170,HT000674.1=6169,HT000728.1=6162,HT000585.1=6158,HT000602.1=6140,HT000679.1=6135,HT000582.1=6118,HT000584.1=6080,HT000627.1=6071,HT000594.1=6065,HT000626.1=6058,HT000586.1=6052,HT000618.1=6051,HT000591.1=6038,HT000589.1=6023,HT000596.1=5950,HT000598.1=5950,HT000595.1=5948,HT000597.1=5938,HT000600.1=5933,HT000599.1=5928,HT000633.1=5921,HT000606.1=5898,HT000601.1=5896,HT000603.1=5888,HT000615.1=5875,HT000605.1=5863,HT000590.1=5852,HT000607.1=5834,HT000610.1=5813,HT000608.1=5800,HT000613.1=5796,HT000611.1=5793,HT000612.1=5793,HT000614.1=5777,HT000643.1=5769,HT000616.1=5765,HT000579.1=5739,HT000621.1=5733,HT000622.1=5709,HT000848.1=5702,HT000624.1=5679,HT000551.1=5675,HT000628.1=5661,HT000632.1=5641,HT000659.1=5641,HT000635.1=5640,HT000629.1=5633,HT000637.1=5629,HT000636.1=5626,HT000818.1=5622,HT000639.1=5606,HT000660.1=5599,HT000641.1=5596,HT000644.1=5589,HT000747.1=5587,HT000647.1=5576,HT000650.1=5563,HT000649.1=5558,HT000651.1=5558,HT000652.1=5549,HT000655.1=5526,HT000648.1=5521,HT000656.1=5521,HT000654.1=5520,HT000657.1=5510,HT000658.1=5510,HT000583.1=5483,HT000697.1=5472,HT000505.1=5471,HT000661.1=5471,HT000792.1=5457,HT000634.1=5452,HT000664.1=5452,HT000665.1=5442,HT000666.1=5438,HT000741.1=5436,HT000668.1=5434,HT000642.1=5414,HT000709.1=5398,HT000662.1=5387,HT000673.1=5384,HT000670.1=5376,HT000669.1=5372,HT000671.1=5339,HT000675.1=5310,HT000672.1=5304,HT000771.1=5303,HT000831.1=5292,HT000680.1=5279,HT000678.1=5271,HT000681.1=5259,HT000686.1=5250,HT000683.1=5243,HT000682.1=5238,HT000763.1=5211,HT000695.1=5208,HT000700.1=5203,HT000694.1=5202,HT000708.1=5189,HT000691.1=5186,HT000685.1=5176,HT000687.1=5175,HT000689.1=5160,HT000902.1=5156,HT000688.1=5155,HT000663.1=5154,HT000824.1=5151,HT000684.1=5143,HT000690.1=5142,HT000692.1=5120,HT000646.1=5101,HT000696.1=5095,HT000787.1=5076,HT000699.1=5071,HT000703.1=5060,HT000721.1=5054,HT000704.1=5052,HT000677.1=5043,HT000706.1=5024,HT000707.1=5022,HT000716.1=5017,HT000711.1=5002,HT000735.1=5002,HT000714.1=4978,HT000815.1=4965,HT000609.1=4959,HT000717.1=4958,HT000719.1=4958,HT000720.1=4955,HT000722.1=4936,HT000795.1=4930,HT000804.1=4926,HT000723.1=4921,HT000724.1=4911,HT000725.1=4902,HT000727.1=4902,HT000820.1=4878,HT001038.1=4877,HT000731.1=4875,HT000715.1=4863,HT000732.1=4861,HT000733.1=4845,HT000726.1=4843,HT000734.1=4840,HT000884.1=4827,HT000736.1=4820,HT000796.1=4812,HT000740.1=4791,HT000739.1=4790,HT000737.1=4789,HT000738.1=4789,HT000640.1=4775,HT000743.1=4764,HT000744.1=4758,HT000745.1=4753,HT000748.1=4738,HT000753.1=4732,HT000757.1=4729,HT000750.1=4726,HT000749.1=4716,HT000751.1=4715,HT000752.1=4711,HT000705.1=4697,HT000755.1=4692,HT000756.1=4689,HT000754.1=4688,HT000758.1=4687,HT000759.1=4673,HT000761.1=4666,HT000774.1=4661,HT000762.1=4651,HT000701.1=4649,HT000764.1=4645,HT000780.1=4626,HT000961.1=4625,HT000765.1=4624,HT000766.1=4615,HT000767.1=4601,HT000768.1=4597,HT000769.1=4576,HT000770.1=4569,HT000799.1=4568,HT000781.1=4566,HT000773.1=4562,HT000821.1=4545,HT000776.1=4529,HT000934.1=4522,HT000775.1=4518,HT000746.1=4516,HT000778.1=4516,HT000782.1=4509,HT000783.1=4506,HT000807.1=4506,HT000785.1=4497,HT000710.1=4492,HT000784.1=4491,HT000786.1=4489,HT000800.1=4481,HT000788.1=4478,HT000917.1=4472,HT000712.1=4468,HT000790.1=4466,HT000791.1=4440,HT000793.1=4429,HT000713.1=4425,HT000653.1=4420,HT000794.1=4418,HT000968.1=4414,HT000809.1=4405,HT000631.1=4395,HT000797.1=4391,HT000798.1=4382,HT000924.1=4373,HT000871.1=4372,HT000801.1=4366,HT000802.1=4365,HT001019.1=4359,HT000779.1=4340,HT000698.1=4337,HT000803.1=4335,HT000805.1=4330,HT000861.1=4326,HT000806.1=4319,HT000812.1=4319,HT000808.1=4310,HT000810.1=4297,HT000811.1=4292,HT000993.1=4282,HT000813.1=4274,HT000814.1=4268,HT000989.1=4267,HT000816.1=4262,HT000817.1=4262,HT000566.1=4241,HT000819.1=4239,HT000822.1=4237,HT001043.1=4232,HT000999.1=4228,HT000825.1=4225,HT000826.1=4218,HT000829.1=4211,HT000828.1=4207,HT000830.1=4198,HT000834.1=4196,HT000832.1=4182,HT000833.1=4180,HT000926.1=4178,HT000899.1=4170,HT001048.1=4167,HT000849.1=4161,HT000836.1=4149,HT000980.1=4149,HT000856.1=4147,HT000835.1=4146,HT000837.1=4146,HT000840.1=4143,HT000838.1=4135,HT000842.1=4135,HT000841.1=4133,HT000843.1=4130,HT000844.1=4129,HT000845.1=4125,HT000864.1=4121,HT000846.1=4119,HT000847.1=4105,HT000851.1=4095,HT000867.1=4095,HT000850.1=4073,HT000852.1=4063,HT000729.1=4061,HT000853.1=4060,HT000854.1=4056,HT000855.1=4052,HT000858.1=4052,HT001040.1=4047,HT000986.1=4044,HT000914.1=4040,HT000998.1=4035,HT000857.1=4029,HT000839.1=4024,HT000859.1=4017,HT000860.1=4003,HT000863.1=3999,HT000866.1=3999,HT001030.1=3992,HT000865.1=3989,HT000869.1=3977,HT000870.1=3959,HT001052.1=3946,HT000891.1=3942,HT000872.1=3940,HT000874.1=3935,HT000873.1=3931,HT001036.1=3930,HT000876.1=3927,HT000875.1=3924,HT000878.1=3918,HT000890.1=3918,HT000877.1=3912,HT000862.1=3908,HT000881.1=3894,HT000880.1=3892,HT000883.1=3876,HT000887.1=3871,HT001000.1=3869,HT000882.1=3868,HT000888.1=3868,HT001042.1=3863,HT000885.1=3862,HT000886.1=3857,HT000889.1=3857,HT000892.1=3854,HT000895.1=3850,HT000893.1=3849,HT000896.1=3842,HT000894.1=3840,HT000897.1=3833,HT000898.1=3828,HT000900.1=3827,HT000901.1=3801,HT000906.1=3789,HT000905.1=3781,HT000903.1=3777,HT000907.1=3776,HT000921.1=3774,HT000909.1=3767,HT000911.1=3767,HT000908.1=3766,HT000910.1=3762,HT000913.1=3758,HT000956.1=3747,HT000915.1=3742,HT001049.1=3742,HT001044.1=3723,HT000916.1=3719,HT000923.1=3701,HT000912.1=3678,HT000918.1=3678,HT000919.1=3678,HT000920.1=3671,HT000928.1=3663,HT000922.1=3660,HT000991.1=3638,HT000925.1=3637,HT000927.1=3623,HT000777.1=3618,HT000718.1=3606,HT000958.1=3597,HT000929.1=3596,HT000930.1=3581,HT000931.1=3569,HT001012.1=3567,HT000932.1=3560,HT001051.1=3557,HT000933.1=3546,HT000935.1=3542,HT000937.1=3541,HT000827.1=3537,HT000936.1=3535,HT000954.1=3532,HT000939.1=3524,HT000938.1=3518,HT000904.1=3502,HT000942.1=3502,HT000943.1=3498,HT000963.1=3498,HT000945.1=3490,HT000940.1=3475,HT000952.1=3467,HT000948.1=3465,HT000946.1=3464,HT000950.1=3453,HT000955.1=3447,HT000953.1=3444,HT001047.1=3431,HT000957.1=3407,HT000960.1=3395,HT000964.1=3395,HT000941.1=3391,HT000962.1=3391,HT000967.1=3384,HT000966.1=3374,HT000969.1=3358,HT000972.1=3349,HT000971.1=3348,HT000973.1=3344,HT000974.1=3342,HT000975.1=3342,HT000977.1=3334,HT001045.1=3333,HT000976.1=3329,HT000978.1=3323,HT000979.1=3323,HT000949.1=3315,HT000981.1=3309,HT000944.1=3295,HT000985.1=3280,HT000947.1=3277,HT000951.1=3271,HT000987.1=3271,HT000789.1=3270,HT000988.1=3265,HT001029.1=3265,HT000990.1=3262,HT000982.1=3254,HT000959.1=3253,HT000992.1=3245,HT000879.1=3236,HT000994.1=3227,HT001057.1=3216,HT000995.1=3215,HT001039.1=3213,HT001054.1=3212,HT000997.1=3208,HT001053.1=3201,HT000984.1=3200,HT000996.1=3198,HT001034.1=3193,HT001001.1=3186,HT001002.1=3184,HT001004.1=3147,HT001003.1=3146,HT001007.1=3145,HT001006.1=3140,HT001008.1=3137,HT001009.1=3137,HT001005.1=3135,HT001010.1=3132,HT000868.1=3130,HT001011.1=3123,HT001013.1=3117,HT001015.1=3116,HT001016.1=3113,HT001014.1=3107,HT001017.1=3101,HT001018.1=3093,HT000965.1=3088,HT000772.1=3083,HT001020.1=3082,HT001035.1=3081,HT001050.1=3075,HT001023.1=3070,HT001021.1=3067,HT001027.1=3067,HT000983.1=3065,HT001022.1=3064,HT001024.1=3060,HT001037.1=3060,HT001046.1=3060,HT001025.1=3056,HT001026.1=3052,HT001028.1=3047,HT001031.1=3029,HT001033.1=3021,HT001032.1=3020

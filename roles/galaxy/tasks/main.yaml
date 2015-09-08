@@ -139,6 +139,15 @@
 - name: tool_conf.xml
   template: src=tool_conf.xml.j2 dest={{ GALAXY_HOME }}/tool_conf.xml backup=yes
 
+- name: tool_data_table_conf.xml
+  copy: src="tool_data_table_conf.xml" dest="{{ GALAXY_HOME }}/tool_data_table_conf.xml" backup=yes
+
+- name: tool-data
+  copy:
+    src: "tool-data/{{ item }}"
+    dest: "{{ GALAXY_HOME }}/tool-data/"
+    backup: yes
+
 - name: welcome.html
   template: src=welcome.html.j2 dest={{ GALAXY_HOME }}/static/welcome.html backup=yes
 

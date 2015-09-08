@@ -1,0 +1,65 @@
+---
+- hosts: galaxy_servers
+  sudo: yes
+  sudo_user: galaxy
+
+  tasks:
+  - name: pull tool-data files
+    fetch:
+      src: /{{ GALAXY_HOME }}/tool-data/{{ item }}
+      dest: roles/galaxy/files/tool-data/
+      fail_on_missing: yes
+      flat: yes
+    with_items:
+      - all_fasta.loc
+      - bfast_indexes.loc
+      - binned_scores.loc
+      - blastdb.loc
+      - blastdb_d.loc
+      - blastdb_p.loc
+      - bowtie2_indices.loc
+      - bowtie_indices.loc
+      - bwa_index.loc
+      - bwa_mem_index.loc
+      - ccat_configurations.loc
+      - codingSnps.loc
+      - encode_datasets.loc
+      - faseq.loc
+      - fasta_indexes.loc
+      - funDo.loc
+      - gatk_annotations.txt
+      - gatk_sorted_picard_index.loc
+      - gd.chrlens.loc
+      - gd.restriction_enzymes.txt
+      - gd.snps.loc
+      - gd.species.txt
+      - lastz_seqs.loc
+      - liftOver.loc
+      - maf_index.loc
+      - maf_pairwise.loc
+      - microbial_data.loc
+      - mosaik_index.loc
+      - ngs_sim_fasta.loc
+      - perm_base_index.loc
+      - perm_color_index.loc
+      - phastOdds.loc
+      - picard_index.loc
+      - quality_scores.loc
+      - regions.loc
+      - sam_fa_indices.loc
+      - sequence_index_base.loc
+      - sequence_index_color.loc
+      - sift_db.loc
+      - twobit.loc
+      - srma_index.loc
+      - annotation_profiler_options.xml
+      - annotation_profiler_valid_builds.txt
+
+  - name: pull shared ucsc files
+    fetch:
+      src: /{{ GALAXY_HOME }}/tool-data/shared/ucsc/{{ item }}
+      dest: roles/galaxy/files/tool-data/shared/ucsc/
+      fail_on_missing: yes
+      flat: yes
+    with_items:
+      - manual_builds.txt

@@ -1,0 +1,93 @@
+#This is a sample file distributed with Galaxy that enables tools
+#to use a directory of Bowtie indexed sequences data files. You will
+#need to create these data files and then create a bowtie_indices.loc
+#file similar to this one (store it in this directory) that points to
+#the directories in which those files are stored. The bowtie_indices.loc
+#file has this format (longer white space characters are TAB characters):
+#
+#<unique_build_id>   <dbkey>   <display_name>   <file_base_path>
+#
+#So, for example, if you had hg18 indexed stored in
+#/depot/data2/galaxy/bowtie/hg18/,
+#then the bowtie_indices.loc entry would look like this:
+#
+#hg18	hg18	hg18	/depot/data2/galaxy/bowtie/hg18/hg18
+#
+#and your /depot/data2/galaxy/bowtie/hg18/ directory
+#would contain hg18.*.ebwt files:
+#
+#-rw-r--r--  1 james    universe 830134 2005-09-13 10:12 hg18.1.ebwt
+#-rw-r--r--  1 james    universe 527388 2005-09-13 10:12 hg18.2.ebwt
+#-rw-r--r--  1 james    universe 269808 2005-09-13 10:12 hg18.3.ebwt
+#...etc...
+#
+#Your bowtie_indices.loc file should include an entry per line for each
+#index set you have stored. The "file" in the path does not actually
+#exist, but it is the prefix for the actual index files. For example:
+#
+#hg18canon			hg18	hg18 Canonical	/depot/data2/galaxy/bowtie/hg18/hg18canon
+#hg18full			hg18	hg18 Full		/depot/data2/galaxy/bowtie/hg18/hg18full
+#/orig/path/hg19	hg19	hg19			/depot/data2/galaxy/bowtie/hg19/hg19
+#...etc...
+#
+#Note that for backwards compatibility with workflows, the unique ID of
+#an entry must be the path that was in the original loc file, because that
+#is the value stored in the workflow for that parameter. That is why the
+#hg19 entry above looks odd. New genomes can be better-looking.
+#
+#ce_ws195	ce_ws195	Worm (caenorhabditis elegans): WS195	/reference-genomes/caenorhabditis_elegans/caenorhabditis_elegans_ws195/caenorhabditis_elegans_ws195_BOWTIE/caenorhabditis_elegans_ws195
+hg19	hg19	Human Feb. 2009 (GRCh37/hg19) (hg19)	/reference-genomes/homo_sapiens/homo_sapiens_hg19/homo_sapiens_hg19_BOWTIE/homo_sapiens_hg19
+mm9	mm9	Mouse mus musculus (mm9)	/reference-genomes/mus_musculus/mus_musculus_mm9/mus_musculus_mm9_BOWTIE/mus_musculus_mm9
+oxyTri215	oxyTri215	oxytricha trifallax 2.1.5 (oxyTri215)	/reference-genomes/oxytricha_trifallax/oxytricha_trifallax_2_1_5/oxytricha_trifallax_2_1_5_BOWTIE/oxytricha_trifallax_2_1_5
+phiX	phiX	Coliphage phiX174 (NC_001422.1)	/reference-genomes/phix/phix_illumina/phix_illumina_BOWTIE/phix_illumina
+suid_herpesvirus_1_becker_020911	suid_herpesvirus_1_becker_020911	Suid herpesvirus 1 Becker (Szpara 020911) (suid_herpesvirus_1_becker_020911)	/reference-genomes/suid_herpesvirus_1/suid_herpesvirus_1_becker_020911/suid_herpesvirus_1_becker_020911_BOWTIE/suid_herpesvirus_1_becker_020911
+suid_herpesvirus_1_bartha_020911	suid_herpesvirus_1_bartha_020911	Suid herpesvirus 1 Bartha (Szpara 020911) (suid_herpesvirus_1_bartha_020911)	/reference-genomes/suid_herpesvirus_1/suid_herpesvirus_1_bartha_020911/suid_herpesvirus_1_bartha_020911_BOWTIE/suid_herpesvirus_1_bartha_020911
+suid_herpesvirus_1_kaplan_020911	suid_herpesvirus_1_kaplan_020911	Suid herpesvirus 1 Kaplan (Szpara 020911) (suid_herpesvirus_1_kaplan)	/reference-genomes/suid_herpesvirus_1/suid_herpesvirus_1_kaplan_020911/suid_herpesvirus_1_kaplan_020911_BOWTIE/suid_herpesvirus_1_kaplan_020911
+suid_herpesvirus_1_nc_006151_1	suid_herpesvirus_1_nc_006151_1	Suid herpesvirus 1 NC 006151.1 (NCBI) (suid_herpesvirus_1_nc_006151_1)	/reference-genomes/suid_herpesvirus_1/suid_herpesvirus_1_nc_006151_1/suid_herpesvirus_1_nc_006151_1_BOWTIE/suid_herpesvirus_1_nc_006151_1
+rn4	rn4	Rat Nov. 2004 (Baylor 3.4/rn4) (rn4)	/reference-genomes/rattus_norvegicus/rattus_norvegicus_rn4/rattus_norvegicus_rn4_BOWTIE/rattus_norvegicus_rn4
+susScr2	susScr2	Pig Nov. 2009 (SGSC Sscrofa9.2/susScr2) (susScr2)	/reference-genomes/sus_scrofa/sus_scrofa_susscr2/sus_scrofa_susscr2_BOWTIE/sus_scrofa_susscr2
+pf3d7_plasmodb_8_0	pf3d7_plasmodb_8_0	Plasmodium falciparum 3D7 (PlasmoDB 8.0) (pf3d7_plasmodb_8_0)	/reference-genomes/plasmodium_falciparum_3d7/plasmodium_falciparum_3d7_8_0/plasmodium_falciparum_3d7_8_0_BOWTIE/plasmodium_falciparum_3d7_8_0
+19857	19857	Vibrio harveyi ATCC BAA-1116 (19857)	/reference-genomes/vibrio_harveyi_atcc_baa-1116/vibrio_harveyi_atcc_baa-1116_2007-09-06/vibrio_harveyi_atcc_baa-1116_2007-09-06_BOWTIE/vibrio_harveyi_atcc_baa-1116_2007-09-06
+dm3	dm3	D. melanogaster Apr. 2006 (BDGP R5/dm3) (dm3)	/reference-genomes/drosophila_melanogaster/drosophila_melanogaster_dm3/drosophila_melanogaster_dm3_BOWTIE/drosophila_melanogaster_dm3
+saccharomyces_cerevisiae_w303_draft_20111023	saccharomyces_cerevisiae_w303_draft_20111023	S. cerevisiae W303 (agammie draft_20111023) (saccharomyces_cerevisiae_w303_draft_20111023)	/reference-genomes/saccharomyces_cerevisiae_w303/saccharomyces_cerevisiae_w303_draft_20111023/saccharomyces_cerevisiae_w303_draft_20111023_BOWTIE/saccharomyces_cerevisiae_w303_draft_20111023
+saccharomyces_cerevisiae_s288c_sgd_r64-1-1_20110203	saccharomyces_cerevisiae_s288c_sgd_r64-1-1_20110203	S. cerevisiae S288C (SGD R64-1-1_20110203) (saccharomyces_cerevisiae_s288c_sgd_r64-1-1_20110203)	/reference-genomes/saccharomyces_cerevisiae_s288c/saccharomyces_cerevisiae_s288c_sgd_r64-1-1_20110203/saccharomyces_cerevisiae_s288c_sgd_r64-1-1_20110203_BOWTIE/saccharomyces_cerevisiae_s288c_sgd_r64-1-1_20110203
+human_adenovirus_type_5_ay601635_1_strain_nhrc_ad5fs_7151	human_adenovirus_type_5_ay601635_1_strain_nhrc_ad5fs_7151	Human adenovirus type 5 (NCBI AY601635.1 strain NHRC Ad5FS 7151) (human_adenovirus_type_5_ay601635_1_strain_nhrc_ad5fs_7151)	/reference-genomes/human_adenovirus_type_5/human_adenovirus_type_5_ay601635_1_strain_nhrc_ad5fs_7151/human_adenovirus_type_5_ay601635_1_strain_nhrc_ad5fs_7151_BOWTIE/human_adenovirus_type_5_ay601635_1_strain_nhrc_ad5fs_7151
+sscrofa10_2	sscrofa10_2	Pig Dec 2011 Sus scrofa (SGSC 10.2) (sscrofa10_2)	/reference-genomes/sus_scrofa/sus_scrofa_10_2/sus_scrofa_10_2_BOWTIE/sus_scrofa_10_2
+ce10	ce10	C. elegans Oct. 2010 (WS220/ce10) (ce10)	/reference-genomes/caenorhabditis_elegans/caenorhabditis_elegans_ce10/caenorhabditis_elegans_ce10_BOWTIE/caenorhabditis_elegans_ce10
+schizosaccharomyces_pombe_09052011	schizosaccharomyces_pombe_09052011	Schizosaccharomyces pombe (PomBase 09052011) (schizosaccharomyces_pombe_09052011)	/reference-genomes/schizosaccharomyces_pombe/schizosaccharomyces_pombe_09052011/schizosaccharomyces_pombe_09052011_BOWTIE/schizosaccharomyces_pombe_09052011
+rheMac2	rheMac2	Rhesus Macaque (UCSC rheMac2) (rheMac2)	/reference-genomes/rhesus_macaque/rhesus_macaque_rhemac2/rhesus_macaque_rhemac2_BOWTIE/rhesus_macaque_rhemac2
+sacCer3	sacCer3	S. cerevisiae Apr. 2011 (SacCer_Apr2011/sacCer3) (sacCer3)	/reference-genomes/saccharomyces_cerevisiae_s288c/saccharomyces_cerevisiae_s288c_saccer3/saccharomyces_cerevisiae_s288c_saccer3_BOWTIE/saccharomyces_cerevisiae_s288c_saccer3
+canFam2	canFam2	Dog May 2005 (Broad/canFam2) (canFam2)	/reference-genomes/canis_familiaris/canis_familiaris_canfam2/canis_familiaris_canfam2_BOWTIE/canis_familiaris_canfam2
+eschColi_K12	eschColi_K12	Escherichia coli K12 (NCBI NC_000913.2) (eschColi_K12)	/reference-genomes/escherichia_coli_k12/escherichia_coli_k12_nc_000913_2/escherichia_coli_k12_nc_000913_2_BOWTIE/escherichia_coli_k12_nc_000913_2
+canFam_ncbi_build3.1	canFam_ncbi_build3.1	Dog Sep 2011 (NCBI build3.1) (canFam_ncbi_build3.1)	/reference-genomes/iGenomes/Canis_familiaris/NCBI/build3.1/Sequence/BowtieIndex/genome
+vibrio_cholerae_o1_biovar_eltor_str_n16961_2000-08-03	vibrio_cholerae_o1_biovar_eltor_str_n16961_2000-08-03	Vibrio cholerae O1 biovar eltor str N16961 (NCBI 2000-08-03) (vibrio_cholerae_o1_biovar_eltor_str_n16961_2000-08-03)	/reference-genomes/vibrio_cholerae_o1_biovar_eltor_str_n16961/vibrio_cholerae_o1_biovar_eltor_str_n16961_2000-08-03/vibrio_cholerae_o1_biovar_eltor_str_n16961_2000-08-03_BOWTIE/vibrio_cholerae_o1_biovar_eltor_str_n16961_2000-08-03
+saccharomyces_cerevisiae_sk1_mvo_v1	saccharomyces_cerevisiae_sk1_mvo_v1	Saccharomyces cerevisiae SK1 (MSKCC MvO_v1) (saccharomyces_cerevisiae_sk1_mvo_v1)	/reference-genomes/saccharomyces_cerevisiae_sk1/saccharomyces_cerevisiae_sk1_mvo_v1/saccharomyces_cerevisiae_sk1_mvo_v1_BOWTIE/saccharomyces_cerevisiae_sk1_mvo_v1
+mm10	mm10	Mouse Dec. 2011 (GRCm38/mm10) (mm10)	/reference-genomes/iGenomes/Mus_musculus/UCSC/mm10/Sequence/BowtieIndex/genome
+danRer7	danRer7	Danio rerio (UCSC danRer7) (danRer7)	/reference-genomes/danio_rerio/danio_rerio_danrer7/danio_rerio_danrer7_BOWTIE/danio_rerio_danrer7
+celegans_ws220	celegans_ws220	C. elegans Oct. 2010 (Wormbase) (celegans_ws220)	/reference-genomes/iGenomes/Caenorhabditis_elegans/Ensembl/WS220/Sequence/BowtieIndex/genome
+sbayanus_ygob_v6_dec2011	sbayanus_ygob_v6_dec2011	Saccharomyces bayanus (YGOB V6 Dec2011) (sbayanus_ygob_v6_dec2011)	/reference-genomes/saccharomyces_bayanus/saccharomyces_bayanus_ygob_v6_dec2011/saccharomyces_bayanus_ygob_v6_dec2011_BOWTIE/saccharomyces_bayanus_ygob_v6_dec2011
+sbayanus_ygob_v7_Aug2012	sbayanus_ygob_v7_Aug2012	Saccharomyces bayanus var. uvarum (YGOB v7 Aug2012) (sbayanus_ygob_v7_Aug2012)	/reference-genomes/saccharomyces_bayanus_var_uvarum/saccharomyces_bayanus_var_uvarum_ygob_v7_aug2012/saccharomyces_bayanus_var_uvarum_ygob_v7_aug2012_BOWTIE/saccharomyces_bayanus_var_uvarum_ygob_v7_aug2012
+Pf3D7_v3_0	Pf3D7_v3_0	Plasmodium falciparum 3D7 (Sanger Institute v3.0 / PlasmoDB 9.x) (Pf3D7_v3_0)	/reference-genomes/plasmodium_falciparum_3d7/plasmodium_falciparum_3d7_v3_0/plasmodium_falciparum_3d7_v3_0_BOWTIE/plasmodium_falciparum_3d7_v3_0
+pchab_2013-05-01	pchab_2013-05-01	Plasmodium chabaudi (Sanger Institute 2013-05-01, unpublished) (pchab_2013-05-01)	/reference-genomes/plasmodium_chabaudi/plasmodium_chabaudi_2013-05-01/plasmodium_chabaudi_2013-05-01_BOWTIE/plasmodium_chabaudi_2013-05-01
+suid_herpesvirus_1_bartha_JF797217_1	suid_herpesvirus_1_bartha_JF797217_1	Suid herpesvirus 1 Bartha (NCBI JF797217.1) (suid_herpesvirus_1_bartha_JF797217_1)	/reference-genomes/suid_herpesvirus_1_bartha/suid_herpesvirus_1_bartha_jf797217_1/suid_herpesvirus_1_bartha_jf797217_1_BOWTIE/suid_herpesvirus_1_bartha_jf797217_1
+suid_herpesvirus_1_becker_JF797219_1	suid_herpesvirus_1_becker_JF797219_1	Suid herpesvirus 1 Becker (NCBI JF797219.1) (suid_herpesvirus_1_becker_JF797219_1)	/reference-genomes/suid_herpesvirus_1_becker/suid_herpesvirus_1_becker_jf797219_1/suid_herpesvirus_1_becker_jf797219_1_BOWTIE/suid_herpesvirus_1_becker_jf797219_1
+suid_herpesvirus_1_kaplan_JF797218_1	suid_herpesvirus_1_kaplan_JF797218_1	Suid herpesvirus 1 Kaplan (NCBI JF797218.1) (suid_herpesvirus_1_kaplan_JF797218_1)	/reference-genomes/suid_herpesvirus_1_kaplan/suid_herpesvirus_1_kaplan_jf797218_1/suid_herpesvirus_1_kaplan_jf797218_1_BOWTIE/suid_herpesvirus_1_kaplan_jf797218_1
+rn5	rn5	Rat Mar. 2012 (RGSC 5.0/rn5) (rn5)	/reference-genomes/iGenomes/Rattus_norvegicus/UCSC/rn5/Sequence/BowtieIndex/genome
+saccharomyces_cerevisiae_cen_pk113-7d_2012-03-26	saccharomyces_cerevisiae_cen_pk113-7d_2012-03-26	Saccharomyces cerevisiae CEN.PK113-7D (NCBI BioProject PRJNA52955 2012-03-26) (saccharomyces_cerevisiae_cen_pk113-7d_2012-03-26)	/reference-genomes/saccharomyces_cerevisiae_cen_pk113-7d/saccharomyces_cerevisiae_cen_pk113-7d_2012-03-26/saccharomyces_cerevisiae_cen_pk113-7d_2012-03-26_BOWTIE/saccharomyces_cerevisiae_cen_pk113-7d_2012-03-26
+18801	18801	Staphylococcus aureus subsp. aureus str. Newman [NCBI NC_009641.1] (18801)	/reference-genomes/staphylococcus_aureus_subsp__aureus_str__newman/staphylococcus_aureus_subsp__aureus_str__newman_nc_009641_1/staphylococcus_aureus_subsp__aureus_str__newman_nc_009641_1_BOWTIE/staphylococcus_aureus_subsp__aureus_str__newman_nc_009641_1
+pseuAeru	pseuAeru	Pseudomonas aeruginosa PAO1 (NCBI NC_002516.2) (pseuAeru)	/reference-genomes/pseudomonas_aeruginosa_pao1/pseudomonas_aeruginosa_pao1_nc_002516_2/pseudomonas_aeruginosa_pao1_nc_002516_2_BOWTIE/pseudomonas_aeruginosa_pao1_nc_002516_2
+225	225	Escherichia coli K12 (NCBI NC_000913.3) (225)	/reference-genomes/escherichia_coli_k12/escherichia_coli_k12_nc_000913_3/escherichia_coli_k12_nc_000913_3_BOWTIE/escherichia_coli_k12_nc_000913_3
+dmel_ncbi_build5.41	dmel_ncbi_build5.41	Drosophila melanogaster (NCBI) (dmel_ncbi_build5.41)	/reference-genomes/iGenomes/Drosophila_melanogaster/NCBI/build5.41/Sequence/BowtieIndex/genome
+ensembl_dmel_bdgp5.25	ensembl_dmel_bdgp5.25	Drosophila melanogaster (Ensembl) (ensembl_dmel_bdgp5.25)	/reference-genomes/iGenomes/Drosophila_melanogaster/Ensembl/BDGP5.25/Sequence/BowtieIndex/genome
+flybase_dmel_5_55	flybase_dmel_5_55	Drosophila melanogaster (Flybase 5.55) (flybase_dmel_5_55)	/reference-genomes/drosophila_melanogaster/drosophila_melanogaster_5_55/drosophila_melanogaster_5_55_BOWTIE/drosophila_melanogaster_5_55
+eschColi_BW2952_nc_012759_1	eschColi_BW2952_nc_012759_1	Escherichia coli BW2952 (MC4100 derivative) (NCBI NC_0012759.1) (eschColi_BW2952_nc_012759_1)	/reference-genomes/escherichia_coli_k12/escherichia_coli_k12_bw2952_nc_012759_1/escherichia_coli_k12_bw2952_nc_012759_1_BOWTIE/escherichia_coli_k12_bw2952_nc_012759_1
+susScr3	susScr3	Pig Aug. 2011 (SGSC Sscrofa10.2/susScr3) (susScr3)	/reference-genomes/iGenomes/Sus_scrofa/UCSC/susScr3/Sequence/BowtieIndex/genome
+ensembl_tcas3_22	ensembl_tcas3_22	Tribolium castaneum (Ensembl 3.22) (ensembl_tcas3_22)	/reference-genomes/tribolium_castaneum/tribolium_castaneum_ensembl_tcas3_22/tribolium_castaneum_ensembl_tcas3_22_BOWTIE/tribolium_castaneum_ensembl_tcas3_22
+bacillus_thuringiensis_serovar_berliner_atcc_10792_nz_cm000753_1	bacillus_thuringiensis_serovar_berliner_atcc_10792_nz_cm000753_1	Bacillus thuringiensis serovar berliner ATCC 10792 (NCBI NZ_CM000753.1) (bacillus_thuringiensis_serovar_berliner_atcc_10792_nz_cm000753_1)	/reference-genomes/bacillus_thuringiensis_serovar_berliner_atcc_10792/bacillus_thuringiensis_serovar_berliner_atcc_10792_nz_cm000753_1/bacillus_thuringiensis_serovar_berliner_atcc_10792_nz_cm000753_1_BOWTIE/bacillus_thuringiensis_serovar_berliner_atcc_10792_nz_cm000753_1
+shewOnei	shewOnei	Shewanella oneidensis MR-1 (UCSC Microbial 2002-10-09) (shewOnei)	/reference-genomes/shewanella_oneidensis_mr-1/shewanella_oneidensis_mr-1_2002-10-09/shewanella_oneidensis_mr-1_2002-10-09_BOWTIE/shewanella_oneidensis_mr-1_2002-10-09
+shewOnei2	shewOnei2	Shewanella oneidensis MR-1 (NCBI 2012-11-14) (shewOnei2)	/reference-genomes/shewanella_oneidensis_mr-1/shewanella_oneidensis_mr-1_2012-11-14/shewanella_oneidensis_mr-1_2012-11-14_BOWTIE/shewanella_oneidensis_mr-1_2012-11-14
+danRer10	danRer10	Danio rerio (Zebrafish) Sep. 2014 (GRCz10/danRer10)	/reference-genomes/danio_rerio/danio_rerio_danrer10/danio_rerio_danrer10_BOWTIE/danio_rerio_danrer10
+Thaps3	Thaps3	Thalassiosira pseudonana (JGI v3.031306) (Thaps3)	/reference-genomes/thalassiosira_pseudonana/thalassiosira_pseudonana_v3_031306/thalassiosira_pseudonana_v3_031306_BOWTIE/thalassiosira_pseudonana_v3_031306
+GRCh38	GRCh38	Human (Ensembl GRCh38) (GRCh38)	/reference-genomes/homo_sapiens/homo_sapiens_grch38/homo_sapiens_grch38_BOWTIE/homo_sapiens_grch38
+ci2	ci2	Ciona intestinalis (UCSC ci2) (ci2)	/reference-genomes/ciona_intestinalis/ciona_intestinalis_ci2/ciona_intestinalis_ci2_BOWTIE/ciona_intestinalis_ci2
+ci_kh1	ci_kh1	Ciona intestinalis (Ensemble KH1 GCA_000224145.1) (ci_kh1)	/reference-genomes/ciona_intestinalis/ciona_intestinalis_kh1/ciona_intestinalis_kh1_BOWTIE/ciona_intestinalis_kh1

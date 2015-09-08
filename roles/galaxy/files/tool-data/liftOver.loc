@@ -1,0 +1,60 @@
+#This is a sample file distributed with Galaxy that is used by the
+#liftOver tools.  The liftOver.loc file has this format (white space 
+#characters are TAB characters):
+#
+#<FromSpecies>	<ToSpecies>	<PathToChainFile>
+#
+#So, for example, if you had the chain file to convert from anoCar1 to galGal3
+#located at /depot/data2/galaxy/anoCar1/liftOver/anoCar1ToGalGal3.over.chain, 
+#then the liftOver.loc entry would look like this:
+#
+#anoCar1 galGal3 /depot/data2/galaxy/anoCar1/liftOver/anoCar1ToGalGal3.over.chain
+#
+#and your /depot/data2/galaxy/anoCar1/liftOver directory would 
+#contain all of your "chain" files (e.g.):
+#
+#-rw-rw-r-- 1 gua110 galaxy 24046079 2008-01-16 14:20 anoCar1ToGalGal3.over.chain
+#-rw-rw-r-- 1 gua110 galaxy 13216668 2008-01-16 14:20 anoCar1ToGasAcu1.over.chain
+#-rw-rw-r-- 1 gua110 galaxy 29597067 2008-01-16 14:20 anoCar1ToHg18.over.chain
+#...etc...
+#
+#Your liftOver.loc file should include an entry per line for each build you can
+#convert.  For example:
+#
+#anoCar1	galGal3	/depot/data2/galaxy/anoCar1/liftOver/anoCar1ToGalGal3.over.chain
+#anoCar1	gasAcu1	/depot/data2/galaxy/anoCar1/liftOver/anoCar1ToGasAcu1.over.chain
+#anoCar1	hg18	/depot/data2/galaxy/anoCar1/liftOver/anoCar1ToHg18.over.chain
+#...etc...
+ce5	ce6	/reference-genomes/caenorhabditis_elegans/caenorhabditis_elegans_ce6/caenorhabditis_elegans_ce6_LIFTOVER/ce5ToCe6.over.chain.gz
+ce6	caeJap1	/reference-genomes/caenorhabditis_elegans/caenorhabditis_elegans_ce6/caenorhabditis_elegans_ce6_LIFTOVER/ce6ToCaeJap1.over.chain.gz
+ce6	caePb2	/reference-genomes/caenorhabditis_elegans/caenorhabditis_elegans_ce6/caenorhabditis_elegans_ce6_LIFTOVER/ce6ToCaePb2.over.chain.gz
+ce6	caeRem3	/reference-genomes/caenorhabditis_elegans/caenorhabditis_elegans_ce6/caenorhabditis_elegans_ce6_LIFTOVER/ce6ToCaeRem3.over.chain.gz
+ce6	cb3	/reference-genomes/caenorhabditis_elegans/caenorhabditis_elegans_ce6/caenorhabditis_elegans_ce6_LIFTOVER/ce6ToCb3.over.chain.gz
+ce6	ce10	/reference-genomes/caenorhabditis_elegans/caenorhabditis_elegans_ce6/caenorhabditis_elegans_ce6_LIFTOVER/ce6ToCe10.over.chain.gz
+ce6	ce4	/reference-genomes/caenorhabditis_elegans/caenorhabditis_elegans_ce6/caenorhabditis_elegans_ce6_LIFTOVER/ce6ToCe4.over.chain.gz
+ce6	ce5	/reference-genomes/caenorhabditis_elegans/caenorhabditis_elegans_ce6/caenorhabditis_elegans_ce6_LIFTOVER/ce6ToCe5.over.chain.gz
+ce6	ce7	/reference-genomes/caenorhabditis_elegans/caenorhabditis_elegans_ce6/caenorhabditis_elegans_ce6_LIFTOVER/ce6ToCe7.over.chain.gz
+ce6	ce9	/reference-genomes/caenorhabditis_elegans/caenorhabditis_elegans_ce6/caenorhabditis_elegans_ce6_LIFTOVER/ce6ToCe9.over.chain.gz
+ce6	priPac1	/reference-genomes/caenorhabditis_elegans/caenorhabditis_elegans_ce6/caenorhabditis_elegans_ce6_LIFTOVER/ce6ToPriPac1.over.chain.gz
+ce9 bruMal1 /reference-genomes/caenorhabditis_elegans/caenorhabditis_elegans_ws210/caenorhabditis_elegans_ws210_LIFTOVER/ce9ToBruMal1.over.chain.gz
+ce9 caeJap1 /reference-genomes/caenorhabditis_elegans/caenorhabditis_elegans_ws210/caenorhabditis_elegans_ws210_LIFTOVER/ce9ToCaeJap1.over.chain.gz
+ce9 caeJap3 /reference-genomes/caenorhabditis_elegans/caenorhabditis_elegans_ws210/caenorhabditis_elegans_ws210_LIFTOVER/ce9ToCaeJap3.over.chain.gz
+ce9 caePb2  /reference-genomes/caenorhabditis_elegans/caenorhabditis_elegans_ws210/caenorhabditis_elegans_ws210_LIFTOVER/ce9ToCaePb2.over.chain.gz
+ce9 caeRem3 /reference-genomes/caenorhabditis_elegans/caenorhabditis_elegans_ws210/caenorhabditis_elegans_ws210_LIFTOVER/ce9ToCaeRem3.over.chain.gz
+ce9 cb3 /reference-genomes/caenorhabditis_elegans/caenorhabditis_elegans_ws210/caenorhabditis_elegans_ws210_LIFTOVER/ce9ToCb3.over.chain.gz
+ce9 ce10    /reference-genomes/caenorhabditis_elegans/caenorhabditis_elegans_ws210/caenorhabditis_elegans_ws210_LIFTOVER/ce9ToCe10.over.chain.gz
+ce9 haeCon1 /reference-genomes/caenorhabditis_elegans/caenorhabditis_elegans_ws210/caenorhabditis_elegans_ws210_LIFTOVER/ce9ToHaeCon1.over.chain.gz
+ce9 melHap1 /reference-genomes/caenorhabditis_elegans/caenorhabditis_elegans_ws210/caenorhabditis_elegans_ws210_LIFTOVER/ce9ToMelHap1.over.chain.gz
+ce9 melInc1 /reference-genomes/caenorhabditis_elegans/caenorhabditis_elegans_ws210/caenorhabditis_elegans_ws210_LIFTOVER/ce9ToMelInc1.over.chain.gz
+ce9 priPac1 /reference-genomes/caenorhabditis_elegans/caenorhabditis_elegans_ws210/caenorhabditis_elegans_ws210_LIFTOVER/ce9ToPriPac1.over.chain.gz
+ce9 priPac2 /reference-genomes/caenorhabditis_elegans/caenorhabditis_elegans_ws210/caenorhabditis_elegans_ws210_LIFTOVER/ce9ToPriPac2.over.chain.gz
+ce10    caeSp91 /reference-genomes/caenorhabditis_elegans/caenorhabditis_elegans_ce10/caenorhabditis_elegans_ce10_LIFTOVER/ce10ToCaeSp91.over.chain.gz
+ce10    caeAng1 /reference-genomes/caenorhabditis_elegans/caenorhabditis_elegans_ce10/caenorhabditis_elegans_ce10_LIFTOVER/ce10ToCaeAng1.over.chain.gz
+ce10    cb4 /reference-genomes/caenorhabditis_elegans/caenorhabditis_elegans_ce10/caenorhabditis_elegans_ce10_LIFTOVER/ce10ToCb4.over.chain.gz
+ce10    caeSp111    /reference-genomes/caenorhabditis_elegans/caenorhabditis_elegans_ce10/caenorhabditis_elegans_ce10_LIFTOVER/ce10ToCaeSp111.over.chain.gz
+ce10    caeRem4 /reference-genomes/caenorhabditis_elegans/caenorhabditis_elegans_ce10/caenorhabditis_elegans_ce10_LIFTOVER/ce10ToCaeRem4.over.chain.gz
+ce10    caeSp71 /reference-genomes/caenorhabditis_elegans/caenorhabditis_elegans_ce10/caenorhabditis_elegans_ce10_LIFTOVER/ce10ToCaeSp71.over.chain.gz
+ce10    caePb3  /reference-genomes/caenorhabditis_elegans/caenorhabditis_elegans_ce10/caenorhabditis_elegans_ce10_LIFTOVER/ce10ToCaePb3.over.chain.gz
+ce10    caeJap4 /reference-genomes/caenorhabditis_elegans/caenorhabditis_elegans_ce10/caenorhabditis_elegans_ce10_LIFTOVER/ce10ToCaeJap4.over.chain.gz
+sacCer1	sacCer2	/reference-genomes/saccharomyces_cerevisiae_s288c/saccharomyces_cerevisiae_s288c_sacCer1/saccharomyces_cerevisiae_s288c_sacCer1_LIFTOVER/sacCer1ToSacCer2.over.chain.gz
+sacCer2	sacCer1	/reference-genomes/saccharomyces_cerevisiae_s288c/saccharomyces_cerevisiae_s288c_sacCer2/saccharomyces_cerevisiae_s288c_sacCer2_LIFTOVER/sacCer2ToSacCer1.over.chain.gz
