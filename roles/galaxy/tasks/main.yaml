@@ -3,10 +3,10 @@
   ping:
 
 - name: create error-documents folder
-  file: path={{ GALAXY_HOME }}/../www/html/error-documents/ state=directory
+  file: path={{ GALAXY_HOME }}/../www/html/error-documents/ state=directory mode=755
 
 - name: error-documents
-  copy: src="error-documents" dest={{ GALAXY_HOME }}/../www/html/
+  copy: src="error-documents/" dest={{ GALAXY_HOME }}/../www/html/error-documents/ mode=0644
 
 - name: set galaxy user git config
   copy: src="git_config/gitconfig" dest="{{ ansible_env.HOME }}/.gitconfig"
@@ -152,7 +152,7 @@
     dest: "{{ GALAXY_HOME }}/tool-data/"
     backup: yes
   register: tooldata
- 
+
 - name: update builds
   command: "{{ galaxy_venv_dir }}/bin/python cron/add_manual_builds.py tool-data/shared/ucsc/manual_builds.txt tool-data/shared/ucsc/builds.txt tool-data/shared/ucsc/chrom/ chdir={{ GALAXY_HOME }}"
   when: tooldata.changed
