@@ -1,0 +1,19 @@
+---
+# Hide specific tools from tools menu
+#####################################
+
+- name: Add hidden tag to shed_tool_conf.xml file
+  lineinfile:
+    dest: "{{ GALAXY_HOME }}/shed_tool_conf.xml"
+    regexp: '(^\s*<tool .* guid="{{ item }}")>'
+    backrefs: yes
+    line: '\1 hidden="True">'
+    state: present
+  with_items:
+      - toolshed\.g2\.bx\.psu\.edu/repos/pcingola/snpeff/snpEff/1\.0
+      - toolshed\.g2\.bx\.psu\.edu/repos/pcingola/snpeff/snpEff_download/1\.0
+      - toolshed\.g2\.bx\.psu\.edu/repos/pcingola/snpeff/snpSift_int/1\.0
+      - toolshed\.g2\.bx\.psu\.edu/repos/pcingola/snpeff/snpSift_filter/1\.0
+      - toolshed\.g2\.bx\.psu\.edu/repos/pcingola/snpeff/snpSift_annotate/1\.0
+      - toolshed\.g2\.bx\.psu\.edu/repos/pcingola/snpeff/snpSift_caseControl/1\.0
+      - toolshed\.g2\.bx\.psu\.edu/repos/iuc/snpeff/snpEff_download/4\.0\.0

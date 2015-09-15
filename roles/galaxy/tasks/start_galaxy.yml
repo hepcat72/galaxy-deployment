@@ -1,0 +1,13 @@
+- name: start galaxy
+  sudo: yes
+  sudo_user: galaxy
+  shell: "/bin/sh {{ GALAXY_HOME }}/galaxy_start.sh"
+  tags:
+    - restart
+    - start
+
+- name: Wait for Galaxy to start
+  wait_for: port=8080 delay=5 state=started timeout=150
+  tags:
+    - restart
+    - start

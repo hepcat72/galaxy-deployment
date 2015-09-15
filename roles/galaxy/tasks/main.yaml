@@ -16,31 +16,7 @@
 - stat: path="{{ GALAXY_HOME }}/.git"
   register: git
 
-- name: Check if galaxy pid file exists.
-  command: /usr/bin/test -e {{ GALAXY_HOME }}/web0.pid
-  ignore_errors: True
-  register: galaxy_running
-  tags:
-    - restart
-    - stop
-
-- name: stop galaxy
-  sudo: yes
-  sudo_user: galaxy
-  environment:
-    GALAXY_RUN_ALL: 1
-  shell: "/bin/sh {{ GALAXY_HOME }}/galaxy_stop.sh"
-  when: galaxy_running.rc == 0
-  tags:
-    - restart
-    - stop
-
-- name: remove integrated_tool_panel.xml
-  file: path="{{ GALAXY_HOME }}/integrated_tool_panel.xml" state="absent"
-  when: galaxy_running.rc == 0
-  tags:
-    - restart
-    - stop
+- include: stop_galaxy.yml
 
 - name: checkout upstream branch
   command: "{{ git_executable | default('git') }} checkout {{ galaxy_changeset_id }} chdir={{ GALAXY_HOME }}"
@@ -92,33 +68,6 @@
 
 - include: patches.yml
 
-#- name: checkout patches branch
-#  command: "{{ git_executable | default('git') }} checkout princeton_patches chdir={{ GALAXY_HOME }}"
-#  args:
-#    chdir: "{{ GALAXY_HOME }}"
-#  environment:
-#    PATH: /usr/local/bin:{{ ansible_env.PATH }}
-#
-#- name: Rebase galaxy patches branch
-#  command: "{{ git_executable | default('git') }} rebase {{ galaxy_changeset_id }} chdir={{ GALAXY_HOME }}"
-#  environment:
-#    PATH: /usr/local/bin:{{ ansible_env.PATH }}
-
-# - name: checkout galaxy patches
-#   hg: repo=https://bitbucket.org/princeton_genomics/galaxy_patches
-#       dest={{ GALAXY_HOME }}/.hg/patches
-#   environment:
-#     PATH: /usr/local/bin:{{ ansible_env.PATH }}
-#   #notify:
-#   #  - restart galaxy
-
-# - name: apply galaxy patches
-#   command: hg qpush -a
-#   args:
-#     chdir: "{{ GALAXY_HOME }}"
-#   environment:
-#     PATH: /usr/local/bin:{{ ansible_env.PATH }}
-
 - name: add legacy tools (not from toolshed)
   copy: src="galaxy_legacy_tools/tools/" dest="{{ GALAXY_HOME }}/tools/" backup=yes
 
@@ -145,6 +94,8 @@
 
 - name: tool_data_table_conf.xml
   copy: src="config/tool_data_table_conf.xml" dest="{{ GALAXY_HOME }}/tool_data_table_conf.xml" backup=yes
+
+- include: hide_tools.yml
 
 - name: tool-data
   copy:
@@ -213,10 +164,4 @@
   with_items:
     updated_tool_migration_stages.stdout_lines[-1]
 
-- name: start galaxy
-  sudo: yes
-  sudo_user: galaxy
-  shell: "/bin/sh {{ GALAXY_HOME }}/galaxy_start.sh"
-  tags:
-    - restart
-    - start
+- include: start_galaxy.yml
