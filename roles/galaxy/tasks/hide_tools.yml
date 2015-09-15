@@ -17,3 +17,26 @@
       - toolshed\.g2\.bx\.psu\.edu/repos/pcingola/snpeff/snpSift_annotate/1\.0
       - toolshed\.g2\.bx\.psu\.edu/repos/pcingola/snpeff/snpSift_caseControl/1\.0
       - toolshed\.g2\.bx\.psu\.edu/repos/iuc/snpeff/snpEff_download/4\.0\.0
+      - toolshed\.g2\.bx\.psu\.edu/repos/aaronquinlan/bedtools/bedtools_intersectbed_bam/0\.1\.0
+      - toolshed\.g2\.bx\.psu\.edu/repos/aaronquinlan/bedtools/bedtools_coveragebed_counts/0\.1\.0
+      - toolshed\.g2\.bx\.psu\.edu/repos/aaronquinlan/bedtools/bedtools_genomecoveragebed_histogram/0\.1\.0
+      - toolshed\.g2\.bx\.psu\.edu/repos/aaronquinlan/bedtools/bedtools_genomecoveragebed_bedgraph/0\.1\.0
+      - toolshed\.g2\.bx\.psu\.edu/repos/aaronquinlan/bedtools/bedtools_bamtobed/0\.1\.0
+      - toolshed\.g2\.bx\.psu\.edu/repos/aaronquinlan/bedtools/bedtools_mergebedgraph/0\.1\.0
+      - toolshed\.g2\.bx\.psu\.edu/repos/aaronquinlan/bedtools/bedtools_multiintersectbed/0\.1\.0
+      - toolshed\.g2\.bx\.psu\.edu/repos/devteam/picard/PicardASMetrics/1\.56\.0
+      - toolshed\.g2\.bx\.psu\.edu/repos/devteam/picard/picard_ARRG/1\.56\.0
+      - toolshed\.g2\.bx\.psu\.edu/repos/devteam/picard/rgEstLibComp/1\.56\.0
+      - toolshed\.g2\.bx\.psu\.edu/repos/devteam/picard/PicardHsMetrics/1\.56\.0
+      - toolshed\.g2\.bx\.psu\.edu/repos/devteam/picard/picard_SamToFastq/1\.56\.1
+      - toolshed\.g2\.bx\.psu\.edu/repos/devteam/picard/PicardGCBiasMetrics/1\.56\.0
+      - toolshed\.g2\.bx\.psu\.edu/repos/devteam/picard/PicardInsertSize/1\.56\.0
+      - toolshed\.g2\.bx\.psu\.edu/repos/devteam/picard/rgPicFixMate/1\.56\.0
+      - toolshed\.g2\.bx\.psu\.edu/repos/devteam/picard/picard_ReplaceSamHeader/1\.56\.0
+      - toolshed\.g2\.bx\.psu\.edu/repos/devteam/picard/rgPicardMarkDups/1\.56\.0
+      - toolshed\.g2\.bx\.psu\.edu/repos/devteam/picard/picard_BamIndexStats/1\.56\.0
+      - toolshed\.g2\.bx\.psu\.edu/repos/iuc/bedtools/bedtools_genomecoveragebed_bedgraph/2\.19\.0
+      - toolshed\.g2\.bx\.psu\.edu/repos/iuc/bedtools/bedtools_mergebedgraph/2\.19\.0
+      - toolshed\.g2\.bx\.psu\.edu/repos/iuc/bedtools/bedtools_bamtofastq/2\.19\.0
+      - toolshed\.g2\.bx\.psu\.edu/repos/iuc/bedtools/bedtools_genomecoveragebed_histogram/2\.19\.0
+  tags: test
