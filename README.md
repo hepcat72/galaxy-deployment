@@ -61,3 +61,41 @@ Runs functional tests on specified galaxy hosts and downloads the results.
 
 `ansible-playbook -i development/inventory --ask-sudo-pass --ask-vault-pass -e "test_params=-migrated" galaxy_test.yaml`
 
+Prerequisites
+-------------
+
+These Ansible roles are designed to run as the `galaxy` user and thus are
+missing various tasks that should be performed by root.
+
+* Install
+    * Mercurial
+    * Python (version 2.7.x preferred)
+    * virtualenv
+    * PostgreSQL
+    * Apache
+* Create and mount directories:
+    * `GALAXY_HOME`
+    * `file_path`
+    * `new_file_path`
+* Configure
+    * Apache as proxy
+    * PostgreSQL database
+
+
+Sample inventory vars file:
+
+    env: development
+    GALAXY_HOME: /galaxy/galaxy-dev/galaxy-dev
+    galaxy_venv_dir: /galaxy/galaxy-dev/galaxy-dev/.venv
+    hg_revision: latest_2015.01.13
+    crontab_mailto: lparsons@genomics.princeton.edu
+    database_user: galaxy
+    database_location: localhost:5431
+    file_path: database/files
+    new_file_path: database/tmp
+    log_level: DEBUG
+    debug: True
+    use_interactive: True
+    id_secret: bioinformaticsisfunatprinceton
+    session_secret: reportsarecool
+

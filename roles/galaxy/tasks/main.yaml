@@ -61,6 +61,8 @@
   #notify:
   #  - restart galaxy
 
+- include: virtualenv.yml
+
 - name: Get updated tool migration stage
   shell: ls -1 *tools.sh | sort chdir={{ GALAXY_HOME }}/scripts/migrate_tools/
   register: updated_tool_migration_stages

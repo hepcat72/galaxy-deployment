@@ -1,0 +1,15 @@
+---
+env: development
+GALAXY_HOME: /galaxy/galaxy-dev/galaxy-dev/
+galaxy_venv_dir: /galaxy/galaxy-dev/galaxy-dev/.venv
+galaxy_changeset_id: release_15.07
+crontab_mailto: lparsons@genomics.princeton.edu
+database_user: galaxy
+database_location: localhost:5431
+file_path: database/files
+new_file_path: database/tmp
+log_level: DEBUG
+debug: True
+use_interactive: True
+id_secret: bioinformaticsisfunatprinceton
+session_secret: reportsarecool
