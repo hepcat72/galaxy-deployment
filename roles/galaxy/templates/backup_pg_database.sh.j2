@@ -6,6 +6,6 @@ NOW=$(date +"%Y-%m-%d")
 BACKUP_FILE_BASE="galaxy-dev_db_backup_"
 BACKUP_FILE_EXT=".pg"
 BACKUP_FILE="${BACKUP_FILE_BASE}${NOW}${BACKUP_FILE_EXT}"
-pg_dump galaxy -p 5431 -U galaxy -Fc -f "${BACKUP_DIR}/${BACKUP_FILE}"
+pg_dump galaxy -p {{ database_port }} -U galaxy -Fc -f "${BACKUP_DIR}/${BACKUP_FILE}"
 
 find "${BACKUP_DIR}/" -name "${BACKUP_FILE_BASE}*" -mtime +30 -exec rm -rf {} \;
