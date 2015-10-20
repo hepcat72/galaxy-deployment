@@ -87,6 +87,8 @@ def data_locations(genome_info):
                                     'Sequence', 'Bowtie2Index'),
             'BWA': os.path.join(genome_info['genome_directory'], 'Sequence',
                                 'BWAIndex', 'version0.5.x'),
+            'BWA_MEM': os.path.join(genome_info['genome_directory'],
+                                    'Sequence', 'BWAIndex', 'version0.6.0'),
             'SAM_FA': os.path.join(genome_info['genome_directory'],
                                    'Sequence', 'WholeGenomeFasta'),
             'ALL_FASTA': os.path.join(genome_info['genome_directory'],
@@ -110,6 +112,7 @@ def data_locations(genome_info):
             'BOWTIE': '%s_BOWTIE' % base_dir,
             'BOWTIE2': '%s_BOWTIE2' % base_dir,
             'BWA': '%s_BWA' % base_dir,
+            'BWA_MEM': '%s_BWA-MEM' % base_dir,
             'SAM_FA': '%s_FASTA' % base_dir,
             'ALL_FASTA': '%s_FASTA' % base_dir,
             'FASTA_INDEXES': '%s_FASTA' % base_dir,
@@ -361,6 +364,25 @@ def build_bwa_locfile_string(genome_info, base_dir):
     return result
 
 
+def build_bwa_mem_locfile_string(genome_info, base_dir):
+    # <unique_build_id>   <dbkey>   <display_name>   <file_base_path>
+    base_dir = data_locations(genome_info)['BWA_MEM']
+    # base_dir = "%s_BWA" % base_dir
+    glob_text = os.path.join(base_dir, '*.bwt')
+    files = glob.glob(glob_text)
+    result = None
+    if len(files) < 1:
+        raise IOError("Could not find bwt files (searching for '%s' returned "
+                      "%s results)" % (glob_text, len(files)))
+    else:
+        file_base_path = os.path.splitext(files[0])[0]
+        result = "%s\t%s\t%s\t%s\n" % (genome_info['dbkey'],
+                                       genome_info['dbkey'],
+                                       genome_info['display_name'],
+                                       file_base_path)
+    return result
+
+
 def build_bowtie_locfile_string(genome_info, base_dir):
     # <unique_build_id>   <dbkey>   <display_name>   <file_base_path>
     base_dir = data_locations(genome_info)['BOWTIE']
@@ -417,6 +439,8 @@ def build_locfile_string(genome_info, directory, type):
         result = build_bowtie2_locfile_string(genome_info, base_dir)
     elif type == 'bwa':
         result = build_bwa_locfile_string(genome_info, base_dir)
+    elif type == 'bwa_mem':
+        result = build_bwa_mem_locfile_string(genome_info, base_dir)
     elif type == 'sam_fa':
         result = build_sam_fa_locfile_string(genome_info, base_dir)
     elif type == 'all_fasta':
@@ -483,6 +507,7 @@ def main(argv=None):
     loc_files = {'BOWTIE': 'bowtie_indices.loc',
                  'BOWTIE2': 'bowtie2_indices.loc',
                  'BWA': 'bwa_index.loc',
+                 'BWA_MEM': 'bwa_mem_index.loc',
                  'SAM_FA': 'sam_fa_indices.loc',
                  'ALL_FASTA': 'all_fasta.loc',
                  'FASTA_INDEXES': 'fasta_indexes.loc',
@@ -501,7 +526,7 @@ def main(argv=None):
     print "\n%s" % manual_builds_file_relpath
     update_manual_builds_file(manual_builds_file, builds_file, genome_info)
 
-    return 1
+    return 0
 
 
 if __name__ == '__main__':
