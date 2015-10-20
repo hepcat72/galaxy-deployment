@@ -23,9 +23,9 @@
     - restart
     - stop
 
-- name: remove integrated_tool_panel.xml
-  file: path="{{ GALAXY_HOME }}/integrated_tool_panel.xml" state="absent"
-  when: galaxy_running.rc == 0
-  tags:
-    - restart
-    - stop
+# - name: remove integrated_tool_panel.xml
+#   file: path="{{ GALAXY_HOME }}/integrated_tool_panel.xml" state="absent"
+#   when: galaxy_running.rc == 0
+#   tags:
+#     - restart
+#     - stop
