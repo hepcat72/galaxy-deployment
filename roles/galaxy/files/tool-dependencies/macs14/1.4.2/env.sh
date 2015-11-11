@@ -1,1 +1,1 @@
-export PATH=/data/galaxy-dev/galaxy-env/bin:$PATH
+export PATH=/data/galaxy-dependencies/macs/1.4.2/bin:$PATH
