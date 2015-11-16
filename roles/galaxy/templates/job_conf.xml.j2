@@ -5,22 +5,66 @@
              The default from <plugins> is used if not defined for a <plugin>.
           -->
         <plugin id="local" type="runner" load="galaxy.jobs.runners.local:LocalJobRunner"/>
+        <plugin id="drmaa" type="runner" load="galaxy.jobs.runners.drmaa:DRMAAJobRunner"/>
     </plugins>
     <handlers default="handlers">
         <!-- Additional job handlers - the id should match the name of a
              [server:<id>] in universe_wsgi.ini.
          -->
         <handler id="handler0" tags="handlers"/>
+        <handler id="handler1" tags="handlers"/>
     </handlers>
-    <destinations default="local">
+    <destinations default="cetus_singlecore">
         <!-- Destinations define details about remote resources and how jobs
              should be executed on those remote resources.
          -->
         <destination id="local" runner="local"/>
+        <destination id="cetus_singlecore" runner="drmaa"/>
+        <destination id="cetus_multicore" runner="drmaa">
+            <param id="nativeSpecification">--ntasks=4</param>
+        </destination>
+        <destination id="cetus_singlecore_highmem" runner="drmaa">
+            <param id="nativeSpecification">--mem=40000</param>
+        </destination>
     </destinations>
     <limits>
         <!-- Certain limits can be defined. -->
-        <limit type="registered_user_concurrent_jobs">4</limit>
-        <limit type="anonymous_user_concurrent_jobs">1</limit>
+        <!-- <limit type="registered_user_concurrent_jobs">4</limit> -->
+        <!-- <limit type="anonymous_user_concurrent_jobs">1</limit> -->
     </limits>
+    <tools>
+        <tool id="pbsdebug" destination="cetus_multicore"/>
+        <tool id="mosaik" destination="cetus_multicore"/>
+        <tool id="bfast_wrapper" destination="cetus_multicore"/>
+        <tool id="sambamba_filter" destination="cetus_multicore"/>
+        <tool id="deeptools_bamCompare" destination="cetus_multicore"/>
+        <tool id="deeptools_bamCorrelate" destination="cetus_multicore"/>
+        <tool id="deeptools_bamCoverage" destination="cetus_multicore"/>
+        <tool id="deeptools_bamFingerprint" destination="cetus_multicore"/>
+        <tool id="deeptools_bamPEFragmentSize" destination="cetus_multicore"/>
+        <tool id="deeptools_bigwigCompare" destination="cetus_multicore"/>
+        <tool id="deeptools_bigwigCorrelate" destination="cetus_multicore"/>
+        <tool id="deeptools_computeGCBias" destination="cetus_multicore"/>
+        <tool id="deeptools_computeMatrix" destination="cetus_multicore"/>
+        <tool id="deeptools_correctGCBias" destination="cetus_multicore"/>
+        <tool id="deeptools_heatmapper" destination="cetus_multicore"/>
+        <tool id="deeptools_profiler" destination="cetus_multicore"/>
+        <tool id="realigner_target_creator" destination="cetus_multicore"/>
+        <tool id="bowtie_wrappers" destination="cetus_multicore"/>
+        <tool id="bowtie_color_wrappers" destination="cetus_multicore"/>
+        <tool id="tophat" destination="cetus_multicore"/>
+        <tool id="tophat2" destination="cetus_multicore"/>
+        <tool id="bowtie2" destination="cetus_multicore"/>
+        <tool id="cufflinks" destination="cetus_multicore"/>
+        <tool id="cuffnorm" destination="cetus_multicore"/>
+        <tool id="cuffdiff" destination="cetus_multicore"/>
+        <tool id="cuffmerge" destination="cetus_multicore"/>
+        <tool id="cuffquant" destination="cetus_multicore"/>
+        <tool id="lastz" destination="cetus_multicore"/>
+        <tool id="ncbi_blast_plus" destination="cetus_multicore"/>
+        <tool id="bwa_wrappers" destination="cetus_multicore"/>
+        <tool id="unified_genotyper" destination="cetus_multicore"/>
+        <tool id="megablast_wrapper" destination="cetus_multicore"/>
+        <tool id="freebayes" destination="cetus_singlecore_highmem"/>
+    </tools>
 </job_conf>
