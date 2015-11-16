@@ -202,4 +202,11 @@
     <tool file="bam_to_bigwig/bam_to_bigwig.xml" />
     <tool file="filters/bed_to_bigbed.xml" />
   </section>
+
+  {% if env != 'production' %}
+  <section id="debug" name="DEBUG">
+      <tool file="pbsdebug/pbsdebug.xml" />
+  </section>
+  {% endif %}
+
 </toolbox>

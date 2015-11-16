@@ -50,6 +50,14 @@ host = 127.0.0.1
 use_threadpool = True
 threadpool_workers = 10
 
+[server:handler1]
+use = egg:Paste#http
+port = 8091
+host = 127.0.0.1
+use_threadpool = True
+threadpool_workers = 10
+
+
 
 # ---- Filters --------------------------------------------------------------
 
