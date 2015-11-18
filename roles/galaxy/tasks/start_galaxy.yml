@@ -11,3 +11,11 @@
   tags:
     - restart
     - start
+
+- name: Set 503 message to unplanned outage
+  file: src={{ GALAXY_HOME }}/../www/html/error-documents/503_outage.html
+        dest={{ GALAXY_HOME }}/../www/html/error-documents/503.html
+        state=link
+  tags:
+    - restart
+    - start
