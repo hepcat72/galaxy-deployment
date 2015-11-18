@@ -1,3 +1,6 @@
+- name: copy start script
+  copy: src=galaxy_start.sh dest={{ GALAXY_HOME }}/ owner=galaxy mode=755
+
 - name: start galaxy
   sudo: yes
   sudo_user: galaxy

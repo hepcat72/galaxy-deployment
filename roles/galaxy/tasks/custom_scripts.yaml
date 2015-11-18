@@ -1,10 +1,4 @@
 ---
-- name: copy start script
-  copy: src=galaxy_start.sh dest={{ GALAXY_HOME }}/ owner=galaxy mode=755
-
-- name: copy stop script
-  copy: src=galaxy_stop.sh dest={{ GALAXY_HOME }}/ owner=galaxy mode=755
-
 - name: create scripts directory
   file: dest={{ GALAXY_HOME }}/scripts/ state=directory
 
