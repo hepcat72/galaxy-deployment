@@ -107,10 +107,12 @@
     dest: "{{ GALAXY_HOME }}/tool-data/"
     backup: yes
   register: tooldata
+  tags: genome_builds
 
 - name: update builds
   command: "{{ galaxy_venv_dir }}/bin/python cron/add_manual_builds.py tool-data/shared/ucsc/manual_builds.txt tool-data/shared/ucsc/builds.txt tool-data/shared/ucsc/chrom/ chdir={{ GALAXY_HOME }}"
   when: tooldata.changed
+  tags: genome_builds
 
 - name: welcome.html
   template: src=welcome.html.j2 dest={{ GALAXY_HOME }}/static/welcome.html backup=yes
