@@ -415,7 +415,7 @@ pyroIsla1	Pyrobaculum islandicum DSM 4184	chr=1826402
 13030	Salmonella enterica subsp. arizonae serovar 62:z4,z23:--	NC_010067=4600800
 18271	Rickettsia massiliae MTU5	NC_009897=15286,NC_009900=1360898
 21047	Candidatus Desulforudis audaxviator MP104C	NC_010424=2349476
-19857	Vibrio harveyi ATCC BAA-1116	NC_009783=3765351,NC_009777=89008,NC_009784=2204018
+19857	Vibrio harveyi ATCC BAA-1116	NC_009783.1=3765351,NC_009777.1=89008,NC_009784.1=2204018
 17639	Parvibaculum lavamentivorans DS-1	NC_009719=3914745
 18059	Mycobacterium bovis BCG str. Pasteur 1173P2	NC_008769=4374522
 vibrPara1	Vibrio parahaemolyticus RIMD 2210633	chrII=1877212,chrI=3288558
