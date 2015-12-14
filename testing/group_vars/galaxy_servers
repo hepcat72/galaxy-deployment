@@ -13,5 +13,3 @@ new_file_path: database/tmp
 log_level: DEBUG
 debug: True
 use_interactive: True
-id_secret: bioinformaticsisfunatprinceton
-session_secret: reportsarecool
