@@ -20,11 +20,20 @@
          -->
         <destination id="local" runner="local"/>
         <destination id="cetus_singlecore" runner="drmaa"/>
-        <destination id="cetus_multicore" runner="drmaa">
-            <param id="nativeSpecification">--ntasks=4</param>
+        <destination id="cetus_singlecore_mediummem" runner="drmaa">
+            <param id="nativeSpecification">--mem=10000</param>
         </destination>
         <destination id="cetus_singlecore_highmem" runner="drmaa">
             <param id="nativeSpecification">--mem=40000</param>
+        </destination>
+        <destination id="cetus_multicore" runner="drmaa">
+            <param id="nativeSpecification">--ntasks=4</param>
+        </destination>
+        <destination id="cetus_multicore_mediummem" runner="drmaa">
+            <param id="nativeSpecification">--ntasks=4 --mem=10000</param>
+        </destination>
+        <destination id="cetus_multicore_highmem" runner="drmaa">
+            <param id="nativeSpecification">--ntasks=4 --mem=40000</param>
         </destination>
     </destinations>
     <limits>
@@ -66,5 +75,7 @@
         <tool id="unified_genotyper" destination="cetus_multicore"/>
         <tool id="megablast_wrapper" destination="cetus_multicore"/>
         <tool id="freebayes" destination="cetus_singlecore_highmem"/>
+        <tool id="fastqc" destination="cetus_singlecore_mediummem"/>
+        <tool id="rseqc_read_distribution" destination="cetus_singlecore_highmem"/>
     </tools>
 </job_conf>

@@ -1,13 +1,14 @@
 ---
 env: production
-GALAXY_HOME: /Genomics/local/galaxy/galaxy-prod/
-galaxy_venv_dir: /Genomics/local/galaxy/galaxy-prod/.venv
+GALAXY_HOME: /galaxy/galaxy-app/
+galaxy_venv_dir: /galaxy/galaxy-app/.venv
+pip_virtualenv_command: virtualenv -p /usr/local/bin/python
 galaxy_changeset_id: release_15.10
 crontab_mailto: biocomp@genomics.princeton.edu
 database_user: galaxy
 database_location: localhost
-database_port: 5431
-file_path: /ndata/local/galaxy/galaxy-prod/database/files
+database_port: 5432
+file_path: /galaxy/files
 new_file_path: database/tmp
 log_level: WARNING
 debug: False
