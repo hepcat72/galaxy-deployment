@@ -5,7 +5,6 @@
 
 - name: tool-dependencies directory copy
   copy: src="tool-dependencies/" dest="{{ GALAXY_HOME }}/tool-dependencies/"
-  tags: test
 
 - name: bedtools_links
   file: src="{{ GALAXY_HOME }}/tool-dependencies/bedtools"
@@ -26,7 +25,6 @@
   with_items:
       - { tool: 'bedtools', version: '2.16.2' }
       - { tool: 'freebayes', version: '0.9.4' }
-      - { tool: 'htseq', version: '0.5.3p9' }
       - { tool: 'macs14', version: '1.4.2' }
       - { tool: 'sambamba', version: '0.3.3' }
       - { tool: 'samtools', version: '0.1.18' }
