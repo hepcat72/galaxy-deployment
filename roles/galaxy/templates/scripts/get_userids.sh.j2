@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+psql -U galaxy -p {{ database_port }} -c "select email from galaxy_user where deleted = 'f';" -t | sed 's/@princeton.edu//'

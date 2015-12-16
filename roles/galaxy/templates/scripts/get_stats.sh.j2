@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+psql -U galaxy -p {{ database_port }} -c "select * from galaxy_user;" -t > user_data.txt
+
+
