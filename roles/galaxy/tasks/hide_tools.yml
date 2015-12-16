@@ -39,4 +39,3 @@
       - toolshed\.g2\.bx\.psu\.edu/repos/iuc/bedtools/bedtools_mergebedgraph/2\.19\.0
       - toolshed\.g2\.bx\.psu\.edu/repos/iuc/bedtools/bedtools_bamtofastq/2\.19\.0
       - toolshed\.g2\.bx\.psu\.edu/repos/iuc/bedtools/bedtools_genomecoveragebed_histogram/2\.19\.0
-  tags: test

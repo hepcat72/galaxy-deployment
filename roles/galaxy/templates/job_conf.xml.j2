@@ -29,13 +29,13 @@
             <param id="nativeSpecification">--mem=100000</param>
         </destination>
         <destination id="cetus_multicore" runner="drmaa">
-            <param id="nativeSpecification">--ntasks=8 --mem=50000</param>
+            <param id="nativeSpecification">--nodes=1 --ntasks=8 --mem=50000</param>
         </destination>
         <destination id="cetus_multicore_mediummem" runner="drmaa">
-            <param id="nativeSpecification">--ntasks=8 --mem=100000</param>
+            <param id="nativeSpecification">--nodes=1 --ntasks=8 --mem=100000</param>
         </destination>
         <destination id="cetus_multicore_highmem" runner="drmaa">
-            <param id="nativeSpecification">--ntasks=8 --mem=200000</param>
+            <param id="nativeSpecification">--nodes=1 --ntasks=8 --mem=200000</param>
         </destination>
     </destinations>
     <limits>
