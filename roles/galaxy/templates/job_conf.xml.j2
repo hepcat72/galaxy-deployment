@@ -5,7 +5,7 @@
              The default from <plugins> is used if not defined for a <plugin>.
           -->
         <plugin id="local" type="runner" load="galaxy.jobs.runners.local:LocalJobRunner"/>
-        <plugin id="drmaa" type="runner" load="galaxy.jobs.runners.drmaa:DRMAAJobRunner"/>
+        <plugin id="slurm" type="runner" load="galaxy.jobs.runners.slurm:SlurmJobRunner"/>
     </plugins>
     <handlers default="handlers">
         <!-- Additional job handlers - the id should match the name of a
@@ -19,22 +19,22 @@
              should be executed on those remote resources.
          -->
         <destination id="local" runner="local"/>
-        <destination id="cetus_singlecore" runner="drmaa">
+        <destination id="cetus_singlecore" runner="slurm">
             <param id="nativeSpecification">--mem=10000</param>
         </destination>
-        <destination id="cetus_singlecore_mediummem" runner="drmaa">
+        <destination id="cetus_singlecore_mediummem" runner="slurm">
             <param id="nativeSpecification">--mem=50000</param>
         </destination>
-        <destination id="cetus_singlecore_highmem" runner="drmaa">
+        <destination id="cetus_singlecore_highmem" runner="slurm">
             <param id="nativeSpecification">--mem=100000</param>
         </destination>
-        <destination id="cetus_multicore" runner="drmaa">
+        <destination id="cetus_multicore" runner="slurm">
             <param id="nativeSpecification">-N 1=1 --ntasks=8 --mem=50000</param>
         </destination>
-        <destination id="cetus_multicore_mediummem" runner="drmaa">
+        <destination id="cetus_multicore_mediummem" runner="slurm">
             <param id="nativeSpecification">-N 1=1 --ntasks=8 --mem=100000</param>
         </destination>
-        <destination id="cetus_multicore_highmem" runner="drmaa">
+        <destination id="cetus_multicore_highmem" runner="slurm">
             <param id="nativeSpecification">-N 1=1 --ntasks=8 --mem=200000</param>
         </destination>
     </destinations>
