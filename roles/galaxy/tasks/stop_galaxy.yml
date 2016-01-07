@@ -2,17 +2,11 @@
   file: src={{ GALAXY_HOME }}/../www/html/error-documents/503_known_outage.html
         dest={{ GALAXY_HOME }}/../www/html/error-documents/503.html
         state=link
-  tags:
-    - restart
-    - stop
 
 - name: Check if galaxy pid file exists.
   command: /usr/bin/test -e {{ GALAXY_HOME }}/web0.pid
   ignore_errors: True
   register: galaxy_running
-  tags:
-    - restart
-    - stop
 
 - name: copy stop script
   copy: src=galaxy_stop.sh dest={{ GALAXY_HOME }}/ owner=galaxy mode=755
@@ -24,19 +18,6 @@
     GALAXY_RUN_ALL: 1
   shell: "/bin/sh {{ GALAXY_HOME }}/galaxy_stop.sh"
   when: galaxy_running.rc == 0
-  tags:
-    - restart
-    - stop
 
 - name: Wait for Galaxy to stop
   wait_for: port=8080 delay=5 state=stopped timeout=150
-  tags:
-    - restart
-    - stop
-
-# - name: remove integrated_tool_panel.xml
-#   file: path="{{ GALAXY_HOME }}/integrated_tool_panel.xml" state="absent"
-#   when: galaxy_running.rc == 0
-#   tags:
-#     - restart
-#     - stop

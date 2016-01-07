@@ -15,8 +15,10 @@
 
 - stat: path="{{ GALAXY_HOME }}/.git"
   register: git
+  tags: update
 
 - include: stop_galaxy.yml
+  tags: stop,restart,update
 
 - name: checkout upstream branch
   command: "{{ git_executable | default('git') }} checkout {{ galaxy_changeset_id }} chdir={{ GALAXY_HOME }}"
@@ -25,6 +27,7 @@
   environment:
     PATH: /usr/local/bin:{{ ansible_env.PATH }}
   when: git.stat.isdir is defined and git.stat.isdir == true
+  tags: update
 
 - include: backup_loc_files.yaml
 
@@ -35,6 +38,7 @@
   register: current_changeset_id
   changed_when: False
   when: git.stat.isdir is defined and git.stat.isdir == true
+  tags: update
 
 - name: Report current Galaxy changeset
   debug:
@@ -42,12 +46,14 @@
   changed_when: True
   when: current_changeset_id.stdout != galaxy_changeset_id
   when: git.stat.isdir is defined and git.stat.isdir == true
+  tags: update
 
 - name: Get current tool migration stages
   shell: ls -1 *tools.sh | sort chdir={{ GALAXY_HOME }}/scripts/migrate_tools/
   register: current_tool_migration_stages
   changed_when: False
   when: git.stat.isdir is defined and git.stat.isdir == true
+  tags: update
 
 - name: Update galaxy to correct changeset
   git:
@@ -58,6 +64,7 @@
     executable: "{{ git_executable | default(omit) }}"
   environment:
     PATH: "/usr/local/bin:{{ ansible_env.PATH }}"
+  tags: update
   #notify:
   #  - restart galaxy
 
@@ -67,8 +74,10 @@
   shell: ls -1 *tools.sh | sort chdir={{ GALAXY_HOME }}/scripts/migrate_tools/
   register: updated_tool_migration_stages
   changed_when: False
+  tags: update
 
 - include: patches.yml
+  tags: update
 
 - name: add legacy tools (not from toolshed)
   copy: src="galaxy_legacy_tools/tools/" dest="{{ GALAXY_HOME }}/tools/" backup=yes
@@ -116,6 +125,7 @@
 
 - name: welcome.html
   template: src=welcome.html.j2 dest={{ GALAXY_HOME }}/static/welcome.html backup=yes
+  tags: update
 
 - include: tool-dependencies.yaml
 
@@ -129,24 +139,29 @@
   command: "{{ galaxy_venv_dir }}/bin/python {{ GALAXY_HOME }}/scripts/manage_db.py db_version chdir={{ GALAXY_HOME }}"
   register: current_db_version
   changed_when: False
+  tags: update
 
 - name: Get maximum Galaxy DB version
   command: "{{ galaxy_venv_dir }}/bin/python {{ GALAXY_HOME }}/scripts/manage_db.py version chdir={{ GALAXY_HOME }}"
   register: max_db_version
   changed_when: False
+  tags: update
 
 - include: backup_database.yaml
   when: current_db_version.stdout != max_db_version.stdout
+  tags: update
 
 - name: Upgrade Galaxy DB
   command: "{{ galaxy_venv_dir }}/bin/python {{ GALAXY_HOME }}/scripts/manage_db.py upgrade chdir={{ GALAXY_HOME }}"
   when: current_db_version.stdout != max_db_version.stdout
+  tags: update
 
 - name: Report current tool migration stage
   debug:
     msg: "There are {{ updated_tool_migration_stages.stdout_lines|length - current_tool_migration_stages.stdout_lines|length }} new tool migration stages for {{ GALAXY_HOME }}"
   changed_when: True
   when: current_tool_migration_stages.stdout_lines|length != updated_tool_migration_stages.stdout_lines|length
+  tags: update
 
 - name: Run tool migrations
   shell: ". {{ galaxy_venv_dir}}/bin/activate && sh ./scripts/migrate_tools/{{ item }} install_dependencies chdir={{ GALAXY_HOME }}"
@@ -154,6 +169,7 @@
   when: updated_tool_migration_stages.stdout_lines|length - current_tool_migration_stages.stdout_lines|length > 0
   with_items:
     updated_tool_migration_stages.stdout_lines[-(updated_tool_migration_stages.stdout_lines|length - current_tool_migration_stages.stdout_lines|length)]
+  tags: update
 
 - name: Create tool_conf.xml patch
   shell: "diff -u tool_conf.xml-pre-stage-{{ item[:4] }} tool_conf.xml > tool_conf.xml-{{ item[:4] }}.diff chdir={{ GALAXY_HOME }} creates={{ GALAXY_HOME }}/tool_conf.xml-{{ item[:4] }}.diff"
@@ -163,11 +179,14 @@
     updated_tool_migration_stages.stdout_lines[-1]
   register: diff_result
   failed_when: diff_result.rc > 1
+  tags: update
 
 - name: Fetch tool_conf.xml diff
   fetch: src={{ GALAXY_HOME }}/tool_conf.xml-{{ item[:4] }}.diff dest=tool_conf_diffs/{{ ansible_hostname }}/tool_conf.xml-{{ item[:4] }}.diff flat=yes
   when: updated_tool_migration_stages.stdout_lines|length - current_tool_migration_stages.stdout_lines|length > 0
   with_items:
     updated_tool_migration_stages.stdout_lines[-1]
+  tags: update
 
 - include: start_galaxy.yml
+  tags: start,restart,update
