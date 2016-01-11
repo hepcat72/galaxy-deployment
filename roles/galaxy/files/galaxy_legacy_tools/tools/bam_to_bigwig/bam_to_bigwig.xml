@@ -1,8 +1,8 @@
 <tool id="bam_to_bigwig" name="BAM to BigWig" version="0.1">
 	<description>Calculates coverage from a BAM alignment file</description>
-	<requirements>
-		<requirement type="binary">genomeCoverageBed</requirement>
-		<requirement type="binary">bedGraphToBigWig</requirement>
+    <requirements>
+        <requirement type="package">ucsc_tools</requirement>
+        <requirement type="package">bedtools</requirement>
 	</requirements>
 	<command>
 		genomeCoverageBed -ibam $align -bg $split -g 
