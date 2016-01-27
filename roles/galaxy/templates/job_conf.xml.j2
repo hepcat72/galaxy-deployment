@@ -20,22 +20,22 @@
          -->
         <destination id="local" runner="local"/>
         <destination id="cetus_singlecore" runner="slurm">
-            <param id="nativeSpecification">--mem=10000</param>
+            <param id="nativeSpecification">--mem=10000 -p prod</param>
         </destination>
         <destination id="cetus_singlecore_mediummem" runner="slurm">
-            <param id="nativeSpecification">--mem=50000</param>
+            <param id="nativeSpecification">--mem=50000 -p prod</param>
         </destination>
         <destination id="cetus_singlecore_highmem" runner="slurm">
-            <param id="nativeSpecification">--mem=100000</param>
+            <param id="nativeSpecification">--mem=100000 -p prod</param>
         </destination>
         <destination id="cetus_multicore" runner="slurm">
-            <param id="nativeSpecification">-N 1=1 --ntasks=8 --mem=50000</param>
+            <param id="nativeSpecification">-N 1=1 --ntasks=6 --mem=60000 -p prod</param>
         </destination>
         <destination id="cetus_multicore_mediummem" runner="slurm">
-            <param id="nativeSpecification">-N 1=1 --ntasks=8 --mem=100000</param>
+            <param id="nativeSpecification">-N 1=1 --ntasks=6 --mem=114000 -p prod</param>
         </destination>
         <destination id="cetus_multicore_highmem" runner="slurm">
-            <param id="nativeSpecification">-N 1=1 --ntasks=8 --mem=200000</param>
+            <param id="nativeSpecification">-N 1=1 --ntasks=6 --mem=228000 -p prod</param>
         </destination>
     </destinations>
     <limits>

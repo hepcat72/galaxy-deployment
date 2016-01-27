@@ -44,8 +44,7 @@
   debug:
     msg: "Current changeset of {{ GALAXY_HOME }} {{ current_changeset_id.stdout }} does not match playbook version {{ galaxy_changeset_id }}"
   changed_when: True
-  when: current_changeset_id.stdout != galaxy_changeset_id
-  when: git.stat.isdir is defined and git.stat.isdir == true
+  when: (git.stat.isdir is defined and git.stat.isdir == true) and (current_changeset_id.stdout != galaxy_changeset_id)
   tags: update
 
 - name: Get current tool migration stages
