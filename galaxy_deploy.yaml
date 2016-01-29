@@ -1,7 +1,8 @@
 ---
 - hosts: galaxy_servers
-  sudo: yes
-  sudo_user: galaxy
+  become: yes
+  become_user: galaxy
+  become_method: sudo
   vars_files:
     -  "{{ env }}/secrets/passwords.yaml"
   roles:
