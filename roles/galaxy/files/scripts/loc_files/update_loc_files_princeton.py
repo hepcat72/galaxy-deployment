@@ -17,6 +17,22 @@ import csv
 import re
 from string import Template
 
+# Set csv.field_size_limit to maxInt, catching overflow error
+# http://stackoverflow.com/a/15063941/63093
+maxInt = sys.maxsize
+decrement = True
+
+while decrement:
+    # decrease the maxInt value by factor 10
+    # as long as the OverflowError occurs.
+
+    decrement = False
+    try:
+        csv.field_size_limit(maxInt)
+    except OverflowError:
+        maxInt = int(maxInt/10)
+        decrement = True
+
 
 def read_genome_info(genome_info_file):
     ''' Read Genome Info File and return dictionary '''
