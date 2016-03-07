@@ -1,0 +1,10 @@
+# Set GALAXY_RUN_ALL to start all web and handler processes defined
+export GALAXY_RUN_ALL=1
+
+# Set Python Egg Cache directory to one writable by the cluster nodes
+export PYTHON_EGG_CACHE=/tmp/.python-eggs
+
+# Don't use /tmp on cluster (not very large)
+export TMPDIR="{{ tmp_dir }}";
+
+PATH="/usr/local/bin:/usr/local/galaxy_dependencies/bedtools/2.16.2/bin:${PATH}"

@@ -107,6 +107,10 @@
 - name: tool_data_table_conf.xml
   copy: src="config/tool_data_table_conf.xml" dest="{{ GALAXY_HOME }}/tool_data_table_conf.xml" backup=yes
 
+- name: local_env.sh
+  template: src="config/local_env.sh.j2" dest="{{ GALAXY_HOME }}/config/local_env.sh" backup=yes
+  tags: start,stop,restart,update
+
 - include: hide_tools.yml
 
 - name: tool-data

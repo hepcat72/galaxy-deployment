@@ -8,16 +8,20 @@
   ignore_errors: True
   register: galaxy_running
 
-- name: copy stop script
-  copy: src=galaxy_stop.sh dest={{ GALAXY_HOME }}/ owner=galaxy mode=755
+# - name: copy stop script
+#   copy: src=galaxy_stop.sh dest={{ GALAXY_HOME }}/ owner=galaxy mode=755
 
 - name: stop galaxy
   sudo: yes
   sudo_user: galaxy
-  environment:
-    GALAXY_RUN_ALL: 1
-  shell: "/bin/sh {{ GALAXY_HOME }}/galaxy_stop.sh"
+  shell: "{{ GALAXY_HOME }}/run.sh --stop-daemon"
   when: galaxy_running.rc == 0
+
+# - name: stop galaxy reports
+#   sudo: yes
+#   sudo_user: galaxy
+#   shell: "{{ GALAXY_HOME }}/run_reports.sh --stop-daemon"
+#   when: galaxy_running.rc == 0
 
 - name: Wait for Galaxy to stop
   wait_for: port=8080 delay=5 state=stopped timeout=150

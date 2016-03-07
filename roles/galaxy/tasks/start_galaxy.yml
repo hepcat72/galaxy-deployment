@@ -1,11 +1,16 @@
-- name: copy start script
-  copy: src=galaxy_start.sh dest={{ GALAXY_HOME }}/ owner=galaxy mode=755
+# - name: copy start script
+#   copy: src=galaxy_start.sh dest={{ GALAXY_HOME }}/ owner=galaxy mode=755
 
 - name: start galaxy
   sudo: yes
   sudo_user: galaxy
-  shell: "/bin/sh {{ GALAXY_HOME }}/galaxy_start.sh"
+  shell: "{{ GALAXY_HOME }}/run.sh --daemon"
 
+# - name: start galaxy reports
+#   sudo: yes
+#   sudo_user: galaxy
+#   shell: "{{ GALAXY_HOME }}/run_reports.sh --daemon"
+  
 - name: Wait for Galaxy to start
   wait_for: port=8080 delay=5 state=started timeout=150
 
