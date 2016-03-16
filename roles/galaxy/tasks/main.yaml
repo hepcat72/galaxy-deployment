@@ -95,6 +95,11 @@
   tags:
     job_conf
 
+- name: dynamic job destinations.py
+  copy: src=dynamic_destinations/destinations.py dest={{ GALAXY_HOME }}/lib/galaxy/jobs/rules/destinations.py
+  tags:
+      job_conf
+
 - name: tool_sheds_conf.xml
   template: src=tool_sheds_conf.xml.j2 dest={{ GALAXY_HOME }}/tool_sheds_conf.xml backup=yes
 
