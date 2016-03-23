@@ -88,3 +88,4 @@ index	rhemac2	/reference-genomes/rhesus_macaque/rhesus_macaque_rhemac2/rhesus_ma
 index	gallus_gallus_5_0_ncbi	/reference-genomes/gallus_gallus/gallus_gallus_5_0_ncbi/gallus_gallus_5_0_ncbi_FASTA/GCF_000002315.4_Gallus_gallus-5.0_genomic.fna.fasta
 index	hg38	/reference-genomes/iGenomes/Homo_sapiens/UCSC/hg38/Sequence/WholeGenomeFasta/genome.fa
 index	pseuAeru_ucbpp-pa14	/reference-genomes/pseudomonas_aeruginosa_ucbpp-pa14/pseudomonas_aeruginosa_ucbpp-pa14_nc_008463_1/pseudomonas_aeruginosa_ucbpp-pa14_nc_008463_1_FASTA/Pseudomonas_aeruginosa_UCBPP-PA14_109-fixed.fna.fasta
+index	galGal4	/reference-genomes/gallus_gallus/gallus_gallus_galgal4/gallus_gallus_galgal4_FASTA/galGal4.fasta
