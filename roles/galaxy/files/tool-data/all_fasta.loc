@@ -79,3 +79,4 @@ gallus_gallus_5_0_ncbi	gallus_gallus_5_0_ncbi	Gallus gallus (NCBI 5.0) (gallus_g
 hg38	hg38	Human Dec. 2013 (GRCh38/hg38) (hg38)	/reference-genomes/iGenomes/Homo_sapiens/UCSC/hg38/Sequence/WholeGenomeFasta/genome.fa
 pseuAeru_ucbpp-pa14	pseuAeru_ucbpp-pa14	Pseudomonas aeruginosa UCBPP-PA14 (Pseudomonas.com NC_008463.1) (pseuAeru_ucbpp-pa14)	/reference-genomes/pseudomonas_aeruginosa_ucbpp-pa14/pseudomonas_aeruginosa_ucbpp-pa14_nc_008463_1/pseudomonas_aeruginosa_ucbpp-pa14_nc_008463_1_FASTA/Pseudomonas_aeruginosa_UCBPP-PA14_109-fixed.fna.fasta
 galGal4	galGal4	Chicken Gallus gallus (UCSC galGal4) (galGal4)	/reference-genomes/gallus_gallus/gallus_gallus_galgal4/gallus_gallus_galgal4_FASTA/galGal4.fasta
+ci_kh_ghostdb	ci_kh_ghostdb	Ciona intestinalis (Ghost Database KH) (ci_kh_ghostdb)	/reference-genomes/ciona_intestinalis/ciona_intestinalis_kh_ghostdb/ciona_intestinalis_kh_ghostdb_FASTA/JoinedScaffold.fasta
