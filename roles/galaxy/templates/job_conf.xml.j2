@@ -40,6 +40,9 @@
         <destination id="cetus_multicore_highmem_1wk" runner="slurm">
             <param id="nativeSpecification">-N 1=1 --ntasks=15 --mem=285000 --qos=1wk</param>
         </destination>
+        <destination id="cetus_fullnode_1wk" runner="slurm">
+            <param id="nativeSpecification">-N 1=1 --ntasks=20 --mem=380000 --qos=1wk</param>
+        </destination>
         <destination id="cetus_fullnode_long" runner="slurm">
             <param id="nativeSpecification">-N 1=1 --ntasks=20 --mem=380000 --qos=long</param>
         </destination>
@@ -99,6 +102,6 @@
         <tool id="CONVERTER_bedgraph_to_bigwig" destination="cetus_singlecore_mediummem"/>
         <tool id="CONVERTER_gff_to_interval_index_0" destination="cetus_singlecore_mediummem"/>
         <tool id="wig_to_bigWig" destination="cetus_singlecore_highmem"/>
-        <tool id="trinity" destination="cetus_fullnode_long"/>
+        <tool id="trinity" destination="cetus_fullnode_1wk"/>
     </tools>
 </job_conf>
