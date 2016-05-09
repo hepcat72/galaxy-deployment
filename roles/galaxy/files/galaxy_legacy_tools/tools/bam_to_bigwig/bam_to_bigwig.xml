@@ -7,12 +7,13 @@
 	<command>
 		genomeCoverageBed -ibam $align -bg $split -g 
 		`awk '($0 !~ /^#.*/) &amp;&amp; ($2 == "$align.dbkey") {print $3}' ${GALAXY_DATA_INDEX_DIR}/sam_fa_indices.loc`.fai
-		> tmp.bedgraph;
+        > tmp.bedgraph;
+        LC_COLLATE=C sort -k1,1 -k2,2n tmp.bedgraph > tmp.sort.bedgraph;
 		bedGraphToBigWig 
 		#if $settings.settingsType == "full":
      			-blockSize=${settings.blockSize} -itemsPerSlot=${settings.itemsPerSlot} ${settings.unc}
     		#end if
-		tmp.bedgraph 
+		tmp.sort.bedgraph 
 		`awk '($0 !~ /^#.*/) &amp;&amp; ($2 == "$align.dbkey") {print $3}' ${GALAXY_DATA_INDEX_DIR}/sam_fa_indices.loc`.fai
 	       	$out;
 	</command>
