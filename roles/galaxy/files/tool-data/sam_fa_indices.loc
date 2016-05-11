@@ -90,3 +90,5 @@ index	hg38	/reference-genomes/iGenomes/Homo_sapiens/UCSC/hg38/Sequence/WholeGeno
 index	pseuAeru_ucbpp-pa14	/reference-genomes/pseudomonas_aeruginosa_ucbpp-pa14/pseudomonas_aeruginosa_ucbpp-pa14_nc_008463_1/pseudomonas_aeruginosa_ucbpp-pa14_nc_008463_1_FASTA/Pseudomonas_aeruginosa_UCBPP-PA14_109-fixed.fna.fasta
 index	galGal4	/reference-genomes/gallus_gallus/gallus_gallus_galgal4/gallus_gallus_galgal4_FASTA/galGal4.fasta
 index	ci_kh_ghostdb	/reference-genomes/ciona_intestinalis/ciona_intestinalis_kh_ghostdb/ciona_intestinalis_kh_ghostdb_FASTA/JoinedScaffold.fasta
+index	CSavignyi_v2_0	/reference-genomes/ciona_savignyi/ciona_savignyi_csav2_0/ciona_savignyi_csav2_0_FASTA/Ciona_savignyi.CSAV2.0.dna.toplevel.fasta
+index	CSavignyi_v2_1	/reference-genomes/ciona_savignyi/ciona_savignyi_csav2_1/ciona_savignyi_csav2_1_FASTA/CionaSavignyi_v2.1_Reftigs_lcmasked.fasta
