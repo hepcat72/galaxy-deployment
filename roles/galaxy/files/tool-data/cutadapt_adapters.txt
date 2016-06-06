@@ -1,0 +1,18 @@
+#
+# Adapter/Linker sequences for FASTX-Clipper tool.
+# Also used by cutadapt tool
+#
+# Format:
+#    Adapter Sequence <TAB> Descriptive name
+#
+# Example:
+#     AAATTTGATAAGATA   Our-Adapter
+#
+# Some adapters can be found here:
+# http://seqanswers.com/forums/showthread.php?t=198
+
+AGATCGGAAGAG	Illumina Universal Adapter
+TGGAATTCTCGG	Illumina Small RNA 3' Adapter
+GATCGTCGGACT	Illumina Small RNA 5' Adapter
+CTGTCTCTTATA	Nextera Transposase Sequence
+CGCCTTGGCCGT	SOLID Small RNA Adapter
