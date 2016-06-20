@@ -39,3 +39,14 @@
       - toolshed\.g2\.bx\.psu\.edu/repos/iuc/bedtools/bedtools_mergebedgraph/2\.19\.0
       - toolshed\.g2\.bx\.psu\.edu/repos/iuc/bedtools/bedtools_bamtofastq/2\.19\.0
       - toolshed\.g2\.bx\.psu\.edu/repos/iuc/bedtools/bedtools_genomecoveragebed_histogram/2\.19\.0
+      - toolshed\.g2\.bx\.psu\.edu/repos/bgruening/deeptools/deeptools_heatmapper/1\.5\.9\.1\.0
+      - toolshed\.g2\.bx\.psu\.edu/repos/bgruening/deeptools/deeptools_bigwigCompare/1\.5\.9\.1\.0
+      - toolshed\.g2\.bx\.psu\.edu/repos/bgruening/deeptools/deeptools_bamCoverage/1\.5\.9\.1\.0
+      - toolshed\.g2\.bx\.psu\.edu/repos/bgruening/deeptools/deeptools_correctGCBias/1\.5\.9\.1\.0
+      - toolshed\.g2\.bx\.psu\.edu/repos/bgruening/deeptools/deeptools_bamCompare/1\.5\.9\.1\.0
+      - toolshed\.g2\.bx\.psu\.edu/repos/bgruening/deeptools/deeptools_bamFingerprint/1\.5\.9\.1\.0
+      - toolshed\.g2\.bx\.psu\.edu/repos/bgruening/deeptools/deeptools_profiler/1\.5\.9\.1\.0
+      - toolshed\.g2\.bx\.psu\.edu/repos/bgruening/deeptools/deeptools_computeGCBias/1\.5\.9\.1\.0
+      - toolshed\.g2\.bx\.psu\.edu/repos/bgruening/deeptools/deeptools_computeMatrix/1\.5\.9\.1\.0
+      - toolshed\.g2\.bx\.psu\.edu/repos/bgruening/deeptools/deeptools_bamCorrelate/1\.5\.9\.1\.0
+      - toolshed\.g2\.bx\.psu\.edu/repos/bgruening/deeptools/deeptools_bamPEFragmentSize/1\.5\.9\.1\.0
