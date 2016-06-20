@@ -117,6 +117,7 @@
   tags: start,stop,restart,update
 
 - include: hide_tools.yml
+  tags: update
 
 - name: tool-data
   copy:
@@ -132,7 +133,7 @@
   tags: genome_builds
 
 - name: welcome.html
-  template: src=welcome.html.j2 dest={{ GALAXY_HOME }}/static/welcome.html backup=yes
+  template: src=welcome.html.j2 dest={{ GALAXY_HOME }}/static/welcome.html backup=yes owner=galaxy group=galaxy mode=0644
   tags: update
 
 - include: tool-dependencies.yaml

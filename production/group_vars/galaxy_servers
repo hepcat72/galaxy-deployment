@@ -3,7 +3,7 @@ env: production
 GALAXY_HOME: /galaxy/galaxy-app/
 galaxy_venv_dir: /galaxy/galaxy-app/.venv
 pip_virtualenv_command: virtualenv -p /usr/local/bin/python
-galaxy_changeset_id: release_16.01
+galaxy_changeset_id: release_16.04
 crontab_mailto: biocomp@genomics.princeton.edu
 database_user: galaxy
 database_location: localhost
