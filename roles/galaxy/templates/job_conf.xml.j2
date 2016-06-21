@@ -5,7 +5,9 @@
              The default from <plugins> is used if not defined for a <plugin>.
           -->
         <plugin id="local" type="runner" load="galaxy.jobs.runners.local:LocalJobRunner"/>
-        <plugin id="slurm" type="runner" load="galaxy.jobs.runners.slurm:SlurmJobRunner"/>
+        <plugin id="slurm" type="runner" load="galaxy.jobs.runners.slurm:SlurmJobRunner">
+            <param id="internalexception_retries">5</param>
+        </plugin>
     </plugins>
     <handlers default="handlers">
         <!-- Additional job handlers - the id should match the name of a
@@ -119,6 +121,7 @@
         <tool id="CONVERTER_gff_to_interval_index_0" destination="cetus_singlecore_mediummem"/>
         <tool id="wig_to_bigWig" destination="cetus_singlecore_highmem"/>
         <tool id="trinity" destination="cetus_fullnode_1wk"/>
-        <tool id="macs_callpeak" destination="cetus_singlecore_mediummem"/>
+        <tool id="macs2_callpeak" destination="cetus_singlecore_mediummem"/>
+        <tool id="peakcalling_ccat" destination="cetus_singlecore_mediummem"/>
     </tools>
 </job_conf>
