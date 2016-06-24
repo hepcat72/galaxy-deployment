@@ -50,3 +50,7 @@
       - toolshed\.g2\.bx\.psu\.edu/repos/bgruening/deeptools/deeptools_computeMatrix/1\.5\.9\.1\.0
       - toolshed\.g2\.bx\.psu\.edu/repos/bgruening/deeptools/deeptools_bamCorrelate/1\.5\.9\.1\.0
       - toolshed\.g2\.bx\.psu\.edu/repos/bgruening/deeptools/deeptools_bamPEFragmentSize/1\.5\.9\.1\.0
+      - toolshed\.g2\.bx\.psu\.edu/repos/bgruening/text_processing/tp_tail_tool/1\.0\.0
+      - toolshed\.g2\.bx\.psu\.edu/repos/bgruening/text_processing/tp_head_tool/1\.0\.0
+      - toolshed\.g2\.bx\.psu\.edu/repos/bgruening/text_processing/tp_cat/0\.1\.0
+      - toolshed\.g2\.bx\.psu\.edu/repos/bgruening/text_processing/tp_cut_tool/1\.0\.0
