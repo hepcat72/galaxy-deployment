@@ -84,7 +84,7 @@
     day: "*"
     month: "*"
     weekday: "*"
-    job: "/usr/sbin/tmpwatch -u 168 {{ GALAXY_HOME }}/database/tmp"
+    job: "/usr/sbin/tmpwatch --atime --dirmtime 168 {{ tmp_dir }}"
 
 - name: crontab entry to update ncbi taxonomy
   cron:

@@ -116,6 +116,9 @@
   template: src="config/local_env.sh.j2" dest="{{ GALAXY_HOME }}/config/local_env.sh" backup=yes
   tags: start,stop,restart,update
 
+- name: create tmp dir
+  file: path={{ tmp_dir }} state=directory mode=750
+
 - include: hide_tools.yml
   tags: update
 
