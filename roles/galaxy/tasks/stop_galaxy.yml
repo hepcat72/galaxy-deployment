@@ -3,24 +3,6 @@
         dest={{ GALAXY_HOME }}/../www/html/error-documents/503.html
         state=link
 
-# Galaxy web application
-
-- name: Check if galaxy pid file exists.
-  command: /usr/bin/test -e {{ GALAXY_HOME }}/web0.pid
-  ignore_errors: True
-  register: galaxy_running
-
-- name: stop galaxy
-  become: yes
-  become_user: galaxy
-  become_method: sudo    
-  shell: "{{ GALAXY_HOME }}/run.sh --stop-daemon"
-  when: galaxy_running.rc == 0
-
-- name: Wait for Galaxy to stop
-  wait_for: port=8080 delay=5 state=stopped timeout=60
-
-
 # Reports
 
 - name: Check if galaxy reports pid file exists.
@@ -37,3 +19,20 @@
 
 - name: Wait for Galaxy Reports to stop
   wait_for: port=9001 delay=5 state=stopped timeout=60
+
+# Galaxy web application
+
+- name: Check if galaxy pid file exists.
+  command: /usr/bin/test -e {{ GALAXY_HOME }}/web0.pid
+  ignore_errors: True
+  register: galaxy_running
+
+- name: stop galaxy
+  become: yes
+  become_user: galaxy
+  become_method: sudo
+  shell: "{{ GALAXY_HOME }}/run.sh --stop-daemon"
+  when: galaxy_running.rc == 0
+
+- name: Wait for Galaxy to stop
+  wait_for: port=8080 delay=5 state=stopped timeout=60
