@@ -122,13 +122,20 @@
 - include: hide_tools.yml
   tags: update
 
-- name: tool-data
+- name: tool-data files
   copy:
     src: "tool-data/"
     dest: "{{ GALAXY_HOME }}/tool-data/"
     backup: yes
   register: tooldata
   tags: genome_builds
+
+- name: tool-data templates
+  template:
+      src: "tool-data/{{ item }}.j2"
+      dest: "{{ GALAXY_HOME }}/tool-data/{{ item }}"
+  with_items:
+      - "ccat_configurations.loc" 
 
 - name: update builds
   command: "{{ galaxy_venv_dir }}/bin/python cron/add_manual_builds.py tool-data/shared/ucsc/manual_builds.txt tool-data/shared/ucsc/builds.txt tool-data/shared/ucsc/chrom/ chdir={{ GALAXY_HOME }}"

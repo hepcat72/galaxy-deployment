@@ -1,7 +1,0 @@
-#Provide Pre-compiled CCAT peak/region caller configuration files
-#UID	Description	path_to_config_file
-#ccat_2.0_tf_config	CCAT provided Transcription Factor Binding	/path_to/ccat/configs/config_TF.txt
-#ccat_2.0_histone_config	CCAT provided Histone Modification	/path_to/ccat/configs/config_histone.txt
-ccat_3.0_tf_config	CCAT 3.0 provided Transcription Factor Binding	/sequencing/galaxy_data/ccat/configurations/3.0/config_TF.txt
-ccat_3.0_histone_config	CCAT 3.0 provided Histone Modification	/sequencing/galaxy_data/ccat/configurations/3.0/config_histone.txt
-ccat_3.0_histone_config_fixed	CCAT 3.0 Histone Factor Binding (readme.txt defaults: slidingWinSize=1000)	/sequencing/galaxy_data/ccat/configurations/3.0/config_histone_fixed_readme.txt
