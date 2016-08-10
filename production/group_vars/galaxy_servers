@@ -11,6 +11,6 @@ database_port: 5432
 file_path: /galaxy/files
 new_file_path: /scratch/tmp/galaxy
 tmp_dir: /scratch/tmp/galaxy
-log_level: WARNING
+log_level: DEBUG
 debug: False
 use_interactive: False
