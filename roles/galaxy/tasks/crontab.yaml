@@ -79,12 +79,23 @@
 - name: crontab entry to cleanup Galaxy temp files
   cron:
     name: "cleanup galaxy tempfiles"
+    minute: "30"
+    hour: "4"
+    day: "*"
+    month: "*"
+    weekday: "*"
+    job: "/usr/sbin/tmpwatch --atime --dirmtime 168 {{ tmp_dir }}"
+
+- name: crontab entry to cleanup exported Galaxy files
+  cron:
+    name: "cleanup exported galaxy files"
     minute: "0"
     hour: "5"
     day: "*"
     month: "*"
     weekday: "*"
-    job: "/usr/sbin/tmpwatch --atime --dirmtime 168 {{ tmp_dir }}"
+    job: "/usr/sbin/tmpwatch --mtime --dirmtime 168 /scratch/tmp/galaxy_export"
+
 
 - name: crontab entry to update ncbi taxonomy
   cron:

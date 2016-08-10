@@ -30,3 +30,4 @@
       - { tool: 'samtools', version: '0.1.18' }
       - { tool: 'ucsc_tools', version: 'manual_install' }
       - { tool: 'bwa', version: '0.5.9' }
+      - { tool: 'EXPORT_DIR_PREFIX', version: '0.0.1' }
