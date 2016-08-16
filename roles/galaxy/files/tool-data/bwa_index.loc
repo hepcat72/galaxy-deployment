@@ -100,3 +100,4 @@ galGal4	galGal4	Chicken Gallus gallus (UCSC galGal4) (galGal4)	/reference-genome
 ci_kh_ghostdb	ci_kh_ghostdb	Ciona intestinalis (Ghost Database KH) (ci_kh_ghostdb)	/reference-genomes/ciona_intestinalis/ciona_intestinalis_kh_ghostdb/ciona_intestinalis_kh_ghostdb_BWA/ciona_intestinalis_kh_ghostdb
 CSavignyi_v2_0	CSavignyi_v2_0	Ciona Savignyi (ENSEMBL CSAV2.0) (CSavignyi_v2_0)	/reference-genomes/ciona_savignyi/ciona_savignyi_csav2_0/ciona_savignyi_csav2_0_BWA/ciona_savignyi_csav2_0
 CSavignyi_v2_1	CSavignyi_v2_1	Ciona Savignyi (Stanford CSAV2.1) (CSavignyi_v2_1)	/reference-genomes/ciona_savignyi/ciona_savignyi_csav2_1/ciona_savignyi_csav2_1_BWA/ciona_savignyi_csav2_1
+GRCm38	GRCm38	Mouse M. musculus (Ensembl) (GRCm38)	/reference-genomes/iGenomes/Mus_musculus/Ensembl/GRCm38/Sequence/BWAIndex/version0.5.x/genome.fa
