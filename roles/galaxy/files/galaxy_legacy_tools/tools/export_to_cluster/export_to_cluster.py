@@ -7,13 +7,11 @@ import os.path
 import shutil
 import sys
 import re
+import uuid
 
 parser = optparse.OptionParser()
-parser.add_option('-d', '--export_dir', help='Directory where to export the datasets')
 parser.add_option('-p', '--dir_prefix', help='How the export dir should start')
 (options, args) = parser.parse_args()
-if not options.export_dir:
-    parser.error('Export directory cannot be empty')
 if not options.dir_prefix:
     parser.error('Directory prefix cannot be empty')
 if len(args) < 2:
@@ -21,12 +19,17 @@ if len(args) < 2:
 if len(args) % 2 != 0:
     parser.error('Require an even number of arguments')
 
-real_export_dir = os.path.realpath(options.export_dir)
+# real_export_dir = os.path.realpath(options.export_dir)
+real_export_dir = os.path.realpath(
+    os.path.join(options.dir_prefix, str(uuid.uuid4())))
 dir_prefix = options.dir_prefix.rstrip(os.sep)
 if not real_export_dir.startswith(dir_prefix):
-    sys.exit("%s must be a subdirectory of %s" % (options.export_dir, dir_prefix))
+    sys.exit("%s must be a subdirectory of %s" % (real_export_dir, dir_prefix))
+print("real_export_dir: %s " % real_export_dir)
+os.mkdir(real_export_dir)
 if not os.path.exists(real_export_dir):
-    sys.exit("%s does not exist or it is not accessible by the Galaxy user" % options.export_dir)
+    sys.exit("%s does not exist or it is not accessible by the Galaxy user" %
+             real_export_dir)
 if not os.path.isdir(real_export_dir):
     sys.exit("%s is not a directory" % options.export_dir)
 

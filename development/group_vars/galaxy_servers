@@ -11,6 +11,7 @@ database_port: 5431
 file_path: database/files
 new_file_path: database/tmp
 tmp_dir: /tmp
+export_dir: /tmp/galaxy_export
 log_level: DEBUG
 debug: True
 use_interactive: True

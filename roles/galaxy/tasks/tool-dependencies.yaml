@@ -31,3 +31,9 @@
       - { tool: 'ucsc_tools', version: 'manual_install' }
       - { tool: 'bwa', version: '0.5.9' }
       - { tool: 'EXPORT_DIR_PREFIX', version: '0.0.1' }
+
+- name: create galaxy_export directory
+  file:
+      path: "{{ export_dir }}"
+      state: directory
+      mode: 0771
