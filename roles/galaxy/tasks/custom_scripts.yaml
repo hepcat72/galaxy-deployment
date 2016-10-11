@@ -7,11 +7,6 @@
   with_fileglob:
         - scripts/*
 
-- name: copy scripts
-  copy: src={{ item }} dest={{ GALAXY_HOME }}/scripts/ owner=galaxy mode=755
-  with_fileglob:
-        - scripts/*
-
 - name: copy script templates
   template: src=scripts/{{ item }}.j2 dest={{ GALAXY_HOME }}/scripts/{{ item }} owner=galaxy mode=755
   with_items:
