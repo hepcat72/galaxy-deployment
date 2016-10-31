@@ -94,3 +94,4 @@ index	CSavignyi_v2_0	/reference-genomes/ciona_savignyi/ciona_savignyi_csav2_0/ci
 index	CSavignyi_v2_1	/reference-genomes/ciona_savignyi/ciona_savignyi_csav2_1/ciona_savignyi_csav2_1_FASTA/CionaSavignyi_v2.1_Reftigs_lcmasked.fasta
 index	GRCm38	/reference-genomes/iGenomes/Mus_musculus/Ensembl/GRCm38/Sequence/WholeGenomeFasta/genome.fa
 index	asm104321v1	/reference-genomes/escherichia_coli_k12/escherichia_coli_k12_ncm3722_asm104321v1/escherichia_coli_k12_ncm3722_asm104321v1_FASTA/GCF_001043215.1_ASM104321v1_genomic.fna.fasta
+index	ce11	/reference-genomes/caenorhabditis_elegans/caenorhabditis_elegans_ce11/caenorhabditis_elegans_ce11_FASTA/caenorhabditis_elegans_ce11.fasta

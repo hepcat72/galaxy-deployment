@@ -90,3 +90,4 @@ CSavignyi_v2_0	CSavignyi_v2_0	Ciona Savignyi (ENSEMBL CSAV2.0) (CSavignyi_v2_0)	
 CSavignyi_v2_1	CSavignyi_v2_1	Ciona Savignyi (Stanford CSAV2.1) (CSavignyi_v2_1)	/reference-genomes/ciona_savignyi/ciona_savignyi_csav2_1/ciona_savignyi_csav2_1_BWA-MEM/ciona_savignyi_csav2_1
 GRCm38	GRCm38	Mouse M. musculus (Ensembl) (GRCm38)	/reference-genomes/iGenomes/Mus_musculus/Ensembl/GRCm38/Sequence/BWAIndex/version0.6.0/genome.fa
 asm104321v1	asm104321v1	Escherichia Coli K12 NCM3722 (NCBI 2015/06/30) (asm104321v1)	/reference-genomes/escherichia_coli_k12/escherichia_coli_k12_ncm3722_asm104321v1/escherichia_coli_k12_ncm3722_asm104321v1_BWA-MEM/escherichia_coli_k12_ncm3722_asm104321v1
+ce11	ce11	Caenorhabditis elegans (UCSC Feb 2013) (ce11)	/reference-genomes/caenorhabditis_elegans/caenorhabditis_elegans_ce11/caenorhabditis_elegans_ce11_BWA-MEM/caenorhabditis_elegans_ce11
