@@ -6,8 +6,8 @@
      package definitions, but by default look in the directory specified by tool_dependency_dir
      in Galaxy's config/galaxy.ini -->
   <galaxy_packages />
-  <galaxy_packages versionless="true" />
   <conda />
+  <galaxy_packages versionless="true" />
   <conda versionless="true" />
 
 <!-- Example configuration of modules dependency resolver, uses Environment Modules -->
