@@ -38,6 +38,7 @@
         </destination>
         <destination id="cetus_multicore_mediummem" runner="slurm">
             <param id="nativeSpecification">-N 1=1 --ntasks=6 --mem=114000 -p prod</param>
+            <env id="_JAVA_OPTIONS">-Xms10G -Xmx100G</env>
         </destination>
         <destination id="cetus_multicore_highmem" runner="slurm">
             <param id="nativeSpecification">-N 1=1 --ntasks=12 --mem=228000 -p prod</param>
