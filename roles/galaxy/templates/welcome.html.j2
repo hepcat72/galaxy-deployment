@@ -28,27 +28,26 @@
             <div class="infomessagelarge section" id="updates">
             <h2>What's New</h2>
 
-            <h3>NEW featureCounts 1.4.6.p5</h3>
-            <p><a href="http://subread.sourceforge.net/">featureCounts</a> is a highly efficient and accurate read summarization program. This works very similarly to htseq-count, but is faster and more flexible.</p>
+            <h3>Galaxy Release 16.10</h3>
+            <ul>
+                <li></li>
+            </ul>
 
-            <h3>NEW Collection Column Join</h3>
-            <p><a href="https://toolshed.g2.bx.psu.edu/view/iuc/collection_column_join/2f120a5c49b1">Collection Column Join</a> allows one to join a collection of files on a "key" column. An example usage would be to combine the output of htseq-count or featureCounts for multiple samples into a single table.</p>
+            <h3>NEW Salmon Transcript Quantification from RNA-seq data</h3>
+            <p><a href="https://combine-lab.github.io/salmon/">Salmon</a> is a tool for quantifying the expression of transcripts using RNA-seq data. Salmon uses new algorithms (specifically, coupling the novel concept of quasi-mapping with a two-phase inference algorithm) to provide accurate expression estimates very quickly (i.e. wicked-fast) and while using very little memory. Salmon performs its inference using an expressive and realistic model of RNA-seq data that takes into account the attributes, like position-specfic bias, observed in real experimental data.</p>
 
-            <h3>NEW Trim Galore! 0.4.2</h3>
-            <p><a href="http://www.bioinformatics.babraham.ac.uk/projects/trim_galore/">Trim Galore!</a> is a wrapper script around Cutadapt and FastQC to automate quality and adapter trimming as well as quality control, with some added functionality to remove biased methylation positions for RRBS sequence files (for directional, non-directional (or paired-end) sequencing).</p>
+            <h3>NEW NuGEN NuDup</h3>
+            <p><a href="https://github.com/nugentechnologies/nudup">NuDup</a> marks/removes duplicate molecules based on the molecular tagging technology used in NuGEN products.</p>
 
             <h3>UPDATED Tools</h3>
             <ul>
-                <li><a href="https://github.com/trinityrnaseq/trinityrnaseq/blob/master/Changelog.txt">Trinity 2.2.0</a></li>
-                <li><a href="https://github.com/fidelram/deepTools/blob/master/CHANGES.txt">DeepTools 2.3.5</a></li>
-                <li><a href="http://bioconductor.org/packages/release/bioc/html/DESeq2.html">DESeq2 1.10.1 (Galaxy wrapper 2.1.8.4)</a></li>
+                <li><a href="http://bowtie-bio.sourceforge.net/bowtie2/index.shtml">Bowtie2 2.2.8</a></li>
+                <li><a href="https://ccb.jhu.edu/software/tophat/index.shtml">Tophat2 2.1.1</a></li>
+                <li><a href="https://github.com/fidelram/deepTools/blob/master/CHANGES.txt">DeepTools 2.4.1.0</a></li>
             </ul>
 
-            <h3>NEW Pilon 1.18</h3>
-            <p><a href="https://github.com/broadinstitute/pilon/wiki">Pilon</a> Pilon is a software tool which can be used to automatically improve draft assemblies and find variation among strains, including large event detection.</p>
-
             <h3>Questions, comments, suggestions?</h3>
-            <p><a href="mailto:sequencer@genomics.princeton.edu">sequencer@genomics.princeton.edu</a></p>
+            <p><a href="mailto:{{ crontab_mailto }}">{{ crontab_mailto }}</a></p>
             <ul>
                 <li>New tools (custom tools are welcome!)</li>
                 <li>Reference genomes and other annotations</li>

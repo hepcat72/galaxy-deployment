@@ -4,7 +4,7 @@
 
 - name: Add hidden tag to shed_tool_conf.xml file
   lineinfile:
-    dest: "{{ GALAXY_HOME }}/shed_tool_conf.xml"
+    dest: "{{ config_directory }}/shed_tool_conf.xml"
     regexp: '(^\s*<tool .* guid="{{ item }}")>'
     backrefs: yes
     line: '\1 hidden="True">'

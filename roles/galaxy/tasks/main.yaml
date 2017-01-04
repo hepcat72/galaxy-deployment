@@ -87,36 +87,35 @@
 - name: add legacy jars
   copy: src="galaxy_legacy_tools/tool-data/" dest="{{ GALAXY_HOME }}/tool-data/" backup=yes
 
-- name: universe_wsgi.ini
-  template: src=universe_wsgi.ini.j2 dest={{ GALAXY_HOME }}/universe_wsgi.ini backup=yes
-
-- name: job_conf.xml
-  template: src=job_conf.xml.j2 dest={{ GALAXY_HOME }}/job_conf.xml backup=yes
+- name: config templates
+  template:
+    src: "config/{{ item }}.j2"
+    dest: "{{ config_directory }}/{{ item }}"
+    backup: "yes"
+  with_items:
+    - "galaxy.ini"
+    - "reports.ini"
+    - "job_conf.xml"
+    - "tool_sheds_conf.xml"
+    - "tool_conf.xml"
   tags:
-    job_conf
+    config
+
+- name: config files
+  copy: 
+      src: "config/{{ item }}"
+      dest: "{{ config_directory }}/{{ item }}"
+      backup: "yes"
+  with_items:
+      - "tool_data_table_conf.xml" 
+      - "dependency_resolvers_conf.xml" 
+  tags:
+    config
 
 - name: dynamic job destinations.py
   copy: src=dynamic_destinations/destinations.py dest={{ GALAXY_HOME }}/lib/galaxy/jobs/rules/destinations.py
   tags:
-      job_conf
-
-- name: tool_sheds_conf.xml
-  template: src=tool_sheds_conf.xml.j2 dest={{ GALAXY_HOME }}/tool_sheds_conf.xml backup=yes
-
-- name: reports_wsgi.ini
-  template: src=reports_wsgi.ini.j2 dest={{ GALAXY_HOME }}/reports_wsgi.ini backup=yes
-
-- name: tool_conf.xml
-  template: src=tool_conf.xml.j2 dest={{ GALAXY_HOME }}/tool_conf.xml backup=yes
-
-- name: config files
-  copy: 
-      src: "{{ item }}"
-      dest: "{{ GALAXY_HOME }}/{{ item }}"
-      backup: "yes"
-  with_items:
-      - "config/tool_data_table_conf.xml" 
-      - "config/dependency_resolvers_conf.xml" 
+    config
 
 - name: local_env.sh
   template: src="config/local_env.sh.j2" dest="{{ GALAXY_HOME }}/config/local_env.sh" backup=yes
@@ -132,16 +131,16 @@
   copy:
     src: "tool-data/"
     dest: "{{ GALAXY_HOME }}/tool-data/"
-    backup: yes
+    backup: "yes"
   register: tooldata
   tags: genome_builds
 
 - name: tool-data templates
   template:
-      src: "tool-data/{{ item }}.j2"
-      dest: "{{ GALAXY_HOME }}/tool-data/{{ item }}"
+    src: "tool-data/{{ item }}.j2"
+    dest: "{{ GALAXY_HOME }}/tool-data/{{ item }}"
   with_items:
-      - "ccat_configurations.loc" 
+    - "ccat_configurations.loc"
 
 - name: update builds
   command: "{{ galaxy_venv_dir }}/bin/python cron/add_manual_builds.py tool-data/shared/ucsc/manual_builds.txt tool-data/shared/ucsc/builds.txt tool-data/shared/ucsc/chrom/ chdir={{ GALAXY_HOME }}"

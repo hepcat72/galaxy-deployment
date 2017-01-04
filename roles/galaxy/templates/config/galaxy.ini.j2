@@ -151,7 +151,7 @@ new_file_path = {{ new_file_path }}
 
 # Tool config files, defines what tools are available in Galaxy.
 # Tools can be locally developed or installed from Galaxy tool sheds.
-tool_config_file = tool_conf.xml,shed_tool_conf.xml
+tool_config_file = {{ config_directory }}/tool_conf.xml,{{ config_directory }}/shed_tool_conf.xml
 
 # Enable / disable checking if any tools defined in the above non-shed tool_config_files
 # (i.e., tool_conf.xml) have been migrated from the Galaxy code distribution to the Tool
@@ -159,6 +159,18 @@ tool_config_file = tool_conf.xml,shed_tool_conf.xml
 # that are often rebuilt from scratch where migrated tools do not need to be available in the
 # Galaxy tool panel.  If the following setting remains commented, the default setting will be True.
 #check_migrate_tools = True
+
+# Tool config maintained by tool migration scripts.  If you use the migration
+# scripts to install tools that have been migrated to the tool shed upon a new
+# release, they will be added to this tool config file.
+#migrated_tools_config = config/migrated_tools_conf.xml
+
+# File that contains the XML section and tool tags from all tool panel config
+# files integrated into a single file that defines the tool panel layout.  This
+# file can be changed by the Galaxy administrator to alter the layout of the
+# tool panel.  If not present, Galaxy will create it.
+#integrated_tool_panel_config = integrated_tool_panel.xml
+integrated_tool_panel_config = config/integrated_tool_panel.xml
 
 # Default path to the directory containing the tools defined in tool_conf.xml.
 # Other tool config files must include the tool_path as an attribute in the <toolbox> tag.
@@ -201,6 +213,14 @@ tool_dependency_dir = tool-dependencies
 # if it cannot find a local copy and conda_exec is not configured.
 conda_auto_init = True
 
+# Certain dependency resolvers (namely Conda) take a considerable amount of
+# time to build an isolated job environment in the job_working_directory if the
+# job working directory is on a network share.  Set the following option to True
+# to cache the dependencies in a folder. This option is beta and should only be
+# used if you experience long waiting times before a job is actually submitted
+# to your cluster.
+use_cached_dependency_manager = True
+
 # Enable automatic polling of relative tool sheds to see if any updates
 # are available for installed repositories.  Ideally only one Galaxy
 # server process should be able to check for repository updates.  The
@@ -215,13 +235,13 @@ conda_auto_init = True
 
 # XML config file that contains data table entries for the ToolDataTableManager. This file is manually
 # maintained by the Galaxy administrator.
-#tool_data_table_config_path = tool_data_table_conf.xml
+#tool_data_table_config_path = config/tool_data_table_conf.xml
 
 # XML config file that contains additional data table entries for the ToolDataTableManager.  This file
 # is automatically generated based on the current installed tool shed repositories that contain valid
 # tool_data_table_conf.xml.sample files.  At the time of installation, these entries are automatically
 # added to the following file, which is parsed and applied to the ToolDataTableManager at server start up.
-#shed_tool_data_table_config = shed_tool_data_table_conf.xml
+#shed_tool_data_table_config = config/shed_tool_data_table_conf.xml
 
 # Directory where data used by tools is located, see the samples in that
 # directory and the wiki for help:
@@ -258,7 +278,7 @@ visualization_plugins_directory = config/plugins/visualizations
 
 # External service types config file, defines what types of external_services configurations
 # are available in Galaxy.
-#external_service_type_config_file = external_service_types_conf.xml
+#external_service_type_config_file = config/external_service_types_conf.xml
 
 # Path to the directory containing the external_service_types defined in the config.
 #external_service_type_path = external_service_types
@@ -739,7 +759,9 @@ allow_user_dataset_purge = True
 # Enable authentication via OpenID.  Allows users to log in to their Galaxy
 # account by authenticating with an OpenID provider.
 #enable_openid = False
-#openid_config_file = openid_conf.xml
+# .sample used if default does not exist
+#openid_config_file = config/openid_conf.xml
+#openid_consumer_cache_path = database/openid_consumer_cache
 
 # Optional list of email addresses of API users who can make calls on behalf of
 # other users
@@ -790,9 +812,9 @@ enable_quotas = True
 # Allow non-admin users to view available Data Manager options
 #enable_data_manager_user_view = False
 # File where Data Managers are configured
-#data_manager_config_file = data_manager_conf.xml
+#data_manager_config_file = config/data_manager_conf.xml
 # File where Tool Shed based Data Managers are configured
-#shed_data_manager_config_file = shed_data_manager_conf.xml
+#shed_data_manager_config_file = config/shed_data_manager_conf.xml
 # Directory to store Data Manager based tool-data; defaults to tool_data_path
 #galaxy_data_manager_data_path = tool-data
 

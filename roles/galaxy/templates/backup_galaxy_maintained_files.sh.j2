@@ -3,5 +3,6 @@
 for FILE in migrated_tools_conf.xml shed_tool_conf.xml shed_tool_data_table_conf.xml integrated_tool_panel.xml; do
     NOW=$(date +"%Y-%m-%d@%H:%M")
     BACKUP_FILE="${FILE}.${NOW}~"
-    cp -u "{{ GALAXY_HOME }}/${FILE}" "{{ GALAXY_HOME }}/${BACKUP_FILE}"
+    cp -u "{{ config_directory }}/${FILE}" "{{ config_directory }}/${BACKUP_FILE}"
+    find "{{ config_directory }}" -name "${FILE}*" -mtime +30 -delete;
 done
