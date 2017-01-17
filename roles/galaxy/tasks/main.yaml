@@ -102,13 +102,13 @@
     config
 
 - name: config files
-  copy: 
+  copy:
       src: "config/{{ item }}"
       dest: "{{ config_directory }}/{{ item }}"
       backup: "yes"
   with_items:
-      - "tool_data_table_conf.xml" 
-      - "dependency_resolvers_conf.xml" 
+      - "tool_data_table_conf.xml"
+      - "dependency_resolvers_conf.xml"
   tags:
     config
 
@@ -149,7 +149,9 @@
 
 - name: welcome.html
   template: src=welcome.html.j2 dest={{ GALAXY_HOME }}/static/welcome.html backup=yes owner=galaxy group=galaxy mode=0644
-  tags: update
+  tags:
+      - update
+      - welcome
 
 - include: tool-dependencies.yaml
 
