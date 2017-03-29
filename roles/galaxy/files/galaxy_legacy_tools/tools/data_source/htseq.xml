@@ -9,6 +9,7 @@
 	<command interpreter="python">data_source.py $output $__app__.config.output_size_limit</command>
 	<inputs action="https://htseq.princeton.edu/cgi-bin/search/advanced.pl" check_values="false" method="get">
 		<display>go to Princeton HTSEQ $GALAXY_URL</display>
+		<param name="type" type="hidden" value="sample" />
 		<param name="GALAXY_URL" type="baseurl" value="/tool_runner" />
 		<param name="tool_id" type="hidden" value="princeton_htseq" />
 		<!--

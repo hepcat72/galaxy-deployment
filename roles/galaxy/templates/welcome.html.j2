@@ -28,24 +28,48 @@
             <div class="infomessagelarge section" id="updates">
             <h2>What's New</h2>
 
-            <h3>Galaxy Release 16.10</h3>
+            <h3>Galaxy Release 17.01</h3>
             <ul>
-                <li>Workflow run form updated: Nicer, faster, standardized.</li>
-                <li>Many other enchancements and fixes, see <a href="https://docs.galaxyproject.org/en/master/releases/16.10_announce.html">October 2016 Galaxy Release (v16.10) Notes</a>
+                <li><strong>Support for compressed FASTQ formats:</strong> You
+                    can now upload compressed (with gzip or bzip2) FASTQ files
+                    without them being unpacked automatically (as it was until
+                    now). For this to work you have to select the proper type
+                    when uploading (e.g. instead of fastqsanger you select
+                    fastqsanger.gz or fastqsanger.bz2 for compressed files).
+                    Existing tools will work as before and future tools will be
+                    able to consume archives. Import from HTSEQ will be updated
+                    in the future to import these compressed files.</li>
+                
+                <li>Many other enchancements and fixes, see <a
+                        href="https://docs.galaxyproject.org/en/master/releases/17.01_announce.html">January
+                        2017 Galaxy Release (v17.01)</a></li>
             </ul>
-
-            <h3>NEW Salmon</h3>
-            <p><a href="https://combine-lab.github.io/salmon/">Salmon</a> is a tool for quantifying the expression of transcripts using RNA-seq data. Salmon uses new algorithms (specifically, coupling the novel concept of quasi-mapping with a two-phase inference algorithm) to provide accurate expression estimates very quickly (i.e. wicked-fast) and while using very little memory. Salmon performs its inference using an expressive and realistic model of RNA-seq data that takes into account the attributes, like position-specfic bias, observed in real experimental data.</p>
-
-            <h3>NEW NuGEN NuDup</h3>
-            <p><a href="https://github.com/nugentechnologies/nudup">NuDup</a> marks/removes duplicate molecules based on the molecular tagging technology used in NuGEN products.</p>
 
             <h3>UPDATED Tools</h3>
             <ul>
-                <li><a href="http://bowtie-bio.sourceforge.net/bowtie2/index.shtml">Bowtie2 2.2.8</a></li>
-                <li><a href="https://ccb.jhu.edu/software/tophat/index.shtml">Tophat2 2.1.1</a></li>
-                <li><a href="https://github.com/fidelram/deepTools/blob/master/CHANGES.txt">DeepTools 2.4.1.0</a></li>
+                <li><a href="http://cole-trapnell-lab.github.io/cufflinks/">Cufflinks,
+                        Cuffcompare, Cuffdiff, Cuffmerge, Cuffnorm, Cuffquant,
+                        gffread: 2.2.1</a></li>
+                <li><a href="https://toolshed.g2.bx.psu.edu/view/bgruening/text_processing">Textprocessing
+                        (awk, sed, etc.): 1.1.0</a></li>
             </ul>
+
+            <h3>NEW Salmon</h3>
+            <p><a href="https://combine-lab.github.io/salmon/">Salmon</a> is a
+                tool for quantifying the expression of transcripts using
+                RNA-seq data. Salmon uses new algorithms (specifically,
+                coupling the novel concept of quasi-mapping with a two-phase
+                inference algorithm) to provide accurate expression estimates
+                very quickly (i.e. wicked-fast) and while using very little
+                memory. Salmon performs its inference using an expressive and
+                realistic model of RNA-seq data that takes into account the
+                attributes, like position-specfic bias, observed in real
+                experimental data.</p>
+
+            <h3>NEW NuGEN NuDup</h3>
+            <p><a href="https://github.com/nugentechnologies/nudup">NuDup</a>
+                marks/removes duplicate molecules based on the molecular
+                tagging technology used in NuGEN products.</p>
 
             <h3>Questions, comments, suggestions?</h3>
             <p><a href="mailto:{{ crontab_mailto }}">{{ crontab_mailto }}</a></p>
