@@ -86,3 +86,4 @@ CSavignyi_v2_1	CSavignyi_v2_1	Ciona Savignyi (Stanford CSAV2.1) (CSavignyi_v2_1)
 GRCm38	GRCm38	Mouse M. musculus (Ensembl) (GRCm38)	/reference-genomes/iGenomes/Mus_musculus/Ensembl/GRCm38/Sequence/WholeGenomeFasta/genome.fa
 asm104321v1	asm104321v1	Escherichia Coli K12 NCM3722 (NCBI 2015/06/30) (asm104321v1)	/reference-genomes/escherichia_coli_k12/escherichia_coli_k12_ncm3722_asm104321v1/escherichia_coli_k12_ncm3722_asm104321v1_FASTA/GCF_001043215.1_ASM104321v1_genomic.fna.fasta
 ce11	ce11	Caenorhabditis elegans (UCSC Feb 2013) (ce11)	/reference-genomes/caenorhabditis_elegans/caenorhabditis_elegans_ce11/caenorhabditis_elegans_ce11_FASTA/caenorhabditis_elegans_ce11.fasta
+dm6	dm6	D. melanogaster Aug. 2014 (BDGP Release 6 + ISO1 MT/dm6) (dm6)	/reference-genomes/drosophila_melanogaster/drosophila_melanogaster_dm6/drosophila_melanogaster_dm6_FASTA/genome.fasta
