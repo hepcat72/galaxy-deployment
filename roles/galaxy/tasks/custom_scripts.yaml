@@ -13,6 +13,15 @@
       - get_stats.sh
       - get_user_emails.sh
       - get_userids.sh
+      - cleanup_datasets/admin_delete_datasets_princeton.sh
+      - cleanup_datasets/admin_princeton_htseq_import_cleanup_email.txt
+      - cleanup_datasets/check_users.sh
+      - cleanup_datasets/delete_datasets_princeton.sh
+      - cleanup_datasets/delete_userless_histories_princeton.sh
+      - cleanup_datasets/purge_datasets_princeton.sh
+      - cleanup_datasets/purge_folders_princeton.sh
+      - cleanup_datasets/purge_histories_princeton.sh
+      - cleanup_datasets/purge_libraries_princeton.sh
 
 - name: create scripts/loc_files directory
   file: dest={{ GALAXY_HOME }}/scripts/loc_files state=directory

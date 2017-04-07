@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-userids=`psql -U galaxy -p 5431 -c "select email from galaxy_user where deleted = 'f';" -t | sed 's/@princeton.edu//'`
+userids=`psql -U galaxy -p {{ database_port }} -c "select email from galaxy_user where deleted = 'f';" -t | sed 's/@princeton.edu//'`
 
 echo $userids
 for line in $userids; do

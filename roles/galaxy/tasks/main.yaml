@@ -159,6 +159,7 @@
 - include: crontab.yaml
 
 - include: custom_scripts.yaml
+  tags: scripts
 
 - include: taxonomy_tool_data.yaml
 
