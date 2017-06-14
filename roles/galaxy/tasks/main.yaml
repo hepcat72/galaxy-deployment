@@ -125,6 +125,12 @@
 - name: create tmp dir
   file: path={{ tmp_dir }} state=directory mode=750
 
+- name: create log directory
+  file:
+      path: "{{ GALAXY_HOME }}/../logs"
+      state: directory
+      mode: 750
+
 - include: hide_tools.yml
   tags: update
 
@@ -143,9 +149,15 @@
   with_items:
     - "ccat_configurations.loc"
 
+- name: test uscs/builds.txt exists
+  stat:
+    path: "tool-data/shared/ucsc/builds.txt"
+  register: "ucsc_builds"
+  tags: genome_builds
+
 - name: update builds
   command: "{{ galaxy_venv_dir }}/bin/python cron/add_manual_builds.py tool-data/shared/ucsc/manual_builds.txt tool-data/shared/ucsc/builds.txt tool-data/shared/ucsc/chrom/ chdir={{ GALAXY_HOME }}"
-  when: tooldata.changed
+  when: tooldata.changed and ucsc_builds.stat.exists == True
   tags: genome_builds
 
 - name: welcome.html

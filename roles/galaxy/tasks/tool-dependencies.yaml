@@ -1,15 +1,18 @@
 ---
-
 - name: make sure tool-dependencies folder exists
   file: path="{{ GALAXY_HOME }}/tool-dependencies/" state=directory
 
 - name: tool-dependencies directory copy
-  copy: src="tool-dependencies/" dest="{{ GALAXY_HOME }}/tool-dependencies/"
+  copy:
+      src: "tool-dependencies/"
+      dest: "{{ GALAXY_HOME }}/tool-dependencies/"
+      follow: no
 
 - name: bedtools_links
-  file: src="{{ GALAXY_HOME }}/tool-dependencies/bedtools"
-        dest={{ item }}
-        state=link force=yes
+  file:
+      src: "{{ GALAXY_HOME }}/tool-dependencies/bedtools"
+      dest: "{{ item }}"
+      state: link
   with_items:
       - "{{ GALAXY_HOME }}/tool-dependencies/bamToBed"
       - "{{ GALAXY_HOME }}/tool-dependencies/coverageBed"
@@ -19,9 +22,10 @@
       - "{{ GALAXY_HOME }}/tool-dependencies/unionBedGraphs"
 
 - name: tool dependencies default links
-  file: src={{ GALAXY_HOME }}/tool-dependencies/{{ item.tool }}/{{ item.version }}
-        dest={{ GALAXY_HOME }}/tool-dependencies/{{ item.tool }}/default
-        state=link
+  file:
+      src: "{{ GALAXY_HOME }}/tool-dependencies/{{ item.tool }}/{{ item.version }}"
+      dest: "{{ GALAXY_HOME }}/tool-dependencies/{{ item.tool }}/default"
+      state: link
   with_items:
       - { tool: 'bedtools', version: '2.16.2' }
       - { tool: 'freebayes', version: '0.9.4' }

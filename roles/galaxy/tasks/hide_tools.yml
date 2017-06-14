@@ -2,6 +2,11 @@
 # Hide specific tools from tools menu
 #####################################
 
+- name: test shed_tool_conf.xml exists
+  stat:
+    path: "{{ config_directory }}/shed_tool_conf.xml"
+  register: "shed_tool_conf"
+
 - name: Add hidden tag to shed_tool_conf.xml file
   lineinfile:
     dest: "{{ config_directory }}/shed_tool_conf.xml"
@@ -9,6 +14,7 @@
     backrefs: yes
     line: '\1 hidden="True">'
     state: present
+  when: shed_tool_conf.stat.exists == True
   with_items:
       - toolshed\.g2\.bx\.psu\.edu/repos/pcingola/snpeff/snpEff/1\.0
       - toolshed\.g2\.bx\.psu\.edu/repos/pcingola/snpeff/snpEff_download/1\.0

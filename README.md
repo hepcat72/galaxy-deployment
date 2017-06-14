@@ -8,31 +8,31 @@ Stops the galaxy server if it's running, clones the specified revision, applies 
 
 **Required parameters:**
 
-* `-i`: inventory host file
-* `--ask-become-pass`: password to be used to sudo to galaxy user
-* `--ask-vault-pass`: password used to decrypt the passwords file (used for production only)
+*   `-i`: inventory host file
+*   `--ask-become-pass`: password to be used to sudo to galaxy user
+*   `--ask-vault-pass`: password used to decrypt the passwords file (used for production only)
 
 **Optional parameters:**
 
-* `--tags`: only run plays and tasks tagged with these values (start, stop, restart)
-* `--skip-tags`: only run plays and tasks whose tags do not match these values (start, stop, restart)
+*   `--tags`: only run plays and tasks tagged with these values (start, stop, restart)
+*   `--skip-tags`: only run plays and tasks whose tags do not match these values (start, stop, restart)
 
 
 *Examples:*
 
-* Deploy galaxy to development, restarting galaxy
+*   Deploy galaxy to development, restarting galaxy
 
     `ansible-playbook -i development/inventory --ask-become-pass galaxy_deploy.yaml`
 
-* Deploy galaxy to production (including restart)
+*   Deploy galaxy to production (including restart)
 
     `ansible-playbook -i producion/inventory --ask-become-pass --ask-vault-pass galaxy_deploy.yaml`
 
-* Deploy galaxy, but do NOT restart
+*   Deploy galaxy, but do NOT restart
 
     `ansible-playbook -i development/inventory --ask-become-pass --skip-tags restart galaxy_deploy.yaml`
 
-* Restart galaxy, but do not update any files (no deployment related tasks)
+*   Restart galaxy, but do not update any files (no deployment related tasks)
 
     `ansible-playbook -i development/inventory --ask-become-pass --tags restart galaxy_deploy.yaml`
 
@@ -47,13 +47,13 @@ Runs functional tests on specified galaxy hosts and downloads the results.
 
 **Required parameters:**
 
-* `-i`: inventory host file
-* `--ask-become-pass`: password to be used to sudo to galaxy user
-* `--ask-vault-pass`: password used to decrypt the inventory file (contains passwords)
+*   `-i`: inventory host file
+*   `--ask-become-pass`: password to be used to sudo to galaxy user
+*   `--ask-vault-pass`: password used to decrypt the inventory file (contains passwords)
 
 **Optional parameters:**
 
-* `-e "test_params=PARAMS"`: extra parameters to be passed to the functional test script
+*   `-e "test_params=PARAMS"`: extra parameters to be passed to the functional test script
 
 *Examples:*
 
@@ -67,19 +67,19 @@ Prerequisites
 These Ansible roles are designed to run as the `galaxy` user and thus are
 missing various tasks that should be performed by root.
 
-* Install
-    * Mercurial
-    * Python (version 2.7.x preferred)
-    * virtualenv
-    * PostgreSQL
-    * Apache
-* Create and mount directories:
-    * `GALAXY_HOME`
-    * `file_path`
-    * `new_file_path`
-* Configure
-    * Apache as proxy
-    * PostgreSQL database
+*   Install
+    *   Mercurial
+    *   Python (version 2.7.x preferred)
+    *   virtualenv
+    *   PostgreSQL
+    *   Apache
+*   Create and mount directories:
+    *   `GALAXY_HOME`
+    *   `file_path`
+    *   `new_file_path`
+*   Configure
+    *   Apache as proxy
+    *   PostgreSQL database
 
 
 Sample inventory vars file:
