@@ -1,9 +1,9 @@
 ---
 env: development
-GALAXY_HOME: /Genomics/local/galaxy-dev/galaxy-dev/
-galaxy_venv_dir: /Genomics/local/galaxy-dev/galaxy-dev/.venv
-pip_virtualenv_command: virtualenv -p /usr/local/bin/python
-galaxy_changeset_id: release_15.10
+GALAXY_HOME: /galaxy/galaxy-app/
+galaxy_venv_dir: /galaxy/galaxy-app/.venv
+pip_virtualenv_command: /usr/local/opt/python/2.7.10/bin/python -m virtualenv
+galaxy_changeset_id: release_17.01
 config_directory: /galaxy/galaxy-app/config
 crontab_mailto: lparsons@genomics.princeton.edu
 database_user: galaxy
@@ -11,7 +11,7 @@ database_location: localhost
 database_port: 5431
 file_path: database/files
 new_file_path: database/tmp
-tmp_dir: /tmp
+tmp_dir: /tmp/galaxy
 export_dir: /tmp/galaxy_export
 log_level: DEBUG
 debug: True
