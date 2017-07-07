@@ -96,3 +96,5 @@ index	GRCm38	/reference-genomes/iGenomes/Mus_musculus/Ensembl/GRCm38/Sequence/Wh
 index	asm104321v1	/reference-genomes/escherichia_coli_k12/escherichia_coli_k12_ncm3722_asm104321v1/escherichia_coli_k12_ncm3722_asm104321v1_FASTA/GCF_001043215.1_ASM104321v1_genomic.fna.fasta
 index	ce11	/reference-genomes/caenorhabditis_elegans/caenorhabditis_elegans_ce11/caenorhabditis_elegans_ce11_FASTA/caenorhabditis_elegans_ce11.fasta
 index	dm6	/reference-genomes/drosophila_melanogaster/drosophila_melanogaster_dm6/drosophila_melanogaster_dm6_FASTA/genome.fasta
+index	GRCh38_NCBI	/reference-genomes/iGenomes/Homo_sapiens/NCBI/GRCh38/Sequence/WholeGenomeFasta/genome.fa
+index	GRCm38_NCBI	/reference-genomes/iGenomes/Mus_musculus/NCBI/GRCm38/Sequence/WholeGenomeFasta/genome.fa
