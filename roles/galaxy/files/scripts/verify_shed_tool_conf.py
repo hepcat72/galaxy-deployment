@@ -2,9 +2,10 @@
 # -*- coding: utf-8 -*-
 
 '''
-Check shed_tool_conf.xml file for missing paths and incorrect "installed_change_revision" attributes
+Check shed_tool_conf.xml file for missing paths and incorrect
+"installed_change_revision" attributes
 '''
-
+from __future__ import print_function
 import argparse
 import os
 import xml.etree.ElementTree as ET
@@ -19,16 +20,18 @@ def main():
     root = tree.getroot()
 
     tool_path = root.get("tool_path")
-    print tool_path
+    print(tool_path)
     tools = root.findall(".//tool")
     for tool in tools:
         # print tool.get("guid")
         filepath = os.path.join(tool_path, tool.get('file'))
-        installed_changeset_revision = tool.find("installed_changeset_revision").text
+        installed_changeset_revision = \
+            tool.find("installed_changeset_revision").text
         if filepath.find(installed_changeset_revision) == -1:
-            print "Installed changset revision: '%s' does not match filepath: '%s'" % (installed_changeset_revision, filepath)
+            print("Installed changset revision: '%s' does not match filepath: "
+                  "'%s'" % (installed_changeset_revision, filepath))
         if not os.path.exists(filepath):
-            print "Filepath: '%s' does not exist!"
+            print("Filepath: '%s' does not exist!")
 
 if __name__ == "__main__":
     main()
