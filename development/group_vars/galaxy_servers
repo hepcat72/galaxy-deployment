@@ -8,7 +8,7 @@ config_directory: /galaxy/galaxy-app/config
 crontab_mailto: lparsons@genomics.princeton.edu
 database_user: galaxy
 database_location: localhost
-database_port: 5431
+database_port: 5432
 file_path: database/files
 new_file_path: database/tmp
 tmp_dir: /tmp/galaxy

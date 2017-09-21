@@ -94,7 +94,7 @@
     day: "*"
     month: "*"
     weekday: "*"
-    job: "/usr/sbin/tmpwatch --atime --dirmtime 168 /scratch/tmp/galaxy_export"
+    job: "/usr/sbin/tmpwatch --atime --dirmtime 168 {{ export_dir }}"
 
 
 - name: crontab entry to update ncbi taxonomy

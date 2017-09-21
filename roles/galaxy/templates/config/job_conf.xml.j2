@@ -1,4 +1,17 @@
 <?xml version="1.0"?>
+{% if env != 'production' %}
+<job_conf>
+    <plugins>
+        <plugin id="local" type="runner" load="galaxy.jobs.runners.local:LocalJobRunner" workers="4"/>
+    </plugins>
+    <handlers>
+        <handler id="main"/>
+    </handlers>
+    <destinations>
+        <destination id="local" runner="local"/>
+    </destinations>
+</job_conf>
+{% else %}
 <job_conf>
     <plugins workers="10">
         <!-- "workers" is the number of threads for the runner's work queue.
@@ -145,3 +158,4 @@
         <tool id="ncbi_tblastx_wrapper" destination="cetus_multicore_highmem"/>
     </tools>
 </job_conf>
+{% endif %}
