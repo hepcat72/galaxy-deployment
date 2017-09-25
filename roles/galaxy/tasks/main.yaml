@@ -168,10 +168,10 @@
 
 - include: tool-dependencies.yaml
 
-- include: crontab.yaml
-
 - include: custom_scripts.yaml
   tags: scripts
+
+- include: crontab.yaml
 
 - include: taxonomy_tool_data.yaml
 

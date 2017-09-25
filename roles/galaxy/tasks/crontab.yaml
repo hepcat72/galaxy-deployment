@@ -17,14 +17,6 @@
 - name: create scripts logs directory
   file: dest={{ GALAXY_HOME }}/scripts/logs state=directory
 
-- name: create dataset_cleanup scripts directory
-  file: dest={{ GALAXY_HOME }}/scripts/cleanup_datasets state=directory
-
-- name: copy dataset_cleanup scripts
-  copy: src={{ item }} dest={{ GALAXY_HOME }}/scripts/cleanup_datasets owner=galaxy mode=755
-  with_fileglob:
-        - scripts/cleanup_datasets/*
-
 - name: set MAILTO in crontab
   cron:
     name: "MAILTO"
