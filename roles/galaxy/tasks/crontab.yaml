@@ -25,7 +25,6 @@
   with_fileglob:
         - scripts/cleanup_datasets/*
 
-
 - name: set MAILTO in crontab
   cron:
     name: "MAILTO"
@@ -96,11 +95,20 @@
     weekday: "*"
     job: "/usr/sbin/tmpwatch --atime --dirmtime 168 {{ export_dir }}"
 
+- name: crontab entry to cleanup log files
+  cron:
+    name: "cleanup exported galaxy files"
+    minute: "15"
+    hour: "5"
+    day: "*"
+    month: "*"
+    weekday: "*"
+    job: "/usr/sbin/tmpwatch --atime --dirmtime 168 {{ GALAXY_HOME }}/../logs"
 
 - name: crontab entry to update ncbi taxonomy
   cron:
     name: "update ncbi taxonomy"
-    minute: "15"
+    minute: "30"
     hour: "5"
     day: "*"
     month: "*"
