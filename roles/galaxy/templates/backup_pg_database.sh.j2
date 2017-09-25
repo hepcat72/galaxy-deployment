@@ -1,6 +1,7 @@
 #!/bin/bash
 
 BACKUP_DIR="{{ GALAXY_HOME }}/../postgres-backups"
+mkdir -p "${BACKUP_DIR}"
 
 NOW=$(date +"%Y-%m-%d")
 BACKUP_FILE_BASE="galaxy-dev_db_backup_"
