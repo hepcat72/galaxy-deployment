@@ -137,7 +137,7 @@
   file:
       path: "{{ GALAXY_HOME }}/../logs"
       state: directory
-      mode: 750
+      mode: 2755
 
 - include: hide_tools.yml
   tags: update
