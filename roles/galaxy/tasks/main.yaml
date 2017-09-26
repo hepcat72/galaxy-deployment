@@ -13,6 +13,14 @@
   tags:
     - userconfig
 
+- name: set galaxy user pgpass
+  template:
+    src: "pgpass/pgpass.j2"
+    dest: "{{ ansible_env.HOME }}/.pgpass"
+    mode: '0600'
+  tags:
+    - userconfig
+
 - stat: path="{{ GALAXY_HOME }}/.git"
   register: git
   tags: update
