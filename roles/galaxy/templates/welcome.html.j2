@@ -1,130 +1,154 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <link rel="stylesheet" href="style/base.css" type="text/css" />
-        <style type="text/css">
-            #maintenance-notice, #updates, #instructions, #diskspace-notice {
-                width: 48%;
-                display: inline-block;
-                vertical-align: top;
-            }
-        </style>
-        <title>Galaxy Data Analysis</title>
-    </head>
-    <body>
-        <div class="document">
-            <h1>Galaxy Data Analysis - <a target="_blank" href="http://www.princeton.edu/genomics">Lewis-Sigler Institute for Integrative Genomics</a></h1>
 
-            {% if env == 'development' %}
-            <div class="errormessagelarge section" id="development-notice">
-                <h1>DEVELOPMENT SERVER</h1>
-                <h3>ALL DATA IS SUBJECT TO REMOVAL WITHOUT NOTICE!</h3>
-            </div>
-            {% endif %}
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="style/base.css" type="text/css" />
+    <style type="text/css">
+        #diskspace-notice,
+        #instructions,
+        #maintenance-notice,
+        #updates {
+            width: 48%;
+            display: inline-block;
+            vertical-align: top;
+        }
+    </style>
+    <title>Galaxy Data Analysis</title>
+</head>
 
-            <div class="infomessagelarge section" id="updates">
-            <h2>What's New</h2>
+<body>
+    <div class="document">
+        <h1>Galaxy Data Analysis -
+    <a target="_blank" href="http://www.princeton.edu/genomics">Lewis-Sigler Institute for Integrative Genomics</a>
+    </h1>
+    {% if env == 'development' %}
+    <div class="errormessagelarge section" id="development-notice">
+        <h1>DEVELOPMENT SERVER</h1>
+        <h3>ALL DATA IS SUBJECT TO REMOVAL WITHOUT NOTICE!</h3>
+    </div>
+    {% endif %}
 
-            <h3>Maintenance Downtime - April 18, 11AM - 1PM</h3>
+    <div class="infomessagelarge section" id="updates">
+        <h2>What's New</h2>
 
-            <h3>Galaxy Release 17.01</h3>
-            <ul>
-                <li><strong>Support for compressed FASTQ formats:</strong> You
-                    can now upload compressed (with gzip or bzip2) FASTQ files
-                    without them being unpacked automatically (as it was until
-                    now). For this to work you have to select the proper type
-                    when uploading (e.g. instead of fastqsanger you select
-                    fastqsanger.gz or fastqsanger.bz2 for compressed files).
-                    Existing tools will work as before and future tools will be
-                    able to consume archives. Import from HTSEQ will be updated
-                    in the future to import these compressed files.</li>
-                
-                <li>Many other enchancements and fixes, see <a
-                        href="https://docs.galaxyproject.org/en/master/releases/17.01_announce.html">January
-                        2017 Galaxy Release (v17.01)</a></li>
-            </ul>
+        <h3>Galaxy Release 17.05</h3>
+        <ul>
+            <li>
+                <strong>Tag your data with propagating hashtags</strong>
+                <p>Large Galaxy histories used to be messy. Hashtags make it easy to track dataset
+                    (and collection) relationships. These two movies (both under a minute) explain
+                    how to use this <a href="https://vimeo.com/216884518">with datasets</a> and <a href="https://vimeo.com/216895965>">with collections.</a></p>
+                <p>Learn more about Galaxy histories in our updated <a href="https://galaxyproject.org/tutorials/histories/">tutorial<a></p>
+            </li>
 
-            <h3>UPDATED Tools</h3>
-            <ul>
-                <li><a href="http://cole-trapnell-lab.github.io/cufflinks/">Cufflinks,
-                        Cuffcompare, Cuffdiff, Cuffmerge, Cuffnorm, Cuffquant,
-                        gffread: 2.2.1</a></li>
-                <li><a href="https://toolshed.g2.bx.psu.edu/view/bgruening/text_processing">Textprocessing
-                        (awk, sed, etc.): 1.1.0</a></li>
-            </ul>
+            <li>
+                <strong>Drag &amp; Drop datasets into tool inputs</strong>
+                <p>Interface now allows dragging datasets from history panel into the content selectors
+                    of the tool form. Implemented in <a href="https://github.com/galaxyproject/galaxy/pull/3871">Pull Request 3871</a>.</p>
+            </li>
 
-            <h3>NEW Salmon</h3>
-            <p><a href="https://combine-lab.github.io/salmon/">Salmon</a> is a
-                tool for quantifying the expression of transcripts using
-                RNA-seq data. Salmon uses new algorithms (specifically,
-                coupling the novel concept of quasi-mapping with a two-phase
-                inference algorithm) to provide accurate expression estimates
-                very quickly (i.e. wicked-fast) and while using very little
-                memory. Salmon performs its inference using an expressive and
-                realistic model of RNA-seq data that takes into account the
-                attributes, like position-specfic bias, observed in real
-                experimental data.</p>
+            <li>
+                <strong>Upload directly to a collection<strong>
+                <p>You can now bypass the history manipulation and upload your data straight into a collection for convenience.</p>
+                <p>Learn more about collections and how to use them in a new <a href="https://galaxyproject.org/tutorials/collections/">tutorial</a>.</p>
+            </li>
 
-            <h3>NEW NuGEN NuDup</h3>
-            <p><a href="https://github.com/nugentechnologies/nudup">NuDup</a>
-                marks/removes duplicate molecules based on the molecular
-                tagging technology used in NuGEN products.</p>
+            <li>Many other enchancements and fixes, see
+                <a href="https://docs.galaxyproject.org/en/master/releases/17.05_announce.html">May 2017 Galaxy Release (v17.05)</a>
+            </li>
+        </ul>
 
-            <h3>Questions, comments, suggestions?</h3>
-            <p><a href="mailto:{{ crontab_mailto }}">{{ crontab_mailto }}</a></p>
-            <ul>
-                <li>New tools (custom tools are welcome!)</li>
-                <li>Reference genomes and other annotations</li>
-                <li>New data sources</li>
-                <li>Get help developing analysis pipelines for your lab</li>
-            </ul>
+        <h3>Questions, comments, suggestions?</h3>
+        <p>
+            <a href="mailto:{{ crontab_mailto }}">{{ crontab_mailto }}</a>
+        </p>
+        <ul>
+            <li>New tools (custom tools are welcome!)</li>
+            <li>Reference genomes and other annotations</li>
+            <li>New data sources</li>
+            <li>Get help developing analysis pipelines for your lab</li>
+        </ul>
+    </div>
 
-          </div>
+    <div class="donemessagelarge section" id="instructions">
+    <h2>Getting Started with Galaxy</h2>
+    <p>Get started by selecting
+    <strong>Get Data</strong> from the menu on the left. Upload a file from
+                    your computer or import sequencing data from HTSEQ.</p>
+                    <ul>
+                        <li>
+                            <a href="http://main.g2.bx.psu.edu/galaxy101">Galaxy 101: Tutorial explaining the galaxy basics</a>
+                        </li>
+                        <li>Watch
+                            <a href="http://galaxycast.org/">Screencasts</a>
+                        </li>
+                        <li>Get an overview of the most useful tools at the
+                            <a href="http://www.princeton.edu/genomics/sequencing/instructions/data-analysis/galaxy/">Sequencing Core's Galaxy Overview</a>
+                        </li>
+                        <li>Read about technical details on the
+                            <a href="http://wiki.g2.bx.psu.edu/">Galaxy Wiki</a>
+                        </li>
+                        <li>Join the
+                            <a href="https://sites.google.com/site/princetonhtseq/">Princeton HTSEQ Users Group</a>,
+                            discuss, present, and learn from other users in the Princeton research community</li>
+                        <li>Get expert advice from the
+                            <a href="http://www.princeton.edu/genomics/sequencing/">Lewis-Sigler Sequencing Core Facility</a>
+                        </li>
+                    </ul>
+                    <h3>
+    <a target="_blank" href="https://sites.google.com/site/princetonhtseq/tutorials/snp-and-indel-detection">SNP and Indel Detection Data Analysis Guide</a>
+    </h3>
+                    <p>A guide for SNP and Indel analysis that includes a step-by-step guide using
+                        Galaxy as well as a discussion of various options and considerations when analyzing
+                        data including visualization, mapping reads, and working with VCF files.</p>
+                    <h3>
+    <a target="_blank" href="http://sites.google.com/site/princetonhtseq/tutorials/rna-seq">RNA-Seq Data Analysis Guide</a>
+    </h3>
+                    <p>A step-by-step guide using Galaxy as well as some things to consider such as
+                        handling replicates, reads that map to multiple places, and additional software
+                        tools.
+                    </p>
+                    <h3>
+    <a target="_blank" href="http://sites.google.com/site/princetonhtseq/tutorials/chip-seq">ChIP-Seq Data Analysis Guide</a>
+    </h3>
+                    <p>A step-by-step guide to using Galaxy as well as a considerations regarding replicates,
+                        reads that map to multiple places, and additional software tools.</p>
 
-            <div class="donemessagelarge section" id="instructions">
-                <h2>Getting Started with Galaxy</h2>
-                <p>Get started by selecting <strong>Get Data</strong> from the menu on the left.  Upload a file from your computer or import sequencing data from HTSEQ.</p>
-                <ul>
-                    <li><a href="http://main.g2.bx.psu.edu/galaxy101">Galaxy 101: Tutorial explaining the galaxy basics</a></li>
-                    <li>Watch <a href="http://galaxycast.org/">Screencasts</a></li>
-                    <li>Get an overview of the most useful tools at the <a href="http://www.princeton.edu/genomics/sequencing/instructions/data-analysis/galaxy/">Sequencing Core's Galaxy Overview</a></li>
-                    <li>Read about technical details on the <a href="http://wiki.g2.bx.psu.edu/">Galaxy Wiki</a></li>
-                    <li>Join the <a href="https://sites.google.com/site/princetonhtseq/">Princeton HTSEQ Users Group</a>, discuss, present, and learn from other users in the Princeton research community</li>
-                    <li>Get expert advice from the <a href="http://www.princeton.edu/genomics/sequencing/">Lewis-Sigler Sequencing Core Facility</a></li>
-                </ul>
-                <h3><a target="_blank" href="https://sites.google.com/site/princetonhtseq/tutorials/snp-and-indel-detection">SNP and Indel Detection Data Analysis Guide</a></h3>
-                <p>A guide for SNP and Indel analysis that includes a step-by-step guide using Galaxy as well as a discussion of various options and considerations when analyzing data including visualization, mapping reads, and working with VCF files.</p>
-                <h3><a target="_blank" href="http://sites.google.com/site/princetonhtseq/tutorials/rna-seq">RNA-Seq Data Analysis Guide</a></h3>
-                <p>A step-by-step guide using Galaxy as well as some things to consider such as handling replicates, reads that map to multiple places, and additional software tools.</p>
-                <h3><a target="_blank" href="http://sites.google.com/site/princetonhtseq/tutorials/chip-seq">ChIP-Seq Data Analysis Guide</a></h3>
-                <p>A step-by-step guide to using Galaxy as well as a considerations regarding replicates, reads that map to multiple places, and additional software tools.</p>
-
-            </div>
-
-            <div class="errormessagelarge section" id="diskspace-notice">
-                <h2>Disk Space is Limited</h2>
-                <h3>Please delete datasets you no longer need to make room for others</h3>
-                <p>By viewing your list of saved histories, you can see how much space each is taking up.  Please delete any histories that you no longer need. Your cooperation is appreciated.</p>
-                <h3>Data stored for more than 30 days may be deleted without notice.</h3>
-           </div>
-
-           <div class="warningmessagelarge section" id="maintenance-notice">
-                <h2>Scheduled Maintenance</h2>
-                <p>The Galaxy system will undergo scheduled maintenance on the first Monday of each month from 9am-12pm.</p>
-            </div>
-
-            <hr/>
-            <p>The local instance of Galaxy at Princeton is funded in part by
-            the <a target="_blank" href="http://www.nigms.nih.gov/News/Results/quantitative_bio_center.htm">
-                National Institute of General Medical Sciences (NIGMS)</a>
-            [<a target="_blank" href="http://www.nih.gov/">NIH</a> grant P50 GM071508].</p>
-            <p><a target="_blank" href="http://htseq.princeton.edu">HTSEQ</a> and this local Galaxy instance are projects
-            within the <a target="_blank" href="http://www.genomics.princeton.edu">Lewis-Sigler
-                Institute for Integrative Genomics</a> of <a target="_blank" href="http://www.princeton.edu/">Princeton University</a>.</p>
-            <p>The Galaxy project is supported in part by <a target="_blank" class="reference" href="http://www.nsf.gov">NSF</a>, <a target="_blank" class="reference" href="http://www.genome.gov">NHGRI</a>, and <a target="_blank" class="reference" href="http://www.huck.psu.edu">the Huck Institutes of the Life Sciences</a>.</p>
         </div>
-    </body>
+
+        <div class="errormessagelarge section" id="diskspace-notice">
+            <h2>Disk Space is Limited</h2>
+            <h3>Please delete datasets you no longer need to make room for others</h3>
+            <p>By viewing your list of saved histories, you can see how much space each is taking
+                up. Please delete any histories that you no longer need. Your cooperation is
+                appreciated.
+            </p>
+            <h3>Data stored for more than 30 days may be deleted without notice.</h3>
+        </div>
+
+        <div class="warningmessagelarge section" id="maintenance-notice">
+            <h2>Scheduled Maintenance</h2>
+            <p>The Galaxy system will undergo scheduled maintenance on the first Monday of each
+                month from 9am-12pm.</p>
+        </div>
+
+        <hr/>
+        <p>The local instance of Galaxy at Princeton is funded in part by the
+            <a target="_blank" href="http://www.nigms.nih.gov/News/Results/quantitative_bio_center.htm">
+    National Institute of General Medical Sciences (NIGMS)</a> [
+            <a target="_blank" href="http://www.nih.gov/">NIH</a> grant P50 GM071508].</p>
+        <p>
+            <a target="_blank" href="http://htseq.princeton.edu">HTSEQ</a> and this local
+            Galaxy instance are projects within the
+            <a target="_blank" href="http://www.genomics.princeton.edu">Lewis-Sigler Institute for Integrative Genomics</a>            of
+            <a target="_blank" href="http://www.princeton.edu/">Princeton University</a>.</p>
+        <p>The Galaxy project is supported in part by
+            <a target="_blank" class="reference" href="http://www.nsf.gov">NSF</a>,
+            <a target="_blank" class="reference" href="http://www.genome.gov">NHGRI</a>, and
+            <a target="_blank" class="reference" href="http://www.huck.psu.edu">the Huck Institutes of the Life Sciences</a>.</p>
+    </div>
+</body>
+
 </html>
