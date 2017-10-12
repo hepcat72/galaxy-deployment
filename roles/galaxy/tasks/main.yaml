@@ -140,7 +140,9 @@
       mode: '2755'
 
 - include: hide_tools.yml
-  tags: update
+  tags:
+    - update
+    - config
 
 - name: tool-data files
   copy:
