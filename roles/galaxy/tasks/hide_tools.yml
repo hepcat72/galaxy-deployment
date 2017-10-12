@@ -6,8 +6,6 @@
   stat:
     path: "{{ config_directory }}/shed_tool_conf.xml"
   register: "shed_tool_conf"
-  tags:
-    config
 
 - name: Add hidden tag to shed_tool_conf.xml file
   lineinfile:
@@ -17,8 +15,6 @@
     line: '\1 hidden="True">'
     state: present
   when: shed_tool_conf.stat.exists == True
-  tags:
-    config
   with_items:
       - toolshed\.g2\.bx\.psu\.edu/repos/pcingola/snpeff/snpEff/1\.0
       - toolshed\.g2\.bx\.psu\.edu/repos/pcingola/snpeff/snpEff_download/1\.0
@@ -68,20 +64,37 @@
       - toolshed\.g2\.bx\.psu\.edu/repos/iuc/trinity/abundance_estimates_to_matrix/2\.1\.1\.1
       - toolshed\.g2\.bx\.psu\.edu/repos/iuc/trinity/align_and_estimate_abundance/2\.1\.1\.1
       - toolshed\.g2\.bx\.psu\.edu/repos/iuc/trinity/run_DE_analysis/2\.1\.1\.1
-      - toolshed\.g2\.bx\.psu\.edu/repos/devteam/variant_select/gatk_variant_select/0\.0\.3" />
-      - toolshed\.g2\.bx\.psu\.edu/repos/devteam/print_reads/gatk_print_reads/0\.0\.2" />
-      - toolshed\.g2\.bx\.psu\.edu/repos/devteam/variant_select/gatk_variant_select/0\.0\.2" />
-      - toolshed\.g2\.bx\.psu\.edu/repos/devteam/variant_annotator/gatk_variant_annotator/0\.0\.5" />
-      - toolshed\.g2\.bx\.psu\.edu/repos/devteam/variant_recalibrator/gatk_variant_recalibrator/0\.0\.4" />
-      - toolshed\.g2\.bx\.psu\.edu/repos/devteam/variant_filtration/gatk_variant_filtration/0\.0\.5" />
-      - toolshed\.g2\.bx\.psu\.edu/repos/devteam/variant_eval/gatk_variant_eval/0\.0\.8" />
-      - toolshed\.g2\.bx\.psu\.edu/repos/devteam/variant_combine/gatk_variant_combine/0\.0\.4" />
-      - toolshed\.g2\.bx\.psu\.edu/repos/devteam/variant_apply_recalibration/gatk_variant_apply_recalibration/0\.0\.4" />
-      - toolshed\.g2\.bx\.psu\.edu/repos/devteam/table_recalibration/gatk_table_recalibration/0\.0\.5" />
-      - toolshed\.g2\.bx\.psu\.edu/repos/devteam/realigner_target_creator/gatk_realigner_target_creator/0\.0\.4" />
-      - toolshed\.g2\.bx\.psu\.edu/repos/devteam/print_reads/gatk_print_reads/0\.0\.1" />
-      - toolshed\.g2\.bx\.psu\.edu/repos/devteam/indel_realigner/gatk_indel_realigner/0\.0\.6" />
-      - toolshed\.g2\.bx\.psu\.edu/repos/devteam/depth_of_coverage/gatk_depth_of_coverage/0\.0\.2" />
-      - toolshed\.g2\.bx\.psu\.edu/repos/devteam/count_covariates/gatk_count_covariates/0\.0\.5" />
-      - toolshed\.g2\.bx\.psu\.edu/repos/devteam/analyze_covariates/gatk_analyze_covariates/0\.0\.5" />
-      - toolshed\.g2\.bx\.psu\.edu/repos/devteam/unified_genotyper/gatk_unified_genotyper/0\.0\.6" />
+      - toolshed\.g2\.bx\.psu\.edu/repos/devteam/variant_select/gatk_variant_select/0\.0\.3
+      - toolshed\.g2\.bx\.psu\.edu/repos/devteam/print_reads/gatk_print_reads/0\.0\.2
+      - toolshed\.g2\.bx\.psu\.edu/repos/devteam/unified_genotyper/gatk_unified_genotyper/0\.0\.6
+      
+- name: test migrated_tools_conf.xml exists
+  stat:
+    path: "{{ config_directory }}/migrated_tools_conf.xml"
+  register: "migrated_tools_conf"
+
+- name: Add hidden tag to migrated_tools_conf.xml file
+  lineinfile:
+    dest: "{{ config_directory }}/migrated_tools_conf.xml"
+    regexp: '(^\s*<tool .* guid="{{ item }}")>'
+    backrefs: yes
+    line: '\1 hidden="True">'
+    state: present
+  when: migrated_tools_conf.stat.exists == True
+  with_items:
+      - toolshed\.g2\.bx\.psu\.edu/repos/devteam/print_reads/gatk_print_reads/0\.0\.1
+      - toolshed\.g2\.bx\.psu\.edu/repos/devteam/variant_select/gatk_variant_select/0\.0\.2
+      - toolshed\.g2\.bx\.psu\.edu/repos/devteam/variant_annotator/gatk_variant_annotator/0\.0\.5
+      - toolshed\.g2\.bx\.psu\.edu/repos/devteam/variant_recalibrator/gatk_variant_recalibrator/0\.0\.4
+      - toolshed\.g2\.bx\.psu\.edu/repos/devteam/variant_filtration/gatk_variant_filtration/0\.0\.5
+      - toolshed\.g2\.bx\.psu\.edu/repos/devteam/variant_eval/gatk_variant_eval/0\.0\.8
+      - toolshed\.g2\.bx\.psu\.edu/repos/devteam/variant_combine/gatk_variant_combine/0\.0\.4
+      - toolshed\.g2\.bx\.psu\.edu/repos/devteam/variant_apply_recalibration/gatk_variant_apply_recalibration/0\.0\.4
+      - toolshed\.g2\.bx\.psu\.edu/repos/devteam/table_recalibration/gatk_table_recalibration/0\.0\.5
+      - toolshed\.g2\.bx\.psu\.edu/repos/devteam/realigner_target_creator/gatk_realigner_target_creator/0\.0\.4
+      - toolshed\.g2\.bx\.psu\.edu/repos/devteam/print_reads/gatk_print_reads/0\.0\.1
+      - toolshed\.g2\.bx\.psu\.edu/repos/devteam/indel_realigner/gatk_indel_realigner/0\.0\.6
+      - toolshed\.g2\.bx\.psu\.edu/repos/devteam/depth_of_coverage/gatk_depth_of_coverage/0\.0\.2
+      - toolshed\.g2\.bx\.psu\.edu/repos/devteam/count_covariates/gatk_count_covariates/0\.0\.5
+      - toolshed\.g2\.bx\.psu\.edu/repos/devteam/analyze_covariates/gatk_analyze_covariates/0\.0\.5
+      - toolshed\.g2\.bx\.psu\.edu/repos/devteam/unified_genotyper/gatk_unified_genotyper/0\.0\.6
