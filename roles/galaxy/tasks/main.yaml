@@ -118,6 +118,7 @@
   with_items:
       - "tool_data_table_conf.xml"
       - "dependency_resolvers_conf.xml"
+      - "datatypes_magenta_conf.xml"
   tags:
     config
 
