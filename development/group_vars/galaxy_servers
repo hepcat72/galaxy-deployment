@@ -3,7 +3,7 @@ env: development
 GALAXY_HOME: /galaxy/galaxy-app/
 galaxy_venv_dir: /galaxy/galaxy-app/.venv
 pip_virtualenv_command: /usr/local/opt/python/2.7.10/bin/python -m virtualenv
-galaxy_changeset_id: release_17.05
+galaxy_changeset_id: release_17.09
 config_directory: /galaxy/galaxy-app/config
 crontab_mailto: lparsons@genomics.princeton.edu
 database_user: galaxy

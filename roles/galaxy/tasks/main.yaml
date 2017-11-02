@@ -203,7 +203,7 @@
   tags: update
 
 - name: Upgrade Galaxy DB
-  command: "{{ galaxy_venv_dir }}/bin/python {{ GALAXY_HOME }}/scripts/manage_db.py upgrade chdir={{ GALAXY_HOME }}"
+  command: "{{ GALAXY_HOME }}/scripts/common_startup.sh && {{ GALAXY_HOME }}/manage_db.sh upgrade chdir={{ GALAXY_HOME }}"
   when: current_db_version.stdout != max_db_version.stdout
   tags: update
 
