@@ -67,7 +67,8 @@
       - toolshed\.g2\.bx\.psu\.edu/repos/devteam/variant_select/gatk_variant_select/0\.0\.3
       - toolshed\.g2\.bx\.psu\.edu/repos/devteam/print_reads/gatk_print_reads/0\.0\.2
       - toolshed\.g2\.bx\.psu\.edu/repos/devteam/unified_genotyper/gatk_unified_genotyper/0\.0\.6
-      
+      - toolshed\.g2\.bx\.psu\.edu/repos/devteam/freebayes/freebayes/freebayes-0\.9\.14
+
 - name: test migrated_tools_conf.xml exists
   stat:
     path: "{{ config_directory }}/migrated_tools_conf.xml"
