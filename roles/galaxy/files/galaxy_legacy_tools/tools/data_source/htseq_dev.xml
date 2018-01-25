@@ -4,56 +4,27 @@
     the initial response.  If value of 'URL_method' is 'post', any additional params coming back in the
     initial response ( in addition to 'URL' ) will be encoded and appended to URL and a post will be performed.
 -->
-<tool name="Princeton HTSEQ Development" id="princeton_htseq_dev" tool_type="data_source">
-	<description>HTSEQ Data Import</description>
-	<command interpreter="python">data_source.py $output $__app__.config.output_size_limit</command>
-	<inputs action="https://htseqdev-lparsons.princeton.edu/cgi-bin/search/advanced.pl" check_values="false" method="get">
-		<display>go to Princeton HTSEQ $GALAXY_URL</display>
+<tool name="Princeton HTSEQ Staging" id="princeton_htseq_dev" tool_type="data_source">
+	<description>HTSEQ Staging (Test) Data Import</description>
+    <requirements>
+        <requirement type="package" version="1.0.1">json_collect_data_source</requirement>
+    </requirements>
+    <command detect_errors="exit_code">json_collect_data_source.py '${__app__.config.output_size_limit}' --json_param_file '${output1}' --path '.' --appdata 'tmp'</command>
+
+    <inputs check_values="False" action="http://stage-htseq.princeton.edu/cgi-bin/viewableDatasets.pl">
 		<param name="GALAXY_URL" type="baseurl" value="/tool_runner" />
-		<param name="tool_id" type="hidden" value="princeton_htseq" />
-		<!--
-		<param name="sendToGalaxy" type="hidden" value="1" />
-		<param name="hgta_compressType" type="hidden" value="none" />
-		<param name="hgta_outputType" type="hidden" value="bed" />
-		-->
-	</inputs>
-	<request_param_translation>
-       	<request_param galaxy_name="organism" remote_name="organism" missing="unknown species">
-	<request_param galaxy_name="description" remote_name="description" missing="no description" />
-        	<value_translation>
-			<value galaxy_value="D. melanogaster" remote_value="Drosophila melanogaster"/>
-		</value_translation>
-	</request_param>
-	<request_param galaxy_name="dbkey" remote_name="organism" missing="?">
-        	<value_translation>
-			<value galaxy_value="dm3" remote_value="Drosophila melanogaster"/>
-		</value_translation>
-	</request_param>
-	</request_param_translation>
-	<!--
-	<request_param_translation>
-        <request_param galaxy_name="URL_method" remote_name="URL_method" missing="post" />
-        <request_param galaxy_name="URL" remote_name="URL" missing="" />
-        <request_param galaxy_name="dbkey" remote_name="db" missing="?" />
-        <request_param galaxy_name="organism" remote_name="org" missing="unknown species" />
-	    <request_param galaxy_name="table" remote_name="hgta_table" missing="unknown table" />
-	    <request_param galaxy_name="description" remote_name="hgta_regionType" missing="no description" />
-	    <request_param galaxy_name="data_type" remote_name="hgta_outputType" missing="tabular" >
-            <value_translation>
-                <value galaxy_value="tabular" remote_value="primaryTable" />
-                <value galaxy_value="tabular" remote_value="selectedFields" />
-                <value galaxy_value="wig" remote_value="wigData" />
-                <value galaxy_value="interval" remote_value="tab" />
-                <value galaxy_value="html" remote_value="hyperlinks" />
-                <value galaxy_value="fasta" remote_value="sequence" />
-                <value galaxy_value="gtf" remote_value="gff" />
-            </value_translation>
-        </request_param>
-	</request_param_translation>
-	-->
-	<uihints minwidth="800"/>
-	<outputs>
-		<data name="output" format="fastqsanger" />
-	</outputs>
-	<options sanitize="False" refresh="True"/>
+		<param name="tool_id" type="hidden" value="princeton_htseq_dev" />
+        <!--
+        <param name="URL" type="hidden" value="http://stage-htseq.princeton.edu/tool_runner" />
+        -->
+    </inputs>
+    <outputs>
+        <!--
+        <collection name="list_output" type="list:list" label="${tool.name} Dataset Collection">
+            <discover_datasets pattern="__name_and_ext__" ext="auto" visible="False" directory="." />
+        </collection>
+        -->
+        <data name="output1" format="auto" label="${tool.name} Data" />
+    </outputs>
+    <options sanitize="False" refresh="True"/>
 </tool>
