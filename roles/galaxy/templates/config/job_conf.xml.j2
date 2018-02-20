@@ -38,6 +38,9 @@
         <destination id="cetus_singlecore" runner="slurm">
             <param id="nativeSpecification">--mem=10000 -p prod</param>
         </destination>
+        <destination id="dtd_destination" runner="dynamic">
+            <param id="type">dtd</param>
+        \</destination>
         <destination id="cetus_singlecore_mediummem" runner="slurm">
             <param id="nativeSpecification">--mem=50000 -p prod</param>
             <env id="_JAVA_OPTIONS">-Xms5G -Xmx50G</env>
@@ -128,10 +131,10 @@
         <tool id="unified_genotyper" destination="cetus_multicore_mediummem"/>
         <tool id="realigner_target_creator" destination="cetus_multicore_mediummem"/>
         <tool id="megablast_wrapper" destination="cetus_multicore_mediummem"/>
-        <tool id="freebayes" destination="cetus_multicore_highmem_1wk"/>
+        <tool id="freebayes" destination="cetus_multicore_highmem"/>
         <tool id="fastqc" destination="cetus_singlecore_mediummem"/>
         <tool id="rseqc_read_distribution" destination="cetus_singlecore_highmem"/>
-        <tool id="rseqc_geneBody_coverage" destination="cetus_singlecore_1wk"/>
+        <tool id="rseqc_geneBody_coverage" destination="cetus_singlecore"/>
         <tool id="fastq_paired_end_joiner" destination="cetus_singlecore_mediummem"/>
         <tool id="CONVERTER_bedgraph_to_bigwig" destination="cetus_singlecore_mediummem"/>
         <tool id="CONVERTER_gff_to_interval_index_0" destination="cetus_singlecore_mediummem"/>
