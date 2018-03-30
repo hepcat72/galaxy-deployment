@@ -106,3 +106,4 @@ ce11	ce11	Caenorhabditis elegans (UCSC Feb 2013) (ce11)	/reference-genomes/caeno
 dm6	dm6	D. melanogaster Aug. 2014 (BDGP Release 6 + ISO1 MT/dm6) (dm6)	/reference-genomes/drosophila_melanogaster/drosophila_melanogaster_dm6/drosophila_melanogaster_dm6_BWA/drosophila_melanogaster_dm6
 GRCh38_NCBI	GRCh38_NCBI	Human (NCBI) (GRCh38_NCBI)	/reference-genomes/iGenomes/Homo_sapiens/NCBI/GRCh38/Sequence/BWAIndex/version0.5.x/genome.fa
 GRCm38_NCBI	GRCm38_NCBI	Mouse M. musculus (NBCI) (GRCm38_NCBI)	/reference-genomes/iGenomes/Mus_musculus/NCBI/GRCm38/Sequence/BWAIndex/version0.5.x/genome.fa
+GRCh38	GRCh38	Human (Ensembl GRCh38) (GRCh38)	/reference-genomes/homo_sapiens/homo_sapiens_grch38/homo_sapiens_grch38_BWA/homo_sapiens_grch38
