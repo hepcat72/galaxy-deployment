@@ -3,7 +3,7 @@
 [server:main]
 
 use = egg:Paste#http
-port = 9001
+port = 9000
 host = 127.0.0.1
 use_threadpool = true
 threadpool_workers = 10
@@ -19,7 +19,7 @@ log_level = DEBUG
 # Database connection
 # Galaxy reports are intended for production Galaxy instances, so sqlite is not supported.
 # You may use a SQLAlchemy connection string to specify an external database.
-# database_connection = postgres:///galaxy_test?user=postgres&password=postgres 
+# database_connection = postgres:///galaxy_test?user=postgres&password=postgres
 database_connection = postgres://{{ database_user }}:{{ database_password }}@{{ database_location }}:{{ database_port }}/galaxy
 
 # Where dataset files are saved
