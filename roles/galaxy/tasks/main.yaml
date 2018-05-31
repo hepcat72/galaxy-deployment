@@ -183,6 +183,7 @@
   tags: scripts
 
 - include: crontab.yaml
+  tags: crontab
 
 - include: taxonomy_tool_data.yaml
 

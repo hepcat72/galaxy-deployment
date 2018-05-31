@@ -89,7 +89,7 @@
 
 - name: crontab entry to cleanup log files
   cron:
-    name: "cleanup exported galaxy files"
+    name: "cleanup galaxy log files"
     minute: "15"
     hour: "5"
     day: "*"
