@@ -42,21 +42,10 @@
 					do many analyses just by exploring the interface. However, you may miss much of
 					the power this way.</p>
 
-				<h3>Interactive Tours</h3>
-				<p>Select any tour to get started (and remember, you can click 'End Tour' at any
+				<h3><a target="_parent" href="/tours">Interactive Tours</a></h3>
+				<p>Select from basic and advanced tours to get an interactive walkthrough of many
+					of Galaxy's features (and remember, you can click 'End Tour' at any
 					time).</p>
-				<ul>
-					<li>
-						<a href="/tours/core.history" target="_parent">History Introduction</a>
-						- A detailed introduction to the Galaxy History</li>
-					<li>
-						<a href="/tours/core.galaxy_ui" target="_parent">Galaxy UI</a>
-						- A gentle introduction to the Galaxy User Interface</li>
-					<li>
-						<a href="/tours/core.scratchbook" target="_parent">Scratchbook</a>
-						- Introduction - An introduction on how to display multiple datasets and
-						visualizations next to each other.</li>
-				</ul>
 
 				<h3>Princeton Community</h3>
 				<ul>
@@ -71,29 +60,43 @@
 
 			<div class="infomessagelarge section" id="updates">
 				<h2>What's New</h2>
-
 				<h3>
 					<a
 						target="_blank"
-						href="https://docs.galaxyproject.org/en/master/releases/17.09_announce.html">Galaxy Release 17.09</a>
+						href="https://docs.galaxyproject.org/en/master/releases/18.01_announce.html">Galaxy Release 18.05</a>
+					and
+					<a
+						target="_blank"
+						href="https://docs.galaxyproject.org/en/master/releases/18.01_announce.html">Galaxy Release 18.01</a>
 				</h3>
 				<ul>
 					<li>
-						<strong>Download entire collection</strong>
-						<p>Downloading whole colections is now possible from the history interface.
-							<a target="_blank" href="https://github.com/galaxyproject/galaxy/pull/4098">Pull Request 4098</a>
-							Thanks to
-							<a target="_blank" href="https://github.com/mvdbeek">@mvdbeek</a>.</p>
+						<strong>Unlimited Browser Upload Size</strong>
+						<p>Support for chunked and resumable file uploads out-of-the-box. This should
+							effectively eliminate browser-based limitations on the size of files that
+							can be uploaded to Galaxy.
+						</p>
 					</li>
-
 					<li>
-						<strong>Switch tool versions in workflows</strong>
-						<p>You can now select exactly what version of tool you want to use when building
-							workflows.
-							<a target="_blank" href="https://github.com/galaxyproject/galaxy/pull/4373">
-								Pull Request 4373</a>
-							Thanks to
-							<a target="_blank" href="https://github.com/mvdbeek">@mvdbeek</a>.</p>
+						<strong>Dataset Collection Usability</strong>
+						<p>This release has significantly improved the usability of Galaxy dataset collections.
+							Dozens of improvements to collections have been made.
+						</p>
+					</li>
+					<li>
+						<strong>New Powerful Rule-Based Data Uploader</strong>
+						<p>Galaxy now features a powerful new interface for manipulating lists of rules
+							for processing metadata that can be used to describe the upload of arbitrarily
+							complex collections as well as individual datasets. These rules can be used to
+							build collections from lists of URLs, FTP directory contents, data library folders,
+							and tabular sample sheets or exports from external data sources. Check out
+							<a href="https://github.com/jmchilton/training-material/blob/rules/topics/introduction/tutorials/galaxy-intro-rules/tutorial.md">
+								this tutorial</a> describing new techniques for loading large numbers of
+							datasets and complex collections into Galaxy.
+						</p>
+					</li>
+					<li>
+						<strong>Performance and User Interface improvements</strong>
 					</li>
 				</ul>
 
@@ -104,26 +107,6 @@
 					MultiQC is a tool that aggregates results from bioinformatics analyses across
 					many samples into a single HTML report. It's a general use tool, perfect for
 					summarising the output from numerous bioinformatics tools.</p>
-
-				<h3>
-					<a target="_blank" href="https://vanopijnenlab.github.io/MAGenTA/">MAGenTA: Microbial Assessment by Genome-wide Tn-Seq Analysis</a>
-				</h3>
-				<p>
-					MAGenTA is suite of tools for Transposon-Sequencing (Tn-Seq) data analysis.
-					Tn-Seq combines transposon insertional mutagenesis with high-throughput
-					sequencing of the transposon insertion sites to identify genes contributing to a
-					function of interest in bacteria.</p>
-
-				<h3>
-					<a target="_blank" href="https://ccb.jhu.edu/software/FLASH/">FLASH (Fast Length Adjustment of SHort reads)</a>
-				</h3>
-				<p>
-					FLASH is a very fast and accurate software tool to merge paired-end reads from
-					next-generation sequencing experiments. FLASH is designed to merge pairs of
-					reads when the original DNA fragments are shorter than twice the length of
-					reads. The resulting longer reads can significantly improve genome assemblies.
-					They can also improve transcriptome assembly when FLASH is used to merge RNA-seq
-					data.</p>
 			</div>
 
 			<div class="errormessagelarge section" id="diskspace-notice">

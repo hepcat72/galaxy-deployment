@@ -188,13 +188,13 @@
 - include: taxonomy_tool_data.yaml
 
 - name: Get current Galaxy DB version
-  command: "{{ galaxy_venv_dir }}/bin/python {{ GALAXY_HOME }}/scripts/manage_db.py db_version chdir={{ GALAXY_HOME }}"
+  command: "{{ GALAXY_HOME }}/scripts/common_startup.sh && {{ GALAXY_HOME }}/manage_db.sh db_version chdir={{ GALAXY_HOME }}"
   register: current_db_version
   changed_when: False
   tags: update
 
 - name: Get maximum Galaxy DB version
-  command: "{{ galaxy_venv_dir }}/bin/python {{ GALAXY_HOME }}/scripts/manage_db.py version chdir={{ GALAXY_HOME }}"
+  command: "{{ GALAXY_HOME }}/scripts/common_startup.sh && {{ GALAXY_HOME }}/manage_db.sh version chdir={{ GALAXY_HOME }}"
   register: max_db_version
   changed_when: False
   tags: update
