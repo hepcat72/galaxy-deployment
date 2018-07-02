@@ -7,6 +7,7 @@
       src: "tool-dependencies/"
       dest: "{{ GALAXY_HOME }}/tool-dependencies/"
       follow: no
+      local_follow: no
 
 - name: bedtools_links
   file:
