@@ -64,6 +64,9 @@
         <destination id="cetus_multicore_highmem_1wk" runner="slurm">
             <param id="nativeSpecification">-N 1=1 --ntasks=15 --mem=285000 --qos=1wk</param>
         </destination>
+        <destination id="cetus_fullnode_1day" runner="slurm">
+            <param id="nativeSpecification">-N 1=1 --ntasks=20 --mem=380000 --qos=1day</param>
+        </destination>
         <destination id="cetus_fullnode_1wk" runner="slurm">
             <param id="nativeSpecification">-N 1=1 --ntasks=20 --mem=380000 --qos=1wk</param>
         </destination>
@@ -139,7 +142,7 @@
         <tool id="CONVERTER_bedgraph_to_bigwig" destination="cetus_singlecore_mediummem"/>
         <tool id="CONVERTER_gff_to_interval_index_0" destination="cetus_singlecore_mediummem"/>
         <tool id="wig_to_bigWig" destination="cetus_singlecore_highmem"/>
-        <tool id="trinity" destination="cetus_fullnode_1wk"/>
+        <tool id="trinity" destination="dtd_destination"/>
         <tool id="align_and_estimate_abundance" destination="cetus_multicore_mediummem"/>
         <tool id="trinity_align_and_estimate_abundance" destination="cetus_multicore_mediummem"/>
         <tool id="macs2_callpeak" destination="cetus_singlecore_mediummem"/>
@@ -150,7 +153,7 @@
         <tool id="rna_star" destination="cetus_multicore_highmem"/>
         <tool id="hisat2" destination="cetus_multicore_mediummem"/>
         <tool id="featurecounts" destination="cetus_multicore"/>
-        <tool id="spades" destination="cetus_fullnode_long"/>
+        <tool id="spades" destination="dtd_destination"/>
         <tool id="quast" destination="cetus_multicore_highmem"/>
         <tool id="ncbi_blastn_wrapper" destination="cetus_multicore_highmem"/>
         <tool id="ncbi_blastp_wrapper" destination="cetus_multicore_highmem"/>
@@ -164,7 +167,7 @@
         <tool id="flash" destination="cetus_multicore"/>
         <tool id="bowtie_mapper" destination="cetus_multicore_mediummem"/>
         <tool id="busco" destination="cetus_multicore"/>
-        <tool id="unicycler" destination="cetus_fullnode_1wk"/>
+        <tool id="unicycler" destination="dtd_destination"/>
         <tool id="rna_star_index_builder_data_manager" destination="cetus_multicore_mediummem"/>
     </tools>
 </job_conf>
