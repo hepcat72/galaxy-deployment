@@ -4,7 +4,7 @@ BACKUP_DIR="{{ GALAXY_HOME }}/../postgres-backups"
 mkdir -p "${BACKUP_DIR}"
 
 NOW=$(date +"%Y-%m-%d")
-BACKUP_FILE_BASE="galaxy-dev_db_backup_"
+BACKUP_FILE_BASE="galaxy-{{ env }}_database_backup_"
 BACKUP_FILE_EXT=".pg"
 BACKUP_FILE="${BACKUP_FILE_BASE}${NOW}${BACKUP_FILE_EXT}"
 pg_dump galaxy -p {{ database_port }} -U galaxy -Fc -f "${BACKUP_DIR}/${BACKUP_FILE}"

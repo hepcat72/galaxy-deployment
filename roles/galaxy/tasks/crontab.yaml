@@ -1,12 +1,12 @@
 - name: create cron scripts from templates
   template:
-    src: "{{ item }}.j2"
+    src: "cron/{{ item }}.j2"
     dest: "{{ GALAXY_HOME }}/cron/{{ item }}"
     mode: 0755
   with_items:
       - "backup_pg_database.sh"
       - "backup_galaxy_maintained_files.sh"
-      - "dataset_cleanup.sh"
+      - "cleanup_datasets.sh"
       - "set_user_disk_usage.sh"
       - "updateucsc.sh"
       - "processTaxonomy_cron.sh"
@@ -55,7 +55,7 @@
     day: "*"
     month: "*"
     weekday: "*"
-    job: "export PATH=/usr/local/bin:$PATH; {{ GALAXY_HOME }}/cron/dataset_cleanup.sh >/dev/null"
+    job: "export PATH=/usr/local/bin:$PATH; {{ GALAXY_HOME }}/cron/cleanup_datasets.sh"
 
 - name: crontab entry to set Galaxy user disk usage
   cron:
@@ -95,7 +95,7 @@
     day: "*"
     month: "*"
     weekday: "*"
-    job: "/usr/sbin/tmpwatch --atime --dirmtime 168 {{ GALAXY_HOME }}/../logs"
+    job: "/usr/sbin/logrotate {{ GALAXY_HOME }}/config/logrotate/logrotate.conf --state {{ GALAXY_HOME }}/config/logrotate/logrotate-state"
 
 - name: crontab entry to update ncbi taxonomy
   cron:
@@ -105,7 +105,7 @@
     day: "*"
     month: "*"
     weekday: "*"
-    job: "/bin/sh {{ GALAXY_HOME }}/cron/processTaxonomy_cron.sh >/dev/null"
+    job: "/bin/sh {{ GALAXY_HOME }}/cron/processTaxonomy_cron.sh"
 
 - name: crontab entry to update ucsc genomes
   cron:

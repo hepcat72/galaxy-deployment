@@ -5,14 +5,13 @@ GALAXY_HOME="{{ GALAXY_HOME }}"
 cd "${GALAXY_HOME}/scripts/taxonomy"
 
 # Logfile name
-NOW=$(date +"%Y-%m-%d")
-LOGFILE="processTaxonomy-$NOW.log"
+LOGFILE="processTaxonomy.log"
 
 # Delete old data
 rm -rf "${GALAXY_HOME}/scripts/taxonomy/taxdump.tar.gz"*
 
 # Run taxonomy script
-/bin/sh processTaxonomy.sh > "${GALAXY_HOME}/../logs/${LOGFILE}" 2>&1
+/bin/sh processTaxonomy.sh > "${GALAXY_HOME}/../logs/${LOGFILE}"
 
 # Move files
 mv -f "${GALAXY_HOME}/scripts/taxonomy/gi_taxid_sorted.txt" "${GALAXY_HOME}/tool-data/taxonomy/"

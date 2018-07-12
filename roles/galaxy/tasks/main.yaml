@@ -96,6 +96,9 @@
 - name: add legacy jars
   copy: src="galaxy_legacy_tools/tool-data/" dest="{{ GALAXY_HOME }}/tool-data/" backup=yes
 
+- name: create logrotate config directory
+  file: dest={{ GALAXY_HOME }}/config/logrotate state=directory
+
 - name: config templates
   template:
     src: "config/{{ item }}.j2"
@@ -107,6 +110,7 @@
     - "job_conf.xml"
     - "tool_sheds_conf.xml"
     - "tool_conf.xml"
+    - "logrotate/logrotate.conf"
   tags:
     config
 

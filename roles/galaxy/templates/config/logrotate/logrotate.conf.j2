@@ -1,0 +1,16 @@
+{{ GALAXY_HOME }}/../logs/*.log* {
+    weekly
+    rotate 8
+    compress
+    missingok
+    notifempty
+}
+
+{{ GALAXY_HOME }}/*.log* {
+    weekly
+    rotate 8
+    copytruncate
+    compress
+    missingok
+    notifempty
+}

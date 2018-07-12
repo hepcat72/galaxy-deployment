@@ -2,7 +2,7 @@
 - name: create scripts directory
   file: dest={{ GALAXY_HOME }}/scripts/ state=directory
 
-- name: create dataset_cleanup scripts directory
+- name: create cleanup_datasets scripts directory
   file: dest={{ GALAXY_HOME }}/scripts/cleanup_datasets state=directory
 
 - name: copy scripts
