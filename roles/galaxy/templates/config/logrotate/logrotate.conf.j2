@@ -1,4 +1,4 @@
-{{ GALAXY_HOME }}/../logs/*.log* {
+{{ GALAXY_HOME }}/../logs/*.log {
     weekly
     rotate 8
     compress
@@ -6,7 +6,7 @@
     notifempty
 }
 
-{{ GALAXY_HOME }}/*.log* {
+{{ GALAXY_HOME }}/*.log {
     weekly
     rotate 8
     copytruncate
