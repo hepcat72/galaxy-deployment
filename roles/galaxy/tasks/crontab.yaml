@@ -106,6 +106,7 @@
     month: "*"
     weekday: "*"
     job: "/bin/sh {{ GALAXY_HOME }}/cron/processTaxonomy_cron.sh"
+    disabled: "{{ env == 'development' }}"
 
 - name: crontab entry to update ucsc genomes
   cron:
