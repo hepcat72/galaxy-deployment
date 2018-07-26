@@ -234,5 +234,35 @@ tools:
         destination: cetus_fullnode_long
     default_destination: cetus_fullnode_1day
 
+  rna_star_index_builder_data_manager:
+    rules:
+      - rule_type: file_size
+        nice_value: 0
+        lower_bound: 0
+        upper_bound: 5 GB
+        destination: cetus_multicore
+      - rule_type: file_size
+        nice_value: 0
+        lower_bound: 5 GB
+        upper_bound: 11 GB
+        destination: cetus_multicore_mediummem
+      - rule_type: file_size
+        nice_value: 0
+        lower_bound: 11 GB
+        upper_bound: 22 GB
+        destination: cetus_multicore_highmem
+      - rule_type: file_size
+        nice_value: 0
+        lower_bound: 22 GB
+        upper_bound: 40 GB
+        destination: cetus_fullnode_1day
+      - rule_type: file_size
+        nice_value: 0
+        lower_bound: 40 GB
+        upper_bound: Infinity
+        fail_message: We do not support building STAR indexes for references >40 GB
+        destination: fail
+    default_destination: cetus_multicore
+
 default_destination: cetus_singlecore
 verbose: True
