@@ -117,4 +117,4 @@
     month: "*"
     weekday: "mon-sat"
     job: "{{ GALAXY_HOME }}cron/updateucsc.sh >> {{ GALAXY_HOME }}/../logs/updateucsc.log"
-
+    disabled: "{{ env == 'development' }}"
