@@ -70,12 +70,22 @@
 - name: crontab entry to cleanup Galaxy temp files
   cron:
     name: "cleanup galaxy tempfiles"
-    minute: "30"
+    minute: "20"
     hour: "4"
     day: "*"
     month: "*"
     weekday: "*"
     job: "/usr/sbin/tmpwatch --atime --dirmtime 168 {{ tmp_dir }}"
+
+- name: crontab entry to cleanup Galaxy new_file_path files
+  cron:
+    name: "cleanup galaxy tempfiles"
+    minute: "40"
+    hour: "4"
+    day: "*"
+    month: "*"
+    weekday: "*"
+    job: "/usr/sbin/tmpwatch --atime --dirmtime 168 {{ new_file_path }}"
 
 - name: crontab entry to cleanup exported Galaxy files
   cron:
