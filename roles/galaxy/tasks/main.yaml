@@ -76,6 +76,7 @@
   #  - restart galaxy
 
 - include: virtualenv.yml
+  tags: virtualenv
 
 - name: Get updated tool migration stage
   shell: ls -1 *tools.sh | sort chdir={{ GALAXY_HOME }}/scripts/migrate_tools/
@@ -120,7 +121,6 @@
       dest: "{{ config_directory }}/{{ item }}"
       backup: "yes"
   with_items:
-      - "tool_data_table_conf.xml"
       - "dependency_resolvers_conf.xml"
       - "datatypes_magenta_conf.xml"
       - "tool_destinations.yml"
