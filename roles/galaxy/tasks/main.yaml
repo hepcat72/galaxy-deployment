@@ -4,9 +4,11 @@
 
 - name: create error-documents folder
   file: path={{ GALAXY_HOME }}/../www/html/error-documents/ state=directory mode=755
+  tags: start,stop,restart,update
 
 - name: error-documents
   copy: src="error-documents/" dest={{ GALAXY_HOME }}/../www/html/error-documents/ mode=0644
+  tags: start,stop,restart,update
 
 - name: set galaxy user git config
   copy: src="git_config/gitconfig" dest="{{ ansible_env.HOME }}/.gitconfig"
