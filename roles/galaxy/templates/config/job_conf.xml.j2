@@ -52,26 +52,26 @@
             <param id="nativeSpecification">--mem=10000 --qos=1wk</param>
         </destination>
          <destination id="cetus_multicore" runner="slurm">
-            <param id="nativeSpecification">-N 1=1 --ntasks=6 --mem=60000 -p prod</param>
+            <param id="nativeSpecification">-N 1-1 --ntasks=6 --mem=60000 -p prod</param>
         </destination>
         <destination id="cetus_multicore_mediummem" runner="slurm">
-            <param id="nativeSpecification">-N 1=1 --ntasks=6 --mem=114000 -p prod</param>
+            <param id="nativeSpecification">-N 1-1 --ntasks=6 --mem=114000 -p prod</param>
             <env id="_JAVA_OPTIONS">-Xms10G -Xmx100G</env>
         </destination>
         <destination id="cetus_multicore_highmem" runner="slurm">
-            <param id="nativeSpecification">-N 1=1 --ntasks=12 --mem=228000 -p prod</param>
+            <param id="nativeSpecification">-N 1-1 --ntasks=12 --mem=228000 -p prod</param>
         </destination>
         <destination id="cetus_multicore_highmem_1wk" runner="slurm">
-            <param id="nativeSpecification">-N 1=1 --ntasks=15 --mem=285000 --qos=1wk</param>
+            <param id="nativeSpecification">-N 1-1 --ntasks=15 --mem=285000 --qos=1wk</param>
         </destination>
         <destination id="cetus_fullnode_1day" runner="slurm">
-            <param id="nativeSpecification">-N 1=1 --ntasks=20 --mem=380000 --qos=1day</param>
+            <param id="nativeSpecification">-N 1-1 --ntasks=20 --mem=380000 --qos=1day</param>
         </destination>
         <destination id="cetus_fullnode_1wk" runner="slurm">
-            <param id="nativeSpecification">-N 1=1 --ntasks=20 --mem=380000 --qos=1wk</param>
+            <param id="nativeSpecification">-N 1-1 --ntasks=20 --mem=380000 --qos=1wk</param>
         </destination>
         <destination id="cetus_fullnode_long" runner="slurm">
-            <param id="nativeSpecification">-N 1=1 --ntasks=20 --mem=380000 --qos=long</param>
+            <param id="nativeSpecification">-N 1-1 --ntasks=20 --mem=380000 --qos=long</param>
         </destination>
         <destination id="bowtie2_dynamic" runner="dynamic">
             <param id="type">python</param>
