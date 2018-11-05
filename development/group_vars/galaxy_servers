@@ -1,7 +1,6 @@
 ---
 env: development
 GALAXY_HOME: /galaxy/galaxy-app/
-# ansible_python_interpreter: /usr/local/opt/python/2.7.10/bin/python
 galaxy_venv_dir: /galaxy/galaxy-app/.venv
 pip_virtualenv_command: /usr/local/opt/python/2.7.10/bin/virtualenv
 galaxy_changeset_id: release_18.09
@@ -11,7 +10,7 @@ database_user: galaxy
 database_location: localhost
 database_port: 5432
 file_path: database/files
-new_file_path: database/tmp
+new_file_path: /galaxy/galaxy-app/database/tmp
 tmp_dir: /tmp/galaxy
 export_dir: /tmp/galaxy_export
 log_level: DEBUG
