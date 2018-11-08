@@ -1,3 +1,8 @@
+# - name: Install virtualenv
+#   pip:
+#     name: virutalenv
+#     version: 16.2.0
 
 - name: Create Galaxy virtualenv
-  pip: name=pip virtualenv={{ galaxy_venv_dir }} virtualenv_command="{{ pip_virtualenv_command | default( 'virtualenv' ) }}"
+  #pip: name=pip virtualenv={{ galaxy_venv_dir }} virtualenv_command="{{ pip_virtualenv_command | default( 'virtualenv' ) }}"
+  shell: "{{ pip_virtualenv_command | default( 'virtualenv' ) }} {{ galaxy_venv_dir }}"
