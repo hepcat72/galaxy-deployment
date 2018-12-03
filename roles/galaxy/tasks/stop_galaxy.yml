@@ -1,5 +1,5 @@
-- name: Set 503 message to known outage
-  file: src={{ GALAXY_HOME }}/../www/html/error-documents/503_known_outage.html
+- name: set 503 to scheduled maintenance
+  file: src={{ GALAXY_HOME }}/../www/html/error-documents/scheduled_maintenance.html
         dest={{ GALAXY_HOME }}/../www/html/error-documents/503.html
         state=link
 

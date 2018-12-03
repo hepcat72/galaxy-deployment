@@ -7,6 +7,16 @@
 - name: wait for galaxy to start
   wait_for: port=8080 delay=5 state=started timeout=150
 
+- name: Set 401 message to try again
+  file: src={{ GALAXY_HOME }}/../www/html/error-documents/401_tryagain.html
+        dest={{ GALAXY_HOME }}/../www/html/error-documents/401.html
+        state=link
+
+- name: Set 403 message to access denied
+  file: src={{ GALAXY_HOME }}/../www/html/error-documents/403_access_denied.html
+        dest={{ GALAXY_HOME }}/../www/html/error-documents/403.html
+        state=link
+
 - name: Set 503 message to unplanned outage
   file: src={{ GALAXY_HOME }}/../www/html/error-documents/503_outage.html
         dest={{ GALAXY_HOME }}/../www/html/error-documents/503.html
