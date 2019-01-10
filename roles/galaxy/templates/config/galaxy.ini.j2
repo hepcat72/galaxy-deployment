@@ -55,6 +55,7 @@ static_enabled = False
 apache_xsendfile = True
 upstream_gzip = False
 log_level = {{ log_level }}
+serve_xss_vulnerable_mimetypes = True
 debug = {{ debug }}
 use_interactive = {{ use_interactive }}
 allow_path_paste = True
@@ -69,6 +70,6 @@ allow_user_deletion = True
 allow_user_impersonation = True
 allow_user_dataset_purge = True
 enable_quotas = True
-tool_search_limit: 40
+tool_search_limit = 40
 
 [galaxy_amqp]
