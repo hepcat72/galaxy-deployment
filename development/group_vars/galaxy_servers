@@ -1,18 +1,27 @@
 ---
 env: development
 GALAXY_HOME: /galaxy/galaxy-app/
+galaxy_user: galaxy
+webserver_group: apache
+
 galaxy_venv_dir: /galaxy/galaxy-app/.venv
 pip_virtualenv_command: /galaxy/python/2.7.15/bin/virtualenv --always-copy
+
 galaxy_changeset_id: release_18.09
 config_directory: /galaxy/galaxy-app/config
 crontab_mailto: lparsons@genomics.princeton.edu
+
 database_user: galaxy
 database_location: localhost
 database_port: 5432
-file_path: database/files
-new_file_path: /galaxy/galaxy-app/database/tmp
-tmp_dir: /tmp/galaxy
-export_dir: /tmp/galaxy_export
+
+file_path: /galaxy/galaxy-app/database/files  # Must be readable by apache
+new_file_path: /galaxy/galaxy-app/database/tmp  # Must be readable by apache
+
+job_working_directory: /galaxy/galaxy-app/database/jobs_directory # chmod 2750
+tmp_dir: /tmp/galaxy  # chmod 2750
+export_dir: /tmp/galaxy_export  # chmod 2751 (allow others to execute not read)
+
 log_level: DEBUG
 debug: True
 use_interactive: True
