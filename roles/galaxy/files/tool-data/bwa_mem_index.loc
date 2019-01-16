@@ -95,3 +95,5 @@ dm6	dm6	D. melanogaster Aug. 2014 (BDGP Release 6 + ISO1 MT/dm6) (dm6)	/referenc
 GRCh38_NCBI	GRCh38_NCBI	Human (NCBI) (GRCh38_NCBI)	/reference-genomes/iGenomes/Homo_sapiens/NCBI/GRCh38/Sequence/BWAIndex/version0.6.0/genome.fa
 GRCm38_NCBI	GRCm38_NCBI	Mouse M. musculus (NBCI) (GRCm38_NCBI)	/reference-genomes/iGenomes/Mus_musculus/NCBI/GRCm38/Sequence/BWAIndex/version0.6.0/genome.fa
 canFam_ncbi_build3.1	canFam_ncbi_build3.1	Dog Sep 2011 (NCBI build3.1) (canFam_ncbi_build3.1)	/reference-genomes/iGenomes/Canis_familiaris/NCBI/build3.1/Sequence/BWAIndex/version0.6.0/genome.fa
+mmul_8_0_1	mmul_8_0_1	Macaque (Macaca mulatta) Ensembl Mmul_8.0.1 (mmul_8_0_1)	/reference-genomes/macaca_mulatta/macaca_mulatta_mmul_8_0_1/macaca_mulatta_mmul_8_0_1_BWA-MEM/macaca_mulatta_mmul_8_0_1
+panu_3_0	panu_3_0	Olive baboon (Papio anubis) Ensembl Panu_3.0 (panu_3_0)	/reference-genomes/papio_anubis/papio_anubis_panu_3_0/papio_anubis_panu_3_0_BWA-MEM/papio_anubis_panu_3_0
