@@ -90,7 +90,10 @@
   tags: update
 
 - name: add legacy tools (not from toolshed)
-  copy: src="galaxy_legacy_tools/tools/" dest="{{ GALAXY_HOME }}/tools/" backup=yes
+  copy:
+      src: "galaxy_legacy_tools/tools/"
+      dest: "{{ GALAXY_HOME }}/tools/"
+      backup: "yes"
   tags: legacy_tools
 
 - name: add legacy tool test-data
@@ -106,6 +109,7 @@
   template:
     src: "config/{{ item }}.j2"
     dest: "{{ config_directory }}/{{ item }}"
+    mode: 0640
     backup: "yes"
   with_items:
     - "galaxy.ini"
@@ -121,6 +125,7 @@
   copy:
       src: "config/{{ item }}"
       dest: "{{ config_directory }}/{{ item }}"
+      mode: 0640
       backup: "yes"
   with_items:
       - "dependency_resolvers_conf.xml"
@@ -130,22 +135,45 @@
     config
 
 - name: dynamic job destinations.py
-  copy: src=dynamic_destinations/destinations.py dest={{ GALAXY_HOME }}/lib/galaxy/jobs/rules/destinations.py
+  copy:
+      src: "dynamic_destinations/destinations.py"
+      dest: "{{ GALAXY_HOME }}/lib/galaxy/jobs/rules/destinations.py"
+      mode: 0640
   tags:
     config
 
 - name: local_env.sh
-  template: src="config/local_env.sh.j2" dest="{{ GALAXY_HOME }}/config/local_env.sh" backup=yes
+  template:
+      src: "config/local_env.sh.j2"
+      dest: "{{ GALAXY_HOME }}/config/local_env.sh"
+      mode: 0640
+      backup: "yes"
   tags: start,stop,restart,update
 
-- name: create tmp dir
-  file: path={{ tmp_dir }} state=directory mode=750
-
-- name: create log directory
+- name: create tmp, log, working paths
   file:
-      path: "{{ GALAXY_HOME }}/../logs"
-      state: directory
-      mode: '2755'
+      path: "{{ item }}"
+      state: "directory"
+      owner: "{{ galaxy_user }}"
+      group: "{{ galaxy_user }}"
+      mode: "2750"
+  with_items:
+      - "{{ tmp_dir }}"
+      - "{{ GALAXY_HOME }}/../logs"
+      - "{{ job_working_directory }}"
+  tags: test
+
+- name: create file, and new file paths
+  file:
+      path: "{{ item }}"
+      state: "directory"
+      owner: "{{ galaxy_user }}"
+      group: "{{ webserver_group }}"
+      mode: "2750"
+  with_items:
+      - "{{ file_path }}"
+      - "{{ new_file_path }}"
+  tags: test
 
 - include: hide_tools.yml
   tags:
@@ -156,6 +184,7 @@
   copy:
     src: "tool-data/"
     dest: "{{ GALAXY_HOME }}/tool-data/"
+    mode: 0640
     backup: "yes"
   register: tooldata
   tags: genome_builds
@@ -164,6 +193,7 @@
   template:
     src: "tool-data/{{ item }}.j2"
     dest: "{{ GALAXY_HOME }}/tool-data/{{ item }}"
+    mode: 0640
   with_items:
     - "ccat_configurations.loc"
 
