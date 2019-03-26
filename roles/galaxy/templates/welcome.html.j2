@@ -66,38 +66,35 @@
 			<div class="infomessagelarge section" id="updates">
 				<h2>What's New</h2>
 				<h3>
-					<a href="http://bioconductor.org/packages/release/bioc/html/DEXSeq.html">DEXSeq</a>
-				</h3>
-				<p>
-					Find differential exon usage using RNA-seq exon counts between samples with different experimental
-					designs. Also provides functions for the visualization and exploration of the results.
-				</p>
-
-				<h3>
 					<a
 						target="_blank"
-						href="https://docs.galaxyproject.org/en/master/releases/18.01_announce.html">Galaxy Release 18.09</a>
+						href="https://docs.galaxyproject.org/en/master/releases/19.01_announce.html">Galaxy Release 19.01</a>
 				</h3>
 				<ul>
 					<li>
-						<strong>Extensive Workflow Enhancements</strong>
-						<p>Workflows got a lot of love this time around, with new runtime parameters for subworkflows,
-							exposed workflow versions, and zoom capability in the editor, to name a few. There were
-							also a number of usability enhancements including better labeling, links, overhauled workflow
-							import interfaces, and many more.
+						<strong>Revised UI Style</strong>
+						<p>The Galaxy stylesheet has been substantially reworked resulting in the largest visual refresh
+							to Galaxy in years.
 						</p>
 					</li>
 					<li>
-						<strong>Group Tags</strong>
-						<p>Galaxy now contains powerful new features for multiple factor analysis of collections of
-							datasets. The concept of group tags has been added to Galaxy. These are a special class
-							of tags that describe key-value pairs that can be attached to the contents of a collection
-							during upload or using collection operation tools. These tags can describe multiple sets
-							of variables for the contents of a collection. Once set, these tags can be consumed
-							intelligently by tools that need to divide collections into multiple overlapping factors or
-							sets of datasets. A special thanks to <a href="https://github.com/mvdbeek">@mvdbeek</a> for
-							devising and implementing this approach.
+						<strong>More Colorful Tags</strong>
+						<p>Use consistently hashed randomized colors for history dataset name tags to increase visual
+							distinction between tags, making it easier to track data flow in complex histories. Thanks
+							to <a href="https://github.com/erasche">@erasche</a>.
 						</p>
+					</li>
+					<li>
+						<strong>Extensive Workflow Enhancements (continued)</strong>
+						<p>Galaxy 18.09 featured a bunch of important and diverse fixes and enhancements to workflows
+							on both the frontend and backend. That progress continues in release 19.01.</p>
+						<p>The workflow editor now features explicit step parameter nodes for non-file data (integers,
+							strings, booleans, etc) and the ability to connect these to all tool inputs - not just files.
+							The YAML-based Galaxy Format 2 workflow language is now included in Galaxy as a beta option
+							and allows import and export of human readable workflows as well as extensions to allow Galaxy
+							to serve as a file editor for such workflows. The workflow editor features more helpful labels
+							on inputs and outputs and important fixes including logic for connecting collections and
+							dealing with missing tools. The workflow run form now deals with default values more correctly.</p>
 					</li>
 				</ul>
 			</div>
