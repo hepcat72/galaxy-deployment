@@ -286,6 +286,11 @@ tools:
         lower_bound: 25 GB
         upper_bound: 50 GB
         destination: cetus_singlecore_vhighmem
+      - rule_type: file_size
+        nice_value: 0
+        lower_bound: 50 GB
+        upper_bound: Infinity
+        destination: cetus_fullnode_1wk
 
 default_destination: cetus_singlecore
 verbose: True
