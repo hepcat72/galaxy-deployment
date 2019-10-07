@@ -264,5 +264,28 @@ tools:
         destination: fail
     default_destination: cetus_multicore
 
+  piranha:
+    rules:
+      - rule_type: file_size
+        nice_value: 0
+        lower_bound: 0
+        upper_bound: 2 GB
+        destination: cetus_singlecore
+      - rule_type: file_size
+        nice_value: 0
+        lower_bound: 2 GB
+        upper_bound: 12 GB
+        destination: cetus_singlecore_mediummem
+      - rule_type: file_size
+        nice_value: 0
+        lower_bound: 12 GB
+        upper_bound: 25 GB
+        destination: cetus_singlecore_highmem
+      - rule_type: file_size
+        nice_value: 0
+        lower_bound: 25 GB
+        upper_bound: 50 GB
+        destination: cetus_singlecore_vhighmem
+
 default_destination: cetus_singlecore
 verbose: True
