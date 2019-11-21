@@ -55,6 +55,10 @@
     <tool file="${model_tools_path}/extract_dataset.xml" />j
   </section>
 
+  <section id="expression_tools" name="Expression Tools">
+    <tool file="expression_tools/parse_values_from_file.xml"/>
+  </section>
+
   <label id="HTSeq" text="High Throughput Sequencing" />
   <section id="NGS_QC" name="HTS: FASTQ Manipulation and QC">
     <tool file="next_gen_conversion/solid2fastq.xml" />
@@ -104,6 +108,19 @@
     -->
     <tool file="phenotype_association/master2pg.xml" />
   </section>
+
+  <!--section id="interactivetools" name="Interactive tools">
+    <tool file="interactive/codingSnps.xml" />
+    <tool file="interactive/interactivetool_askomics.xml" />
+    <tool file="interactive/interactivetool_bam_iobio.xml" />
+    <tool file="interactive/interactivetool_cellxgene.xml" />
+    <tool file="interactive/interactivetool_ethercalc.xml" />
+    <tool file="interactive/interactivetool_hicbrowser.xml" />
+    <tool file="interactive/interactivetool_jupyter_notebook.xml" />
+    <tool file="interactive/interactivetool_neo4j.xml" />
+    <tool file="interactive/interactivetool_phinch.xml" />
+  </section-->
+
 
   <label id="Genomic_Annotation_Analysis" text="Genomic Annotation Analysis" />
   <section id="bxops" name="Operate on Genomic Intervals" version="">

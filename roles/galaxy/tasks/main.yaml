@@ -57,12 +57,12 @@
   when: (git.stat.isdir is defined and git.stat.isdir == true) and (current_changeset_id.stdout != galaxy_changeset_id)
   tags: update
 
-- name: Get current tool migration stages
-  shell: ls -1 *tools.sh | sort chdir={{ GALAXY_HOME }}/scripts/migrate_tools/
-  register: current_tool_migration_stages
-  changed_when: False
-  when: git.stat.isdir is defined and git.stat.isdir == true
-  tags: update
+# - name: Get current tool migration stages
+#   shell: ls -1 *tools.sh | sort chdir={{ GALAXY_HOME }}/scripts/migrate_tools/
+#   register: current_tool_migration_stages
+#   changed_when: False
+#   when: git.stat.isdir is defined and git.stat.isdir == true
+#   tags: update
 
 - name: Update galaxy to correct changeset
   git:
@@ -80,11 +80,11 @@
 - include: virtualenv.yml
   tags: virtualenv
 
-- name: Get updated tool migration stage
-  shell: ls -1 *tools.sh | sort chdir={{ GALAXY_HOME }}/scripts/migrate_tools/
-  register: updated_tool_migration_stages
-  changed_when: False
-  tags: update
+# - name: Get updated tool migration stage
+#   shell: ls -1 *tools.sh | sort chdir={{ GALAXY_HOME }}/scripts/migrate_tools/
+#   register: updated_tool_migration_stages
+#   changed_when: False
+#   tags: update
 
 - include: patches.yml
   tags: update
@@ -247,37 +247,37 @@
   when: current_db_version.stdout != max_db_version.stdout
   tags: update
 
-- name: Report current tool migration stage
-  debug:
-    msg: "There are {{ updated_tool_migration_stages.stdout_lines|length - current_tool_migration_stages.stdout_lines|length }} new tool migration stages for {{ GALAXY_HOME }}"
-  changed_when: True
-  when: current_tool_migration_stages.stdout_lines|length != updated_tool_migration_stages.stdout_lines|length
-  tags: update
-
-- name: Run tool migrations
-  shell: ". {{ galaxy_venv_dir}}/bin/activate && sh ./scripts/migrate_tools/{{ item }} install_dependencies chdir={{ GALAXY_HOME }}"
-  changed_when: True
-  when: updated_tool_migration_stages.stdout_lines|length - current_tool_migration_stages.stdout_lines|length > 0
-  with_items:
-    updated_tool_migration_stages.stdout_lines[-(updated_tool_migration_stages.stdout_lines|length - current_tool_migration_stages.stdout_lines|length)]
-  tags: update
-
-- name: Create tool_conf.xml patch
-  shell: "diff -u tool_conf.xml-pre-stage-{{ item[:4] }} tool_conf.xml > tool_conf.xml-{{ item[:4] }}.diff chdir={{ GALAXY_HOME }} creates={{ GALAXY_HOME }}/tool_conf.xml-{{ item[:4] }}.diff"
-  changed_when: True
-  when: updated_tool_migration_stages.stdout_lines|length - current_tool_migration_stages.stdout_lines|length > 0
-  with_items:
-    updated_tool_migration_stages.stdout_lines[-1]
-  register: diff_result
-  failed_when: diff_result.rc > 1
-  tags: update
-
-- name: Fetch tool_conf.xml diff
-  fetch: src={{ GALAXY_HOME }}/tool_conf.xml-{{ item[:4] }}.diff dest=tool_conf_diffs/{{ ansible_hostname }}/tool_conf.xml-{{ item[:4] }}.diff flat=yes
-  when: updated_tool_migration_stages.stdout_lines|length - current_tool_migration_stages.stdout_lines|length > 0
-  with_items:
-    updated_tool_migration_stages.stdout_lines[-1]
-  tags: update
+# - name: Report current tool migration stage
+#   debug:
+#     msg: "There are {{ updated_tool_migration_stages.stdout_lines|length - current_tool_migration_stages.stdout_lines|length }} new tool migration stages for {{ GALAXY_HOME }}"
+#   changed_when: True
+#   when: current_tool_migration_stages.stdout_lines|length != updated_tool_migration_stages.stdout_lines|length
+#   tags: update
+# 
+# - name: Run tool migrations
+#   shell: ". {{ galaxy_venv_dir}}/bin/activate && sh ./scripts/migrate_tools/{{ item }} install_dependencies chdir={{ GALAXY_HOME }}"
+#   changed_when: True
+#   when: updated_tool_migration_stages.stdout_lines|length - current_tool_migration_stages.stdout_lines|length > 0
+#   with_items:
+#     updated_tool_migration_stages.stdout_lines[-(updated_tool_migration_stages.stdout_lines|length - current_tool_migration_stages.stdout_lines|length)]
+#   tags: update
+# 
+# - name: Create tool_conf.xml patch
+#   shell: "diff -u tool_conf.xml-pre-stage-{{ item[:4] }} tool_conf.xml > tool_conf.xml-{{ item[:4] }}.diff chdir={{ GALAXY_HOME }} creates={{ GALAXY_HOME }}/tool_conf.xml-{{ item[:4] }}.diff"
+#   changed_when: True
+#   when: updated_tool_migration_stages.stdout_lines|length - current_tool_migration_stages.stdout_lines|length > 0
+#   with_items:
+#     updated_tool_migration_stages.stdout_lines[-1]
+#   register: diff_result
+#   failed_when: diff_result.rc > 1
+#   tags: update
+# 
+# - name: Fetch tool_conf.xml diff
+#   fetch: src={{ GALAXY_HOME }}/tool_conf.xml-{{ item[:4] }}.diff dest=tool_conf_diffs/{{ ansible_hostname }}/tool_conf.xml-{{ item[:4] }}.diff flat=yes
+#   when: updated_tool_migration_stages.stdout_lines|length - current_tool_migration_stages.stdout_lines|length > 0
+#   with_items:
+#     updated_tool_migration_stages.stdout_lines[-1]
+#   tags: update
 
 - include: start_galaxy.yml
   tags: start,restart,update
