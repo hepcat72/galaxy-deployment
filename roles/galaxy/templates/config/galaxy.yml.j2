@@ -1,0 +1,68 @@
+uwsgi:
+
+  # required in order to start the galaxy application  
+  module: galaxy.webapps.galaxy.buildapp:uwsgi_app()
+  virtualenv: {{ galaxy_venv_dir }}
+  pythonpath: lib
+ 
+  # performance options 
+  master: true
+  enable-threads: true
+  processes: 2
+  threads: 4
+  offload-threads: 1
+
+  # fixup signal handling
+  die-on-term: true
+  hook-master-start: unix_signal:2 gracefully_kill_them_all
+  hook-master-start: unix_signal:15 gracefully_kill_them_all
+
+  # listening options
+  http: 127.0.0.1:8080
+  http-raw-body: True
+
+  # job handler options
+  mule: lib/galaxy/main.py
+  mule: lib/galaxy/main.py
+  farm: job-handlers:1,2
+
+galaxy:
+  database_connection: postgresql://{{ database_user }}:{{ database_password }}@{{ database_location }}:{{ database_port }}/galaxy
+  database_engine_option_server_side_cursors: true
+  file_path: {{ file_path }}
+  new_file_path: {{ new_file_path }}
+  tool_config_file: {{ config_directory }}/tool_conf.xml
+  shed_tool_config_file: {{ config_directory }}/shed_tool_conf.xml
+  integrated_tool_panel_config: {{ config_directory }}/integrated_tool_panel.xml
+  tool_dependency_dir: tool-dependencies
+  use_cached_dependency_manager: true
+  datatypes_config_file: {{ config_directory }}/datatypes_conf.xml.sample,config/datatypes_magenta_conf.xml
+  job_working_directory: {{ job_working_directory }} 
+  smtp_server: smtp.princeton.edu
+  smtp_username: gensmtp
+  smtp_password: {{ smtp_password }}
+  error_email_to: biocomp@genomics.princeton.edu
+  email_from: biocomp@genomics.princeton.edu
+  display_servers: hgw1.cse.ucsc.edu,hgw2.cse.ucsc.edu,hgw3.cse.ucsc.edu,hgw4.cse.ucsc.edu,hgw5.cse.ucsc.edu,hgw6.cse.ucsc.edu,hgw7.cse.ucsc.edu,hgw8.cse.ucsc.edu,lowepub.cse.ucsc.edu
+  brand: Princeton Genomics
+  support_url: http://www.princeton.edu/genomics/sequencing/instructions/data-analysis/
+  static_enabled: false
+  apache_xsendfile: true
+  upstream_gzip: false
+  log_level: {{ log_level }}
+  serve_xss_vulnerable_mimetypes: true
+  debug: {{ debug }}
+  use_interactive: {{ use_interactive }}
+  allow_path_paste: true
+  id_secret: {{ id_secret }}
+  use_remote_user: true
+  remote_user_maildomain: princeton.edu
+  remote_user_logout_href: https://fed.princeton.edu/cas/logout
+  admin_users: jwiggins@princeton.edu,lparsons@princeton.edu,jcmatese@princeton.edu,rleach@princeton.edu
+  require_login: true
+  allow_user_creation: false
+  allow_user_deletion: true
+  allow_user_impersonation: true
+  allow_user_dataset_purge: true
+  enable_quotas: true
+  tool_search_limit: 40

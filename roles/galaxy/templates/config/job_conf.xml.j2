@@ -4,10 +4,6 @@
     <plugins>
         <plugin id="local" type="runner" load="galaxy.jobs.runners.local:LocalJobRunner" workers="4"/>
     </plugins>
-    <handlers default="handlers">
-        <handler id="handler0" tags="handlers"/>
-        <handler id="handler1" tags="handlers"/>
-    </handlers>
     <destinations>
         <destination id="local" runner="local"/>
     </destinations>
@@ -23,13 +19,6 @@
             <param id="internalexception_retries">5</param>
         </plugin>
     </plugins>
-    <handlers default="handlers">
-        <!-- Additional job handlers - the id should match the name of a
-             [server:<id>] in universe_wsgi.ini.
-         -->
-        <handler id="handler0" tags="handlers"/>
-        <handler id="handler1" tags="handlers"/>
-    </handlers>
     <destinations default="cetus_singlecore">
         <!-- Destinations define details about remote resources and how jobs
              should be executed on those remote resources.

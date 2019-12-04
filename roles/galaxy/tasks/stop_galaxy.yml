@@ -23,7 +23,7 @@
 # Galaxy web application
 
 - name: Check if galaxy pid file exists.
-  command: /usr/bin/test -e {{ GALAXY_HOME }}/web0.pid
+  command: /usr/bin/test -e {{ GALAXY_HOME }}/galaxy.pid
   ignore_errors: True
   register: galaxy_running
 

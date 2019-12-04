@@ -112,8 +112,8 @@
     mode: 0640
     backup: "yes"
   with_items:
-    - "galaxy.ini"
-    - "reports.ini"
+    - "galaxy.yml"
+    - "reports.yml"
     - "job_conf.xml"
     - "tool_sheds_conf.xml"
     - "tool_conf.xml"
