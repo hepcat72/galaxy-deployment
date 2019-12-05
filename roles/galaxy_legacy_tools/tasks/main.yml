@@ -1,0 +1,19 @@
+---
+- name: add legacy tools (not from toolshed)
+  copy:
+      src: "galaxy_legacy_tools/tools/"
+      dest: "{{ GALAXY_HOME }}/tools/"
+      backup: "yes"
+  tags: legacy_tools
+
+- name: add legacy tool test-data
+  copy: src="galaxy_legacy_tools/test-data/" dest="{{ GALAXY_HOME }}/test-data/" backup=yes
+
+- name: add legacy jars
+  copy: src="galaxy_legacy_tools/tool-data/" dest="{{ GALAXY_HOME }}/tool-data/" backup=yes
+
+- include: tool-dependencies.yaml
+
+- include: hide_tools.yml
+  tags:
+    - config

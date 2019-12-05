@@ -1,14 +1,11 @@
 ---
-- name: test connection
-  ping:
-
 - name: create error-documents folder
   file: path={{ GALAXY_HOME }}/../www/html/error-documents/ state=directory mode=755
-  tags: start,stop,restart,update
+  tags: start,stop,restart,update,error-documents
 
 - name: error-documents
   copy: src="error-documents/" dest={{ GALAXY_HOME }}/../www/html/error-documents/ mode=0644
-  tags: start,stop,restart,update
+  tags: start,stop,restart,update,error-documents
 
 - name: set galaxy user git config
   copy: src="git_config/gitconfig" dest="{{ ansible_env.HOME }}/.gitconfig"
@@ -86,22 +83,6 @@
 #   changed_when: False
 #   tags: update
 
-- include: patches.yml
-  tags: update
-
-- name: add legacy tools (not from toolshed)
-  copy:
-      src: "galaxy_legacy_tools/tools/"
-      dest: "{{ GALAXY_HOME }}/tools/"
-      backup: "yes"
-  tags: legacy_tools
-
-- name: add legacy tool test-data
-  copy: src="galaxy_legacy_tools/test-data/" dest="{{ GALAXY_HOME }}/test-data/" backup=yes
-
-- name: add legacy jars
-  copy: src="galaxy_legacy_tools/tool-data/" dest="{{ GALAXY_HOME }}/tool-data/" backup=yes
-
 - name: create logrotate config directory
   file: dest={{ GALAXY_HOME }}/config/logrotate state=directory
 
@@ -174,10 +155,6 @@
       - "{{ new_file_path }}"
   tags: test
 
-- include: hide_tools.yml
-  tags:
-    - config
-
 - name: tool-data files
   copy:
     src: "tool-data/"
@@ -211,8 +188,6 @@
   tags:
       - update
       - welcome
-
-- include: tool-dependencies.yaml
 
 - include: custom_scripts.yaml
   tags: scripts

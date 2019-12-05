@@ -17,6 +17,11 @@ Stops the galaxy server if it's running, clones the specified revision, applies 
 *   `--tags`: only run plays and tasks tagged with these values (start, stop, restart)
 *   `--skip-tags`: only run plays and tasks whose tags do not match these values (start, stop, restart)
 
+**Legacy tools:**
+
+*   `--tags legacy_tools`: the `legacy_tools` role only runs if the tags is explicity specified. It's
+    not needed most of the time and can take quite a while, so it's separated into a separate role.
+
 
 *Examples:*
 

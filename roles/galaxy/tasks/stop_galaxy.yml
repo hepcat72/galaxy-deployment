@@ -4,35 +4,43 @@
         state=link
 
 # Reports
-
-- name: Check if galaxy reports pid file exists.
-  command: /usr/bin/test -e {{ GALAXY_HOME }}/reports_webapp.pid
-  ignore_errors: True
+- name: Check if galaxy reports is running
+  wait_for:
+    port: 9000
+    timeout: 1
+  ignore_errors: true
   register: galaxy_reports_running
+- debug:
+    msg: Completed {{ galaxy_reports_running }}
 
 - name: stop galaxy reports
   become: yes
   become_user: galaxy
   become_method: sudo
   shell: "{{ GALAXY_HOME }}/run_reports.sh --stop-daemon"
-  when: galaxy_reports_running.rc == 0
+  when: galaxy_reports_running.failed == false
 
 - name: Wait for Galaxy Reports to stop
-  wait_for: port=9001 delay=5 state=stopped timeout=60
+  wait_for: port=9000 delay=5 state=stopped timeout=60
+  when: galaxy_reports_running.failed == false
 
 # Galaxy web application
-
-- name: Check if galaxy pid file exists.
-  command: /usr/bin/test -e {{ GALAXY_HOME }}/galaxy.pid
-  ignore_errors: True
+- name: Check if galaxy is running
+  wait_for:
+    port: 8080
+    timeout: 1
+  ignore_errors: true
   register: galaxy_running
+- debug:
+    msg: Completed {{ galaxy_reports_running }}
 
 - name: stop galaxy
   become: yes
   become_user: galaxy
   become_method: sudo
   shell: "{{ GALAXY_HOME }}/run.sh --stop-daemon"
-  when: galaxy_running.rc == 0
+  when: galaxy_running.failed == false
 
 - name: Wait for Galaxy to stop
   wait_for: port=8080 delay=5 state=stopped timeout=60
+  when: galaxy_running.failed == false

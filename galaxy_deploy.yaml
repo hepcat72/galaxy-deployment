@@ -6,4 +6,6 @@
   vars_files:
     -  "{{ env }}/secrets/passwords.yaml"
   roles:
-    - galaxy
+    - role: galaxy
+    - role: galaxy_legacy_tools
+      tags: [ never, legacy_tools ]
