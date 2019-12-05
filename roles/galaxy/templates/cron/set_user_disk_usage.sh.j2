@@ -18,4 +18,4 @@ ${NOW}\n\
 ==================="
 echo -e "${HEADER}" >> ${LOG_FILE}
 cd ${GALAXY_HOME}
-python ${GALAXY_HOME}/scripts/set_user_disk_usage.py --config "{{ config_directory }}/galaxy.ini" 1>>${LOG_FILE}
+python ${GALAXY_HOME}/scripts/set_user_disk_usage.py --config "{{ config_directory }}/galaxy.yml" 1>>${LOG_FILE}

@@ -9,4 +9,4 @@ purge_histories.log\n\
 ${NOW}\n\
 ==================="
 echo -e "${HEADER}"
-python ./scripts/cleanup_datasets/cleanup_datasets.py '{{ config_directory }}/galaxy.ini' -d 10 -2 -r $@
+python ./scripts/cleanup_datasets/cleanup_datasets.py '{{ config_directory }}/galaxy.yml' -d 10 -2 -r $@
