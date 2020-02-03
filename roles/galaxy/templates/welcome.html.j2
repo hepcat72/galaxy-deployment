@@ -68,33 +68,59 @@
 				<h3>
 					<a
 						target="_blank"
-						href="https://docs.galaxyproject.org/en/master/releases/19.01_announce.html">Galaxy Release 19.01</a>
+						href="https://docs.galaxyproject.org/en/release_19.05/releases/19.05_announce_user.html">Galaxy Release 19.05</a>
 				</h3>
 				<ul>
 					<li>
-						<strong>Revised UI Style</strong>
-						<p>The Galaxy stylesheet has been substantially reworked resulting in the largest visual refresh
-							to Galaxy in years.
+						<strong>Tool Favorites</strong>
+						<p>Tools can now be marked as favorites, and then they’ll be easily accessible from the star button in your tool panel.
 						</p>
 					</li>
 					<li>
-						<strong>More Colorful Tags</strong>
-						<p>Use consistently hashed randomized colors for history dataset name tags to increase visual
-							distinction between tags, making it easier to track data flow in complex histories. Thanks
-							to <a href="https://github.com/erasche">@erasche</a>.
+						<strong>Workflow Editor Connection Feedback</strong>
+						<p>The editor now provides feedback on why connections are invalid, so you aren’t left wondering
+						   why two tools won’t connect. For complex data pipelines this should greatly simplify your life!
 						</p>
 					</li>
 					<li>
-						<strong>Extensive Workflow Enhancements (continued)</strong>
-						<p>Galaxy 18.09 featured a bunch of important and diverse fixes and enhancements to workflows
-							on both the frontend and backend. That progress continues in release 19.01.</p>
-						<p>The workflow editor now features explicit step parameter nodes for non-file data (integers,
-							strings, booleans, etc) and the ability to connect these to all tool inputs - not just files.
-							The YAML-based Galaxy Format 2 workflow language is now included in Galaxy as a beta option
-							and allows import and export of human readable workflows as well as extensions to allow Galaxy
-							to serve as a file editor for such workflows. The workflow editor features more helpful labels
-							on inputs and outputs and important fixes including logic for connecting collections and
-							dealing with missing tools. The workflow run form now deals with default values more correctly.</p>
+						<strong>Data Dialog for Tool Form</strong>
+						<p>There is a new way to select datasets when running tools! It is a very simple method to select 
+						   any number of files from both your History and Data Libraries.</p>
+						<p>Additionally the selector implements a highly requested feature, the ability to run tools on arbitrary datasets 
+						   from a collection</p>
+					</li>
+					<li>
+						<strong>History Export/Import Reworked</strong>
+						<p>These features used to be clumsy in the past but do not despair since in this release they got a revamp and their
+							reliability skyrocketed! Moving historic object across Galaxies should now be easier than ever. Rocketfuel included.
+						</p>
+					</li>
+				</ul>
+				<h3>
+					<a
+						target="_blank"
+						href="https://docs.galaxyproject.org/en/release_19.09/releases/19.09_announce_user.html">Galaxy Release 19.09</a>
+				</h3>
+				<ul>
+					<li>
+						<strong>Workflow Reporting</strong>
+						<p>John Chilton added embedded reports to workflows. These are reports which are automatically available upon 
+							workflow completion and can discuss the contents of a workflow, point out interesting aspects of individual
+							outputs, and generally help you summarize the outputs for colleagues in a comprehensible way!
+						</p>
+					</li>
+					<li>
+						<strong>Cleaner History Menu</strong>
+						<p>Check out the new, cleaner history menu! Many of the extraneous actions were moved out so you can more
+							quickly do what you need to do.
+						</p>
+					</li>
+					<li>
+						<strong>Awesome Visualizations</strong>
+						<p>The Community (that is you!) added not one, not two, but three new awesome visualizations in this release
+							allowing for free style image annotation, visualizing spatial data on OpenLayers maps, and exploring HIV
+							NGS data with hyphy-vision.
+						</p>
 					</li>
 				</ul>
 			</div>
