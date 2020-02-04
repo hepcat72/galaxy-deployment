@@ -4,7 +4,6 @@
       src: "galaxy_legacy_tools/tools/"
       dest: "{{ GALAXY_HOME }}/tools/"
       backup: "yes"
-  tags: legacy_tools
 
 - name: add legacy tool test-data
   copy: src="galaxy_legacy_tools/test-data/" dest="{{ GALAXY_HOME }}/test-data/" backup=yes
@@ -15,5 +14,3 @@
 - include: tool-dependencies.yaml
 
 - include: hide_tools.yml
-  tags:
-    - config
