@@ -5,31 +5,23 @@ uwsgi:
   virtualenv: {{ galaxy_venv_dir }}
   pythonpath: lib
  
+   # listening options
+  http: 127.0.0.1:9000
+  http-raw-body: True
+
   # performance options 
   master: true
   enable-threads: true
   processes: 1
   threads: 4
-  offload-threads: 1
-
-  # fixup signal handling
-  die-on-term: true
-  hook-master-start: unix_signal:2 gracefully_kill_them_all
-  hook-master-start: unix_signal:15 gracefully_kill_them_all
-
-  # listening options
-  http: 127.0.0.1:9000
-  http-raw-body: True
+  offload-threads: 2
 
 reports:
   log_level: {{ log_level }}
   database_connection: postgres://{{ database_user }}:{{ database_password }}@{{ database_location }}:{{ database_port }}/galaxy
+
+  file_path: {{ file_path }}
+  new_file_path: {{ new_file_path }}
   
-  # Configuration for debugging middleware
-  #debug: false
-
-  # Check for WSGI compliance.
-  #use_lint: false
-
   smtp_server: gsmtp.princeton.edu
-  error_email_to: lparsons@princeton.edu
+  error_email_to: biocomp@princeton.edu
