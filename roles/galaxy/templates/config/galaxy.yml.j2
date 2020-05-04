@@ -26,6 +26,8 @@ uwsgi:
   mule: lib/galaxy/main.py
   farm: job-handlers:1,2
 
+  umask: 022
+
 galaxy:
   database_connection: postgresql://{{ database_user }}:{{ database_password }}@{{ database_location }}:{{ database_port }}/galaxy
   database_engine_option_server_side_cursors: true
