@@ -1,166 +1,170 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-		<link rel="stylesheet" href="style/base.css" type="text/css"/>
-		<style type="text/css">
-			#diskspace-notice,
-			#instructions,
-			#maintenance-notice,
-			#updates {
-				width: 100%;
-				display: inline-block;
-				vertical-align: top;
-				padding-top: 0px;
-			}
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <link rel="stylesheet" href="style/base.css" type="text/css"/>
+        <style type="text/css">
+            #diskspace-notice,
+            #instructions,
+            #maintenance-notice,
+            #updates {
+                width: 100%;
+                display: inline-block;
+                vertical-align: top;
+                padding-top: 0px;
+            }
 
-		</style>
-		<title>Galaxy Data Analysis</title>
-	</head>
+        </style>
+        <title>Galaxy Data Analysis</title>
+    </head>
 
-	<body>
-		<div class="document">
-			<h1>Galaxy Data Analysis -
-				<a target="_blank" href="http://www.princeton.edu/genomics">Lewis-Sigler Institute for Integrative Genomics</a>
-			</h1>
-			{% if env == 'development' %}
-				<div class="errormessagelarge section" id="development-notice">
-					<h1>DEVELOPMENT SERVER</h1>
-					<h3>ALL DATA IS SUBJECT TO REMOVAL WITHOUT NOTICE!</h3>
-				</div>
-			{% endif %}
+    <body>
+        <div class="document">
+            <h1>Galaxy Data Analysis -
+                <a target="_blank" href="http://www.princeton.edu/genomics">Lewis-Sigler Institute for Integrative Genomics</a>
+            </h1>
+            {% if env == 'development' %}
+                <div class="errormessagelarge section" id="development-notice">
+                    <h1>DEVELOPMENT SERVER</h1>
+                    <h3>ALL DATA IS SUBJECT TO REMOVAL WITHOUT NOTICE!</h3>
+                </div>
+            {% endif %}
 
-			<div class="donemessagelarge section" id="instructions">
-				<h2>Getting Started with Galaxy</h2>
+            <div class="donemessagelarge section" id="instructions">
+                <h2>Getting Started with Galaxy</h2>
 
-				<h3>
-					<a target="_blank" href="https://galaxyproject.org/learn/">Learn Galaxy</a>
-				</h3>
-				<p>There are many approaches to learning how to use Galaxy. The most popular is
-					probably to just dive in and use it. Galaxy is simple enough to use that you can
-					do many analyses just by exploring the interface. However, you may miss much of
-					the power this way.</p>
+                <h3>
+                    <a target="_blank" href="https://galaxyproject.org/learn/">Learn Galaxy</a>
+                </h3>
+                <p>There are many approaches to learning how to use Galaxy. The most popular is
+                    probably to just dive in and use it. Galaxy is simple enough to use that you can
+                    do many analyses just by exploring the interface. However, you may miss much of
+                    the power this way.</p>
 
-				<h3><a target="_parent" href="/tours">Interactive Tours</a></h3>
-				<p>Select from basic and advanced tours to get an interactive walkthrough of many
-					of Galaxy's features (and remember, you can click 'End Tour' at any
-					time).</p>
+                <h3><a target="_parent" href="/tours">Interactive Tours</a></h3>
+                <p>Select from basic and advanced tours to get an interactive walkthrough of many
+                    of Galaxy's features (and remember, you can click 'End Tour' at any
+                    time).</p>
 
-				<h3>
-					<a target="_blank" href="https://galaxyproject.github.io/training-material/">Galaxy Training</a>
-				</h3>
-				<p>Collection of tutorials developed and maintained by the worldwide Galaxy community.</p>
+                <h3>
+                    <a target="_blank" href="https://galaxyproject.github.io/training-material/">Galaxy Training</a>
+                </h3>
+                <p>Collection of tutorials developed and maintained by the worldwide Galaxy community.</p>
 
-				<h3>Princeton Community</h3>
-				<ul>
-					<li>Join the
-						<a target="_blank" href="https://sites.google.com/site/princetonhtseq/">Princeton HTSEQ Users Group</a>,
-						discuss, present, and learn from other users in the Princeton research community</li>
-					<li>Get expert advice from the
-						<a target="_blank" href="http://www.princeton.edu/genomics/sequencing/">Lewis-Sigler Sequencing Core Facility</a>
-					</li>
-				</ul>
-			</div>
+                <h3>Princeton Community</h3>
+                <ul>
+                    <li>Join the
+                        <a target="_blank" href="https://sites.google.com/site/princetonhtseq/">Princeton HTSEQ Users Group</a>,
+                        discuss, present, and learn from other users in the Princeton research community</li>
+                    <li>Get expert advice from the
+                        <a target="_blank" href="http://www.princeton.edu/genomics/sequencing/">Lewis-Sigler Sequencing Core Facility</a>
+                    </li>
+                </ul>
+            </div>
 
-			<div class="infomessagelarge section" id="updates">
-				<h2>What's New</h2>
-				<h3>
-					<a
-						target="_blank"
-						href="https://docs.galaxyproject.org/en/release_19.05/releases/19.05_announce_user.html">Galaxy Release 19.05</a>
-				</h3>
-				<ul>
-					<li>
-						<strong>Tool Favorites</strong>
-						<p>Tools can now be marked as favorites, and then they’ll be easily accessible from the star button in your tool panel.
-						</p>
-					</li>
-					<li>
-						<strong>Workflow Editor Connection Feedback</strong>
-						<p>The editor now provides feedback on why connections are invalid, so you aren’t left wondering
-						   why two tools won’t connect. For complex data pipelines this should greatly simplify your life!
-						</p>
-					</li>
-					<li>
-						<strong>Data Dialog for Tool Form</strong>
-						<p>There is a new way to select datasets when running tools! It is a very simple method to select 
-						   any number of files from both your History and Data Libraries.</p>
-						<p>Additionally the selector implements a highly requested feature, the ability to run tools on arbitrary datasets 
-						   from a collection</p>
-					</li>
-					<li>
-						<strong>History Export/Import Reworked</strong>
-						<p>These features used to be clumsy in the past but do not despair since in this release they got a revamp and their
-							reliability skyrocketed! Moving historic object across Galaxies should now be easier than ever. Rocketfuel included.
-						</p>
-					</li>
-				</ul>
-				<h3>
-					<a
-						target="_blank"
-						href="https://docs.galaxyproject.org/en/release_19.09/releases/19.09_announce_user.html">Galaxy Release 19.09</a>
-				</h3>
-				<ul>
-					<li>
-						<strong>Workflow Reporting</strong>
-						<p>John Chilton added embedded reports to workflows. These are reports which are automatically available upon 
-							workflow completion and can discuss the contents of a workflow, point out interesting aspects of individual
-							outputs, and generally help you summarize the outputs for colleagues in a comprehensible way!
-						</p>
-					</li>
-					<li>
-						<strong>Cleaner History Menu</strong>
-						<p>Check out the new, cleaner history menu! Many of the extraneous actions were moved out so you can more
-							quickly do what you need to do.
-						</p>
-					</li>
-					<li>
-						<strong>Awesome Visualizations</strong>
-						<p>The Community (that is you!) added not one, not two, but three new awesome visualizations in this release
-							allowing for free style image annotation, visualizing spatial data on OpenLayers maps, and exploring HIV
-							NGS data with hyphy-vision.
-						</p>
-					</li>
-				</ul>
-			</div>
+            <div class="infomessagelarge section" id="updates">
+                <h2>What's New</h2>
+                <h3>
+                    <a
+                        target="_blank"
+                        href="">Galaxy Release 20.01</a>
+                </h3>
+                <ul>
+                    <li>
+                        <strong>Workflow Executions Menu</strong>
+                        <p>This menu can be reached from the User menu -&gt; Workflow Invocations and lists your recent
+                        Workflow executions, their status and links to the Workflow Editor and the History with the
+                        results of the Workflow run.
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Workflow Invocations</strong>
+                    </li>
+                    <li>
+                        <strong>Galay Markdown Pages and Workflow Reports as PDF</strong>
+                        <p>An additional link has been added to Galaxy Markdown Pages and Workflow reports that exports
+                        your document as a standalone PDF.</p>
+                    </li>
+                    <li>
+                        <strong>Screenreader-friendly Navigation</strong>
+                        <p>The top menu and the Workflow Editor have been improved for easier navigation using
+                        Screenreaders and the Keyboard. Thanks goes to
+                        <a href="https://github.com/WilliamHolden">@WilliamHolden</a>
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Email-notification for completed jobs</strong>
+                        <p>You can now select to be notified by email when a tool run has finished. Thanks goes to
+                        <a href="https://github.com/astrovsky01">@astrovsky01</a>
+                        </p>
+                    </li>
+                </ul>
+                <h3>
+                    <a
+                        target="_blank"
+                        href="https://docs.galaxyproject.org/en/release_19.09/releases/19.09_announce_user.html">Galaxy Release 19.09</a>
+                </h3>
+                <ul>
+                    <li>
+                        <strong>Workflow Reporting</strong>
+                        <p>John Chilton added embedded reports to workflows. These are reports which are automatically available upon
+                            workflow completion and can discuss the contents of a workflow, point out interesting aspects of individual
+                            outputs, and generally help you summarize the outputs for colleagues in a comprehensible way!
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Cleaner History Menu</strong>
+                        <p>Check out the new, cleaner history menu! Many of the extraneous actions were moved out so you can more
+                            quickly do what you need to do.
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Awesome Visualizations</strong>
+                        <p>The Community (that is you!) added not one, not two, but three new awesome visualizations in this release
+                            allowing for free style image annotation, visualizing spatial data on OpenLayers maps, and exploring HIV
+                            NGS data with hyphy-vision.
+                        </p>
+                    </li>
+                </ul>
+            </div>
 
-			<div class="errormessagelarge section" id="diskspace-notice">
-				<h2>Disk Space is Limited</h2>
-				<h3>Please delete datasets you no longer need to make room for others</h3>
-				<p>By viewing your list of saved histories, you can see how much space each is
-					taking up. Please delete any histories that you no longer need. Your cooperation
-					is appreciated.
-				</p>
-				<h3>Data stored for more than 30 days may be deleted without notice.</h3>
-			</div>
+            <div class="errormessagelarge section" id="diskspace-notice">
+                <h2>Disk Space is Limited</h2>
+                <h3>Please delete datasets you no longer need to make room for others</h3>
+                <p>By viewing your list of saved histories, you can see how much space each is
+                    taking up. Please delete any histories that you no longer need. Your cooperation
+                    is appreciated.
+                </p>
+                <h3>Data stored for more than 30 days may be deleted without notice.</h3>
+            </div>
 
-			<div class="warningmessagelarge section" id="maintenance-notice">
-				<h2>Scheduled Maintenance</h2>
-				<p>The Galaxy system will undergo scheduled maintenance on the first Monday of
-					each month from 9am-12pm.</p>
-			</div>
+            <div class="warningmessagelarge section" id="maintenance-notice">
+                <h2>Scheduled Maintenance</h2>
+                <p>The Galaxy system will undergo scheduled maintenance on the first Monday of
+                    each month from 9am-12pm.</p>
+            </div>
 
-			<hr/>
-			<p>The local instance of Galaxy at Princeton is funded in part by the
-				<a
-					target="_blank"
-					href="http://www.nigms.nih.gov/News/Results/quantitative_bio_center.htm">
-					National Institute of General Medical Sciences (NIGMS)</a>
-				[
-				<a target="_blank" href="http://www.nih.gov/">NIH</a>
-				grant P50 GM071508].</p>
-			<p>
-				<a target="_blank" href="http://htseq.princeton.edu">HTSEQ</a>
-				and this local Galaxy instance are projects within the
-				<a target="_blank" href="http://www.genomics.princeton.edu">Lewis-Sigler Institute for Integrative Genomics</a>
-				of
-				<a target="_blank" href="http://www.princeton.edu/">Princeton University</a>.</p>
-			<p>The Galaxy project is supported in part by
-				<a target="_blank" class="reference" href="http://www.nsf.gov">NSF</a>,
-				<a target="_blank" class="reference" href="http://www.genome.gov">NHGRI</a>, and
-				<a target="_blank" class="reference" href="http://www.huck.psu.edu">the Huck Institutes of the Life Sciences</a>.</p>
-		</div>
-	</body>
+            <hr/>
+            <p>The local instance of Galaxy at Princeton is funded in part by the
+                <a
+                    target="_blank"
+                    href="http://www.nigms.nih.gov/News/Results/quantitative_bio_center.htm">
+                    National Institute of General Medical Sciences (NIGMS)</a>
+                [
+                <a target="_blank" href="http://www.nih.gov/">NIH</a>
+                grant P50 GM071508].</p>
+            <p>
+                <a target="_blank" href="http://htseq.princeton.edu">HTSEQ</a>
+                and this local Galaxy instance are projects within the
+                <a target="_blank" href="http://www.genomics.princeton.edu">Lewis-Sigler Institute for Integrative Genomics</a>
+                of
+                <a target="_blank" href="http://www.princeton.edu/">Princeton University</a>.</p>
+            <p>The Galaxy project is supported in part by
+                <a target="_blank" class="reference" href="http://www.nsf.gov">NSF</a>,
+                <a target="_blank" class="reference" href="http://www.genome.gov">NHGRI</a>, and
+                <a target="_blank" class="reference" href="http://www.huck.psu.edu">the Huck Institutes of the Life Sciences</a>.</p>
+        </div>
+    </body>
 
 </html>
