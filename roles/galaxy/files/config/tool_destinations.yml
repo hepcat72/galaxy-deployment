@@ -190,6 +190,30 @@ tools:
         destination: cetus_fullnode_long
     default_destination: cetus_multicore_highmem
 
+  metaspades:
+    rules:
+      - rule_type: file_size
+        nice_value: 0
+        lower_bound: 0
+        upper_bound: 1 GB
+        destination: cetus_multicore_highmem
+      - rule_type: file_size
+        nice_value: 0
+        lower_bound: 1 GB
+        upper_bound: 20 GB
+        destination: cetus_fullnode_1day
+      - rule_type: file_size
+        nice_value: 0
+        lower_bound: 20 GB
+        upper_bound: 150 GB
+        destination: cetus_fullnode_1wk
+      - rule_type: file_size
+        nice_value: 0
+        lower_bound: 150 GB
+        upper_bound: Infinity
+        destination: cetus_fullnode_long
+    default_destination: cetus_multicore_highmem
+
   unicycler:
     rules:
       - rule_type: file_size
