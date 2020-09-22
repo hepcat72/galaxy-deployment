@@ -1,57 +1,39 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-        <link rel="stylesheet" href="style/base.css" type="text/css"/>
-        <style type="text/css">
-            #diskspace-notice,
-            #instructions,
-            #maintenance-notice,
-            #updates {
-                width: 100%;
-                display: inline-block;
-                vertical-align: top;
-                padding-top: 0px;
-            }
-
-        </style>
-        <title>Galaxy Data Analysis</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style/base.css" type="text/css" />
     </head>
-
-    <body>
-        <div class="document">
-            <h1>Galaxy Data Analysis -
-                <a target="_blank" href="http://www.princeton.edu/genomics">Lewis-Sigler Institute for Integrative Genomics</a>
-            </h1>
-            {% if env == 'development' %}
-                <div class="errormessagelarge section" id="development-notice">
-                    <h1>DEVELOPMENT SERVER</h1>
-                    <h3>ALL DATA IS SUBJECT TO REMOVAL WITHOUT NOTICE!</h3>
-                </div>
-            {% endif %}
-
-            <div class="donemessagelarge section" id="instructions">
-                <h2>Getting Started with Galaxy</h2>
-
-                <h3>
-                    <a target="_blank" href="https://galaxyproject.org/learn/">Learn Galaxy</a>
-                </h3>
-                <p>There are many approaches to learning how to use Galaxy. The most popular is
-                    probably to just dive in and use it. Galaxy is simple enough to use that you can
-                    do many analyses just by exploring the interface. However, you may miss much of
-                    the power this way.</p>
-
-                <h3><a target="_parent" href="/tours">Interactive Tours</a></h3>
-                <p>Select from basic and advanced tours to get an interactive walkthrough of many
-                    of Galaxy's features (and remember, you can click 'End Tour' at any
-                    time).</p>
-
-                <h3>
-                    <a target="_blank" href="https://galaxyproject.github.io/training-material/">Galaxy Training</a>
-                </h3>
-                <p>Collection of tutorials developed and maintained by the worldwide Galaxy community.</p>
-
+    <body class="m-0">
+        <div class="py-4">
+            <div class="container">
+                <h2>Galaxy Data Analysis -
+                    <a target="_blank" href="http://www.princeton.edu/genomics">Lewis-Sigler Institute for Integrative Genomics</a>
+                </h2>
+                {% if env == 'development' %}
+                    <div class="errormessagelarge" id="development-notice">
+                        <h1>DEVELOPMENT SERVER</h1>
+                        <h3>ALL DATA IS SUBJECT TO REMOVAL WITHOUT NOTICE!</h3>
+                    </div>
+                {% endif %}
+            </div>
+            <br>
+            <div class="donemessagelarge container">
+                <h3>Learn Galaxy</h2>
+                <ul>
+                    <li>Take an interactive tour:
+                        <a target="_parent" href="../tours/core.galaxy_ui" class="btn btn-secondary btn-sm">Galaxy UI</a>
+                        <a target="_parent" href="../tours/core.history" class="btn btn-secondary btn-sm">History</a>
+                        <a target="_parent" href="../tours/core.scratchbook" class="btn btn-secondary btn-sm">Scratchbook</a>
+                    </li>
+                    <li><a target="_blank" href="https://galaxyproject.org/learn/">Learn Galaxy</a> -
+                        There are many approaches to learning how to use Galaxy. The most popular is
+                        probably to just dive in and use it. Galaxy is simple enough to use that you can
+                        do many analyses just by exploring the interface. However, you may miss much of
+                        the power this way.</li>
+                    <li><a target="_blank" href="https://galaxyproject.github.io/training-material/">Galaxy Training</a> -
+                        Collection of tutorials developed and maintained by the worldwide Galaxy community.</li>
+                </ul>
                 <h3>Princeton Community</h3>
                 <ul>
                     <li>Join the
@@ -62,90 +44,62 @@
                     </li>
                 </ul>
             </div>
-
-            <div class="infomessagelarge section" id="updates">
-                <h2>What's New</h2>
-                <h3>
+            <br>
+            <div class="infomessagelarge container" id="updates">
+                <h3>What's New</h3>
+                <h4>
                     <a
                         target="_blank"
-                        href="">Galaxy Release 20.01</a>
-                </h3>
+                        href="https://docs.galaxyproject.org/en/master/releases/20.05_announce_user.html">Galaxy Release 20.05</a>
+                </h4>
                 <ul>
                     <li>
-                        <strong>Workflow Executions Menu</strong>
-                        <p>This menu can be reached from the User menu -&gt; Workflow Invocations and lists your recent
-                        Workflow executions, their status and links to the Workflow Editor and the History with the
-                        results of the Workflow run.
-                        </p>
+                        <strong>New Interactive Tools</strong>
+                        <p>Through the combined efforts of many UseGalaxy.eu admins and developers, as well as
+                        the European Galaxy community we have converted a significant number of interactive
+                        environments into the new interactive tool specification. Thanks to
+                        <a href="https://github.com/bgruening">@bgruening</a>,
+                        <a href="https://github.com/hexylena">@hexylena</a>,
+                        <a href="https://github.com/jenzopr">@jenzopr</a>,
+                        <a href="https://github.com/yvanlebras">@yvanlebras</a>,
+                        <a href="https://github.com/annefou">@annefou</a>,
+                        <a href="https://github.com/abretaud">@abretaud</a>,
+                        <a href="https://github.com/joachimwolff">@joachimwolff</a>, and
+                        <a href="https://github.com/astrovsky01">@astrovsky01</a>. You can try
+                        them all on <a href="https://live.usegalaxy.eu/">live.usegalaxy.eu</a></p>
                     </li>
                     <li>
-                        <strong>Workflow Invocations</strong>
-                    </li>
-                    <li>
-                        <strong>Galay Markdown Pages and Workflow Reports as PDF</strong>
-                        <p>An additional link has been added to Galaxy Markdown Pages and Workflow reports that exports
-                        your document as a standalone PDF.</p>
-                    </li>
-                    <li>
-                        <strong>Screenreader-friendly Navigation</strong>
-                        <p>The top menu and the Workflow Editor have been improved for easier navigation using
-                        Screenreaders and the Keyboard. Thanks goes to
-                        <a href="https://github.com/WilliamHolden">@WilliamHolden</a>
-                        </p>
-                    </li>
-                    <li>
-                        <strong>Email-notification for completed jobs</strong>
-                        <p>You can now select to be notified by email when a tool run has finished. Thanks goes to
-                        <a href="https://github.com/astrovsky01">@astrovsky01</a>
-                        </p>
-                    </li>
-                </ul>
-                <h3>
-                    <a
-                        target="_blank"
-                        href="https://docs.galaxyproject.org/en/release_19.09/releases/19.09_announce_user.html">Galaxy Release 19.09</a>
-                </h3>
-                <ul>
-                    <li>
-                        <strong>Workflow Reporting</strong>
-                        <p>John Chilton added embedded reports to workflows. These are reports which are automatically available upon
-                            workflow completion and can discuss the contents of a workflow, point out interesting aspects of individual
-                            outputs, and generally help you summarize the outputs for colleagues in a comprehensible way!
-                        </p>
-                    </li>
-                    <li>
-                        <strong>Cleaner History Menu</strong>
-                        <p>Check out the new, cleaner history menu! Many of the extraneous actions were moved out so you can more
-                            quickly do what you need to do.
-                        </p>
-                    </li>
-                    <li>
-                        <strong>Awesome Visualizations</strong>
-                        <p>The Community (that is you!) added not one, not two, but three new awesome visualizations in this release
-                            allowing for free style image annotation, visualizing spatial data on OpenLayers maps, and exploring HIV
-                            NGS data with hyphy-vision.
-                        </p>
+                        <strong>Rule Based Uploader: Scrolling!</strong>
+                        <p>Many power users have fallen in love with Galaxy’s Rule Builder, allowing you to upload
+                        tables of data, and easily tag datasets and build collections on upload. However with too
+                        many columns the table did not scroll well for users, but no longer! This has been fixed
+                        by one of the Galaxy team members, <a href="https://github.com/assuntad23">@assuntad23</a>.
+                        If you want to learn more about using the rule builder please see the 
+                        <a href="https://training.galaxyproject.org/training-material/topics/galaxy-data-manipulation/tutorials/upload-rules/tutorial.html">in-depth tutorial</a>
+                        from the developer, <a href="https://github.com/jmchilton">@jmchilton</a>.
                     </li>
                 </ul>
             </div>
 
-            <div class="errormessagelarge section" id="diskspace-notice">
-                <h2>Disk Space is Limited</h2>
-                <h3>Please delete datasets you no longer need to make room for others</h3>
+            <div class="errormessagelarge container" id="diskspace-notice">
+                <h3>Disk Space is Limited</h3>
+                <h4>Please delete datasets you no longer need to make room for others</h4>
                 <p>By viewing your list of saved histories, you can see how much space each is
                     taking up. Please delete any histories that you no longer need. Your cooperation
                     is appreciated.
                 </p>
-                <h3>Data stored for more than 30 days may be deleted without notice.</h3>
+                <h4>Data stored for more than 30 days may be deleted without notice.</h4>
             </div>
 
-            <div class="warningmessagelarge section" id="maintenance-notice">
-                <h2>Scheduled Maintenance</h2>
+            <div class="warningmessagelarge container" id="maintenance-notice">
+                <h3>Scheduled Maintenance</h3>
                 <p>The Galaxy system will undergo scheduled maintenance on the first Monday of
                     each month from 9am-12pm.</p>
             </div>
+        </div>
 
-            <hr/>
+
+        <div class="container">
             <p>The local instance of Galaxy at Princeton is funded in part by the
                 <a
                     target="_blank"
@@ -160,11 +114,21 @@
                 <a target="_blank" href="http://www.genomics.princeton.edu">Lewis-Sigler Institute for Integrative Genomics</a>
                 of
                 <a target="_blank" href="http://www.princeton.edu/">Princeton University</a>.</p>
-            <p>The Galaxy project is supported in part by
+            <p>
+                <a target="_blank" class="reference" href="http://galaxyproject.org/">
+                Galaxy</a> is an open platform for supporting data intensive
+                research. Galaxy is developed by <a target="_blank" class="reference" href="https://galaxyproject.org/galaxy-team/">The Galaxy Team</a>
+                with the support of  <a target="_blank" class="reference" href="https://github.com/galaxyproject/galaxy/blob/dev/CONTRIBUTORS.md">many contributors</a>.
+            </p>
+            <footer>
+                The <a target="_blank" class="reference" href="http://galaxyproject.org/">Galaxy Project</a>
+                is supported in part by <a target="_blank" class="reference" href="http://www.genome.gov">NHGRI</a>,
                 <a target="_blank" class="reference" href="http://www.nsf.gov">NSF</a>,
-                <a target="_blank" class="reference" href="http://www.genome.gov">NHGRI</a>, and
-                <a target="_blank" class="reference" href="http://www.huck.psu.edu">the Huck Institutes of the Life Sciences</a>.</p>
+                <a target="_blank" class="reference" href="http://www.huck.psu.edu">The Huck Institutes of the Life Sciences</a>,
+                <a target="_blank" class="reference" href="http://www.ics.psu.edu">The Institute for CyberScience at Penn State</a>,
+                and <a target="_blank" class="reference" href="http://www.jhu.edu/">Johns Hopkins University</a>.
+            </footer>
         </div>
     </body>
-
 </html>
+
