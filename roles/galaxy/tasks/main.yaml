@@ -111,6 +111,7 @@
   with_items:
       - "datatypes_magenta_conf.xml"
       - "tool_destinations.yml"
+      - "disposable_email_whitelist.conf"
   tags:
     config
 
