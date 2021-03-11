@@ -18,8 +18,7 @@ uwsgi:
   hook-master-start: unix_signal:15 gracefully_kill_them_all
 
   # listening options
-  http: 127.0.0.1:8080
-  http-raw-body: True
+  socket: 127.0.0.1:4001
 
   # job handler options
   mule: lib/galaxy/main.py
@@ -50,7 +49,7 @@ galaxy:
   support_url: http://www.princeton.edu/genomics/sequencing/instructions/data-analysis/
   static_enabled: false
   apache_xsendfile: true
-  upstream_gzip: false
+  upstream_gzip: true
   log_level: {{ log_level }}
   serve_xss_vulnerable_mimetypes: true
   debug: {{ debug }}
@@ -59,6 +58,7 @@ galaxy:
   id_secret: {{ id_secret }}
   use_remote_user: true
   remote_user_maildomain: princeton.edu
+  remote_user_header: REMOTE_USER
   remote_user_logout_href: https://fed.princeton.edu/cas/logout
   admin_users: jwiggins@princeton.edu,lparsons@princeton.edu,jcmatese@princeton.edu,rleach@princeton.edu
   require_login: true
