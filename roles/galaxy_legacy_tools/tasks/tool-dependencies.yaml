@@ -1,5 +1,5 @@
 ---
-- name: make sure tool-dependencies folder exists
+- name: tool-dependencies directory
   file: path="{{ GALAXY_HOME }}/tool-dependencies/" state=directory
 
 - name: tool-dependencies directory copy
@@ -9,18 +9,21 @@
       follow: no
       local_follow: no
 
-- name: bedtools_links
-  file:
-      src: "{{ GALAXY_HOME }}/tool-dependencies/bedtools"
-      dest: "{{ item }}"
-      state: link
+      # - name: tool-dependencies sub-directories
+      #   file: 
+      #     path: "{{ GALAXY_HOME }}/tool-dependencies/{{ item }}"
+      #     state: directory
+      #   with_items:
+      #     - "EXPORT_DIR_PREFIX/0.0.1"
+
+- name: tool-dependencies templates
+  template:
+    src: "tool-dependencies/{{ item }}.j2"
+    dest: "{{ GALAXY_HOME }}/tool-dependencies/{{ item }}"
+    mode: 0640
+    backup: "yes"
   with_items:
-      - "{{ GALAXY_HOME }}/tool-dependencies/bamToBed"
-      - "{{ GALAXY_HOME }}/tool-dependencies/coverageBed"
-      - "{{ GALAXY_HOME }}/tool-dependencies/genomeCoverageBed"
-      - "{{ GALAXY_HOME }}/tool-dependencies/intersectBed"
-      - "{{ GALAXY_HOME }}/tool-dependencies/multiIntersectBed"
-      - "{{ GALAXY_HOME }}/tool-dependencies/unionBedGraphs"
+    - "EXPORT_DIR_PREFIX/0.0.1/env.sh"
 
 - name: tool dependencies default links
   file:
@@ -28,13 +31,6 @@
       dest: "{{ GALAXY_HOME }}/tool-dependencies/{{ item.tool }}/default"
       state: link
   with_items:
-      - { tool: 'bedtools', version: '2.16.2' }
-      - { tool: 'freebayes', version: '0.9.4' }
-      - { tool: 'macs14', version: '1.4.2' }
-      - { tool: 'sambamba', version: '0.3.3' }
-      - { tool: 'samtools', version: '0.1.18' }
-      - { tool: 'ucsc_tools', version: 'manual_install' }
-      - { tool: 'bwa', version: '0.5.9' }
       - { tool: 'EXPORT_DIR_PREFIX', version: '0.0.1' }
 
 - name: create galaxy_export directory

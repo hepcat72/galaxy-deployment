@@ -6,7 +6,7 @@
 # Reports
 - name: Check if galaxy reports is running
   wait_for:
-    port: 9000
+    port: 5001
     timeout: 1
   ignore_errors: true
   register: galaxy_reports_running
@@ -21,7 +21,7 @@
   when: galaxy_reports_running.failed == false
 
 - name: Wait for Galaxy Reports to stop
-  wait_for: port=9000 delay=5 state=stopped timeout=60
+  wait_for: port=5001 delay=5 state=stopped timeout=60
   when: galaxy_reports_running.failed == false
 
 # Galaxy web application
