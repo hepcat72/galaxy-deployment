@@ -5,7 +5,7 @@ galaxy_user: galaxy
 webserver_group: apache
 
 galaxy_venv_dir: /galaxy/galaxy-app/.venv
-pip_virtualenv_command: /usr/local/opt/python/3.6.10/bin/virtualenv --always-copy
+pip_virtualenv_command: /usr/bin/python3 -m venv
 
 galaxy_changeset_id: release_20.01
 config_directory: /galaxy/galaxy-app/config
