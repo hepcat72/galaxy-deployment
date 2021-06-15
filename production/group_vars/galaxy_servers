@@ -5,14 +5,14 @@ galaxy_user: galaxy
 webserver_group: apache
 
 galaxy_venv_dir: /galaxy/galaxy-app/.venv
-pip_virtualenv_command: /usr/local/opt/python/3.6.10/bin/virtualenv --always-copy
+pip_virtualenv_command: /usr/bin/python3 -m venv
 
 galaxy_changeset_id: release_20.01
 config_directory: /galaxy/galaxy-app/config
 crontab_mailto: biocomp@princeton.edu
 
 database_user: galaxy
-database_location: localhost
+database_location: 
 database_port: 5432
 
 file_path: /galaxy/files  # Must be readable by apache

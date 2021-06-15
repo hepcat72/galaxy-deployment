@@ -5,7 +5,7 @@
   shell: "{{ GALAXY_HOME }}/run.sh --daemon"
 
 - name: wait for galaxy to start
-  wait_for: port=8080 delay=5 state=started timeout=150
+  wait_for: port=4001 delay=5 state=started timeout=150
 
 - name: Set 401 message to try again
   file: src={{ GALAXY_HOME }}/../www/html/error-documents/401_tryagain.html
@@ -29,4 +29,4 @@
   shell: "{{ GALAXY_HOME }}/run_reports.sh --daemon"
 
 - name: wait for galaxy reports to start
-  wait_for: port=9000 delay=5 state=started timeout=150
+  wait_for: port=5001 delay=5 state=started timeout=150

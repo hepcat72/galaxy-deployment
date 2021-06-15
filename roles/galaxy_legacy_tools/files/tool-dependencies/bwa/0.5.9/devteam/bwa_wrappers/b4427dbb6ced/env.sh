@@ -1,1 +1,0 @@
-if [ -f /galaxy/galaxy-app/tool-dependencies/bwa/0.5.9/devteam/package_bwa_0_5_9/ec2595e4d313/env.sh ] ; then . /galaxy/galaxy-app/tool-dependencies/bwa/0.5.9/devteam/package_bwa_0_5_9/ec2595e4d313/env.sh ; fi
