@@ -75,7 +75,7 @@
     day: "*"
     month: "*"
     weekday: "*"
-    job: "/usr/sbin/tmpwatch --atime --dirmtime 168 {{ tmp_dir }}"
+    job: "/usr/sbin/tmpwatch --atime --dirmtime 168 --exclude-pattern \"{{ tmp_dir }}/.nfs*\" {{ tmp_dir }}"
 
 - name: crontab entry to cleanup Galaxy new_file_path files
   cron:
