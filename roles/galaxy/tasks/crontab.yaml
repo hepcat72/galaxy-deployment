@@ -18,7 +18,7 @@
   file: dest={{ GALAXY_HOME }}/scripts/logs state=directory
 
 - name: set MAILTO in crontab
-  cron:
+  ansible.builtin.cron:
     name: "MAILTO"
     minute: "MAILTO={{ crontab_mailto }}"
     hour: ""
@@ -28,17 +28,17 @@
     job: ""
 
 - name: crontab entry to backup Galaxy database
-  cron:
+  ansible.builtin.cron:
     name: "backup galaxy database"
     minute: "0"
-    hour: "1"
+    hour: "*"
     day: "*"
     month: "*"
     weekday: "*"
-    job: "{{ GALAXY_HOME }}cron/backup_pg_database.sh"
+    job: "scl enable rh-postgresql96 -- {{ GALAXY_HOME }}cron/backup_pg_database.sh"
 
 - name: crontab entry to backup Galaxy maintained files
-  cron:
+  ansible.builtin.cron:
     name: "backup galaxy maintained files"
     minute: "0"
     hour: "1"
@@ -48,7 +48,7 @@
     job: "{{ GALAXY_HOME }}cron/backup_galaxy_maintained_files.sh"
 
 - name: crontab entry to cleanup datasets
-  cron:
+  ansible.builtin.cron:
     name: "cleanup galaxy datasets"
     minute: "0"
     hour: "2"
@@ -58,7 +58,7 @@
     job: "export PATH=/usr/local/bin:$PATH; {{ GALAXY_HOME }}/cron/cleanup_datasets.sh"
 
 - name: crontab entry to set Galaxy user disk usage
-  cron:
+  ansible.builtin.cron:
     name: "set galaxy user disk usage"
     minute: "0"
     hour: "4"
@@ -68,7 +68,7 @@
     job: "export PATH=/usr/local/bin:$PATH; {{ GALAXY_HOME }}/cron/set_user_disk_usage.sh"
 
 - name: crontab entry to cleanup Galaxy temp files
-  cron:
+  ansible.builtin.cron:
     name: "cleanup galaxy tempfiles"
     minute: "20"
     hour: "4"
@@ -78,7 +78,7 @@
     job: "/usr/sbin/tmpwatch --atime --dirmtime 168 --exclude-pattern \"{{ tmp_dir }}/.nfs*\" {{ tmp_dir }}"
 
 - name: crontab entry to cleanup Galaxy new_file_path files
-  cron:
+  ansible.builtin.cron:
     name: "cleanup galaxy tempfiles"
     minute: "40"
     hour: "4"
@@ -88,7 +88,7 @@
     job: "/usr/sbin/tmpwatch --atime --dirmtime 168 {{ new_file_path }}"
 
 - name: crontab entry to cleanup exported Galaxy files
-  cron:
+  ansible.builtin.cron:
     name: "cleanup exported galaxy files"
     minute: "0"
     hour: "5"
@@ -98,7 +98,7 @@
     job: "/usr/sbin/tmpwatch --atime --dirmtime 168 {{ export_dir }}"
 
 - name: crontab entry to cleanup log files
-  cron:
+  ansible.builtin.cron:
     name: "cleanup galaxy log files"
     minute: "15"
     hour: "5"
@@ -108,7 +108,7 @@
     job: "/usr/sbin/logrotate {{ GALAXY_HOME }}/config/logrotate/logrotate.conf --state {{ GALAXY_HOME }}/config/logrotate/logrotate-state"
 
 - name: crontab entry to update ncbi taxonomy
-  cron:
+  ansible.builtin.cron:
     name: "update ncbi taxonomy"
     minute: "30"
     hour: "5"
@@ -119,7 +119,7 @@
     disabled: "{{ env == 'development' }}"
 
 - name: crontab entry to update ucsc genomes
-  cron:
+  ansible.builtin.cron:
     name: "update ucsc genomes"
     minute: "0"
     hour: "6"
