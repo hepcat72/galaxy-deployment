@@ -7,7 +7,7 @@ webserver_group: apache
 galaxy_venv_dir: /galaxy/galaxy-app/.venv
 pip_virtualenv_command: /usr/bin/python3 -m venv
 
-galaxy_changeset_id: release_20.01
+galaxy_changeset_id: release_21.05
 config_directory: /galaxy/galaxy-app/config
 crontab_mailto: lparsons@princeton.edu
 
